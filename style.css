@@ -719,7 +719,7 @@ i {
     font-size: 12px;
   }
   #sideNav {
-    width: 125px;
+    width: 175px;
     height: 200vh;
   }
   nav ul li a {
@@ -729,13 +729,13 @@ i {
   }
   nav ul {
     height: 200vh;
-    width: 125px;
-    font-size: 10px;
+    width: 175px;
+    font-size: 12px;
     line-height: 28px;
   }
   nav ul li {
     float: bottom;
-    width: 125px;
+    width: 175px;
   }
   .nav1 {
     width: 30px;

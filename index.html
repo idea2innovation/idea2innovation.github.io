@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,163 +9,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="click">
-    <h1 style="font-family: Arial, Helvetica, sans-serif; margin-left: 5%; padding: 1%; text-align: center; ">--Members--</h1>
-    <section id="members">
-        <div class="member-row">
-            <div class="member-col">
-                <img src="images/pic.png">
-                <h4>Member 1</h4>
-                <p>about mem_1</p>
-            </div>
-            <div class="member-col">
-                <img src="images/pic.png">
-                <h4>Member 2</h4>
-                <p>about mem_2</p>
-            </div>
-            <div class="member-col">
-                <img src="images/pic.png">
-                <h4>Member 3</h4>
-                <p>about mem_3</p>
-            </div>
-            <div class="member-col">
-                <img src="images/pic.png">
-                <h4>Member 4</h4>
-                <p>about mem_4</p>
-            </div>
-            </div>
-            <br>
-            <span id="more">
-                <div class="member-row">
-                <div class="member-col">
-                    <img src="images/pic.png">
-                    <h4>Member 5</h4>
-                    <p>about mem_5</p>
-                </div>
-                <div class="member-col">
-                    <img src="images/pic.png">
-                    <h4>Member 6</h4>
-                    <p>about mem_6</p>
-                </div>
-                <div class="member-col">
-                    <img src="images/pic.png">
-                    <h4>Member 7</h4>
-                    <p>about mem_7</p>
-                </div>
-                <div class="member-col">
-                    <img src="images/pic.png">
-                    <h4>Member 8</h4>
-                    <p>about mem_8</p>
-                </div>
-                </div>
-                <br>
-                <div class="member-row">
-                    <div class="member-col">
-                        <img src="images/pic.png">
-                        <h4>Member 9</h4>
-                        <p>about mem_9</p>
-                    </div>
-                    <div class="member-col">
-                        <img src="images/pic.png">
-                        <h4>Member 10</h4>
-                        <p>about mem_10</p>
-                    </div>
-                    <div class="member-col">
-                        <img src="images/pic.png">
-                        <h4>Member 11</h4>
-                        <p>about mem_11</p>
-                    </div>
-                </div>
-            </span>
-        <div class="member-btn">
-            <button class="common-btn" id="read" onclick="read()">Explore</button>
-            <script type="text/javascript">
-                var i = 0;
-                function read() {
-                    if (!i) {
-                        document.getElementById("more").style.display = "inline";
-                        document.getElementById("read").innerHTML = "Close";
-                        i = 1;
+    <section id="header">
+        <div class="container">
+            <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
+            <a href="index.html"><img src="images/iarelogo.jpg" class="logo"></a>
+            <div class="header-text">
+                <h1 style="color:gold  ; text-shadow: 1px 1px 1px  grey;">Welcome to I2I website!</h1><br><br>
+                <p><b>Idea to Innovation</b> is a club started by the students of Institute of Aeronautical Engineering in the year 2021 to evoke students’ creativity levels by encouraging them to take-up projects with varying levels of complexities. This Club aims at taking up various <b>innovative ideas</b> and <b>methodologies</b> of the students’ and help them execute it by providing technical assistance backed by eminent faculty support.<span id="more"> The club mainly focuses on <b>critical and competitive problem-solving skills</b> by inculcating group discussions and effective learning techniques. At <b>I2I</b> we believe practical and interactive way of learning will boost and enhance the creative and logical thinking levels of the students who aim at achieving high in the field of their passion and interests.</span></p>
+                <button class="common-btn1" id="read" onclick="read()">Read More</button>
+                <script type="text/javascript">
+                var i=0;
+                    function read(){
+                        if(!i){
+                            document.getElementById("more").style.display="inline";
+                            document.getElementById("read").innerHTML="Read less";
+                            i = 1;
+                        }
+                        else{
+                           document.getElementById("more").style.display = "none";
+                            document.getElementById("read").innerHTML = "Read More";
+                            i = 0; 
+                        }
                     }
-                    else {
-                        document.getElementById("more").style.display = "none";
-                        document.getElementById("read").innerHTML = "Explore";
-                        i = 0;
-                    }
-                }
-            </script>
+                </script>
+            </div>
         </div>
-    </section>
-    <!--Navigation-->
-    <nav class="nav1" id="na">
-        <ul>
-            <li class="active"><i class="fa fa-home"  id="fa"></i></li>
-            <li><i class="fa fa-hourglass-half"  id="fa"></i></li>
-            <li><i class="fa fa-calendar"  id="fa"></i></li>
-            <li><i class="fa fa-address-card"  id="fa"></i></li>
-            <li><i class="fa fa-users"  id="fa"></i></li>
-            <li><i class="fa fa-university" id="fa"></i></li>
-        </ul>
-    </nav>
-    <nav id="sideNav">
-    <ul>
-        <li ><a href="index.html" >&nbsp &nbsp &nbsp &nbsp<i class="fa fa-home"  id="fa"></i> Home</a></li>
-        <li><a href="activities.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-hourglass-half"  id="fa"></i>Activities</a></li>
-        <li><a href="events.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-calendar"  id="fa"></i>Events</a></li>
-        <li><a href="about.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-address-card"  id="fa"></i> About Us</a></li>
-        <li class="active"><a href="members.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-users"  id="fa"></i> Members</a></li>
-        <li><a href="https://www.iare.ac.in/">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-university" id="fa"></i>About College</a>
-        </li>
-    </ul>
-    </nav>
-    <img src="images/men.png" id="menuBtn">
-    <script>
-        var menuBtn = document.getElementById("menuBtn");
-        var sideNav = document.getElementById("sideNav");
-        var click = document.getElementById("click")
-        var na = document.getElementById("na")
-        sideNav.style.left = "-250px";
-        na.onmouseover = function () {
-            sideNav.style.left = "0px"
-        }
-        na.onmouseout = function () {
-            sideNav.style.left = "-250px"
-        }
-        sideNav.onmouseover = function () {
-            sideNav.style.left = "0px"
-        }
-        sideNav.onmouseout = function () {
-            sideNav.style.left = "-250px"
-        }
-        var i1 = 0
-            var j1 = 0
-            menuBtn.onclick = function () {
-                j1 = 1
-                if (!i1) {
-                    sideNav.style.left = "0px"
-                    i1 = 1
-                }
-                else {
-                    sideNav.style.left = "-250px"
-                    i1 = 0
-                }
-            }
-            onclick = function () {
-                if (i1 && !j1) {
-                    sideNav.style.left = "-250px"
-                    i1 = 0
-                }
-                j1 = 0
-            }
-    </script>
-    <!--Social media-->
-    <div class="social-icons">
-        <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
-        <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png"></a>
-        <a href="https://twitter.com/?lang=en"><img src="images/twitter.png"></a>
-        <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
-        <a href="https://in.linkedin.com/"><img src="images/linkedin.png"></a>
-    </div>
-            <!--Footer-->
+    </section> 
+    <!--Footer-->
     <section id="footer">
         <br>
         <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
@@ -180,7 +49,7 @@
                         <br>
                         <a href="events.html">Events</a>
                         <br>
-                        <a href="index.html">Home</a>
+                        <a href="members.html">Members</a>
                         </small>
                     </div>
                     <div class="link-title">
@@ -205,4 +74,76 @@
             <small id="sm1"><i class="fa fa-copyright"></i> copyright 2021 ideatoinnovation</small>
         </div>
     </section>
+    <!--Social Media-->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+        <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png"></a>
+        <a href="https://twitter.com/?lang=en"><img src="images/twitter.png"></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
+        <a href="https://in.linkedin.com/"><img src="images/linkedin.png"></a>
+    </div>
+    <!--Navigation-->
+    <nav class="nav1" id="na">
+        <ul>
+            <li class="active"><i class="fa fa-home" id="fa"></i></li>
+            <li><i class="fa fa-hourglass-half" id="fa"></i></li>
+            <li><i class="fa fa-calendar" id="fa"></i></li>
+            <li><i class="fa fa-address-card" id="fa"></i></li>
+            <li><i class="fa fa-users" id="fa"></i></li>
+            <li><i class="fa fa-university" id="fa"></i></li>
+        </ul>
+    </nav>
+    <nav id="sideNav">
+        <ul>
+            <li class="active"><a href="index.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-home" id="fa"></i> Home</a></li>
+            <li><a href="activities.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-hourglass-half" id="fa"></i>
+                    Activities</a></li>
+            <li><a href="events.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-calendar" id="fa"></i> Events</a></li>
+            <li><a href="about.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-address-card" id="fa"></i> About Us</a></li>
+            <li><a href="members.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-users" id="fa"></i> Members</a></li>
+            <li><a href="https://www.iare.ac.in/">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-university" id="fa"></i>About College</a></li>
+        </ul>
+    </nav>
+    
+    <img src="images/men.png" id="menuBtn">
+    <script>
+        var menuBtn=document.getElementById("menuBtn");
+        var sideNav=document.getElementById("sideNav");
+        var click=document.getElementById("click")
+        var na=document.getElementById("na")
+        sideNav.style.left="-250px";
+        na.onmouseover = function () {
+                sideNav.style.left ="0px"
+            }
+        na.onmouseout = function () {
+            sideNav.style.left = "-250px"
+        }
+        sideNav.onmouseover = function () {
+             sideNav.style.left = "0px"
+        }
+        sideNav.onmouseout = function () {
+            sideNav.style.left = "-250px"
+        }
+        var i1 = 0
+        var j1 = 0
+        menuBtn.onclick = function () {
+                j1 = 1
+                if (!i1) {
+                    sideNav.style.left = "0px"
+                    i1 = 1
+                }
+                else {
+                    sideNav.style.left = "-250px"
+                    i1 = 0
+                }
+            }
+            onclick = function () {
+                if (i1 && !j1) {
+                    sideNav.style.left = "-250px"
+                    i1 = 0
+                }
+                j1 = 0
+            }  
+    </script>
 </body>
+</html>

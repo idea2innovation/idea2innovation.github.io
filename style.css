@@ -696,11 +696,11 @@ i {
     font-family: sans-serif;
   }
   .show-btn {
-    font-size: 10px;
-    width: 40px;
+    font-size: 14px;
+    padding: 10px 16px;
   }
   .show-btn1 {
-    font-size: 12px;
+    font-size: 14px;
     padding: 10px 16px;
   }
   form .btn {

@@ -696,11 +696,11 @@ i {
     font-family: sans-serif;
   }
   .show-btn {
-    font-size: 14px;
-    padding: 10px 16px;
+    font-size: 10px;
+    width: 40px;
   }
   .show-btn1 {
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px 16px;
   }
   form .btn {
@@ -833,6 +833,13 @@ i {
   }
   .footer-info {
     font-size: 12px;
+  }
+  .container2 {
+    position: fixed;
+    top: 15%;
+    left: 25%;
+    width: 35%;
+    height: 45%;
   }
   .container2 form .data {
     height: 20px;

@@ -40,7 +40,8 @@ h1 {
   background-color: darkslateblue;
   margin: 15px 0;
 }
-.common-btn {
+.common-btn,
+.common-btn1 {
   padding: 18px 40px;
   background: transparent;
   outline: none;
@@ -307,7 +308,7 @@ nav ul li a:hover {
   top: 15%;
   left: 33%;
   width: 30%;
-  height: 60%;
+  height: 55%;
   display: none;
   background: white;
   padding: 30px;
@@ -385,12 +386,7 @@ form .login_link label:hover {
   margin-bottom: 6%;
   text-align: center;
 }
-.error {
-  background: rgba(255, 192, 203, 0.5);
-  padding: 2%;
-  color: red;
-  text-align: center;
-}
+
 .show-btn,
 .container1 {
   position: absolute;
@@ -690,7 +686,7 @@ i {
     border-radius: 1mm;
     padding: 2%;
     font-size: 12px;
-    line-height: 3mm;
+    line-height: 4mm;
     opacity: 1;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
@@ -704,8 +700,8 @@ i {
     width: 40px;
   }
   .show-btn1 {
-    font-size: 10px;
-    width: 58px;
+    font-size: 14px;
+    padding: 10px 16px;
   }
   form .btn {
     margin: 20px 0;
@@ -767,6 +763,10 @@ i {
     font-size: 25px;
   }
   .common-btn {
+    padding: 10px 16px;
+  }
+  .common-btn1 {
+    background: rgba(241, 241, 241, 0.9);
     padding: 10px 16px;
   }
   .social-icons img {

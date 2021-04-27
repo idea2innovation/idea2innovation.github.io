@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Idea2Innovation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <input type="number" name="value" id="n1">
+    <input type="number" name="value" id="n2">
+    <script>
+        var b=document.getElementById("n2");
+        console.log(b)
+    </script>
+        <!--Register and Login-->
+        <div class="center">
+            <label for="show" class="show-btn">LOGIN</label>
+            <input type="checkbox" name="show" id="show">
+            <div class="container1">
+                <label for="show" class="close-btn"><i class="fa fa-times"></i></label>
+                <div class="text">
+                    <h1>Login</h1>
+                    <h2>for eventname</h2>
+                </div>
+                <form>
+                    <div class="data">
+                        <input type="text" required placeholder="Roll Number">
+                    </div>
+                    <div class="data">
+                        <input type="password" required placeholder="Password">
+                    </div>
+                    <div class="forgot-pass"><a href="#">Forgot Password?</a></div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">
+                            <h3>login</h3>
+                        </button>
+                    </div>
+                    <div class="signup_link">Not Registered? <label for="show1"> Register Now</label></a></div>
+                </form>
+            </div>
+        </div>
+    <section>
+    <div class="center">
+        <label for="show1" class="show-btn1">Register</label>
+        <input type="checkbox" name="show1" id="show1">
+        <div class="container2">
+            <label for="show" class="close-btn1"><i class="fa fa-times"></i></label>
+            <div class="text">
+                <h1>Register</h1>
+                <h2>for eventname</h2>
+            </div>
+            <form>
+                <div class="data">
+                    <input type="text" required placeholder="Roll Number">
+                    </div>
+                <div class="data">
+                    <input type="password" required placeholder="New Password">
+                    </div>
+                <div class="data">
+                    <input type="password" required placeholder="Conform Password">
+                </div>
+                <div class="btn">
+                    <div class="inner"></div>
+                    <button type="submit">
+                        <h3>Register</h3>
+                    </button>
+                </div>
+                <div class="login_link">Already Registerd?<label for="show">Login</label></div>
+            </form>
+        </div>
+        </div>
+    </div>
+    <nav id="sideNav">
+    <ul>
+        <li><a href="index.html">&nbsp &nbsp Home</a></li>
+        <li><a href="activities.html">&nbsp &nbsp Activities</a></li>
+        <li><a href="#events">&nbsp &nbsp Events</a></li>
+        <li><a href="members.html">&nbsp &nbsp Members</a></li>
+        <li><a href="about.html">&nbsp &nbsp About Us</a></li>
+        <li class="active"><a href="contact.html">&nbsp &nbsp Contact</a></li>
+    </ul>
+    </nav>
+    <img src="images/men.png" id="menuBtn">
+    <div class="social-icons">
+        <img src="images/facebook.png">
+        <img src="images/whatsapp.png">
+        <img src="images/twitter.png">
+        <img src="images/instagram.png">
+        <img src="images/linkedin.png">
+    </div>
+    </section>
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        var click=document.getElementById("click")
+        sideNav.style.left = "-250px";
+        var i=0
+        var j=0
+        menuBtn.onclick = function () {
+            j=1
+            if (!i) {
+                sideNav.style.left = "0px"
+                i=1
+            }
+            else {
+                sideNav.style.left = "-250px"
+                i=0
+            }
+        }
+        onclick=function(){
+            if(i && !j){
+                sideNav.style.left = "-250px"
+                i = 0
+            }
+            j=0
+        }
+    </script>
+</body>

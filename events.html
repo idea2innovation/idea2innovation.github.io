@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Idea2Innovation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+            <!--Navigation-->
+            <nav class="nav1" id="na">
+                <ul>
+                    <li><i class="fa fa-home" id="fa"></i></li>
+                    <li><i class="fa fa-hourglass-half" id="fa"></i></li>
+                    <li class="active"><i class="fa fa-calendar" id="fa"></i></li>
+                    <li><i class="fa fa-address-card" id="fa"></i></li>
+                    <li><i class="fa fa-users" id="fa"></i></li>
+                </ul>
+            </nav>
+            <nav id="sideNav">
+                <ul>
+                    <li><a href="index.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-home" id="fa"></i> Home</a></li>
+                    <li><a href="activities.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-hourglass-half" id="fa"></i>
+                            Activities</a></li>
+                    <li class="active"><a href="events.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-calendar" id="fa"></i>
+                            Events</a></li>
+                    <li><a href="about.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-address-card" id="fa"></i> About Us</a></li>
+                    <li><a href="members.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-users" id="fa"></i> Members</a></li>
+                </ul>
+            </nav>
+            
+            <img src="images/men.png" id="menuBtn">
+            <script>
+                var menuBtn = document.getElementById("menuBtn");
+                var sideNav = document.getElementById("sideNav");
+                var click = document.getElementById("click")
+                var na = document.getElementById("na")
+                sideNav.style.left = "-250px";
+                na.onmouseover = function () {
+                    sideNav.style.left = "0px"
+                }
+                na.onmouseout = function () {
+                    sideNav.style.left = "-250px"
+                }
+                sideNav.onmouseover = function () {
+                    sideNav.style.left = "0px"
+                }
+                sideNav.onmouseout = function () {
+                    sideNav.style.left = "-250px"
+                }
+                var i1 = 0
+                var j1 = 0
+                menuBtn.onclick = function () {
+                    j1 = 1
+                    if (!i1) {
+                        sideNav.style.left = "0px"
+                        i1 = 1
+                    }
+                    else {
+                        sideNav.style.left = "-250px"
+                        i1 = 0
+                    }
+                }
+                onclick = function () {
+                    if (i1 && !j1) {
+                        sideNav.style.left = "-250px"
+                        i1 = 0
+                    }
+                    j1 = 0
+                }
+            </script>
+    <!--Slideshow-->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/img1.jpg" style="width:100%">
+            <div class="text">Event Name</div>
+        </div>
+    
+        <div class="mySlides fade">
+            <img src="images/img2.jpg" style="width:100%">
+            <div class="text">Event Name</div>
+        </div>
+    
+        <div class="mySlides fade">
+            <img src="images/img1.jpg" style="width:100%">
+            <div class="text">Event Name</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="images/img2.jpg" style="width:100%">
+            <div class="text">Event Name</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <script>
+        var slideIndex = 0;
+            showSlides();
+        function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 3000);
+            }
+    </script>
+    <!--events body-->
+    <div class="hev">
+        <h1>--Events--</h1>
+        <br>
+        <div class="evrow">
+            <div class="ecol">
+                <div class="ehcontainer2" id="eh1">
+                    <h2>Present Events</h2>
+                </div>
+                <br>
+            <div class="evcontainer1" id="ev1">
+                <h3>Event Name</h3>
+                <br>
+                <img src="images/event-poster.jfif" alt="event poster" style="width: 100%;">
+                <br>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus harum quos id perspiciatis corporis. Modi harum odio quasi fugiat culpa cumque autem quas rem. Libero sunt quibusdam cupiditate sint consequuntur.</p>
+                <div class="center">
+                    <div id="sb1">
+                    <label for="show1" class="show-btn1">Register</label>
+                    </div>
+                    <input type="checkbox" name="show1" id="show1">
+                    <div class="container2" id="blur"></div>
+                    <div class="container2" id="col">
+                        <label for="show1" class="close-btn1"><i class="fa fa-times"></i></label>
+                        <h1>Register</h1>
+                        <h2 style="color: black;">for Event name</h2>
+                        <form>
+                            <div class="data">
+                                <input type="text" required placeholder="Roll Number">
+                            </div>
+                            <div class="data">
+                                <input type="password" required placeholder="New Password">
+                            </div>
+                            <div class="data">
+                                <input type="password" required placeholder="Conform Password">
+                            </div>
+                            <div class="btn">
+                                <div class="inner"></div>
+                                <button type="submit">
+                                    <h3>Register</h3>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+            </div>
+            </div>
+            <br>
+            <div class="ecol">
+                <div class="ehcontainer2" id="eh2">
+                    <h2>Past Events</h2>
+                </div>
+                <br>
+            <div class="evcontainer1" id="ev2">
+                <div class="ce1">
+                <h3>Event Name</h3>
+                <br>
+                <img src="images/event-poster.jpg" alt="event-poster" style="width: 100%;">
+                <br>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus harum quos id perspiciatis corporis. Modi harum odio quasi fugiat culpa cumque autem quas rem. Libero sunt quibusdam cupiditate sint consequuntur.</p>
+                </div>
+                <span id="more">
+                    <br>
+                <div class="ce1">
+                <h3>Event Name</h3>
+                <br>
+                <img src="images/event-poster.jpg" alt="event-poster" style="width: 100%;">
+                <br>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus harum quos id perspiciatis corporis. Modi harum odio quasi fugiat culpa cumque autem quas rem. Libero sunt quibusdam cupiditate sint consequuntur.</p>
+                </div>
+                <br>
+                <div class="ce1">
+                <h3>Event Name</h3>
+                <br>
+                <img src="images/event-poster.jpg" alt="event-poster" style="width: 100%;">
+                <br>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus harum quos id perspiciatis corporis. Modi harum odio quasi fugiat culpa cumque autem quas rem. Libero sunt quibusdam cupiditate sint consequuntur.</p>
+                </div>
+                </span>
+                <div class="member-btn">
+                    <button class="common-btn" id="read" onclick="read()">Explore</button>
+                    <script type="text/javascript">
+                        var i = 0;
+                        function read() {
+                            if (!i) {
+                                document.getElementById("more").style.display = "inline";
+                                document.getElementById("read").innerHTML = "Close";
+                                i = 1;
+                            }
+                            else {
+                                document.getElementById("more").style.display = "none";
+                                document.getElementById("read").innerHTML = "Explore";
+                                i = 0;
+                            }
+                        }
+                    </script>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+        <!--Social Media-->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+            <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png"></a>
+            <a href="https://twitter.com/?lang=en"><img src="images/twitter.png"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
+            <a href="https://in.linkedin.com/"><img src="images/linkedin.png"></a>
+        </div>
+        <!--Footer-->
+    <section id="footer">
+        <br>
+        <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
+        <br>
+                <div class="footer-links">
+                    <div class="link-title">
+                        <h3>Overview</h3>
+                        <small> <a href="about.html">About us</a></small><br>
+                        <small>
+                        <a href="activities.html">Activities</a>
+                        <br>
+                        <a href="index.html">Home</a>
+                        <br>
+                        <a href="members.html">Members</a>
+                        </small>
+                    </div>
+                    <div class="link-title">
+                        <h3>Follow us</h3>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa"></i></a>
+                        <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa"></i></a>
+                        <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa"></i></a>
+                    </div>
+                    <div class="link-title">
+                        <h3>Contact us</h3>
+                        <small><i class="fa fa-google" id="fa"></i>&nbsp ideatoinnovation01@gmail.com</small>
+                        <br>
+                        <small><i class="fa fa-phone" id="fa"></i>&nbsp+91-6304341895</small>
+                    </div>
+                    <div class="link-title" id="im1">
+                        <h3><a href="index.html"><img src="images/logo.png" alt="logo" style="width: 50%;"></a></h3>
+                    </div>
+                </div>
+        <div class="fend">
+            <small id="sm">made with <i class="fa fa-heart"></i> <i></i><i class="fa fa-html5"></i> <i></i>& <i></i><i class="fa fa-css3"></i> in <a href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
+            <small id="sm1"><i class="fa fa-copyright"></i> copyright 2021 ideatoinnovation</small>
+        </div>
+    </section>
+</body>
+</html>

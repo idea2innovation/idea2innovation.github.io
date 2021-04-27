@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Idea2Innovation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="click">
+    <section id="about">
+        <div class="about-left-col">
+            <img src="images/about.jpg">
+        </div>
+        <div class="about-right-col">
+            <div class="about-text">
+                <h1>About Us</h1>
+                <span class="square"></span>
+                <p>Unlike ever before, computer science engineers are addressing the most acute global and social issues impacting our future. Through cutting edge research, innovations, and multi-disciplinary collaborations, addressing challenges has become the most significant part of the real world. Idea to Innovation promises to play an integral role in shaping your ideas for these future developments. The motto <b> Think – Innovate – Achieve</b> is what that keeps the torch of the club, Idea to Innovation burning. 
+                    <br>I2I is a lively, inclusive community of students and faculty, conducting various events and activities to develop critical thinking and problem- solving skills, as well as hands-on learning. Innovation is central to our mission. Our aim for innovation focus is grounded in the strengths of our supportive team-mates and faculty who are sure to guide and assist in the fields of Competitive programming, Web-development (front-end, back-end and server-side), Mobile-based applications, Photoshop and much more..</p><br>
+                <div class="line">
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+                <h2>Eagerly waiting for all those students with interactive, inquisitive, and innovative minds to be a part of the I2I club
+                and get “your Ideas turned into Innovations”.</h2>
+            </div>
+            <div id="abend">
+                <b>--Team I2I</b>
+            </div>
+        </div>
+    <!--Navigation-->
+    <nav class="nav1" id="na">
+        <ul>
+            <li class="active"><i class="fa fa-home" id="fa"></i></li>
+            <li><i class="fa fa-hourglass-half" id="fa"></i></li>
+            <li><i class="fa fa-calendar" id="fa"></i></li>
+            <li><i class="fa fa-address-card" id="fa"></i></li>
+            <li><i class="fa fa-users" id="fa"></i></li>
+        </ul>
+    </nav>
+    <nav id="sideNav">
+    <ul>
+        <li ><a href="index.html" >&nbsp &nbsp &nbsp &nbsp<i class="fa fa-home" id="fa"></i> Home</a></li>
+        <li><a href="activities.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-hourglass-half" id="fa"></i>Activities</a></li>
+        <li ><a href="events.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-calendar" id="fa"></i>Events</a></li>
+        <li class="active"><a href="about.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-address-card" id="fa"></i> About Us</a></li>
+        <li><a href="members.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-users" id="fa"></i> Members</a></li>
+    </ul>
+    </nav>
+    <img src="images/men.png" id="menuBtn">
+    </section>
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        var click = document.getElementById("click")
+        var na = document.getElementById("na")
+        sideNav.style.left = "-250px";
+        na.onmouseover = function () {
+            sideNav.style.left = "0px"
+        }
+        na.onmouseout = function () {
+            sideNav.style.left = "-250px"
+        }
+        sideNav.onmouseover = function () {
+            sideNav.style.left = "0px"
+        }
+        sideNav.onmouseout = function () {
+            sideNav.style.left = "-250px"
+        }
+        var i1 = 0
+            var j1 = 0
+            menuBtn.onclick = function () {
+                j1 = 1
+                if (!i1) {
+                    sideNav.style.left = "0px"
+                    i1 = 1
+                }
+                else {
+                    sideNav.style.left = "-250px"
+                    i1 = 0
+                }
+            }
+            onclick = function () {
+                if (i1 && !j1) {
+                    sideNav.style.left = "-250px"
+                    i1 = 0
+                }
+                j1 = 0
+            }
+    </script>
+    <!--Social Media-->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+        <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png"></a>
+        <a href="https://twitter.com/?lang=en"><img src="images/twitter.png"></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
+        <a href="https://in.linkedin.com/"><img src="images/linkedin.png"></a>
+    </div>
+    <!--Footer-->
+    <section id="footer">
+        <br>
+        <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
+        <br>
+        <div class="footer-links">
+            <div class="link-title">
+                <h3>Overview</h3>
+                <small> <a href="index.html">Home</a></small><br>
+                <small>
+                    <a href="activities.html">Activities</a>
+                    <br>
+                    <a href="events.html">Events</a>
+                    <br>
+                    <a href="members.html">Members</a>
+                </small>
+            </div>
+            <div class="link-title">
+                <h3>Follow us</h3>
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa"></i></a>
+                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa"></i></a>
+                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa"></i></a>
+            </div>
+            <div class="link-title">
+                <h3>Contact us</h3>
+                <small><i class="fa fa-google" id="fa"></i>&nbsp ideatoinnovation01@gmail.com</small>
+                <br>
+                <small><i class="fa fa-phone" id="fa"></i>&nbsp+91-6304341895</small>
+            </div>
+            <div class="link-title" id="im1">
+                <h3><a href="index.html"><img src="images/logo.png" alt="logo" style="width: 50%;"></a></h3>
+            </div>
+        </div>
+        <div class="fend">
+            <small id="sm">made with <i class="fa fa-heart"></i> <i></i><i class="fa fa-html5"></i> <i></i>& <i></i><i
+                    class="fa fa-css3"></i> in <a
+                    href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i
+                        class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
+            <small id="sm1"><i class="fa fa-copyright"></i> copyright 2021 ideatoinnovation</small>
+        </div>
+    </section>
+</body>

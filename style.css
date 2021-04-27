@@ -275,6 +275,7 @@ nav ul li a:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 5%;
   border-radius: 2mm;
+  background: rgba(0, 0, 0, 0.3);
 }
 .acon p {
   color: white;
@@ -303,10 +304,10 @@ nav ul li a:hover {
 }
 .container2 {
   position: fixed;
-  top: 20%;
+  top: 15%;
   left: 33%;
   width: 30%;
-  height: 55%;
+  height: 60%;
   display: none;
   background: white;
   padding: 30px;
@@ -382,6 +383,12 @@ form .login_link label:hover {
 #sb1 {
   margin-top: 29%;
   margin-bottom: 6%;
+  text-align: center;
+}
+.error {
+  background: rgba(255, 192, 203, 0.5);
+  padding: 2%;
+  color: red;
   text-align: center;
 }
 .show-btn,
@@ -675,12 +682,17 @@ i {
     background-size: cover;
   }
   .header-text {
-    max-width: 85%;
+    max-width: 90%;
   }
   .header-text p {
     color: black;
+    background: rgba(241, 241, 241, 0.7);
+    border-radius: 1mm;
+    padding: 2%;
     font-size: 12px;
     line-height: 3mm;
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
   .container {
     margin-right: 50px;

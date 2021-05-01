@@ -149,7 +149,7 @@ nav ul li a:hover {
   margin: 0;
   padding: 0;
   height: 100vh;
-  width: 43px;
+  width: 42px;
   list-style: none;
   line-height: 55px;
   background-color: darkslateblue;
@@ -158,7 +158,7 @@ nav ul li a:hover {
   margin-left: 5px;
   color: white;
   float: bottom;
-  width: 43px;
+  width: 42px;
 }
 .nav1 ul li i {
   position: relative;
@@ -235,6 +235,24 @@ nav ul li a:hover {
 .member-col {
   flex-basis: 25%;
   text-align: center;
+}
+#fa1 {
+  text-decoration: none;
+  color: #777;
+  font-size: 20px;
+}
+#fa1:hover {
+  color: #ee6055;
+}
+.middle {
+  transition: 0.5s ease;
+  text-align: center;
+  display: none;
+  padding-top: 3%;
+  padding-bottom: 2%;
+}
+.member-col:hover > .middle {
+  display: block;
 }
 .member-col img {
   width: 100px;
@@ -618,7 +636,7 @@ i {
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 1.2s;
   animation-name: fade;
   animation-duration: 1.5s;
 }

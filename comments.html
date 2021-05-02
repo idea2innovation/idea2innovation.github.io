@@ -26,7 +26,11 @@
         }
     </script>
 </head>
-
+<style>
+    ::placeholder{
+        color: white;
+    }
+</style>
 <body>
     <h1 style="font-family: Arial, Helvetica, sans-serif; margin-left: 5%; padding: 1%; text-align: center; ">--Feedback--
     </h1>
@@ -100,15 +104,17 @@
         </script>
     <div class="comments">
     <form id="myForm">
-        <label>Name</label>
+        <h2 style="padding-bottom: 10%; color: deepskyblue;">Write to Us...<hr></h2>
+        
+        <label style="color: gold">Name</label>
         <br>
-        <input name="Name" required class="comin" placeholder="Name...">
+        <input name="Name" required class="comin" placeholder="Name... " style="background: rgba(255, 217, 0, 0.486); color: white;">
         <br>
-        <label>Email</label>
+        <label style="color: red;">Email</label>
         <br>
-        <input name="email" required class="comin" placeholder="email...">
+        <input name="email" required class="comin" placeholder="email..." style="background: rgba(255, 0, 0, 0.486);color: white;">
         <br>
-        <label>Comment Here...</label>
+        <label style="color:rgb(12, 221, 12);">Comment Here...</label>
         <br>
         <textarea name="Comment Here..." required class="comin" id="com-box" cols="30" rows="10" placeholder="Comments..."></textarea>
         <br>

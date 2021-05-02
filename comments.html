@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Idea2Innovation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function SubForm() {
+            $.ajax({
+                url: 'https://api.apispreadsheets.com/data/11735/',
+                type: 'post',
+                data: $("#myForm").serializeArray(),
+                success: function () {
+                    alert("Form Data Submitted :)")
+                },
+                error: function () {
+                    alert("There was an error :(")
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif; margin-left: 5%; padding: 1%; text-align: center; ">--Feedback--
+    </h1>
+        <!--Navigation-->
+        <nav class="nav1" id="na">
+            <ul>
+                <li ><i class="fa fa-home" id="fa"></i></li>
+                <li><i class="fa fa-hourglass-half" id="fa"></i></li>
+                <li><i class="fa fa-calendar" id="fa"></i></li>
+                <li><i class="fa fa-address-card" id="fa"></i></li>
+                <li><i class="fa fa-users" id="fa"></i></li>
+                <li><i class="fa fa-university" id="fa"></i></li>
+                <li class="active"><i class="fa fa-comments" id="fa"></i></li>
+            </ul>
+        </nav>
+        <nav id="sideNav">
+            <ul>
+                <li><a href="index.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-home" id="fa"></i> Home</a></li>
+                <li><a href="activities.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-hourglass-half" id="fa"></i>Activities</a>
+                </li>
+                <li><a href="events.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-calendar" id="fa"></i>Events</a></li>
+                <li><a href="about.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-address-card" id="fa"></i> About Us</a></li>
+                <li><a href="members.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-users" id="fa"></i> Members</a>
+                </li>
+                <li><a href="https://www.iare.ac.in/">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-university" id="fa"></i>About
+                        College</a>
+                </li>
+                <li class="active"><a href="comments.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
+                </li>
+            </ul>
+        </nav>
+        <img src="images/men.png" id="menuBtn">
+        <script>
+            var menuBtn = document.getElementById("menuBtn");
+            var sideNav = document.getElementById("sideNav");
+            var click = document.getElementById("click")
+            var na = document.getElementById("na")
+            sideNav.style.left = "-250px";
+            na.onmouseover = function () {
+                sideNav.style.left = "0px"
+            }
+            na.onmouseout = function () {
+                sideNav.style.left = "-250px"
+            }
+            sideNav.onmouseover = function () {
+                sideNav.style.left = "0px"
+            }
+            sideNav.onmouseout = function () {
+                sideNav.style.left = "-250px"
+            }
+            var i1 = 0
+            var j1 = 0
+            menuBtn.onclick = function () {
+                j1 = 1
+                if (!i1) {
+                    sideNav.style.left = "0px"
+                    i1 = 1
+                }
+                else {
+                    sideNav.style.left = "-250px"
+                    i1 = 0
+                }
+            }
+            onclick = function () {
+                if (i1 && !j1) {
+                    sideNav.style.left = "-250px"
+                    i1 = 0
+                }
+                j1 = 0
+            }
+        </script>
+    <div class="comments">
+    <form id="myForm">
+        <label>Name</label>
+        <br>
+        <input name="Name" required class="comin" placeholder="Name...">
+        <br>
+        <label>Email</label>
+        <br>
+        <input name="email" required class="comin" placeholder="email...">
+        <br>
+        <label>Comment Here...</label>
+        <br>
+        <textarea name="Comment Here..." required class="comin" id="com-box" cols="30" rows="10" placeholder="Comments..."></textarea>
+        <br>
+    </form>
+    <button onclick="SubForm()" class="sub-btn">Submit</button>
+    </div>
+        <!--Social media-->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+            <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png"></a>
+            <a href="https://twitter.com/?lang=en"><img src="images/twitter.png"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
+            <a href="https://in.linkedin.com/"><img src="images/linkedin.png"></a>
+        </div>
+        <!--Footer-->
+        <section id="footer">
+            <br>
+            <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
+            <br>
+            <div class="footer-links">
+                <div class="link-title">
+                    <h3>Overview</h3>
+                    <small> <a href="about.html">About us</a></small><br>
+                    <small>
+                        <a href="activities.html">Activities</a>
+                        <br>
+                        <a href="events.html">Events</a>
+                        <br>
+                        <a href="index.html">Home</a>
+                        <br>
+                        <a href="members.html">Members</a>
+                        <br>
+                        <a href="https://www.iare.ac.in/">About IARE</a>
+                    </small>
+                </div>
+                <div class="link-title">
+                    <h3>Follow us</h3>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa"></i></a>
+                    <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa"></i></a>
+                    <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa"></i></a>
+                </div>
+                <div class="link-title">
+                    <h3>Contact us</h3>
+                    <small><i class="fa fa-google" id="fa"></i>&nbsp ideatoinnovation01@gmail.com</small>
+                    <br>
+                    <small><i class="fa fa-phone" id="fa"></i>&nbsp+91-6304341895</small>
+                </div>
+                <div class="link-title" id="im1">
+                    <h3><a href="index.html"><img src="images/logo.png" alt="logo" style="width: 50%;"></a></h3>
+                </div>
+            </div>
+            <div class="fend">
+                <small id="sm">made with <i class="fa fa-heart"></i> <i></i><i class="fa fa-html5"></i> <i></i>& <i></i><i
+                        class="fa fa-css3"></i> in <a
+                        href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i
+                            class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
+                <small id="sm1"><i class="fa fa-copyright"></i> copyright 2021 ideatoinnovation</small>
+            </div>
+        </section>
+</body>
+
+</html>

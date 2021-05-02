@@ -149,7 +149,7 @@ nav ul li a:hover {
   margin: 0;
   padding: 0;
   height: 100vh;
-  width: 42px;
+  width: 40px;
   list-style: none;
   line-height: 55px;
   background-color: darkslateblue;
@@ -158,7 +158,7 @@ nav ul li a:hover {
   margin-left: 5px;
   color: white;
   float: bottom;
-  width: 42px;
+  width: 40px;
 }
 .nav1 ul li i {
   position: relative;
@@ -692,6 +692,39 @@ i {
 .evcontainer1 p {
   color: cornsilk;
 }
+.comments {
+  margin-left: 33%;
+  margin-top: 5%;
+  padding: 5%;
+  width: 30%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.comin {
+  border: darkslateblue 1mm solid;
+  height: 43px;
+  width: 100%;
+  font-size: 100%;
+}
+.sub-btn {
+  padding: 10px 10px;
+  background: transparent;
+  outline: none;
+  border: 2px solid darkslateblue;
+  border-radius: 2mm;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 70%;
+}
+#myForm {
+  font-size: 20px;
+  line-height: 10mm;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+#com-box {
+  width: 100%;
+  height: 100%;
+}
 @media all and (max-width: 1000px) {
   #header {
     background: url(images/abc.jpg);
@@ -880,5 +913,38 @@ i {
   }
   #logo123 {
     margin-right: 0;
+  }
+  .comments {
+    margin-left: 25%;
+    margin-top: 5%;
+    padding: 5%;
+    width: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .comin {
+    border: darkslateblue 0.25mm solid;
+    height: 15px;
+    width: 100%;
+    font-size: 100%;
+  }
+  .sub-btn {
+    padding: 5px 5px;
+    background: transparent;
+    outline: none;
+    border: 1px solid darkslateblue;
+    border-radius: 2mm;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 10px;
+    margin-left: 60%;
+  }
+  #myForm {
+    font-size: 12px;
+    line-height: 5mm;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  #com-box {
+    width: 100%;
+    height: 100%;
   }
 }

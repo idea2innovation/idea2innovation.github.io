@@ -698,12 +698,15 @@ i {
   padding: 5%;
   width: 30%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-left: #ee6055 4mm solid;
+  background: url(images/comment\ background.png);
 }
 .comin {
   border: darkslateblue 1mm solid;
   height: 43px;
   width: 100%;
   font-size: 100%;
+  background: rgb(104, 128, 104);
 }
 .sub-btn {
   padding: 10px 10px;
@@ -715,6 +718,12 @@ i {
   cursor: pointer;
   font-size: 18px;
   margin-left: 70%;
+  color: white;
+  background: darkmagenta;
+}
+.sub-btn:hover {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.726);
+  background: rgb(219, 6, 219);
 }
 #myForm {
   font-size: 20px;
@@ -724,6 +733,7 @@ i {
 #com-box {
   width: 100%;
   height: 100%;
+  color: white;
 }
 @media all and (max-width: 1000px) {
   #header {
@@ -915,7 +925,7 @@ i {
     margin-right: 0;
   }
   .comments {
-    margin-left: 25%;
+    margin-left: 18%;
     margin-top: 5%;
     padding: 5%;
     width: 50%;

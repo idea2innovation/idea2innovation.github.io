@@ -10,21 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script>
-        function SubForm() {
-            $.ajax({
-                url: 'https://api.apispreadsheets.com/data/11735/',
-                type: 'post',
-                data: $("#myForm").serializeArray(),
-                success: function () {
-                    alert("Form Data Submitted :)")
-                },
-                error: function () {
-                    alert("There was an error :(")
-                }
-            });
-        }
-    </script>
+
 </head>
 <style>
     ::placeholder{
@@ -127,6 +113,39 @@
     <button onclick="SubForm()" class="sub-btn">Submit</button>
     </div>
     </div>
+        <script>
+            function SubForm() {
+                a1 = document.getElementsByClassName('comin')
+                i=a1[1].value
+                j=i.indexOf('@')
+                k=i.indexOf('.')
+                if (!a1[0].value) {
+                    alert("Enter your name")
+
+                }
+                else if (!a1[1].value) {
+                    alert("Enter your email-id")
+                }
+                else if (j == -1 || k == -1) {
+                    alert("Enter a proper email-id")
+                }
+                else if (!a1[2].value) {
+                    alert("write ur comment")
+                }
+                else if (a1[2].value && a1[1].value && a1[0].value){
+                $.ajax({
+                    url: 'https://api.apispreadsheets.com/data/11735/',
+                    type: 'post',
+                    data: $("#myForm").serializeArray(),
+                    success: function () {
+                        alert("Form Data Submitted :)")
+                    },
+                    error: function () {
+                        alert("There was an error :(")
+                    }
+                });}
+            }
+        </script>
         <!--Social media-->
         <div class="social-icons">
             <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>

@@ -110,17 +110,31 @@
         <textarea name="Comment Here..." required class="comin" id="com-box" cols="30" rows="10" placeholder="Comments..."></textarea>
         <br>
         <input type="text" name="datetime-local" class="comin" style="display: none;">
+        <input type="text" name="OS" class="comin" style="display: none;">
     </form>
     <button onclick="SubForm()" class="sub-btn">Submit</button>
     </div>
     </div>
         <script>
             function SubForm() {
+                var Name = "Unknown OS";
+                if (navigator.userAgent.indexOf("Win") != -1) Name =
+                    "Windows OS";
+                if (navigator.userAgent.indexOf("Mac") != -1) Name =
+                    "Macintosh";
+                if (navigator.userAgent.indexOf("Linux") != -1) Name =
+                    "Linux OS";
+                if (navigator.userAgent.indexOf("Android") != -1) Name =
+                    "Android OS";
+                if (navigator.userAgent.indexOf("like Mac") != -1) Name =
+                    "iOS";
+                console.log(Name);
                 a1 = document.getElementsByClassName('comin')
                 i=a1[1].value
                 j=i.indexOf('@')
                 k=i.indexOf('.')
                 a1[3].value=new Date();
+                a1[4].value=Name;
                 if (!a1[0].value) {
                     alert("Enter your name")
 

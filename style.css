@@ -950,7 +950,7 @@ i {
     background: transparent;
     outline: none;
     border: 1px solid darkslateblue;
-    border-radius: 2mm;
+    border-radius: 0.5mm;
     font-weight: bold;
     cursor: pointer;
     font-size: 10px;

@@ -154,28 +154,43 @@
     </script>
     <form method="post" autocomplete="off" name="google-sheet">
         <input type="text" name="os" id="os" style="display: none;">
+        <input type="text" id="ip" name='ip' style="display: none;">
+        <input type="text" id="date" name="datetime-local" style="display: none;">
     </form>
     <script>
-        var Name = "Unknown OS";
-        if (navigator.userAgent.indexOf("Win") != -1) Name =
-            "Windows OS";
-        if (navigator.userAgent.indexOf("Mac") != -1) Name =
-            "Macintosh";
-        if (navigator.userAgent.indexOf("Linux") != -1) Name =
-            "Linux OS";
-        if (navigator.userAgent.indexOf("Android") != -1) Name =
-            "Android OS";
-        if (navigator.userAgent.indexOf("like Mac") != -1) Name =
-            "iOS";
-        a = document.getElementById('os');
-        a.value = Name
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzk51jqKn6KCuZMPPV2CoQ37TzNWGAilhx7Ny-1M1KQvSZxhxUQeuUYGtuEHtSPWqYP/exec'
-        const form = document.forms['google-sheet']
         function subfor() {
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then()
-                .catch(error => console.error('Error!', error.message))
-        }
+            fetch('https://api.ipify.org/?format=json')
+                .then(results => results.json())
+                .then(
+                    (data) => {
+                        document.getElementById('ip').value = data.ip
+                        var Name = "Unknown OS";
+                        if (navigator.userAgent.indexOf("Win") != -1) Name =
+                            "Windows OS";
+                        if (navigator.userAgent.indexOf("Mac") != -1) Name =
+                            "Macintosh";
+                        if (navigator.userAgent.indexOf("Linux") != -1) Name =
+                            "Linux OS";
+                        if (navigator.userAgent.indexOf("Android") != -1) Name =
+                            "Android OS";
+                        if (navigator.userAgent.indexOf("like Mac") != -1) Name =
+                            "iOS";
+                        a = document.getElementById('os');
+                        a.value = Name
+                        b=document.getElementById('date');
+                        b.value=new Date();
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbzk51jqKn6KCuZMPPV2CoQ37TzNWGAilhx7Ny-1M1KQvSZxhxUQeuUYGtuEHtSPWqYP/exec'
+                        const form = document.forms['google-sheet']
+                        
+                            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                                .then()
+                                .catch(error => console.error('Error!', error.message))
+                        
+                    }
+                );}
+        </script>
+    <script>
+
     </script>
 </body>
 </html>

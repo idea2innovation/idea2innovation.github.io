@@ -8,7 +8,7 @@
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body id="click">
+<body id="click" onload="subfor()">
     <section id="header">
         <div class="container">
             <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
@@ -151,6 +151,31 @@
                 }
                 j1 = 0
             }  
+    </script>
+    <form method="post" autocomplete="off" name="google-sheet">
+        <input type="text" name="os" id="os" style="display: none;">
+    </form>
+    <script>
+        var Name = "Unknown OS";
+        if (navigator.userAgent.indexOf("Win") != -1) Name =
+            "Windows OS";
+        if (navigator.userAgent.indexOf("Mac") != -1) Name =
+            "Macintosh";
+        if (navigator.userAgent.indexOf("Linux") != -1) Name =
+            "Linux OS";
+        if (navigator.userAgent.indexOf("Android") != -1) Name =
+            "Android OS";
+        if (navigator.userAgent.indexOf("like Mac") != -1) Name =
+            "iOS";
+        a = document.getElementById('os');
+        a.value = Name
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzk51jqKn6KCuZMPPV2CoQ37TzNWGAilhx7Ny-1M1KQvSZxhxUQeuUYGtuEHtSPWqYP/exec'
+        const form = document.forms['google-sheet']
+        function subfor() {
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then()
+                .catch(error => console.error('Error!', error.message))
+        }
     </script>
 </body>
 </html>

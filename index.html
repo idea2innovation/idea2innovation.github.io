@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="click" onload="subfor()">
+        <div id="loading"></div>
     <section id="header">
         <div class="container">
             <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
@@ -159,7 +160,9 @@
         <input type="text" id="date" name="datetime-local" style="display: none;">
     </form>
     <script>
+        var loader = document.getElementById("loading");
         function subfor() {
+            loader.style.display="none";
             fetch('https://api.ipify.org/?format=json')
                 .then(results => results.json())
                 .then(
@@ -227,6 +230,7 @@
                         if (operaAgent){
                             Name1='Opera';
                         }
+                        
                         c=document.getElementById('brow');
                         c.value=Name1
                         a = document.getElementById('os');

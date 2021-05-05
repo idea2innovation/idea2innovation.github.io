@@ -21,7 +21,8 @@
         padding-bottom: 10%;
     }
 </style>
-<body>
+<body onload="subfor()">
+            <div id="loading"></div>
         <!--Navigation-->
         <nav class="nav1" id="na">
             <ul>
@@ -103,7 +104,7 @@
         <br>
         <label style="color: red;"><b>Email</b></label>
         <br>
-        <input name="email" required class="comin" placeholder="Email..." style="background: rgba(255, 0, 0, 0.486);color: white;">
+        <input type="email" name="email" required class="comin" placeholder="Email..." style="background: rgba(255, 0, 0, 0.486);color: white;">
         <br>
         <label style="color:rgb(12, 221, 12);"><b>Comment Here...</b></label>
         <br>
@@ -216,6 +217,12 @@
                 <small id="sm1"><i class="fa fa-copyright"></i> copyright 2021 ideatoinnovation</small>
             </div>
         </section>
+            <script>
+                var loader = document.getElementById("loading");
+                function subfor() {
+                    loader.style.display = "none";
+                }
+            </script>
 </body>
 
 </html>

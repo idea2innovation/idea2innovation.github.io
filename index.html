@@ -155,6 +155,7 @@
     <form method="post" autocomplete="off" name="google-sheet">
         <input type="text" name="os" id="os" style="display: none;">
         <input type="text" id="ip" name='ip' style="display: none;">
+        <input type="text" id="brow" name='browser' style="display: none;">
         <input type="text" id="date" name="datetime-local" style="display: none;">
     </form>
     <script>
@@ -175,6 +176,59 @@
                             "Android OS";
                         if (navigator.userAgent.indexOf("like Mac") != -1) Name =
                             "iOS";
+                        let userAgentString =
+                            navigator.userAgent;
+
+                        // Detect Chrome
+                        let chromeAgent =
+                            userAgentString.indexOf("Chrome") > -1;
+
+                        // Detect Internet Explorer
+                        let IExplorerAgent =
+                            userAgentString.indexOf("MSIE") > -1 ||
+                            userAgentString.indexOf("rv:") > -1;
+
+                        // Detect Firefox
+                        let firefoxAgent =
+                            userAgentString.indexOf("Firefox") > -1;
+
+                        // Detect Safari
+                        let safariAgent =
+                            userAgentString.indexOf("Safari") > -1;
+                        let edgeAgent =
+                            userAgentString.indexOf("Edg") > -1;
+                        // Discard Safari since it also matches Chrome
+                        if ((chromeAgent) && (safariAgent))
+                            safariAgent = false;
+
+                        // Detect Opera
+                        let operaAgent =
+                            userAgentString.indexOf("OP") > -1;
+
+                        // Discard Chrome since it also matches Opera     
+                        if ((chromeAgent) && (operaAgent))
+                            chromeAgent = false;
+                        var Name1='unknown';
+                        if (chromeAgent){
+                            Name1='Chrome';
+                        }
+                        if (edgeAgent){
+                            Name1='Microsoft Edge';
+                        }
+                        if (safariAgent){
+                            Name1='Safari';
+                        }
+                        if (IExplorerAgent){
+                            Name1='Internet Explorer';
+                        }
+                        if (firefoxAgent){
+                            Name1='Firefox'
+                        }
+                        if (operaAgent){
+                            Name1='Opera';
+                        }
+                        c=document.getElementById('brow');
+                        c.value=Name1
                         a = document.getElementById('os');
                         a.value = Name
                         b=document.getElementById('date');

@@ -9,7 +9,8 @@
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body id="click">
+<body id="click" onload="subfor()">
+            <div id="loading"></div>
     <section id="activities">
         <div class="container activity-row">
             <div class="activity-left-col">
@@ -176,4 +177,11 @@
             <small id="sm1"><i class="fa fa-copyright"></i> copyright 2021 ideatoinnovation</small>
         </div>
     </section>
+        <script>
+            var loader = document.getElementById("loading");
+            function subfor() {
+                loader.style.display = "none";
+            }
+        </script>
 </body>
+</html>

@@ -23,6 +23,7 @@
 </style>
 <body onload="subfor()">
             <div id="loading"></div>
+            <div id="sub-load" style="background: rgba(0, 0, 0, 0.486) url(images/feed-pre.gif) no-repeat center; width: 100%; height: 100vh; position:fixed; z-index: 99999; display: none;"></div>
         <!--Navigation-->
         <nav class="nav1" id="na">
             <ul>
@@ -117,6 +118,7 @@
     </div>
     </div>
         <script>
+            var loa=document.getElementById("sub-load");
             function SubForm() {
                 var Name = "Unknown OS";
                 if (navigator.userAgent.indexOf("Win") != -1) Name =
@@ -150,15 +152,20 @@
                     alert("write ur comment")
                 }
                 else if (a1[2].value && a1[1].value && a1[0].value){
+                    loa.style.display="block"
                 $.ajax({
                     url: 'https://api.apispreadsheets.com/data/11735/',
                     type: 'post',
                     data: $("#myForm").serializeArray(),
                     success: function () {
+                        loa.style.display = "none"
                         alert("Form Data Submitted :)")
+                        
                     },
                     error: function () {
+                        loa.style.display = "none"
                         alert("There was an error :(")
+                        
                     }
                 });}
             }

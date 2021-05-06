@@ -873,8 +873,14 @@ i {
   .about-text h2 {
     font-size: 18px;
   }
+  .member-row {
+    width: 100%;
+    margin: auto;
+    margin-bottom: -6%;
+    line-height: 10mm;
+  }
   .member-col {
-    flex-basis: 100%;
+    flex-basis: 60%;
     margin-bottom: 20px;
   }
   .activity-left-col {

@@ -220,7 +220,8 @@
                         }
                         if (safariAgent){
                             Name1 = 'Safari';
-                            if(safariAgent && chromeAgent){
+                            var chro=!!window.chrome;
+                            if(chro){
                                 Name1='Chrome'
                             }
                         }

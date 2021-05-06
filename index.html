@@ -219,7 +219,10 @@
                             Name1='Microsoft Edge';
                         }
                         if (safariAgent){
-                            Name1='Safari';
+                            Name1 = 'Safari';
+                            if(safariAgent && chromeAgent){
+                                Name1='Chrome'
+                            }
                         }
                         if (IExplorerAgent){
                             Name1='Internet Explorer';

@@ -23,7 +23,33 @@
 </style>
 <body onload="subfor()">
             <div id="loading"></div>
-            <div id="sub-load" style="background: rgba(0, 0, 0, 0.274) url(images/feed-pre.gif) no-repeat center; width: 100%; height: 100vh; position:fixed; z-index: 99999; display: none;"></div>
+            <div id="sub-load">
+                <div id="sub-load0-1">
+                    <div id="sub-load0-2">
+                        <h2>Submitting</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="sub-load1">
+                <div id="sub-load1-1">
+                    <div id="sub-load1-3">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <div id="sub-load1-2">
+                        <h2>Feedback Submitted :)</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="sub-load2">
+                <div id="sub-load2-1">
+                    <div id="sub-load2-3">
+                        <i class="fa fa-exclamation-triangle"></i>
+                    </div>
+                    <div id="sub-load2-2">
+                        <h2>There was an error :(</h2>
+                    </div>
+                </div>
+            </div>
         <!--Navigation-->
         <nav class="nav1" id="na">
             <ul>
@@ -119,6 +145,8 @@
     </div>
         <script>
             var loa=document.getElementById("sub-load");
+            var loa1=document.getElementById("sub-load1");
+            var loa2=document.getElementById("sub-load2");
             function SubForm() {
                 var Name = "Unknown OS";
                 if (navigator.userAgent.indexOf("Win") != -1) Name =
@@ -159,11 +187,13 @@
                     data: $("#myForm").serializeArray(),
                     success: function () {
                         loa.style.display = "none"
-                        setTimeout(function () { alert("Form Data Submitted :)"); }, 1000);
+                        loa1.style.display='block'
+                        setTimeout(function () { loa1.style.display="none"; }, 1000);
                     },
                     error: function () {
                         loa.style.display = "none"
-                        setTimeout(function () { alert("There was an error :("); }, 1000);
+                        loa2.style.display="block"
+                        setTimeout(function () { loa2.style.display="none"; }, 1000);
                     }
                 });}
             }

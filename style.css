@@ -819,7 +819,7 @@ i {
   height: 100vh;
   z-index: 99999;
   position: fixed;
-  display: block;
+  display: none;
 }
 #sub-load2-1 {
   width: 25%;

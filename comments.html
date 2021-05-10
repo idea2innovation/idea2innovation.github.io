@@ -123,20 +123,19 @@
             </h1>
     <div class="comments">
     <form id="myForm">
-        <h2 style="padding-bottom: 10%; color: deepskyblue;">Write to Us...<hr></h2>
-        
-        <label style="color: gold"><b>Name</b></label>
+        <h2 style="padding-bottom: 10%; color: white; font-family:Verdana, Geneva, Tahoma, sans-serif; " id="com-text">Write To Us</h2>
+        <div class="cin">
+        <input name="Name" required class="comin" placeholder="Name... " >
+        </div>
         <br>
-        <input name="Name" required class="comin" placeholder="Name... " style="background: rgba(255, 217, 0, 0.486); color: white;">
+        <div class="cin">
+        <input type="email" name="email" required class="comin" placeholder="Email..." >
+        </div>
         <br>
-        <label style="color: red;"><b>Email</b></label>
+        <div class="cin">
+        <textarea name="Comment Here..." required class="comin" id="com-box" cols="20" rows="5" placeholder="Comments..."></textarea>
         <br>
-        <input type="email" name="email" required class="comin" placeholder="Email..." style="background: rgba(255, 0, 0, 0.486);color: white;">
-        <br>
-        <label style="color:rgb(12, 221, 12);"><b>Comment Here...</b></label>
-        <br>
-        <textarea name="Comment Here..." required class="comin" id="com-box" cols="30" rows="10" placeholder="Comments..."></textarea>
-        <br>
+        </div>
         <input type="text" name="datetime-local" class="comin" style="display: none;">
         <input type="text" name="OS" class="comin" style="display: none;">
     </form>
@@ -159,7 +158,6 @@
                     "Android OS";
                 if (navigator.userAgent.indexOf("like Mac") != -1) Name =
                     "iOS";
-                console.log(Name);
                 a1 = document.getElementsByClassName('comin')
                 i=a1[1].value
                 j=i.indexOf('@')

@@ -708,32 +708,35 @@ i {
   padding: 5%;
   width: 30%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  border-left: #ee6055 4mm solid;
-  background: url(images/comment\ background.png);
+  background: rgba(44, 44, 43, 0.849);
+  border-radius: 1%;
 }
 .comin {
-  border: darkslateblue 1mm solid;
+  border: none;
+  outline: none;
   height: 43px;
   width: 100%;
   font-size: 100%;
-  background: rgb(104, 128, 104);
+  background: transparent;
+  border-bottom: gold 0.75vh solid;
+  color: white;
+}
+.cin {
+  padding: 0.5%;
 }
 .sub-btn {
   padding: 10px 10px;
-  background: transparent;
-  outline: none;
-  border: 2px solid darkslateblue;
-  border-radius: 2mm;
+  border-radius: 0.75mm;
+  border: none;
   font-weight: bold;
   cursor: pointer;
   font-size: 18px;
-  margin-left: 70%;
   color: white;
-  background: darkmagenta;
+  background: rgb(221, 192, 31);
 }
 .sub-btn:hover {
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.726);
-  background: rgb(219, 6, 219);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.726);
+  background: gold;
 }
 #myForm {
   font-size: 20px;
@@ -1046,22 +1049,20 @@ i {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   .comin {
-    border: darkslateblue 0.25mm solid;
     height: 15px;
     width: 100%;
     font-size: 100%;
+    border-bottom: gold 0.75vh solid;
   }
   .sub-btn {
     padding: 5px 5px;
-    background: transparent;
     outline: none;
-    border: 1px solid darkslateblue;
     border-radius: 0.5mm;
-    font-weight: bold;
-    cursor: pointer;
     font-size: 10px;
-    margin-left: 60%;
-    background: darkmagenta;
+    background: rgb(221, 192, 31);
+  }
+  #com-text {
+    font-size: 100%;
   }
   #myForm {
     font-size: 12px;

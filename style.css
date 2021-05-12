@@ -254,14 +254,22 @@ nav ul li a:hover {
   color: #ee6055;
 }
 .middle {
-  transition: 0.5s ease;
   text-align: center;
   display: none;
   padding-top: 3%;
   padding-bottom: 2%;
 }
 .member-col:hover > .middle {
+  animation: fade-in 0.5s;
   display: block;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .member-col img {
   width: 100px;
@@ -548,53 +556,60 @@ input[type="checkbox"] {
   flex-wrap: wrap;
 }
 .link-title {
-  width: 25%;
   margin-left: 5%;
-  flex-basis: 21%;
+  flex-basis: 21vw;
+  font-size: 1.35vw;
+  padding-bottom: 0.77vw;
 }
 #im1 {
-  flex-basis: 15%;
+  flex-basis: 16%;
 }
 .link-title h3 {
   color: darkslateblue;
   margin-bottom: 5%;
+  font-size: 1.5vw;
 }
 
 .link-title a {
   text-decoration: none;
-  color: #777;
+  color: black;
+  display: inline;
+}
+#mfa {
+  font-size: 2vw;
 }
 .link-title a:hover {
   color: deepskyblue;
 }
 .link-title small {
-  color: #999;
-  font-size: 16px;
+  font-size: 100%;
 }
-.footer-logo img {
-  width: 25%;
+.link-title1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mem-social {
+  margin-right: 1%;
+  flex-basis: 18%;
+  background: rgb(173, 164, 164);
+  text-align: center;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  border-radius: 50%;
 }
 .fend {
-  text-align: left;
-  font-size: 16px;
+  text-align: center;
+  font-size: 1.25vw;
   color: white;
-  background-color: black;
-  padding: 0 0 1% 0;
-  width: 100%;
-}
-#sm {
-  margin-left: 4%;
+  display: flex;
+  flex-direction: column;
 }
 .fend a {
   text-decoration: none;
-  color: white;
-  padding: 0 0 0 0;
+  color: gray;
 }
-#sm1 {
-  margin-top: 1%;
-  position: absolute;
-  right: 1%;
-}
+
 .fend a:hover {
   color: deepskyblue;
 }
@@ -966,7 +981,7 @@ i {
     line-height: 10mm;
   }
   .member-col {
-    flex-basis: 60%;
+    flex-basis: 45%;
     margin-bottom: 20px;
   }
   .activity-left-col {
@@ -982,14 +997,6 @@ i {
   }
   .contact-right-col img {
     margin-top: 35px;
-  }
-  .footer-left-col,
-  .footer-right-col {
-    flex-basis: 100%;
-  }
-  .link-title {
-    flex-basis: 50%;
-    margin-bottom: 30px;
   }
   h1 {
     font-size: 18px;
@@ -1009,11 +1016,22 @@ i {
   .header-text {
     margin-top: 5%;
   }
-  .link-title small {
-    font-size: 10px;
+  .link-title {
+    flex-basis: 24vw;
+    font-size: 1.5vw;
+    padding-bottom: 0.75vw;
   }
-  .footer-info {
-    font-size: 12px;
+  .link-title h3 {
+    font-size: 1.75vw;
+  }
+  #im1 {
+    flex-basis: 16vw;
+  }
+  #mem-fol {
+    flex-basis: 20vw;
+  }
+  #mem-fol1 {
+    flex-basis: 19vw;
   }
   .container2 {
     position: fixed;

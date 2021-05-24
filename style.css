@@ -828,7 +828,7 @@ i {
   position: absolute;
   left: 30%;
   top: 35%;
-  overflow: auto;
+  overflow-y: auto;
 }
 .subs-img {
   width: 35%;

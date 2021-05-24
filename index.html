@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,91 +9,250 @@
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<style>
+    ::placeholder {
+        color: white;
+    }
+
+    #b1 {
+        background: url(images/Feedback.jpg);
+        padding-bottom: 10%;
+    }
+</style>
 <body id="click" onload="subfor()">
-        <div id="loading"></div>
+    <div id="loading"></div>
     <section id="header">
         <div class="container">
             <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
-            <a href="index.html"><img src="images/iarelogo.jpg" class="logo"></a>
+            <a href="https://www.iare.ac.in/"><img src="images/iarelogo.jpg" class="logo"></a>
             <div class="header-text">
                 <h1 style="color:gold  ; text-shadow: 1px 1px 1px  grey;">Welcome to I2I website!</h1><br><br>
-                <p><b>Idea to Innovation</b> is a club started by the students of Institute of Aeronautical Engineering in the year 2021 to evoke students’ creativity levels by encouraging them to take-up projects with varying levels of complexities. This Club aims at taking up various <b>innovative ideas</b> and <b>methodologies</b> of the students’ and help them execute it by providing technical assistance backed by eminent faculty support.<span id="more"> The club mainly focuses on <b>critical and competitive problem-solving skills</b> by inculcating group discussions and effective learning techniques. At <b>I2I</b> we believe practical and interactive way of learning will boost and enhance the creative and logical thinking levels of the students who aim at achieving high in the field of their passion and interests.</span></p>
+                <p><b>Idea to Innovation</b> is a club started by the students of Institute of Aeronautical Engineering
+                    in the year 2021 to evoke students’ creativity levels by encouraging them to take-up projects with
+                    varying levels of complexities. This Club aims at taking up various <b>innovative ideas</b> and
+                    <b>methodologies</b> of the students’ and help them execute it by providing technical assistance
+                    backed by eminent faculty support.<span id="more"> The club mainly focuses on <b>critical and
+                            competitive problem-solving skills</b> by inculcating group discussions and effective
+                        learning techniques. At <b>I2I</b> we believe practical and interactive way of learning will
+                        boost and enhance the creative and logical thinking levels of the students who aim at achieving
+                        high in the field of their passion and interests.</span></p>
                 <button class="common-btn1" id="read" onclick="read()">Read More</button>
                 <script type="text/javascript">
-                var i=0;
-                    function read(){
-                        if(!i){
-                            document.getElementById("more").style.display="inline";
-                            document.getElementById("read").innerHTML="Read less";
+                    var i = 0;
+                    function read() {
+                        if (!i) {
+                            document.getElementById("more").style.display = "inline";
+                            document.getElementById("read").innerHTML = "Read less";
                             i = 1;
                         }
-                        else{
-                           document.getElementById("more").style.display = "none";
+                        else {
+                            document.getElementById("more").style.display = "none";
                             document.getElementById("read").innerHTML = "Read More";
-                            i = 0; 
+                            i = 0;
                         }
                     }
                 </script>
             </div>
         </div>
-    </section> 
-    <!--Footer-->
-<section id="footer">
-    <br>
-    <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
-    <br>
-    <div class="footer-links">
-        <div class="link-title" id="mem-fol1">
-            <h3>Overview</h3>
-            <small> <a href="about.html"><i class="fa fa-address-card"></i>&nbsp About us</a></small><br>
-            <small>
-                <a href="activities.html"><i class="fa fa-hourglass-half"></i>&nbsp Activities</a>
+    </section>
+    <div id="b1">
+        <h1 id="com-head">--Feedback--
+        </h1>
+        <div class="comments">
+            <form id="myForm">
+                <h2 style="padding-bottom: 10%; color: white; font-family:Verdana, Geneva, Tahoma, sans-serif; "
+                    id="com-text">Write To Us</h2>
+                <div class="cin">
+                    <input name="Name" required class="comin" placeholder="Name... ">
+                </div>
                 <br>
-                <a href="events.html"><i class="fa fa-calendar"></i>&nbsp Events</a>
+                <div class="cin">
+                    <input type="email" name="email" required class="comin" placeholder="Email...">
+                </div>
                 <br>
-                <a href="members.html"><i class="fa fa-users"></i>&nbsp Home</a>
-                <br>
-                <a href="https://www.iare.ac.in/"><i class="fa fa-university"></i>&nbsp About IARE</a>
-                <br>
-                <a href="comments.html"><i class="fa fa-comments"></i>&nbsp Feedback</a>
-            </small>
+                <div class="cin">
+                    <textarea name="Comment Here..." required class="comin" id="com-box" cols="20" rows="5"
+                        placeholder="Comments..."></textarea>
+                    <br>
+                </div>
+                <input type="text" name="datetime-local" class="comin" style="display: none;">
+                <input type="text" name="OS" class="comin" style="display: none;">
+            </form>
+            <button onclick="SubForm()" class="sub-btn">Submit</button>
         </div>
-        <div class="link-title" id="mem-fol">
-            <h3>Follow us</h3>
-            <div class="link-title1">
-                <div class="mem-social">
-                    <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="mfa"></i></a>
+    </div>
+    <script>
+        var loa = document.getElementById("sub-load");
+        var loa1 = document.getElementById("sub-load1");
+        var loa2 = document.getElementById("sub-load2");
+        function SubForm() {
+            var Name = "Unknown OS";
+            if (navigator.userAgent.indexOf("Win") != -1) Name =
+                "Windows OS";
+            if (navigator.userAgent.indexOf("Mac") != -1) Name =
+                "Macintosh";
+            if (navigator.userAgent.indexOf("Linux") != -1) Name =
+                "Linux OS";
+            if (navigator.userAgent.indexOf("Android") != -1) Name =
+                "Android OS";
+            if (navigator.userAgent.indexOf("like Mac") != -1) Name =
+                "iOS";
+            a1 = document.getElementsByClassName('comin')
+            i = a1[1].value
+            j = i.indexOf('@')
+            k = i.indexOf('.')
+            a1[3].value = new Date();
+            a1[4].value = Name;
+            if (!a1[0].value) {
+                alert("Enter your name")
+
+            }
+            else if (!a1[1].value) {
+                alert("Enter your email-id")
+            }
+            else if (j == -1 || k == -1) {
+                alert("Enter a proper email-id")
+            }
+            else if (!a1[2].value) {
+                alert("write ur comment")
+            }
+            else if (a1[2].value && a1[1].value && a1[0].value) {
+                loa.style.display = "block"
+                $.ajax({
+                    url: 'https://api.apispreadsheets.com/data/11735/',
+                    type: 'post',
+                    data: $("#myForm").serializeArray(),
+                    success: function () {
+                        loa.style.display = "none"
+                        loa1.style.display = 'block'
+                        setTimeout(function () { loa1.style.display = "none"; }, 2000);
+                    },
+                    error: function () {
+                        loa.style.display = "none"
+                        loa2.style.display = "block"
+                        setTimeout(function () { loa2.style.display = "none"; }, 2000);
+                    }
+                });
+            }
+        }
+    </script>
+    <!--Footer-->
+    <section id="footer">
+        <br>
+        <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
+        <br>
+        <div class="footer-links">
+            <div class="link-title" id="mem-fol1">
+                <h3>Overview</h3>
+                <small> <a href="about.html"><i class="fa fa-address-card"></i>&nbsp About us</a></small><br>
+                <small>
+                    <a href="activities.html"><i class="fa fa-hourglass-half"></i>&nbsp Activities</a>
+                    <br>
+                    <a href="events.html"><i class="fa fa-calendar"></i>&nbsp Events</a>
+                    <br>
+                    <a href="members.html"><i class="fa fa-users"></i>&nbsp Home</a>
+                    <br>
+                    <a href="https://www.iare.ac.in/"><i class="fa fa-university"></i>&nbsp About IARE</a>
+                    <br>
+                    <a href="#b1"><i class="fa fa-comments"></i>&nbsp Feedback</a>
+                </small>
+            </div>
+            <div class="link-title" id="mem-fol">
+                <h3>Follow us</h3>
+                <div class="link-title1">
+                    <div class="mem-social">
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="mfa"></i></a>
+                    </div>
+                    <div class="mem-social">
+                        <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="mfa"></i></a>
+                    </div>
+                    <div class="mem-social">
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="mfa"></i></a>
+                    </div>
+                    <div class="mem-social">
+                        <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="mfa"></i></a>
+                    </div>
                 </div>
-                <div class="mem-social">
-                    <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="mfa"></i></a>
-                </div>
-                <div class="mem-social">
-                    <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="mfa"></i></a>
-                </div>
-                <div class="mem-social">
-                    <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="mfa"></i></a>
+                        <br>
+                        <h3>Subscription</h3>
+                        <div class="link-title1">
+                            <div id="subs-sub">
+                                <small>Subscribe</small>
+                            </div>
+                            <div id="subs-un">
+                                <small>Unsubscribe</small>
+                            </div>
+                        </div>
+                
+            </div>
+            <div class="link-title">
+                <h3>Contact us</h3>
+                <small id="mem-con"><i class="fa fa-google"></i>&nbsp ideatoinnovation01@gmail.com</small>
+                <br>
+                <small id="mem-con"><i class="fa fa-phone"></i>&nbsp+91-6304341895</small>
+                <br>
+                <br>
+                <h3>Legal</h3>
+                <div class="link-title1">
+                    <small id="open-pri">Privacy Policy</small>
                 </div>
             </div>
+            <div class="link-title" id="im1">
+                <h3><a href="index.html"><img src="images/logo.png" alt="logo" style="width: 50%;"></a></h3>
+            </div>
         </div>
-        <div class="link-title">
-            <h3>Contact us</h3>
-            <small id="mem-con"><i class="fa fa-google"></i>&nbsp ideatoinnovation01@gmail.com</small>
-            <br>
-            <small id="mem-con"><i class="fa fa-phone"></i>&nbsp+91-6304341895</small>
+        <div class="fend">
+            <small id="sm" style="color: black;">made with <i class="fa fa-heart" title="Love"></i> <i></i><i
+                    class="fa fa-html5" title="HTML"></i>
+                <i></i>& <i></i><i class="fa fa-css3" title="CSS"></i> in <a
+                    href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i
+                        class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
+            <small id="sm1" style="background: black;"><i class="fa fa-copyright"></i> copyright 2021
+                ideatoinnovation</small>
         </div>
-        <div class="link-title" id="im1">
-            <h3><a href="index.html"><img src="images/logo.png" alt="logo" style="width: 50%;"></a></h3>
+    </section>
+    <!--Privacy Policy-->
+    <div id="pri-po">
+        <h1 style="text-align: center; background: rgb(12, 79, 110); width: 100%; padding-bottom: 1vh;">Privacy Policy<i class="fa fa-times" style="position: absolute; left: 95%; " id="close-pri"></i></h1>
+        
+        <div style="padding: 5%;">
+        <h2>Information Collected from Idea2Innovation Visitors</h2>
+        <br>
+        <h3>Device Information from Idea2Innovation Visitors</h3>
+        <br>
+        <p style="color:white;">We may receive and collect certain Information furnished by the visitor's browser or otherwise by their access device
+        (“Device Information”), such as:</p>
+        <br>
+        <p style="color: white;">Browser Information
+        <br>
+        <br>
+        Operating System Information
+        <br>
+        <br>
+        IP address (stored in anonymized form)
+        <br>
+        <br>
+        Page Accessed
+        <br>
+        <br>
+        Time of visit (by date, month, year, local)
+        <br>
+        <br>
+        Other such Information as may be delivered or shared by the applicable browser or access software or device.
+        </p>
         </div>
     </div>
-    <div class="fend">
-        <small id="sm" style="color: black;">made with <i class="fa fa-heart"></i> <i></i><i class="fa fa-html5"></i>
-            <i></i>& <i></i><i class="fa fa-css3"></i> in <a
-                href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i
-                    class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
-        <small id="sm1" style="background: black;"><i class="fa fa-copyright"></i> copyright 2021
-            ideatoinnovation</small>
-    </div>
-</section>
+    <script>
+        var ap=document.getElementById("pri-po");
+        var o=document.getElementById("open-pri");
+        var c=document.getElementById("close-pri");
+        o.onclick=function(){
+            ap.style.display="block";
+        }
+        c.onclick=function(){
+            ap.style.display="none";
+        }
+    </script>
     <!--Social Media-->
     <div class="social-icons">
         <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
@@ -115,33 +275,35 @@
     </nav>
     <nav id="sideNav">
         <ul>
-            <li class="active"><a href="index.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-home" id="fa"></i> Home</a></li>
+            <li class="active"><a href="index.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-home" id="fa"></i> Home</a>
+            </li>
             <li><a href="activities.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-hourglass-half" id="fa"></i>
                     Activities</a></li>
             <li><a href="events.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-calendar" id="fa"></i> Events</a></li>
             <li><a href="about.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-address-card" id="fa"></i> About Us</a></li>
             <li><a href="members.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-users" id="fa"></i> Members</a></li>
-            <li><a href="https://www.iare.ac.in/">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-university" id="fa"></i>About IARE</a></li>
-            <li><a href="comments.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
+            <li><a href="https://www.iare.ac.in/">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-university" id="fa"></i>About
+                    IARE</a></li>
+            <li><a href="#b1">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
             </li>
         </ul>
     </nav>
-    
+
     <img src="images/men.png" id="menuBtn">
     <script>
-        var menuBtn=document.getElementById("menuBtn");
-        var sideNav=document.getElementById("sideNav");
-        var click=document.getElementById("click")
-        var na=document.getElementById("na")
-        sideNav.style.left="-250px";
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        var click = document.getElementById("click")
+        var na = document.getElementById("na")
+        sideNav.style.left = "-250px";
         na.onmouseover = function () {
-                sideNav.style.left ="0px"
-            }
+            sideNav.style.left = "0px"
+        }
         na.onmouseout = function () {
             sideNav.style.left = "-250px"
         }
         sideNav.onmouseover = function () {
-             sideNav.style.left = "0px"
+            sideNav.style.left = "0px"
         }
         sideNav.onmouseout = function () {
             sideNav.style.left = "-250px"
@@ -149,23 +311,23 @@
         var i1 = 0
         var j1 = 0
         menuBtn.onclick = function () {
-                j1 = 1
-                if (!i1) {
-                    sideNav.style.left = "0px"
-                    i1 = 1
-                }
-                else {
-                    sideNav.style.left = "-250px"
-                    i1 = 0
-                }
+            j1 = 1
+            if (!i1) {
+                sideNav.style.left = "0px"
+                i1 = 1
             }
-            onclick = function () {
-                if (i1 && !j1) {
-                    sideNav.style.left = "-250px"
-                    i1 = 0
-                }
-                j1 = 0
-            }  
+            else {
+                sideNav.style.left = "-250px"
+                i1 = 0
+            }
+        }
+        onclick = function () {
+            if (i1 && !j1) {
+                sideNav.style.left = "-250px"
+                i1 = 0
+            }
+            j1 = 0
+        }
     </script>
     <form method="post" autocomplete="off" name="google-sheet">
         <input type="text" name="os" id="os" style="display: none;">
@@ -176,13 +338,12 @@
     <script>
         var loader = document.getElementById("loading");
         function subfor() {
-            loader.style.display="none";
+            loader.style.display = "none";
             fetch('https://api.ipify.org/?format=json')
                 .then(results => results.json())
                 .then(
                     (data) => {
                         document.getElementById('ip').value = data.ip
-                        console.log(data)
                         var Name = "Unknown OS";
                         if (navigator.userAgent.indexOf("Win") != -1) Name =
                             "Windows OS";
@@ -226,47 +387,131 @@
                         // Discard Chrome since it also matches Opera     
                         if ((chromeAgent) && (operaAgent))
                             chromeAgent = false;
-                        var Name1='unknown';
-                        if (chromeAgent){
-                            Name1='Chrome';
+                        var Name1 = 'unknown';
+                        if (chromeAgent) {
+                            Name1 = 'Chrome';
                         }
-                        if (edgeAgent){
-                            Name1='Microsoft Edge';
+                        if (edgeAgent) {
+                            Name1 = 'Microsoft Edge';
                         }
-                        if (safariAgent){
+                        if (safariAgent) {
                             Name1 = 'Safari';
-                            var chro=!!window.chrome;
-                            if(chro){
-                                Name1='Chrome'
+                            var chro = !!window.chrome;
+                            if (chro) {
+                                Name1 = 'Chrome'
                             }
                         }
-                        if (IExplorerAgent){
-                            Name1='Internet Explorer';
+                        if (IExplorerAgent) {
+                            Name1 = 'Internet Explorer';
                         }
-                        if (firefoxAgent){
-                            Name1='Firefox'
+                        if (firefoxAgent) {
+                            Name1 = 'Firefox'
                         }
-                        if (operaAgent){
-                            Name1='Opera';
+                        if (operaAgent) {
+                            Name1 = 'Opera';
                         }
-                        
-                        c=document.getElementById('brow');
-                        c.value=Name1
+
+                        c = document.getElementById('brow');
+                        c.value = Name1
                         a = document.getElementById('os');
                         a.value = Name
-                        b=document.getElementById('date');
-                        b.value=new Date();
+                        b = document.getElementById('date');
+                        b.value = new Date();
                         const scriptURL = 'https://script.google.com/macros/s/AKfycbzk51jqKn6KCuZMPPV2CoQ37TzNWGAilhx7Ny-1M1KQvSZxhxUQeuUYGtuEHtSPWqYP/exec'
                         const form = document.forms['google-sheet']
-                        
-                            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                                .then()
-                                .catch(error => console.error('Error!', error.message))
-                    }
-                );}
-        </script>
-    <script>
 
+                        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                            .then()
+                            .catch(error => console.error('Error!', error.message))
+                    }
+                );
+        }
+        
+    </script>
+    <!--Subscribe-->
+    <div class="subscribe" id="subs1">
+        <div class="subs-box">
+            <img src="images/logo.png" alt="logo">
+            <div class="subs-form">
+                <h3>Subscribe <i class="fa fa-times" id="subs1-close"></i></h3>
+                <br>
+                <br>
+                <form action="">
+                    <input type="email" name="Email" id="subs-email" placeholder="Email" required>
+                    <button type="submit" class="subs-btn" title="subscribe"><i
+                            class="fa fa-arrow-circle-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe" id="subs2">
+        <div class="subs-box">
+            <img src="images/logo.png" alt="logo">
+            <div class="subs-form">
+                <h3>Unsubscribe<i class="fa fa-times" id="subs2-close"></i></h3>
+                <br>
+                <form action="">
+                    <input type="email" name="Email" id="subs2-email" placeholder="Email" required>
+                    <br>
+                    <br>
+                    <input type="text" name="Tell" id="Tellus" placeholder="Tell us why">
+                    <br>
+                    <br>
+                    <button type="submit" class="subs2-btn">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var subs1 = document.getElementById("subs1");
+        var subssub = document.getElementById("subs-sub");
+        var s1close = document.getElementById("subs1-close");
+        var subsun = document.getElementById("subs-un");
+        var subs2 = document.getElementById("subs2");
+        var s2close = document.getElementById("subs2-close");
+        subssub.onclick = function () {
+            subs1.style.display = "block";
+        }
+        s1close.onclick = function () {
+            subs1.style.display = "none"
+        }
+        subsun.onclick = function () {
+            subs2.style.display = "block"
+        }
+        s2close.onclick = function () {
+            subs2.style.display = "none"
+        }
+        </script>
+    <div id="subs-top">
+        <div id="subs-sub1">
+            <small>Subscribe</small>
+        </div>
+        <div id="subs-un1">
+            <small>Unsubscribe</small>
+        </div>
+    </div>
+    <script>
+         var subs1 = document.getElementById("subs1");
+            var subssub = document.getElementById("subs-sub");
+            var s1close = document.getElementById("subs1-close");
+            var subsun = document.getElementById("subs-un");
+            var subs2 = document.getElementById("subs2");
+            var s2close = document.getElementById("subs2-close");
+            var subssub1 = document.getElementById("subs-sub1");
+            var subsun1 = document.getElementById("subs-un1");
+             subssub1.onclick = function () {
+                    subs1.style.display = "block";
+                }
+             s1close.onclick = function () {
+                    subs1.style.display = "none"
+                }
+            subsun1.onclick = function () {
+                    subs2.style.display = "block"
+                }
+                s2close.onclick = function () {
+                    subs2.style.display = "none"
+                }
     </script>
 </body>
+
 </html>

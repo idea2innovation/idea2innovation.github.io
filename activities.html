@@ -12,7 +12,7 @@
 <body id="click" onload="subfor()" >
             <div id="loading"></div>
     <div style="background: rgb(250, 222, 198);">
-    <div style="margin-left: 100px;">
+    <div style="margin-left: 7vw;">
         <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
     </div>
     <section id="activities">
@@ -265,88 +265,78 @@
             }
         </script>
         <!--Subscribe-->
-    <div class="subscribe" id="subs1">
-        <div class="subs-box">
-            <img src="images/logo.png" alt="logo">
-            <div class="subs-form">
-                <h3>Subscribe <i class="fa fa-times" id="subs1-close"></i></h3>
-                <br>
-                <br>
-                <form action="">
-                    <input type="email" name="Email" id="subs-email" placeholder="Email" required>
-                    <button type="submit" class="subs-btn" title="subscribe"><i
-                            class="fa fa-arrow-circle-right"></i></button>
-                </form>
+<div id="subscribe">
+    <div class="subs-box">
+        <img src="images/logo.png" alt="logo" class="subs-img">
+        <div class="subs-form-box">
+            <div class="subs-head">
+                SUBSCRIBE
+                <i class="fa fa-times" id="subs-close1"></i>
             </div>
+            <form action="" class="subs-form">
+                <div class="subs-inputs">
+                    <input type="email" name="email" id="subs-email1" required placeholder="Email">
+                </div>
+                <button type="submit" id="subs-btn1">Subscribe</button>
+            </form>
         </div>
     </div>
-    <div class="subscribe" id="subs2">
-        <div class="subs-box">
-            <img src="images/logo.png" alt="logo">
-            <div class="subs-form">
-                <h3>Unsubscribe<i class="fa fa-times" id="subs2-close"></i></h3>
-                <br>
-                <form action="">
-                    <input type="email" name="Email" id="subs2-email" placeholder="Email" required>
-                    <br>
-                    <br>
-                    <input type="text" name="Tell" id="Tellus" placeholder="Tell us why">
-                    <br>
-                    <br>
-                    <button type="submit" class="subs2-btn">submit</button>
-                </form>
+</div>
+<div id="unsubscribe">
+    <div class="subs-box">
+        <img src="images/logo.png" alt="logo" class="subs-img">
+        <div class="subs-form-box">
+            <div class="subs-head">
+                UNSUBSCRIBE
+                <i class="fa fa-times" id="subs-close2"></i>
             </div>
+            <form action="" class="subs-form1">
+                <div class="subs-inputs">
+                    <input type="email" name="email" id="subs-email2" required placeholder="Email">
+                </div>
+                <div class="subs-inputs">
+                    <input type="text" name="Tell us" id="subs-tell" placeholder="Tell us why">
+                </div>
+                <button type="submit" id="subs-btn2">unsubscribe</button>
+            </form>
         </div>
     </div>
-    <script>
-        var subs1 = document.getElementById("subs1");
-        var subssub = document.getElementById("subs-sub");
-        var s1close = document.getElementById("subs1-close");
-        var subsun = document.getElementById("subs-un");
-        var subs2 = document.getElementById("subs2");
-        var s2close = document.getElementById("subs2-close");
-        subssub.onclick = function () {
-            subs1.style.display = "block";
-        }
-        s1close.onclick = function () {
-            subs1.style.display = "none"
-        }
-        subsun.onclick = function () {
-            subs2.style.display = "block"
-        }
-        s2close.onclick = function () {
-            subs2.style.display = "none"
-        }
-        </script>
-    <div id="subs-top">
-        <div id="subs-sub1">
-            <small>Subscribe</small>
-        </div>
-        <div id="subs-un1">
-            <small>Unsubscribe</small>
-        </div>
+</div>
+<div id="subs-top">
+    <div id="subs-sub1">
+        <small>Subscribe</small>
     </div>
-    <script>
-        var subs1 = document.getElementById("subs1");
-        var subssub = document.getElementById("subs-sub");
-        var s1close = document.getElementById("subs1-close");
-        var subsun = document.getElementById("subs-un");
-        var subs2 = document.getElementById("subs2");
-        var s2close = document.getElementById("subs2-close");
-        var subssub1 = document.getElementById("subs-sub1");
-        var subsun1 = document.getElementById("subs-un1");
-        subssub1.onclick = function () {
-            subs1.style.display = "block";
-        }
-        s1close.onclick = function () {
-            subs1.style.display = "none"
-        }
-        subsun1.onclick = function () {
-            subs2.style.display = "block"
-        }
-        s2close.onclick = function () {
-            subs2.style.display = "none"
-        }
-    </script>
+    <div id="subs-un1">
+        <small>Unsubscribe</small>
+    </div>
+</div>
+<script>
+    var subs1 = document.getElementById("subs-sub");
+    var subs2 = document.getElementById("subs-sub1");
+    var unsub1 = document.getElementById("subs-un");
+    var unsub2 = document.getElementById("subs-un1");
+    var subscribe = document.getElementById("subscribe");
+    var unsubscribe = document.getElementById("unsubscribe");
+    var sclose1 = document.getElementById("subs-close1");
+    var sclose2 = document.getElementById("subs-close2");
+    subs1.onclick = function () {
+        subscribe.style.display = "block";
+    }
+    subs2.onclick = function () {
+        subscribe.style.display = "block";
+    }
+    sclose1.onclick = function () {
+        subscribe.style.display = "none";
+    }
+    unsub1.onclick = function () {
+        unsubscribe.style.display = "block";
+    }
+    unsub2.onclick = function () {
+        unsubscribe.style.display = "block";
+    }
+    sclose2.onclick = function () {
+        unsubscribe.style.display = "none"
+    }
+</script>
 </body>
 </html>

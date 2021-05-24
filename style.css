@@ -829,6 +829,7 @@ i {
   left: 30%;
   top: 35%;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .subs-img {
   width: 35%;

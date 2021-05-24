@@ -9,7 +9,37 @@
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+    <div style="margin-left: 100px;">
+        <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
+    </div>
 <body onload="subfor()">
+    <div id="sub-load"style="position: fixed; top: -2vh;height: 105vh;">
+        <div id="sub-load0-1">
+            <div id="sub-load0-2">
+                <h2>Submitting :|</h2>
+            </div>
+        </div>
+    </div>
+    <div id="sub-load1" style="position: fixed; top: -2vh;height: 105vh;">
+        <div id="sub-load1-1">
+            <div id="sub-load1-3">
+                <i class="fa fa-check"></i>
+            </div>
+            <div id="sub-load1-2">
+                <h2>Registered :)</h2>
+            </div>
+        </div>
+    </div>
+    <div id="sub-load2" style="position: fixed; top: -2vh;height: 105vh;">
+        <div id="sub-load2-1">
+            <div id="sub-load2-3">
+                <i class="fa fa-exclamation-triangle"></i>
+            </div>
+            <div id="sub-load2-2">
+                <h2>Registration Failed :(</h2>
+            </div>
+        </div>
+    </div>
             <!--Navigation-->
             <nav class="nav1" id="na">
                 <ul>
@@ -33,7 +63,7 @@
                     <li><a href="members.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-users" id="fa"></i> Members</a></li>
                     <li><a href="https://www.iare.ac.in/">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-university" id="fa"></i>About College</a>
                     </li>
-                    <li><a href="comments.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
+                    <li><a href="index.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
                     </li>
                 </ul>
             </nav>
@@ -137,35 +167,9 @@
                 <br>
                 <br>
                 <p>Coming up soon... <br>Coming up soon...</p>
-                <div class="center">
-                    <div id="sb1">
-                    <label for="show1" class="show-btn1">Register</label>
-                    </div>
-                    <input type="checkbox" name="show1" id="show1">
-                    <div class="container2" id="blur"></div>
-                    <div class="container2" id="col">
-                        <label for="show1" class="close-btn1"><i class="fa fa-times"></i></label>
-                        <h1>Register</h1>
-                        <h2 style="color: black;">for Event name</h2>
-                        <form>
-                            <div class="data">
-                                <input type="text" required placeholder="Roll Number">
-                            </div>
-                            <div class="data">
-                                <input type="password" required placeholder="New Password">
-                            </div>
-                            <div class="data">
-                                <input type="password" required placeholder="Conform Password">
-                            </div>
-                            <div class="btn">
-                                <div class="inner"></div>
-                                <button type="submit">
-                                    <h3>Register</h3>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    </div>
+                <div class="member-btn" id="r-open">
+                <button class="common-btn">Register</button>
+                </div>
             </div>
             </div>
             <br>
@@ -225,6 +229,83 @@
         </div>
     </div>
     </div>
+    <div id="register">
+        <div id="r-box">
+                <h3 id="r-head">REGISTER<i class="fa fa-times" id="r-close" title="close" style="position: absolute; right:0% ; cursor: pointer; padding-right: 1%; padding-left: 1%; padding-bottom: 1%; border: none; outline: none;" ></i></h3>
+            <div id="r-data">
+                <form method="post" autocomplete="off" name="google-sheet">
+                    <div class="r-in">
+                        <i class="fa fa-user"></i>
+                        <input type="text" name="name" id="r-name" class="r-input" placeholder="Name" required>
+                    </div>
+                    <div class="r-in">
+                        <i class="fa fa-cubes"></i>
+                        <input type="text" name="roll-number" id="r-ronum" class="r-input" placeholder="Roll Number" required pattern="[1-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9A-Za-z].{0,0}">
+                    </div>
+                    <div class="r-in">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" name="email" id="r-email" class="r-input" placeholder="Email" required>
+                    </div>
+                    <div class="r-in">
+                        <i class="fa fa-phone"></i>
+                        <input type="text" name="ph-no" id="r-phno" class="r-input" placeholder="Contact number" required pattern="[1-9].{6,14}">
+                    </div>
+                    <div class="r-in">
+                        <i class="fa fa-building"></i>
+                    <select name="branch" id="r-branch" class="r-input" required>
+                        <option value="" style="color: rgb(73, 73, 73);">Select Branch</option>
+                        <option value="CSE">CSE</option>
+                        <option value="IT">IT</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="Mech">Mechanical Engineering</option>
+                        <option value="Civil">Civil Engineering</option>
+                        <option value="AERO">Aeronautical Engineering</option>
+                    </select>
+                    </div>
+                    <div id="r-inc">
+                        <input type="checkbox" name="terms" id="r-terms" required>
+                        <label for="terms">I Agree to <a href="#" id="r-termlink">Terms and Conditions</a></label>
+                    </div>
+                    <div class="r-in2">
+                        <button type="submit" id="r-submit">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var rclose=document.getElementById("r-close");
+        var register=document.getElementById("register");
+        var ropen=document.getElementById("r-open");
+        var rload=document.getElementById("sub-load");
+        var rload1=document.getElementById("sub-load1");
+        var rload2=document.getElementById("sub-load2");
+        rclose.onclick = function(){
+            register.style.display="none"
+        }
+        ropen.onclick=function(){
+            register.style.display="block"
+        }
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwH_9lxbKG_Qh4pyeM3455OsJgf9fm_vdPNvKqc9N-2fhMd16iX-UXeTQWQxW6PtFJI/exec'
+            const f = document.forms['google-sheet']
+            f.addEventListener('submit', e => {
+                register.style.display = "none"
+                rload.style.display="block"
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(f) })
+                    .then(Response=>{
+                        rload.style.display = "none"
+                        rload1.style.display = "block"
+                        setTimeout(function () { rload1.style.display = "none"; }, 2000);
+                    })
+                    .catch(error => {
+                        rload.style.display = "none"
+                        rload2.style.display = "block"
+                        setTimeout(function () { rload2.style.display = "none"; }, 2000);
+                    })
+            })
+    </script>
         <!--Social Media-->
         <div class="social-icons">
             <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
@@ -251,7 +332,7 @@
                     <br>
                     <a href="https://www.iare.ac.in/"><i class="fa fa-university"></i>&nbsp About IARE</a>
                     <br>
-                    <a href="comments.html"><i class="fa fa-comments"></i>&nbsp Feedback</a>
+                    <a href="index.html"><i class="fa fa-comments"></i>&nbsp Feedback</a>
                 </small>
             </div>
             <div class="link-title" id="mem-fol">
@@ -270,31 +351,174 @@
                         <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="mfa"></i></a>
                     </div>
                 </div>
+                        <br>
+                        <h3>Subscription</h3>
+                        <div class="link-title1">
+                            <div id="subs-sub">
+                                <small>Subscribe</small>
+                            </div>
+                            <div id="subs-un">
+                                <small>Unsubscribe</small>
+                            </div>
+                        </div>
             </div>
             <div class="link-title">
                 <h3>Contact us</h3>
                 <small id="mem-con"><i class="fa fa-google"></i>&nbsp ideatoinnovation01@gmail.com</small>
                 <br>
                 <small id="mem-con"><i class="fa fa-phone"></i>&nbsp+91-6304341895</small>
+                <br>
+                <br>
+                <h3>Legal</h3>
+                <div class="link-title1">
+                    <small id="open-pri">Privacy Policy</small>
+                </div>
             </div>
             <div class="link-title" id="im1">
                 <h3><a href="index.html"><img src="images/logo.png" alt="logo" style="width: 50%;"></a></h3>
             </div>
         </div>
         <div class="fend">
-            <small id="sm" style="color: black;">made with <i class="fa fa-heart"></i> <i></i><i class="fa fa-html5"></i>
-                <i></i>& <i></i><i class="fa fa-css3"></i> in <a
+            <small id="sm" style="color: black;">made with <i class="fa fa-heart" title="Love"></i> <i></i><i class="fa fa-html5" title="HTML"></i>
+                <i></i>& <i></i><i class="fa fa-css3" title="CSS"></i> in <a
                     href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i
                         class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
             <small id="sm1" style="background: black;"><i class="fa fa-copyright"></i> copyright 2021
                 ideatoinnovation</small>
         </div>
     </section>
+    <div id="pri-po">
+        <h1 style="text-align: center; background: rgb(12, 79, 110); width: 100%; padding-bottom: 1vh;">Privacy Policy<i
+                class="fa fa-times" style="position: absolute; left: 95%; " id="close-pri"></i></h1>
+    
+        <div style="padding: 5%;">
+            <h2>Information Collected from Idea2Innovation Visitors</h2>
+            <br>
+            <h3>Device Information from Idea2Innovation Visitors</h3>
+            <br>
+            <p style="color:white;">We may receive and collect certain Information furnished by the visitor's browser or
+                otherwise by their access device
+                (“Device Information”), such as:</p>
+            <br>
+            <p style="color: white;">Browser Information
+                <br>
+                <br>
+                Operating System Information
+                <br>
+                <br>
+                IP address (stored in anonymized form)
+                <br>
+                <br>
+                Page Accessed
+                <br>
+                <br>
+                Time of visit (by date, month, year, local)
+                <br>
+                <br>
+                Other such Information as may be delivered or shared by the applicable browser or access software or device.
+            </p>
+        </div>
+    </div>
+    <script>
+        var ap = document.getElementById("pri-po");
+        var o = document.getElementById("open-pri");
+        var c = document.getElementById("close-pri");
+        o.onclick = function () {
+            ap.style.display = "block";
+        }
+        c.onclick = function () {
+            ap.style.display = "none";
+        }
+    </script>
     <script>
         var loader = document.getElementById("loading");
         function subfor() {
             loader.style.display = "none";
         }
+    </script>
+    <!--Subscribe-->
+        <div class="subscribe" id="subs1">
+            <div class="subs-box">
+                <img src="images/logo.png" alt="logo">
+                <div class="subs-form">
+                    <h3>Subscribe <i class="fa fa-times" id="subs1-close"></i></h3>
+                    <br>
+                    <br>
+                    <form action="">
+                        <input type="email" name="Email" id="subs-email" placeholder="Email" required>
+                        <button type="submit" class="subs-btn" title="subscribe"><i
+                                class="fa fa-arrow-circle-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe" id="subs2">
+            <div class="subs-box">
+                <img src="images/logo.png" alt="logo">
+                <div class="subs-form">
+                    <h3>Unsubscribe<i class="fa fa-times" id="subs2-close"></i></h3>
+                    <br>
+                    <form action="">
+                        <input type="email" name="Email" id="subs2-email" placeholder="Email" required>
+                        <br>
+                        <br>
+                        <input type="text" name="Tell" id="Tellus" placeholder="Tell us why">
+                        <br>
+                        <br>
+                        <button type="submit" class="subs2-btn">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            var subs1 = document.getElementById("subs1");
+            var subssub = document.getElementById("subs-sub");
+            var s1close = document.getElementById("subs1-close");
+            var subsun = document.getElementById("subs-un");
+            var subs2 = document.getElementById("subs2");
+            var s2close = document.getElementById("subs2-close");
+            subssub.onclick = function () {
+                subs1.style.display = "block";
+            }
+            s1close.onclick = function () {
+                subs1.style.display = "none"
+            }
+            subsun.onclick = function () {
+                subs2.style.display = "block"
+            }
+            s2close.onclick = function () {
+                subs2.style.display = "none"
+            }
+            </script>
+    <div id="subs-top">
+        <div id="subs-sub1">
+            <small>Subscribe</small>
+        </div>
+        <div id="subs-un1">
+            <small>Unsubscribe</small>
+        </div>
+    </div>
+    <script>
+         var subs1 = document.getElementById("subs1");
+            var subssub = document.getElementById("subs-sub");
+            var s1close = document.getElementById("subs1-close");
+            var subsun = document.getElementById("subs-un");
+            var subs2 = document.getElementById("subs2");
+            var s2close = document.getElementById("subs2-close");
+            var subssub1 = document.getElementById("subs-sub1");
+            var subsun1 = document.getElementById("subs-un1");
+             subssub1.onclick = function () {
+                    subs1.style.display = "block";
+                }
+             s1close.onclick = function () {
+                    subs1.style.display = "none"
+                }
+            subsun1.onclick = function () {
+                    subs2.style.display = "block"
+                }
+                s2close.onclick = function () {
+                    subs2.style.display = "none"
+                }
     </script>
 </body>
 </html>

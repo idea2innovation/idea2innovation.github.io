@@ -828,6 +828,7 @@ i {
   position: absolute;
   left: 30%;
   top: 35%;
+  overflow: auto;
 }
 .subs-img {
   width: 35%;
@@ -835,7 +836,6 @@ i {
 }
 .subs-form-box {
   width: 100%;
-  overflow: auto;
 }
 .subs-head {
   text-align: center;

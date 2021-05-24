@@ -418,15 +418,9 @@ nav ul li a:hover {
 #r-submit:hover {
   background: rgb(51, 61, 167);
 }
-#r-inc {
-  text-align: center;
-  padding-top: 5%;
-  font-size: 1vw;
-  text-decoration: none;
-}
 .r-in2 {
   text-align: center;
-  padding-top: 5%;
+  padding-top: 10%;
 }
 #r-termlink {
   text-decoration: none;
@@ -816,63 +810,147 @@ i {
   border-radius: 2mm;
 }
 /*subscribe*/
-.subscribe {
+#subscribe {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 99999;
   position: fixed;
   top: 0;
-  padding: 0.001px;
+  left: 0;
+  z-index: 99999;
   display: none;
 }
 .subs-box {
-  width: 45vw;
-  height: 30vh;
-  background: transparent;
-  margin-left: 27.5vw;
-  margin-top: 35vh;
+  width: 40%;
+  height: 30%;
+  background: rgba(49, 48, 48, 0.788);
   display: flex;
-  padding: 0.1px;
   position: absolute;
+  left: 30%;
+  top: 35%;
 }
-.subs-form {
-  flex-basis: 100%;
-  background: rgba(0, 0, 0, 0.637);
-  padding: 0.1px;
+.subs-img {
+  width: 35%;
+  flex-basis: 35%;
+}
+.subs-form-box {
+  width: 100%;
   overflow: auto;
 }
-.subs-form h3 {
-  margin-top: 2%;
+.subs-head {
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
-}
-#subs-email {
-  width: 75%;
-  height: 3vh;
-  margin-left: 5%;
-  display: inline-block;
-  outline: none;
-  border: none;
-  border-bottom: gold 0.75vh solid;
-  background: transparent;
-  color: white;
-  font-size: 2.75vh;
+  font-size: 2vw;
+  color: gold;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-#subs-email::placeholder {
-  color: white;
+.subs-form {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 65%;
 }
-.subs-btn {
-  background: transparent;
+#subs-email1 {
+  width: 80%;
   border: none;
-  font-size: 4vh;
-  color: rgba(255, 255, 255, 0.836);
+  outline: none;
+  background: transparent;
+  border-bottom: gold 0.75vh solid;
+  color: white;
+  font-size: 1.5vw;
+  margin-bottom: 10%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.subs-btn:hover {
-  box-shadow: none;
-  color: dodgerblue;
+#subs-btn1 {
+  cursor: pointer;
+  font-size: 1.25vw;
+  padding: 1%;
+  background: transparent;
+  border: white solid 0.5mm;
+  outline: none;
+  color: white;
+  transition: 0.5s;
+}
+#subs-btn1:hover {
+  background: rgb(202, 177, 33);
+}
+#subs-email1::placeholder {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#subs-close1 {
+  position: absolute;
+  left: 95%;
+  color: white;
+  cursor: pointer;
+}
+#subs-close1:hover {
+  background: red;
+}
+#unsubscribe {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  display: none;
+}
+.subs-form1 {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  width: 65%;
+}
+#subs-email2 {
+  width: 80%;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: gold 0.75vh solid;
+  color: white;
+  font-size: 1.5vw;
+  margin-bottom: 10%;
+}
+#subs-tell {
+  width: 80%;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: gold 0.75vh solid;
+  color: white;
+  font-size: 1.5vw;
+  margin-bottom: 5%;
+}
+#subs-btn2 {
+  cursor: pointer;
+  font-size: 1.25vw;
+  padding: 1%;
+  background: transparent;
+  border: white solid 0.5mm;
+  outline: none;
+  color: white;
+  transition: 0.5s;
+}
+#subs-btn2:hover {
+  background: rgb(202, 177, 33);
+}
+#subs-close2 {
+  position: absolute;
+  left: 95%;
+  color: white;
+  cursor: pointer;
+}
+#subs-close2:hover {
+  background: red;
+}
+#subs-email2::placeholder {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#subs-tell::placeholder {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 #subs-sub {
   background: rgb(100, 233, 100);
@@ -893,66 +971,6 @@ i {
 #subs-un:hover {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   color: white;
-}
-#subs1-close {
-  position: absolute;
-  left: 95%;
-  cursor: pointer;
-}
-#subs1-close:hover {
-  color: rgb(247, 51, 51);
-}
-#subs2-email {
-  width: 75%;
-  height: 3vh;
-  margin-left: 5%;
-  display: inline-block;
-  outline: none;
-  border: none;
-  border-bottom: gold 0.75vh solid;
-  background: transparent;
-  color: white;
-  font-size: 2.75vh;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-#subs2-email::placeholder {
-  color: white;
-}
-#subs2-close {
-  position: absolute;
-  left: 95%;
-  cursor: pointer;
-}
-#subs2-close:hover {
-  color: rgb(247, 51, 51);
-}
-#Tellus {
-  width: 75%;
-  height: 3vh;
-  margin-left: 5%;
-  display: inline-block;
-  outline: none;
-  border: none;
-  border-bottom: gold 0.75vh solid;
-  background: transparent;
-  color: white;
-  font-size: 2.75vh;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-#Tellus::placeholder {
-  color: white;
-}
-.subs2-btn {
-  background: rgb(0, 140, 255);
-  border: none;
-  padding: 0.25vw;
-  cursor: pointer;
-  color: white;
-  margin-left: 5%;
-}
-.subs2-btn:hover {
-  background: rgb(0, 81, 255);
-  box-shadow: 0 0 3px rgba(255, 255, 255, 0.815);
 }
 #subs-top {
   position: absolute;
@@ -1267,10 +1285,32 @@ i {
     top: 25%;
   }
   .subs-box {
-    width: 90vw;
-    margin-left: 5vw;
-    height: 20vh;
-    margin-top: 40vh;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    left: 0%;
+    top: 40%;
+  }
+  .subs-head {
+    font-size: 2.5vh;
+  }
+  #subs-email1 {
+    font-size: 2.25vh;
+    border-bottom: gold 0.45vh solid;
+  }
+  #subs-email2 {
+    font-size: 2.25vh;
+    border-bottom: gold 0.45vh solid;
+  }
+  #subs-tell {
+    font-size: 2.25vh;
+    border-bottom: gold 0.45vh solid;
+  }
+  #subs-btn2 {
+    font-size: 1.25vh;
+  }
+  #subs-btn1 {
+    font-size: 1.25vh;
   }
   #r-box {
     width: 50vw;
@@ -1289,8 +1329,5 @@ i {
   }
   #r-submit {
     font-size: 2vh;
-  }
-  #r-inc {
-    font-size: 1.25vh;
   }
 }

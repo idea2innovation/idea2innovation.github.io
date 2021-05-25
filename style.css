@@ -1032,6 +1032,9 @@ i {
 ::selection {
   background: rgb(255, 233, 106);
 }
+input {
+  -webkit-appearance: none;
+}
 @media all and (max-width: 951px) {
   #header {
     background: url(images/abc.jpg);

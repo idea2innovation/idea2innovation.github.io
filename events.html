@@ -9,10 +9,10 @@
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    <div style="margin-left: 7vw;">
-        <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
-    </div>
 <body onload="subfor()">
+        <div style="margin-left: 7vw;">
+            <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
+        </div>
     <div id="sub-load"style="position: fixed; top: -2vh;height: 105vh;">
         <div id="sub-load0-1">
             <div id="sub-load0-2">
@@ -172,7 +172,6 @@
                 </div>
             </div>
             </div>
-            <br>
             <div class="ecol">
                 <div class="ehcontainer2" id="eh2">
                     <h2>Past Events</h2>
@@ -180,49 +179,60 @@
                 <br>
             <div class="evcontainer1" id="ev2">
                 <div class="ce1">
-                <h3>Event Name</h3>
+                <h3>Event-1 Name</h3>
                 <br>
                 <img src="images/event-poster.jfif" alt="event-poster" style="width: 100%;">
                 <br>
                 <br>
                 <p>Coming up soon... <br>Coming up soon...</p>
                 </div>
-                <span id="more">
-                    <br>
+                <span id="more1">
                 <div class="ce1">
-                <h3>Event Name</h3>
+                <h3>Event-2 Name</h3>
                 <br>
                 <img src="images/event-poster.jpg" alt="event-poster" style="width: 100%;">
                 <br>
                 <br>
                 <p>Coming up soon... <br>Coming up soon...</p>
                 </div>
-                <br>
                 <div class="ce1">
-                <h3>Event Name</h3>
+                <h3>Event-3 Name</h3>
                 <br>
-                <img src="images/event-poster.jpg" alt="event-poster" style="width: 100%;">
+                <img src="images/event-poster2.jpg" alt="event-poster" style="width: 100%;">
                 <br>
                 <br>
                 <p>Coming up soon... <br>Coming up soon...</p>
                 </div>
                 </span>
                 <div class="member-btn">
-                    <button class="common-btn" id="read" onclick="read()">Explore</button>
+                    <button class="common-btn2" id="read1" title="previous" ><i class="fa fa-chevron-left"></i></button>
+                    <button class="common-btn2" id="read" title="next"><i class="fa fa-chevron-right"></i></button>
                     <script type="text/javascript">
                         var i = 0;
-                        function read() {
-                            if (!i) {
-                                document.getElementById("more").style.display = "inline";
-                                document.getElementById("read").innerHTML = "Close";
-                                i = 1;
-                            }
-                            else {
-                                document.getElementById("more").style.display = "none";
-                                document.getElementById("read").innerHTML = "Explore";
-                                i = 0;
-                            }
+                        var sl=document.getElementsByClassName("ce1");
+                        var r=document.getElementById("read");
+                        var r1=document.getElementById("read1");
+                        for(i=0;i<sl.length;i++){
+                            sl[i].style.display="none"
                         }
+                        sl[0].style.display="block"
+                        i=0
+                        r.onclick=function(){
+                            sl[i].style.display="none";
+                            if (i == sl.length - 1) {
+                                i = -1
+                            }
+                            i++
+                            sl[i].style.display = "block"
+                        }
+                        r1.onclick = function () {
+                                sl[i].style.display = "none";
+                                if (i == 0) {
+                                    i = sl.length
+                                }
+                                i--
+                                sl[i].style.display = "block"
+                            }
                     </script>
             </div>
         </div>

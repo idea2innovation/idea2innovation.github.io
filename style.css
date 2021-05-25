@@ -57,6 +57,19 @@ h1 {
 button:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+.common-btn2 {
+  background: transparent;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 35px;
+  color: rgb(66, 62, 62);
+}
+.common-btn2:hover {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  color: deepskyblue;
+}
 p {
   font-size: 15px;
   line-height: 18px;
@@ -283,8 +296,9 @@ nav ul li a:hover {
 .member-btn {
   margin: 5vh auto 0;
   display: flex;
+  width: 100%;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .mem-con-btn {
   margin-top: 10%;
@@ -1018,7 +1032,7 @@ i {
 ::selection {
   background: rgb(255, 233, 106);
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 800px) {
   #header {
     background: url(images/abc.jpg);
     background-position: center;

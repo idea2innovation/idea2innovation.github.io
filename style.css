@@ -1032,7 +1032,12 @@ i {
 ::selection {
   background: rgb(255, 233, 106);
 }
-input[type="text"] {
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
   -webkit-appearance: none;
   border-radius: 0;
 }

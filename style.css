@@ -1032,7 +1032,7 @@ i {
 ::selection {
   background: rgb(255, 233, 106);
 }
-input {
+input[type="text"] {
   -webkit-appearance: none;
   border-radius: 0;
 }

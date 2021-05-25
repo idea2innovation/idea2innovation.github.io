@@ -1032,7 +1032,7 @@ i {
 ::selection {
   background: rgb(255, 233, 106);
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 951px) {
   #header {
     background: url(images/abc.jpg);
     background-position: center;
@@ -1370,5 +1370,8 @@ i {
     padding-left: 0.75vh;
     padding-right: 0.75vh;
     border-radius: 1.5vh;
+  }
+  .ecol {
+    margin-bottom: 5%;
   }
 }

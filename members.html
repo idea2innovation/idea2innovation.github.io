@@ -24,7 +24,7 @@
     <h1 style="font-family: Arial, Helvetica, sans-serif; margin-left: 5%; padding: 1%; text-align: center;;">--Members--</h1>
     <section id="members">
         <div class="member-row">
-            <div class="member-col" style="background: rgb(195, 240, 255);">
+            <div class="member-col" style="background: rgb(195, 240, 255); ">
                 <img src="images/pic.png">
                 <div class="middle">
                     <div class="info">
@@ -356,7 +356,6 @@
                     </div>
                 </div>
                 </div>
-
                 <div class="member-btn">
                     <button class="common-btn2" id="read1" title="previous"><i class="fa fa-chevron-left"></i></button>
                     <button class="common-btn2" id="read2" title="next"><i class="fa fa-chevron-right"></i></button>
@@ -365,6 +364,152 @@
                         var sl = document.getElementsByClassName("member-row1");
                         var r = document.getElementById("read2");
                         var r1 = document.getElementById("read1");
+                        var c1=[0,0,0,0,0,0,0,0,0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                        var arr=[ "rgb(195, 240, 255)", "yellow","rgb(247, 157, 187)","palegreen","rgb(105, 238, 194)","lightgray","orange","rgb(170, 178, 212)","rgb(255, 251, 205)","greenyellow","rgb(47, 172, 245)","rgb(196, 196, 196)","rgb(255, 226, 129)","rgb(248, 169, 255)","rgb(141, 212, 132)","violet","rgb(221, 255, 159)","lightsalmon","lightseagreen","lightgoldenrodyellow","khaki","hotpink","gold","cornflowerblue"]
+                        var colo=document.getElementsByClassName("member-col");
+                        for(j=0;j<colo.length;j++){
+                            colo[j].style.background=arr[Math.floor(Math.random() * arr.length)]
+                        }
+                        colo[0].ondblclick=function(){
+                            colo[0].style.background= arr[c1[0]]
+                            c1[0]++
+                            if(c1[0]==arr.length){
+                                c1[0]=0
+                            }
+                        }
+                        colo[1].ondblclick = function () {
+                                colo[1].style.background = arr[c1[1]]
+                            c1[1]++
+                            if(c1[1]==arr.length){
+                                c1[1]=0
+                            }
+                            }
+                        colo[2].ondblclick = function () {
+                                colo[2].style.background = arr[c1[2]]
+                            c1[2]++
+                            if(c1[2]==arr.length){
+                                c1[2]=0
+                            }
+                            }
+                        colo[3].ondblclick = function () {
+                                colo[3].style.background = arr[c1[3]]
+                            c1[3]++
+                            if(c1[3]==arr.length){
+                                c1[3]=0
+                            }
+                            }
+                        colo[4].ondblclick = function () {
+                                colo[4].style.background = arr[c1[4]]
+                            c1[4]++
+                            if(c1[4]==arr.length){
+                                c1[4]=0
+                            }
+                            }
+                        colo[5].ondblclick = function () {
+                                colo[5].style.background = arr[c1[5]]
+                            c1[5]++
+                            if(c1[5]==arr.length){
+                                c1[5]=0
+                            }
+                            }
+                        colo[6].ondblclick = function () {
+                                colo[6].style.background = arr[c1[6]]
+                            c1[6]++
+                            if(c1[6]==arr.length){
+                                c1[6]=0
+                            }
+                            }
+                        colo[7].ondblclick = function () {
+                                colo[7].style.background = arr[c1[7]]
+                            c1[7]++
+                            if(c1[7]==arr.length){
+                                c1[7]=0
+                            }
+                            }
+                        colo[8].ondblclick = function () {
+                                colo[8].style.background = arr[c1[8]]
+                            c1[8]++
+                            if(c1[8]==arr.length){
+                                c1[8]=0
+                            }
+                            }
+                        colo[9].ondblclick = function () {
+                                colo[9].style.background = arr[c1[9]]
+                            c1[9]++
+                            if(c1[9]==arr.length){
+                                c1[9]=0
+                            }
+                            }
+                        colo[10].ondblclick=function(){
+                            colo[10].style.background= arr[c1[10]]
+                            c1[10]++
+                            if(c1[10]==arr.length){
+                                c1[10]=0
+                            }
+                        }
+                        colo[11].ondblclick = function () {
+                                colo[11].style.background = arr[c1[11]]
+                            c1[11]++
+                            if(c1[11]==arr.length){
+                                c1[11]=0
+                            }
+                            }
+                        colo[12].ondblclick = function () {
+                                colo[12].style.background = arr[c1[12]]
+                            c1[12]++
+                            if(c1[12]==arr.length){
+                                c1[12]=0
+                            }
+                            }
+                        colo[13].ondblclick = function () {
+                                colo[13].style.background = arr[c1[13]]
+                            c1[13]++
+                            if(c1[13]==arr.length){
+                                c1[13]=0
+                            }
+                            }
+                        colo[14].ondblclick = function () {
+                                colo[14].style.background = arr[c1[14]]
+                            c1[14]++
+                            if(c1[14]==arr.length){
+                                c1[14]=0
+                            }
+                            }
+                        colo[15].ondblclick = function () {
+                                colo[15].style.background = arr[c1[15]]
+                            c1[15]++
+                            if(c1[15]==arr.length){
+                                c1[15]=0
+                            }
+                            }
+                        colo[16].ondblclick = function () {
+                                colo[16].style.background = arr[c1[16]]
+                            c1[16]++
+                            if(c1[16]==arr.length){
+                                c1[16]=0
+                            }
+                            }
+                        colo[17].ondblclick = function () {
+                                colo[17].style.background = arr[c1[17]]
+                            c1[17]++
+                            if(c1[17]==arr.length){
+                                c1[17]=0
+                            }
+                            }
+                        colo[18].ondblclick = function () {
+                                colo[18].style.background = arr[c1[18]]
+                            c1[18]++
+                            if(c1[18]==arr.length){
+                                c1[18]=0
+                            }
+                            }
+                        colo[19].ondblclick = function () {
+                                colo[19].style.background = arr[c1[19]]
+                            c1[19]++
+                            if(c1[19]==arr.length){
+                                c1[19]=0
+                            }
+                            }
                         for(j=0;j<sl.length;j++){
                             sl[j].style.opacity = "0"
                             sl[j].style.visibility = "hidden"

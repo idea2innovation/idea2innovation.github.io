@@ -221,25 +221,40 @@
                         var r=document.getElementById("read");
                         var r1=document.getElementById("read1");
                         for(i=0;i<sl.length;i++){
+                            sl[i].style.opacity = "0"
+                            sl[i].style.visibility = "hidden"
                             sl[i].style.display="none"
                         }
+                        sl[0].style.transition = "0.35s"
                         sl[0].style.display="block"
+                        sl[0].style.visibility = "visible"
+                        sl[0].style.opacity = "1"
                         i=0
                         r.onclick=function(){
+                            sl[i].style.opacity = "0"
+                            sl[i].style.visibility = "hidden"
                             sl[i].style.display="none";
                             if (i == sl.length - 1) {
                                 i = -1
                             }
                             i++
+                            sl[i].style.transition = "0.35s"
                             sl[i].style.display = "block"
+                            sl[i].style.visibility = "visible"
+                            setTimeout(function () { sl[i].style.opacity = "1"; }, 0);
                         }
                         r1.onclick = function () {
+                                sl[i].style.opacity = "0"
+                                sl[i].style.visibility = "hidden"
                                 sl[i].style.display = "none";
                                 if (i == 0) {
                                     i = sl.length
                                 }
                                 i--
+                                sl[i].style.transition = "0.35s"
                                 sl[i].style.display = "block"
+                                sl[i].style.visibility = "visible"
+                                setTimeout(function () { sl[i].style.opacity = "1"; }, 0);
                             }
                     </script>
             </div>

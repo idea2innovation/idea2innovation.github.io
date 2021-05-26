@@ -252,6 +252,14 @@ nav ul li a:hover {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.member-row1 {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 .member-col {
   flex-basis: 20%;
   text-align: center;
@@ -1151,6 +1159,9 @@ i {
     font-size: 18px;
   }
   .member-row {
+    width: 80%;
+  }
+  .member-row1 {
     width: 80%;
   }
   .member-col {

@@ -1393,12 +1393,33 @@ i {
     margin-bottom: 5%;
   }
 }
-@media all and (max-height: 600px) {
+@media all and (max-height: 350px) {
   .subs-box {
-    width: 75%;
-    height: 25%;
+    width: 100%;
+    height: 40%;
     position: absolute;
-    left: 12.5%;
+    left: 0;
     top: 37.5%;
+  }
+  .subs-head {
+    font-size: 3.5vw;
+  }
+  #subs-email1 {
+    font-size: 3vw;
+    border-bottom: gold 0.5vh solid;
+  }
+  #subs-email2 {
+    font-size: 3vw;
+    border-bottom: gold 0.5vh solid;
+  }
+  #subs-tell {
+    font-size: 3vw;
+    border-bottom: gold 0.5vh solid;
+  }
+  #subs-btn2 {
+    font-size: 2.5vw;
+  }
+  #subs-btn1 {
+    font-size: 2.5vw;
   }
 }

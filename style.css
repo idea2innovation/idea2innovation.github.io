@@ -1039,11 +1039,13 @@ i {
 }
 /*select text*/
 ::-moz-selection {
-  background: rgb(255, 233, 106);
+  background: rgb(255, 230, 0);
+  color: white;
 }
 
 ::selection {
-  background: rgb(255, 233, 106);
+  background: rgb(255, 230, 0);
+  color: white;
 }
 @media all and (max-width: 951px) {
   #header {

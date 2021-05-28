@@ -173,7 +173,7 @@ nav ul li a:hover {
   position: fixed;
   top: 0%;
   left: 0%;
-  width: 41px;
+  width: 45px;
   height: 100vh;
   background: darkslateblue;
   z-index: 2;
@@ -182,7 +182,7 @@ nav ul li a:hover {
   margin: 0;
   padding: 0;
   height: 100vh;
-  width: 41px;
+  width: 45px;
   list-style: none;
   line-height: 55px;
   background-color: darkslateblue;
@@ -191,7 +191,7 @@ nav ul li a:hover {
   margin-left: 0px;
   color: white;
   float: bottom;
-  width: 41px;
+  width: 45px;
   text-align: center;
 }
 .nav1 ul li i {
@@ -202,7 +202,7 @@ nav ul li a:hover {
   padding: 0px;
   color: white;
   text-decoration: none;
-  width: 41px;
+  width: 45px;
 }
 .nav1 ul li i:hover {
   background-color: white;

@@ -1402,24 +1402,24 @@ i {
     top: 37.5%;
   }
   .subs-head {
-    font-size: 3.5vw;
+    font-size: 3.75vw;
   }
   #subs-email1 {
-    font-size: 3vw;
-    border-bottom: gold 0.5vh solid;
+    font-size: 3.5vw;
+    border-bottom: gold 0.55vw solid;
   }
   #subs-email2 {
-    font-size: 3vw;
-    border-bottom: gold 0.5vh solid;
+    font-size: 3.5vw;
+    border-bottom: gold 0.55vw solid;
   }
   #subs-tell {
-    font-size: 3vw;
-    border-bottom: gold 0.5vh solid;
+    font-size: 3.5vw;
+    border-bottom: gold 0.55vw solid;
   }
   #subs-btn2 {
-    font-size: 2.5vw;
+    font-size: 2.25vw;
   }
   #subs-btn1 {
-    font-size: 2.5vw;
+    font-size: 2.25vw;
   }
 }

@@ -1092,7 +1092,7 @@ i {
     font-size: 12px;
   }
   #sideNav {
-    width: 175px;
+    width: 200px;
     height: 200vh;
   }
   nav ul li a {
@@ -1102,13 +1102,13 @@ i {
   }
   nav ul {
     height: 200vh;
-    width: 175px;
-    font-size: 12px;
-    line-height: 35px;
+    width: 200px;
+    font-size: 15px;
+    line-height: 45px;
   }
   nav ul li {
     float: bottom;
-    width: 175px;
+    width: 200px;
   }
   .nav1 {
     width: 30px;
@@ -1118,8 +1118,8 @@ i {
     display: none;
   }
   #menuBtn {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     position: fixed;
     left: 1px;
     top: 3px;

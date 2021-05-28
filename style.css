@@ -1393,3 +1393,12 @@ i {
     margin-bottom: 5%;
   }
 }
+@media all and (min-height: 350px) and (max-width: 550px) {
+  .subs-box {
+    width: 75%;
+    height: 25%;
+    position: absolute;
+    left: 12.5%;
+    top: 37.5%;
+  }
+}

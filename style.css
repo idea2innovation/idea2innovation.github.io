@@ -124,6 +124,8 @@ nav ul li a {
   padding: 0.35px;
   color: white;
   text-decoration: none;
+  border-radius: 1.5mm;
+  transition: 0.25s;
 }
 nav ul {
   margin: 0;
@@ -140,16 +142,22 @@ nav ul {
 .active a {
   background-color: rgb(88, 76, 170);
   position: relative;
-  left: 0px;
+  left: 10px;
+  padding-left: 10px;
+  margin-left: -10px;
 }
 nav ul li {
   float: bottom;
-  width: 250px;
+  width: 220px;
+  margin-left: 10px;
 }
 nav ul li a:hover {
   position: relative;
-  left: 0px;
-  background-color: deepskyblue;
+  left: 10px;
+  background-color: white;
+  color: darkslateblue;
+  padding-left: 10px;
+  margin-left: -10px;
 }
 #fa {
   font-size: 24px;
@@ -1098,7 +1106,7 @@ i {
   nav ul li a {
     position: relative;
     top: 28px;
-    left: 20px;
+    left: 0px;
   }
   nav ul {
     height: 200vh;
@@ -1108,7 +1116,16 @@ i {
   }
   nav ul li {
     float: bottom;
-    width: 200px;
+    width: 180px;
+  }
+  .active a {
+    background-color: white;
+    color: darkslateblue;
+    position: relative;
+    left: 10px;
+    width: 170px;
+    padding-left: 10px;
+    margin-left: -10px;
   }
   .nav1 {
     width: 30px;

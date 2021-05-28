@@ -1422,4 +1422,21 @@ i {
   #subs-btn1 {
     font-size: 2.25vw;
   }
+  #r-box {
+    width: 50vw;
+    height: 90vh;
+    position: absolute;
+    left: 25vw;
+    top: 5vh;
+  }
+  #r-head {
+    font-size: 5vw;
+  }
+  .r-input {
+    font-size: 4vw;
+    border-bottom: 0.2vh solid black;
+  }
+  #r-submit {
+    font-size: 4vw;
+  }
 }

@@ -94,6 +94,7 @@
                 sideNav.onmouseout = function () {
                     sideNav.style.left = "-250px"
                 }
+                sideNav.style.transition="all 0.35s ease-in"
                 var i1 = 0
                 var j1 = 0
                 menuBtn.onclick = function () {
@@ -142,9 +143,6 @@
     <script>
         var slideIndex = 0;
             showSlides();
-        function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
             function showSlides() {
                 var i;
                 var slides = document.getElementsByClassName("mySlides");

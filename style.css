@@ -118,7 +118,7 @@ p {
 }
 nav ul li a {
   position: relative;
-  top: 55px;
+  top: 0px;
   left: 0px;
   display: block;
   padding: 0.35px;
@@ -138,6 +138,11 @@ nav ul {
   background-color: darkslateblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+nav ul h2 {
+  margin-left: 45px;
+  font-size: 20px;
+  color: white;
 }
 .active a {
   background-color: rgb(88, 76, 170);
@@ -168,7 +173,7 @@ nav ul li a:hover {
   position: fixed;
   top: 0%;
   left: 0%;
-  width: 43px;
+  width: 41px;
   height: 100vh;
   background: darkslateblue;
   z-index: 2;
@@ -177,28 +182,31 @@ nav ul li a:hover {
   margin: 0;
   padding: 0;
   height: 100vh;
-  width: 40px;
+  width: 41px;
   list-style: none;
   line-height: 55px;
   background-color: darkslateblue;
 }
 .nav1 ul li {
-  margin-left: 5px;
+  margin-left: 0px;
   color: white;
   float: bottom;
-  width: 40px;
+  width: 41px;
+  text-align: center;
 }
 .nav1 ul li i {
   position: relative;
   top: 55px;
   line-height: 55px;
   display: block;
-  padding: 0.35px;
+  padding: 0px;
   color: white;
   text-decoration: none;
+  width: 41px;
 }
 .nav1 ul li i:hover {
-  background-color: deepskyblue;
+  background-color: white;
+  color: darkslateblue;
 }
 
 #menuBtn {
@@ -1114,9 +1122,20 @@ i {
     font-size: 15px;
     line-height: 45px;
   }
+  nav ul h2 {
+    margin-left: 30px;
+    font-size: 16px;
+  }
   nav ul li {
     float: bottom;
     width: 180px;
+  }
+  nav ul li a:hover {
+    position: relative;
+    left: 10px;
+    width: 170px;
+    padding-left: 10px;
+    margin-left: -10px;
   }
   .active a {
     background-color: white;

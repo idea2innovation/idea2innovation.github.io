@@ -145,7 +145,7 @@ nav ul h2 {
   color: white;
 }
 .active a {
-  background-color: rgb(105, 90, 202);
+  background-color: rgb(98, 84, 194);
   position: relative;
   left: 10px;
   padding-left: 10px;
@@ -213,7 +213,7 @@ nav ul li a:hover {
   color: darkslateblue;
 }
 .active i {
-  background: rgb(105, 90, 202);
+  background: rgb(98, 84, 194);
 }
 
 #menuBtn {

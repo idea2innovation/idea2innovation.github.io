@@ -145,7 +145,7 @@ nav ul h2 {
   color: white;
 }
 .active a {
-  background-color: rgb(88, 76, 170);
+  background-color: rgb(105, 90, 202);
   position: relative;
   left: 10px;
   padding-left: 10px;
@@ -155,6 +155,7 @@ nav ul li {
   float: bottom;
   width: 220px;
   margin-left: 10px;
+  margin-bottom: 10pt;
 }
 nav ul li a:hover {
   position: relative;
@@ -207,6 +208,9 @@ nav ul li a:hover {
 .nav1 ul li i:hover {
   background-color: white;
   color: darkslateblue;
+}
+.active i {
+  background: rgb(105, 90, 202);
 }
 
 #menuBtn {
@@ -527,7 +531,7 @@ nav ul li a:hover {
 .mem-social {
   margin-right: 1%;
   flex-basis: 18%;
-  background: rgb(173, 164, 164);
+  background: rgb(189, 189, 189);
   text-align: center;
   padding-top: 4%;
   padding-bottom: 3%;

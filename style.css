@@ -1070,6 +1070,18 @@ i {
   background: rgb(255, 230, 0);
   color: white;
 }
+body::-webkit-scrollbar {
+  width: 0.75vw;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 230, 0, 0.89);
+  border-radius: 2mm;
+}
 @media all and (max-width: 951px) {
   #header {
     background: url(images/abc.jpg);

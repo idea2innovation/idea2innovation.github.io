@@ -151,6 +151,9 @@ nav ul h2 {
   padding-left: 10px;
   margin-left: -10px;
 }
+.active a i {
+  background: transparent;
+}
 nav ul li {
   float: bottom;
   width: 220px;
@@ -1149,6 +1152,9 @@ i {
     width: 170px;
     padding-left: 10px;
     margin-left: -10px;
+  }
+  .active i {
+    background: transparent;
   }
   .nav1 {
     width: 30px;

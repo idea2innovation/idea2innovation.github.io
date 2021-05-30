@@ -4,6 +4,7 @@
 }
 #header {
   background: url(images/abc.jpg);
+  background-attachment: fixed;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -362,6 +363,7 @@ nav ul li a:hover {
 #activities {
   padding: 50px 0;
   background: rgb(250, 222, 198);
+  background-attachment: fixed;
 }
 .activity-row {
   display: flex;
@@ -1071,7 +1073,7 @@ i {
   color: white;
 }
 body::-webkit-scrollbar {
-  width: 0.75vw;
+  width: 0.8vw;
 }
 
 body::-webkit-scrollbar-track {
@@ -1079,8 +1081,14 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 230, 0, 0.89);
+  background: gold;
   border-radius: 2mm;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 217, 0, 0.774);
+}
+html {
+  scroll-behavior: smooth;
 }
 @media all and (max-width: 951px) {
   #header {

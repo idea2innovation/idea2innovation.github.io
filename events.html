@@ -77,6 +77,7 @@
             </nav>
             
             <img src="images/men.jpg" id="menuBtn">
+            
             <script>
                 var menuBtn = document.getElementById("menuBtn");
                 var sideNav = document.getElementById("sideNav");
@@ -85,15 +86,19 @@
                 sideNav.style.left = "-250px";
                 na.onmouseover = function () {
                     sideNav.style.left = "0px"
+                    menuBtn.src="images/menclose.jpg"
                 }
                 na.onmouseout = function () {
                     sideNav.style.left = "-250px"
+                    menuBtn.src = "images/men.jpg"
                 }
                 sideNav.onmouseover = function () {
                     sideNav.style.left = "0px"
+                    menuBtn.src = "images/menclose.jpg"
                 }
                 sideNav.onmouseout = function () {
                     sideNav.style.left = "-250px"
+                    menuBtn.src = "images/men.jpg"
                 }
                 sideNav.style.transition="all 0.35s ease-in"
                 var i1 = 0
@@ -102,16 +107,19 @@
                     j1 = 1
                     if (!i1) {
                         sideNav.style.left = "0px"
+                        menuBtn.src = "images/menclose.jpg"
                         i1 = 1
                     }
                     else {
                         sideNav.style.left = "-250px"
+                        menuBtn.src = "images/men.jpg"
                         i1 = 0
                     }
                 }
                 onclick = function () {
                     if (i1 && !j1) {
                         sideNav.style.left = "-250px"
+                        menuBtn.src = "images/men.jpg"
                         i1 = 0
                     }
                     j1 = 0

@@ -603,37 +603,44 @@
         sideNav.style.left = "-250px";
         na.onmouseover = function () {
             sideNav.style.left = "0px"
+            menuBtn.src = "images/menclose.jpg"
         }
         na.onmouseout = function () {
             sideNav.style.left = "-250px"
+            menuBtn.src = "images/men.jpg"
         }
         sideNav.onmouseover = function () {
             sideNav.style.left = "0px"
+            menuBtn.src = "images/menclose.jpg"
         }
         sideNav.onmouseout = function () {
             sideNav.style.left = "-250px"
+            menuBtn.src = "images/men.jpg"
         }
         sideNav.style.transition = "all 0.35s ease-in"
         var i1 = 0
-            var j1 = 0
-            menuBtn.onclick = function () {
-                j1 = 1
-                if (!i1) {
-                    sideNav.style.left = "0px"
-                    i1 = 1
-                }
-                else {
-                    sideNav.style.left = "-250px"
-                    i1 = 0
-                }
+        var j1 = 0
+        menuBtn.onclick = function () {
+            j1 = 1
+            if (!i1) {
+                sideNav.style.left = "0px"
+                menuBtn.src = "images/menclose.jpg"
+                i1 = 1
             }
-            onclick = function () {
-                if (i1 && !j1) {
-                    sideNav.style.left = "-250px"
-                    i1 = 0
-                }
-                j1 = 0
+            else {
+                sideNav.style.left = "-250px"
+                menuBtn.src = "images/men.jpg"
+                i1 = 0
             }
+        }
+        onclick = function () {
+            if (i1 && !j1) {
+                sideNav.style.left = "-250px"
+                menuBtn.src = "images/men.jpg"
+                i1 = 0
+            }
+            j1 = 0
+        }
     </script>
     <!--Social media-->
     <div class="social-icons">

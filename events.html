@@ -473,15 +473,15 @@
         }
     </script>
     <!--Subscribe-->
-<div id="subscribe">
+<div id="subscribe" >
     <div class="subs-box">
-        <img src="images/logo.png" alt="logo" class="subs-img">
+        <img src="images/logo.png" alt="logo" class="subs-img" id="subs-lo">
         <div class="subs-form-box">
             <div class="subs-head">
                 SUBSCRIBE
                 <i class="fa fa-times" id="subs-close1"></i>
             </div>
-            <form action="" class="subs-form">
+            <form method="post" autocomplete="off" name="sub-sheet" class="subs-form">
                 <div class="subs-inputs">
                     <input type="email" name="email" id="subs-email1" required placeholder="Email">
                 </div>
@@ -527,6 +527,7 @@
     var unsubscribe = document.getElementById("unsubscribe");
     var sclose1 = document.getElementById("subs-close1");
     var sclose2 = document.getElementById("subs-close2");
+    var loadsusbs=document.getElementById("subs-lo");
     subs1.onclick = function () {
         subscribe.style.display = "block";
     }
@@ -545,6 +546,23 @@
     sclose2.onclick = function () {
         unsubscribe.style.display = "none"
     }
+                const scriptURL1 = 'https://script.google.com/macros/s/AKfycbx2Mhxk7Bu1ExzmiHqFtMGb5hyQ4wG3r4hOgW02Awu3ppLT2IOAsPQGnmXvbKrj747Smg/exec'
+                    const fo = document.forms['sub-sheet']
+                    fo.addEventListener('submit', e => {
+                        loadsusbs.src="images/loading-subs.gif"
+                        e.preventDefault()
+                        fetch(scriptURL1, { method: 'POST', body: new FormData(fo) })
+                            .then(Response => {
+                                loadsusbs.src = "images/loading-subs-com.gif"
+                                setTimeout(()=>{ subscribe.style.display="none" },2000);
+                                setTimeout(()=>{ loadsusbs.src = "images/logo.png"},2250);
+                            })
+                            .catch(error => {
+                                loadsusbs.src = "images/loading-subs-uncom.gif"
+                                setTimeout(() => { subscribe.style.display = "none" }, 2000);
+                                setTimeout(() => { loadsusbs.src = "images/logo.png" }, 2250);
+                            })
+                    })
 </script>
 </body>
 </html>

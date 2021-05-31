@@ -816,31 +816,50 @@
         </div>
     <script>
         var subs1=document.getElementById("subs-sub");
-        var subs2=document.getElementById("subs-sub1");
-        var unsub1=document.getElementById("subs-un");
-        var unsub2=document.getElementById("subs-un1");
-        var subscribe=document.getElementById("subscribe");
-        var unsubscribe=document.getElementById("unsubscribe");
-        var sclose1=document.getElementById("subs-close1");
-        var sclose2=document.getElementById("subs-close2");
-        subs1.onclick = function(){
-            subscribe.style.display="block";
+        var subs1 = document.getElementById("subs-sub");
+        var subs2 = document.getElementById("subs-sub1");
+        var unsub1 = document.getElementById("subs-un");
+        var unsub2 = document.getElementById("subs-un1");
+        var subscribe = document.getElementById("subscribe");
+        var unsubscribe = document.getElementById("unsubscribe");
+        var sclose1 = document.getElementById("subs-close1");
+        var sclose2 = document.getElementById("subs-close2");
+        var loadsusbs = document.getElementById("subs-lo");
+        subs1.onclick = function () {
+            subscribe.style.display = "block";
         }
-        subs2.onclick = function(){
-            subscribe.style.display="block";
+        subs2.onclick = function () {
+            subscribe.style.display = "block";
         }
-        sclose1.onclick=function(){
-            subscribe.style.display="none";
+        sclose1.onclick = function () {
+            subscribe.style.display = "none";
         }
-        unsub1.onclick=function(){
-            unsubscribe.style.display="block";
+        unsub1.onclick = function () {
+            unsubscribe.style.display = "block";
         }
-        unsub2.onclick=function(){
-            unsubscribe.style.display="block";
+        unsub2.onclick = function () {
+            unsubscribe.style.display = "block";
         }
-        sclose2.onclick=function(){
-            unsubscribe.style.display="none"
+        sclose2.onclick = function () {
+            unsubscribe.style.display = "none"
         }
+        const scriptURL1 = 'https://script.google.com/macros/s/AKfycbx2Mhxk7Bu1ExzmiHqFtMGb5hyQ4wG3r4hOgW02Awu3ppLT2IOAsPQGnmXvbKrj747Smg/exec'
+        const fo = document.forms['sub-sheet']
+        fo.addEventListener('submit', e => {
+            loadsusbs.src = "images/loading-subs.gif"
+            e.preventDefault()
+            fetch(scriptURL1, { method: 'POST', body: new FormData(fo) })
+                .then(Response => {
+                    loadsusbs.src = "images/loading-subs-com.gif"
+                    setTimeout(() => { subscribe.style.display = "none" }, 2000);
+                    setTimeout(() => { loadsusbs.src = "images/logo.png" }, 2250);
+                })
+                .catch(error => {
+                    loadsusbs.src = "images/loading-subs-uncom.gif"
+                    setTimeout(() => { subscribe.style.display = "none" }, 2000);
+                    setTimeout(() => { loadsusbs.src = "images/logo.png" }, 2250);
+                })
+        })
     </script>
 </body>
 </html>

@@ -168,6 +168,7 @@ nav ul li a:hover {
   color: darkslateblue;
   padding-left: 10px;
   margin-left: -10px;
+  box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.397);
 }
 #fa {
   font-size: 24px;
@@ -1172,6 +1173,7 @@ html {
     width: 170px;
     padding-left: 10px;
     margin-left: -10px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.397);
   }
   .active i {
     background: transparent;

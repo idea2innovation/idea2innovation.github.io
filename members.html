@@ -788,13 +788,13 @@
     </div>
     <div id="unsubscribe">
         <div class="subs-box">
-        <img src="images/logo.png" alt="logo" class="subs-img">
+        <img src="images/logo.png" alt="logo" class="subs-img" id="unsubs-lo">
         <div class="subs-form-box">
             <div class="subs-head">
                 UNSUBSCRIBE
                 <i class="fa fa-times" id="subs-close2"></i>
             </div>
-            <form action="" class="subs-form1">
+            <form method="post" autocomplete="off" name="unsub-sheet" class="subs-form1">
                 <div class="subs-inputs">
                     <input type="email" name="email" id="subs-email2" required placeholder="Email">
                 </div>
@@ -825,6 +825,7 @@
         var sclose1 = document.getElementById("subs-close1");
         var sclose2 = document.getElementById("subs-close2");
         var loadsusbs = document.getElementById("subs-lo");
+        var loadunsubs = document.getElementById("unsubs-lo");
         subs1.onclick = function () {
             subscribe.style.display = "block";
         }
@@ -860,6 +861,23 @@
                     setTimeout(() => { loadsusbs.src = "images/logo.png" }, 2250);
                 })
         })
+        const scriptURL2 = 'https://script.google.com/macros/s/AKfycbyNzRoYSdT1qd--9FCqs-pAmhNE9FipehPSvYUUygysW-fRftfs5wvDwed49gK8slQ3Yw/exec'
+            const fo1 = document.forms['unsub-sheet']
+            fo1.addEventListener('submit', e => {
+                loadunsubs.src = "images/loading-unsubs.gif"
+                e.preventDefault()
+                fetch(scriptURL2, { method: 'POST', body: new FormData(fo1) })
+                    .then(Response => {
+                        loadunsubs.src = "images/loading-unsubs-com.gif"
+                        setTimeout(() => { unsubscribe.style.display = "none" }, 2000);
+                        setTimeout(() => { loadunsubs.src = "images/logo.png" }, 2250);
+                    })
+                    .catch(error => {
+                        loadunsubs.src = "images/loading-subs-uncom.gif"
+                        setTimeout(() => { unsubscribe.style.display = "none" }, 2000);
+                        setTimeout(() => { loadunsubs.src = "images/logo.png" }, 2250);
+                    })
+            })
     </script>
 </body>
 </html>

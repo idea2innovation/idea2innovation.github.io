@@ -8,26 +8,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-            crossorigin="anonymous"></script>
 </head>
 <style type="text/css">
-    ::placeholder {
-        color: white;
+    input,
+    textarea {
+        -webkit-appearance: none;
+        border-radius: 0;
     }
-
-    #b1 {
-        background: url(images/Feedback.jpg);
-        background-attachment: fixed;
-        padding-bottom: 10%;
-    }
-input, textarea {
--webkit-appearance: none;
-border-radius: 0; }
 </style>
-<body id="click" onload="subfor()">
-    <div id="loading"></div>
-    <div id="sub-load" style="position: fixed; top: -2vh;height: 105vh;">
+<body onload="subfor()">
+        <div style="margin-left: 7vw;">
+            <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
+        </div>
+    <div id="sub-load"style="position: fixed; top: -2vh;height: 105vh;">
         <div id="sub-load0-1">
             <div id="sub-load0-2">
                 <h2>Submitting :|</h2>
@@ -40,7 +33,7 @@ border-radius: 0; }
                 <i class="fa fa-check"></i>
             </div>
             <div id="sub-load1-2">
-                <h2>Submitted :)</h2>
+                <h2>Registered :)</h2>
             </div>
         </div>
     </div>
@@ -50,126 +43,314 @@ border-radius: 0; }
                 <i class="fa fa-exclamation-triangle"></i>
             </div>
             <div id="sub-load2-2">
-                <h2>Submission Failed :(</h2>
+                <h2>Registration Failed :(</h2>
             </div>
         </div>
     </div>
-    <section id="header">
-        <div class="container">
-            <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
-            <a href="https://www.iare.ac.in/"><img src="images/iarelogo.jpg" class="logo"></a>
-            <div class="header-text">
-                <h1 style="color:gold  ; text-shadow: 1px 1px 1px  grey;">Welcome to I2I website!</h1><br><br>
-                <p><b>Idea to Innovation</b> is a club started by the students of Institute of Aeronautical Engineering
-                    in the year 2021 to evoke students’ creativity levels by encouraging them to take-up projects with
-                    varying levels of complexities. This Club aims at taking up various <b>innovative ideas</b> and
-                    <b>methodologies</b> of the students’ and help them execute it by providing technical assistance
-                    backed by eminent faculty support.<span id="more"> The club mainly focuses on <b>critical and
-                            competitive problem-solving skills</b> by inculcating group discussions and effective
-                        learning techniques. At <b>I2I</b> we believe practical and interactive way of learning will
-                        boost and enhance the creative and logical thinking levels of the students who aim at achieving
-                        high in the field of their passion and interests.</span></p>
-                <button class="common-btn1" id="read" onclick="read()">Read More</button>
-                <script type="text/javascript">
-                    var i = 0;
-                    function read() {
-                        if (!i) {
-                            document.getElementById("more").style.display = "inline";
-                            document.getElementById("read").innerHTML = "Read less";
-                            i = 1;
-                        }
-                        else {
-                            document.getElementById("more").style.display = "none";
-                            document.getElementById("read").innerHTML = "Read More";
-                            i = 0;
-                        }
+            <!--Navigation-->
+            <nav class="nav1" id="na">
+                <ul>
+                    <li><i class="fa fa-home" id="fa"></i></li>
+                    <li><i class="fa fa-hourglass-half" id="fa"></i></li>
+                    <li class="active"><i class="fa fa-calendar" id="fa"></i></li>
+                    <li><i class="fa fa-address-card" id="fa"></i></li>
+                    <li><i class="fa fa-users" id="fa"></i></li>
+                    <li><i class="fa fa-university" id="fa"></i></li>
+                    <li><i class="fa fa-comments" id="fa"></i></li>
+                </ul>
+            </nav>
+            <nav id="sideNav">
+                <ul>
+                    <h2>IdeaToInnovation</h2>
+                    <li><a href="index.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-home" id="fa"></i> Home</a></li>
+                    <li><a href="activities.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-hourglass-half" id="fa"></i>
+                            Activities</a></li>
+                    <li class="active"><a href="events.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-calendar" id="fa"></i>
+                            Events</a></li>
+                    <li><a href="about.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-address-card" id="fa"></i> About Us</a></li>
+                    <li><a href="members.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-users" id="fa"></i> Members</a></li>
+                    <li><a href="https://www.iare.ac.in/">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-university" id="fa"></i>About College</a>
+                    </li>
+                    <li><a href="index.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <img src="images/men.jpg" id="menuBtn">
+            
+            <script>
+                var menuBtn = document.getElementById("menuBtn");
+                var sideNav = document.getElementById("sideNav");
+                var click = document.getElementById("click")
+                var na = document.getElementById("na")
+                sideNav.style.left = "-250px";
+                na.onmouseover = function () {
+                    sideNav.style.left = "0px"
+                    menuBtn.src="images/menclose.jpg"
+                }
+                na.onmouseout = function () {
+                    sideNav.style.left = "-250px"
+                    menuBtn.src = "images/men.jpg"
+                }
+                sideNav.onmouseover = function () {
+                    sideNav.style.left = "0px"
+                    menuBtn.src = "images/menclose.jpg"
+                }
+                sideNav.onmouseout = function () {
+                    sideNav.style.left = "-250px"
+                    menuBtn.src = "images/men.jpg"
+                }
+                sideNav.style.transition="all 0.35s ease-in"
+                var i1 = 0
+                var j1 = 0
+                menuBtn.onclick = function () {
+                    j1 = 1
+                    if (!i1) {
+                        sideNav.style.left = "0px"
+                        menuBtn.src = "images/menclose.jpg"
+                        i1 = 1
                     }
-                </script>
+                    else {
+                        sideNav.style.left = "-250px"
+                        menuBtn.src = "images/men.jpg"
+                        i1 = 0
+                    }
+                }
+                onclick = function () {
+                    if (i1 && !j1) {
+                        sideNav.style.left = "-250px"
+                        menuBtn.src = "images/men.jpg"
+                        i1 = 0
+                    }
+                    j1 = 0
+                }
+            </script>
+                <div id="loading" style="position: fixed; top: -2vh;height: 105vh;"></div>
+    <!--Slideshow-->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/img1.jpg" style="width:100%">
+            <div class="text">Event Name</div>
+        </div>
+    
+        <div class="mySlides fade">
+            <img src="images/img2.jpg" style="width:100%">
+            <div class="text">Event Name</div>
+        </div>
+    
+        <div class="mySlides fade">
+            <img src="images/img3.jpg" style="width:100%">
+            <div class="text">Event Name</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="images/img1.jpg" style="width:100%">
+            <div class="text">Event Name</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <script>
+        var slideIndex = 0;
+            showSlides();
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 2500);
+            }
+    </script>
+    <!--events body-->
+    <div class="hev">
+        <h1>--Events--</h1>
+        <br>
+        <div class="evrow">
+            <div class="ecol">
+                <div class="ehcontainer2" id="eh1">
+                    <h2>Present Events</h2>
+                </div>
+                <br>
+            <div class="evcontainer1" id="ev1">
+                <h3>Event Name</h3>
+                <br>
+                <img src="images/event-poster.jpg" alt="event poster" style="width: 100%;">
+                <br>
+                <br>
+                <p>Coming up soon... <br>Coming up soon...</p>
+                <div class="member-btn" id="r-open">
+                <button class="common-btn">Register</button>
+                </div>
+            </div>
+            </div>
+            <div class="ecol">
+                <div class="ehcontainer2" id="eh2">
+                    <h2>Past Events</h2>
+                </div>
+                <br>
+            <div class="evcontainer1" id="ev2">
+                <div class="ce1">
+                <h3>Event-1 Name</h3>
+                <br>
+                <img src="images/event-poster.jfif" alt="event-poster" style="width: 100%;">
+                <br>
+                <br>
+                <p>Coming up soon... <br>Coming up soon...</p>
+                </div>
+                <span id="more1">
+                <div class="ce1">
+                <h3>Event-2 Name</h3>
+                <br>
+                <img src="images/event-poster.jpg" alt="event-poster" style="width: 100%;">
+                <br>
+                <br>
+                <p>Coming up soon... <br>Coming up soon...</p>
+                </div>
+                <div class="ce1">
+                <h3>Event-3 Name</h3>
+                <br>
+                <img src="images/event-poster2.jpg" alt="event-poster" style="width: 100%;">
+                <br>
+                <br>
+                <p>Coming up soon... <br>Coming up soon...</p>
+                </div>
+                </span>
+                <div class="member-btn">
+                    <button class="common-btn2" id="read1" title="previous" ><i class="fa fa-chevron-left"></i></button>
+                    <lar class="light">EXPLORE</lar>
+                    <button class="common-btn2" id="read" title="next"><i class="fa fa-chevron-right"></i></button>
+                    <script type="text/javascript">
+                        var i = 0;
+                        var sl=document.getElementsByClassName("ce1");
+                        var r=document.getElementById("read");
+                        var r1=document.getElementById("read1");
+                        for(i=0;i<sl.length;i++){
+                            sl[i].style.opacity = "0"
+                            sl[i].style.visibility = "hidden"
+                            sl[i].style.display="none"
+                        }
+                        sl[0].style.transition = "0.35s"
+                        sl[0].style.display="block"
+                        sl[0].style.visibility = "visible"
+                        sl[0].style.opacity = "1"
+                        i=0
+                        r.onclick=function(){
+                            sl[i].style.opacity = "0"
+                            sl[i].style.visibility = "hidden"
+                            sl[i].style.display="none";
+                            if (i == sl.length - 1) {
+                                i = -1
+                            }
+                            i++
+                            sl[i].style.transition = "0.35s"
+                            sl[i].style.display = "block"
+                            sl[i].style.visibility = "visible"
+                            setTimeout(function () { sl[i].style.opacity = "1"; }, 0);
+                        }
+                        r1.onclick = function () {
+                                sl[i].style.opacity = "0"
+                                sl[i].style.visibility = "hidden"
+                                sl[i].style.display = "none";
+                                if (i == 0) {
+                                    i = sl.length
+                                }
+                                i--
+                                sl[i].style.transition = "0.35s"
+                                sl[i].style.display = "block"
+                                sl[i].style.visibility = "visible"
+                                setTimeout(function () { sl[i].style.opacity = "1"; }, 0);
+                            }
+                    </script>
             </div>
         </div>
-    </section>
-    <div id="b1">
-        <h1 id="com-head">--Feedback--
-        </h1>
-        <div class="comments">
-            <form id="myForm">
-                <h2 style="padding-bottom: 10%; color: white; font-family:Verdana, Geneva, Tahoma, sans-serif; "
-                    id="com-text">Write To Us</h2>
-                <div class="cin">
-                    <input name="Name" required class="comin" placeholder="Name... ">
-                </div>
-                <br>
-                <div class="cin">
-                    <input type="email" name="email" required class="comin" placeholder="Email...">
-                </div>
-                <br>
-                <div class="cin">
-                    <textarea name="Comment Here..." required class="comin" id="com-box" cols="20" rows="5"
-                        placeholder="Comments..."></textarea>
-                    <br>
-                </div>
-                <input type="text" name="datetime-local" class="comin" style="display: none;">
-                <input type="text" name="OS" class="comin" style="display: none;">
-            </form>
-            <button onclick="SubForm()" class="sub-btn">Submit</button>
+        </div>
+    </div>
+    </div>
+    <div id="register">
+        <div id="r-box">
+                <h3 id="r-head">REGISTER<i class="fa fa-times" id="r-close" title="close" style="position: absolute; right:0% ; cursor: pointer; padding-right: 1%; padding-left: 1%; padding-bottom: 1%; border: none; outline: none;" ></i></h3>
+            <div id="r-data">
+                <form method="post" autocomplete="off" name="google-sheet">
+                    <div class="r-in">
+                        <i class="fa fa-user"></i>
+                        <input type="text" name="name" id="r-name" class="r-input" placeholder="Name" required>
+                    </div>
+                    <div class="r-in">
+                        <i class="fa fa-cubes"></i>
+                        <input type="text" name="roll-number" id="r-ronum" class="r-input" placeholder="Roll Number" required pattern="[1-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9A-Za-z].{0,0}">
+                    </div>
+                    <div class="r-in">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" name="email" id="r-email" class="r-input" placeholder="Email" required>
+                    </div>
+                    <div class="r-in">
+                        <i class="fa fa-phone"></i>
+                        <input type="text" name="ph-no" id="r-phno" class="r-input" placeholder="Contact number" required pattern="[1-9].{6,14}">
+                    </div>
+                    <div class="r-in">
+                        <i class="fa fa-building"></i>
+                    <select name="branch" id="r-branch" class="r-input" required>
+                        <option value="" style="color: rgb(73, 73, 73);">Select Branch</option>
+                        <option value="CSE">CSE</option>
+                        <option value="IT">IT</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="Mech">Mechanical Engineering</option>
+                        <option value="Civil">Civil Engineering</option>
+                        <option value="AERO">Aeronautical Engineering</option>
+                    </select>
+                    </div>
+                    <div class="r-in2">
+                        <button type="submit" id="r-submit">Register</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <script>
-        var loa = document.getElementById("sub-load");
-        var loa1 = document.getElementById("sub-load1");
-        var loa2 = document.getElementById("sub-load2");
-        function SubForm() {
-            var Name = "Unknown OS";
-            if (navigator.userAgent.indexOf("Win") != -1) Name =
-                "Windows OS";
-            if (navigator.userAgent.indexOf("Mac") != -1) Name =
-                "Macintosh";
-            if (navigator.userAgent.indexOf("Linux") != -1) Name =
-                "Linux OS";
-            if (navigator.userAgent.indexOf("Android") != -1) Name =
-                "Android OS";
-            if (navigator.userAgent.indexOf("like Mac") != -1) Name =
-                "iOS";
-            a1 = document.getElementsByClassName('comin')
-            i = a1[1].value
-            j = i.indexOf('@')
-            k = i.indexOf('.')
-            a1[3].value = new Date();
-            a1[4].value = Name;
-            if (!a1[0].value) {
-                alert("Enter your name")
-
-            }
-            else if (!a1[1].value) {
-                alert("Enter your email-id")
-            }
-            else if (j == -1 || k == -1) {
-                alert("Enter a proper email-id")
-            }
-            else if (!a1[2].value) {
-                alert("write ur comment")
-            }
-            else if (a1[2].value && a1[1].value && a1[0].value) {
-                loa.style.display = "block"
-                $.ajax({
-                    url: 'https://api.apispreadsheets.com/data/11735/',
-                    type: 'post',
-                    data: $("#myForm").serializeArray(),
-                    success: function () {
-                        loa.style.display = "none"
-                        loa1.style.display = 'block'
-                        setTimeout(function () { loa1.style.display = "none"; }, 2000);
-                    },
-                    error: function () {
-                        loa.style.display = "none"
-                        loa2.style.display = "block"
-                        setTimeout(function () { loa2.style.display = "none"; }, 2000);
-                    }
-                });
-            }
+        var rclose=document.getElementById("r-close");
+        var register=document.getElementById("register");
+        var ropen=document.getElementById("r-open");
+        var rload=document.getElementById("sub-load");
+        var rload1=document.getElementById("sub-load1");
+        var rload2=document.getElementById("sub-load2");
+        rclose.onclick = function(){
+            register.style.display="none"
         }
+        ropen.onclick=function(){
+            register.style.display="block"
+        }
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwH_9lxbKG_Qh4pyeM3455OsJgf9fm_vdPNvKqc9N-2fhMd16iX-UXeTQWQxW6PtFJI/exec'
+            const f = document.forms['google-sheet']
+            f.addEventListener('submit', e => {
+                register.style.display = "none"
+                rload.style.display="block"
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(f) })
+                    .then(Response=>{
+                        rload.style.display = "none"
+                        rload1.style.display = "block"
+                        setTimeout(function () { rload1.style.display = "none"; }, 2000);
+                    })
+                    .catch(error => {
+                        rload.style.display = "none"
+                        rload2.style.display = "block"
+                        setTimeout(function () { rload2.style.display = "none"; }, 2000);
+                    })
+            })
     </script>
-    <!--Footer-->
+        <!--Social Media-->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+            <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png"></a>
+            <a href="https://twitter.com/?lang=en"><img src="images/twitter.png"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
+            <a href="https://in.linkedin.com/"><img src="images/linkedin.png"></a>
+        </div>
+        <!--Footer-->
     <section id="footer">
         <br>
         <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
@@ -181,13 +362,13 @@ border-radius: 0; }
                 <small>
                     <a href="activities.html"><i class="fa fa-hourglass-half"></i>&nbsp Activities</a>
                     <br>
-                    <a href="events.html"><i class="fa fa-calendar"></i>&nbsp Events</a>
+                    <a href="members.html"><i class="fa fa-users"></i>&nbsp Events</a>
                     <br>
-                    <a href="members.html"><i class="fa fa-users"></i>&nbsp Home</a>
+                    <a href="index.html"><i class="fa fa-home"></i>&nbsp Home</a>
                     <br>
                     <a href="https://www.iare.ac.in/"><i class="fa fa-university"></i>&nbsp About IARE</a>
                     <br>
-                    <a href="#b1"><i class="fa fa-comments"></i>&nbsp Feedback</a>
+                    <a href="index.html"><i class="fa fa-comments"></i>&nbsp Feedback</a>
                 </small>
             </div>
             <div class="link-title" id="mem-fol">
@@ -216,7 +397,6 @@ border-radius: 0; }
                                 <small>Unsubscribe</small>
                             </div>
                         </div>
-                
             </div>
             <div class="link-title">
                 <h3>Contact us</h3>
@@ -235,8 +415,7 @@ border-radius: 0; }
             </div>
         </div>
         <div class="fend">
-            <small id="sm" style="color: black;">made with <i class="fa fa-heart" title="Love"></i> <i></i><i
-                    class="fa fa-html5" title="HTML"></i>
+            <small id="sm" style="color: black;">made with <i class="fa fa-heart" title="Love"></i> <i></i><i class="fa fa-html5" title="HTML"></i>
                 <i></i>& <i></i><i class="fa fa-css3" title="CSS"></i> in <a
                     href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i
                         class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
@@ -244,234 +423,60 @@ border-radius: 0; }
                 ideatoinnovation</small>
         </div>
     </section>
-    <!--Privacy Policy-->
     <div id="pri-po">
-        <h1 style="text-align: center; background: rgb(12, 79, 110); width: 100%; padding-bottom: 1vh;">Privacy Policy<i class="fa fa-times" style="position: absolute; left: 95%; " id="close-pri"></i></h1>
+        <h1 style="text-align: center; background: rgb(0, 192, 48);  padding-bottom: 1vh; position: -webkit-sticky;position: sticky; top: 0; box-shadow:0 0 5px rgba(255, 217, 0, 0.747);">Privacy Policy<i
+                class="fa fa-times" style="position: absolute; left: 96%; " id="close-pri"></i></h1>
         
-        <div style="padding: 5%;">
-        <h2>Information Collected from Idea2Innovation Visitors</h2>
-        <br>
-        <h3>Device Information from Idea2Innovation Visitors</h3>
-        <br>
-        <p style="color:white;">We may receive and collect certain Information furnished by the visitor's browser or otherwise by their access device
-        (“Device Information”), such as:</p>
-        <br>
-        <p style="color: white;">Browser Information
-        <br>
-        <br>
-        Operating System Information
-        <br>
-        <br>
-        IP address (stored in anonymized form)
-        <br>
-        <br>
-        Page Accessed
-        <br>
-        <br>
-        Time of visit (by date, month, year, local)
-        <br>
-        <br>
-        Other such Information as may be delivered or shared by the applicable browser or access software or device.
-        </p>
+        <div style="padding: 5%; " id="pri-po-body">
+            <h2>Information Collected from Idea2Innovation Visitors</h2>
+            <br>
+            <h3>Device Information from Idea2Innovation Visitors</h3>
+            <br>
+            <p style="color:white;">We may receive and collect certain Information furnished by the visitor's browser or
+                otherwise by their access device
+                (“Device Information”), such as:</p>
+            <br>
+            <ul style="color: white; text-align: justify;">
+               <li> Browser Information</li>
+               <br>
+               <li> Operating System Information</li>
+               <br>
+                <li> IP address (stored in anonymized form)</li>
+                <br>
+                <li> Page Accessed</li>
+                <br>
+                <li> Time of visit (by date, month, year, local)</li>
+                <br>
+                <li> Other such Information as may be delivered or shared by the applicable browser or access software or device.</li>
+            </ul>
         </div>
     </div>
+    <img src="images/logo.png" alt="loading" id="pri-po-load">
     <script>
-        var ap=document.getElementById("pri-po");
-        var o=document.getElementById("open-pri");
-        var c=document.getElementById("close-pri");
-        o.onclick=function(){
-            ap.style.display="block";
+        var ap = document.getElementById("pri-po");
+        var o = document.getElementById("open-pri");
+        var c = document.getElementById("close-pri");
+        var imgp=document.getElementById("pri-po-load");
+        o.onclick = function () {
+            imgp.style.display="block";
+            setTimeout(()=>{imgp.style.display="none"},1000)
+            ap.style.transition="all 1s ease-in"
+            ap.style.display = "block"
+            setTimeout(()=>{ ap.style.opacity = "1"},1000)
         }
-        c.onclick=function(){
-            ap.style.display="none";
+        c.onclick = function () {
+            ap.style.display = "none";
+            ap.style.opacity="0"
         }
     </script>
-    <!--Social Media-->
-    <div class="social-icons">
-        <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
-        <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png"></a>
-        <a href="https://twitter.com/?lang=en"><img src="images/twitter.png"></a>
-        <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
-        <a href="https://in.linkedin.com/"><img src="images/linkedin.png"></a>
-    </div>
-    <!--Navigation-->
-    <nav class="nav1" id="na">
-        <ul>
-            <li class="active"><i class="fa fa-home" id="fa"></i></li>
-            <li><i class="fa fa-hourglass-half" id="fa"></i></li>
-            <li><i class="fa fa-calendar" id="fa"></i></li>
-            <li><i class="fa fa-address-card" id="fa"></i></li>
-            <li><i class="fa fa-users" id="fa"></i></li>
-            <li><i class="fa fa-university" id="fa"></i></li>
-            <li><i class="fa fa-comments" id="fa"></i></li>
-        </ul>
-    </nav>
-    <nav id="sideNav">
-        <ul>
-            <h2>IdeaToInnovation</h2>
-            <li class="active"><a href="index.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-home" id="fa"></i> Home</a>
-            </li>
-            <li><a href="activities.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-hourglass-half" id="fa"></i>
-                    Activities</a></li>
-            <li><a href="events.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-calendar" id="fa"></i> Events</a></li>
-            <li><a href="about.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-address-card" id="fa"></i> About Us</a></li>
-            <li><a href="members.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-users" id="fa"></i> Members</a></li>
-            <li><a href="https://www.iare.ac.in/">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-university" id="fa"></i>About
-                    IARE</a></li>
-            <li><a href="#b1">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
-            </li>
-        </ul>
-    </nav>
-
-    <img src="images/men.jpg" id="menuBtn">
-    <script>
-        var menuBtn = document.getElementById("menuBtn");
-        var sideNav = document.getElementById("sideNav");
-        var click = document.getElementById("click")
-        var na = document.getElementById("na")
-        sideNav.style.left = "-250px";
-        na.onmouseover = function () {
-            sideNav.style.left = "0px"
-            menuBtn.src = "images/menclose.jpg"
-        }
-        na.onmouseout = function () {
-            sideNav.style.left = "-250px"
-            menuBtn.src = "images/men.jpg"
-        }
-        sideNav.onmouseover = function () {
-            sideNav.style.left = "0px"
-            menuBtn.src = "images/menclose.jpg"
-        }
-        sideNav.onmouseout = function () {
-            sideNav.style.left = "-250px"
-            menuBtn.src = "images/men.jpg"
-        }
-        sideNav.style.transition = "all 0.35s ease-in"
-        var i1 = 0
-        var j1 = 0
-        menuBtn.onclick = function () {
-            j1 = 1
-            if (!i1) {
-                sideNav.style.left = "0px"
-                menuBtn.src = "images/menclose.jpg"
-                i1 = 1
-            }
-            else {
-                sideNav.style.left = "-250px"
-                menuBtn.src = "images/men.jpg"
-                i1 = 0
-            }
-        }
-        onclick = function () {
-            if (i1 && !j1) {
-                sideNav.style.left = "-250px"
-                menuBtn.src = "images/men.jpg"
-                i1 = 0
-            }
-            j1 = 0
-        }
-    </script>
-    <form method="post" autocomplete="off" name="google-sheet">
-        <input type="text" name="os" id="os" style="display: none;">
-        <input type="text" id="ip" name='ip' style="display: none;">
-        <input type="text" id="brow" name='browser' style="display: none;">
-        <input type="text" id="date" name="datetime-local" style="display: none;">
-    </form>
     <script>
         var loader = document.getElementById("loading");
         function subfor() {
             loader.style.display = "none";
-            fetch('https://api.ipify.org/?format=json')
-                .then(results => results.json())
-                .then(
-                    (data) => {
-                        document.getElementById('ip').value = data.ip
-                        var Name = "Unknown OS";
-                        if (navigator.userAgent.indexOf("Win") != -1) Name =
-                            "Windows OS";
-                        if (navigator.userAgent.indexOf("Mac") != -1) Name =
-                            "Macintosh";
-                        if (navigator.userAgent.indexOf("Linux") != -1) Name =
-                            "Linux OS";
-                        if (navigator.userAgent.indexOf("Android") != -1) Name =
-                            "Android OS";
-                        if (navigator.userAgent.indexOf("like Mac") != -1) Name =
-                            "iOS";
-                        let userAgentString =
-                            navigator.userAgent;
-
-                        // Detect Chrome
-                        let chromeAgent =
-                            userAgentString.indexOf("Chrome") > -1;
-
-                        // Detect Internet Explorer
-                        let IExplorerAgent =
-                            userAgentString.indexOf("MSIE") > -1 ||
-                            userAgentString.indexOf("rv:") > -1;
-
-                        // Detect Firefox
-                        let firefoxAgent =
-                            userAgentString.indexOf("Firefox") > -1;
-
-                        // Detect Safari
-                        let safariAgent =
-                            userAgentString.indexOf("Safari") > -1;
-                        let edgeAgent =
-                            userAgentString.indexOf("Edg") > -1;
-                        // Discard Safari since it also matches Chrome
-                        if ((chromeAgent) && (safariAgent))
-                            safariAgent = false;
-
-                        // Detect Opera
-                        let operaAgent =
-                            userAgentString.indexOf("OP") > -1;
-
-                        // Discard Chrome since it also matches Opera     
-                        if ((chromeAgent) && (operaAgent))
-                            chromeAgent = false;
-                        var Name1 = 'unknown';
-                        if (chromeAgent) {
-                            Name1 = 'Chrome';
-                        }
-                        if (edgeAgent) {
-                            Name1 = 'Microsoft Edge';
-                        }
-                        if (safariAgent) {
-                            Name1 = 'Safari';
-                            var chro = !!window.chrome;
-                            if (chro) {
-                                Name1 = 'Chrome'
-                            }
-                        }
-                        if (IExplorerAgent) {
-                            Name1 = 'Internet Explorer';
-                        }
-                        if (firefoxAgent) {
-                            Name1 = 'Firefox'
-                        }
-                        if (operaAgent) {
-                            Name1 = 'Opera';
-                        }
-
-                        c = document.getElementById('brow');
-                        c.value = Name1
-                        a = document.getElementById('os');
-                        a.value = Name
-                        b = document.getElementById('date');
-                        b.value = new Date();
-                        const scriptURL = 'https://script.google.com/macros/s/AKfycbzk51jqKn6KCuZMPPV2CoQ37TzNWGAilhx7Ny-1M1KQvSZxhxUQeuUYGtuEHtSPWqYP/exec'
-                        const form = document.forms['google-sheet']
-
-                        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                            .then()
-                            .catch(error => console.error('Error!', error.message))
-                    }
-                );
         }
-        
     </script>
     <!--Subscribe-->
-<div id="subscribe">
+<div id="subscribe" >
     <div class="subs-box">
         <img src="images/logo.png" alt="logo" class="subs-img" id="subs-lo">
         <div class="subs-form-box">
@@ -517,44 +522,44 @@ border-radius: 0; }
     </div>
 </div>
 <script>
-        var subs1 = document.getElementById("subs-sub");
-        var subs2 = document.getElementById("subs-sub1");
-        var unsub1 = document.getElementById("subs-un");
-        var unsub2 = document.getElementById("subs-un1");
-        var subscribe = document.getElementById("subscribe");
-        var unsubscribe = document.getElementById("unsubscribe");
-        var sclose1 = document.getElementById("subs-close1");
-        var sclose2 = document.getElementById("subs-close2");
-        var loadsusbs = document.getElementById("subs-lo");
-        var loadunsubs = document.getElementById("unsubs-lo");
-        subs1.onclick = function () {
-            subscribe.style.display = "block";
-        }
-        subs2.onclick = function () {
-            subscribe.style.display = "block";
-        }
-        sclose1.onclick = function () {
-            subscribe.style.display = "none";
-        }
-        unsub1.onclick = function () {
-            unsubscribe.style.display = "block";
-        }
-        unsub2.onclick = function () {
-            unsubscribe.style.display = "block";
-        }
-        sclose2.onclick = function () {
-            unsubscribe.style.display = "none"
-        }
-                    const scriptURL1 = 'https://script.google.com/macros/s/AKfycbx2Mhxk7Bu1ExzmiHqFtMGb5hyQ4wG3r4hOgW02Awu3ppLT2IOAsPQGnmXvbKrj747Smg/exec'
+    var subs1 = document.getElementById("subs-sub");
+    var subs2 = document.getElementById("subs-sub1");
+    var unsub1 = document.getElementById("subs-un");
+    var unsub2 = document.getElementById("subs-un1");
+    var subscribe = document.getElementById("subscribe");
+    var unsubscribe = document.getElementById("unsubscribe");
+    var sclose1 = document.getElementById("subs-close1");
+    var sclose2 = document.getElementById("subs-close2");
+    var loadsusbs=document.getElementById("subs-lo");
+    var loadunsubs=document.getElementById("unsubs-lo");
+    subs1.onclick = function () {
+        subscribe.style.display = "block";
+    }
+    subs2.onclick = function () {
+        subscribe.style.display = "block";
+    }
+    sclose1.onclick = function () {
+        subscribe.style.display = "none";
+    }
+    unsub1.onclick = function () {
+        unsubscribe.style.display = "block";
+    }
+    unsub2.onclick = function () {
+        unsubscribe.style.display = "block";
+    }
+    sclose2.onclick = function () {
+        unsubscribe.style.display = "none"
+    }
+                const scriptURL1 = 'https://script.google.com/macros/s/AKfycbx2Mhxk7Bu1ExzmiHqFtMGb5hyQ4wG3r4hOgW02Awu3ppLT2IOAsPQGnmXvbKrj747Smg/exec'
                     const fo = document.forms['sub-sheet']
                     fo.addEventListener('submit', e => {
-                        loadsusbs.src = "images/loading-subs.gif"
+                        loadsusbs.src="images/loading-subs.gif"
                         e.preventDefault()
                         fetch(scriptURL1, { method: 'POST', body: new FormData(fo) })
                             .then(Response => {
                                 loadsusbs.src = "images/loading-subs-com.gif"
-                                setTimeout(() => { subscribe.style.display = "none" }, 2000);
-                                setTimeout(() => { loadsusbs.src = "images/logo.png" }, 2250);
+                                setTimeout(()=>{ subscribe.style.display="none" },2000);
+                                setTimeout(()=>{ loadsusbs.src = "images/logo.png"},2250);
                             })
                             .catch(error => {
                                 loadsusbs.src = "images/loading-subs-uncom.gif"
@@ -562,24 +567,23 @@ border-radius: 0; }
                                 setTimeout(() => { loadsusbs.src = "images/logo.png" }, 2250);
                             })
                     })
-    const scriptURL2 = 'https://script.google.com/macros/s/AKfycbyNzRoYSdT1qd--9FCqs-pAmhNE9FipehPSvYUUygysW-fRftfs5wvDwed49gK8slQ3Yw/exec'
-    const fo1 = document.forms['unsub-sheet']
-    fo1.addEventListener('submit', e => {
-        loadunsubs.src = "images/loading-unsubs.gif"
-        e.preventDefault()
-        fetch(scriptURL2, { method: 'POST', body: new FormData(fo1) })
-            .then(Response => {
-                loadunsubs.src = "images/loading-unsubs-com.gif"
-                setTimeout(() => { unsubscribe.style.display = "none" }, 2000);
-                setTimeout(() => { loadunsubs.src = "images/logo.png" }, 2250);
-            })
-            .catch(error => {
-                loadunsubs.src = "images/loading-subs-uncom.gif"
-                setTimeout(() => { unsubscribe.style.display = "none" }, 2000);
-                setTimeout(() => { loadunsubs.src = "images/logo.png" }, 2250);
-            })
-    })
+                    const scriptURL2='https://script.google.com/macros/s/AKfycbyNzRoYSdT1qd--9FCqs-pAmhNE9FipehPSvYUUygysW-fRftfs5wvDwed49gK8slQ3Yw/exec'
+                        const fo1 = document.forms['unsub-sheet']
+                        fo1.addEventListener('submit', e => {
+                            loadunsubs.src = "images/loading-unsubs.gif"
+                            e.preventDefault()
+                            fetch(scriptURL2, { method: 'POST', body: new FormData(fo1) })
+                                .then(Response => {
+                                    loadunsubs.src = "images/loading-unsubs-com.gif"
+                                    setTimeout(() => { unsubscribe.style.display = "none" }, 2000);
+                                    setTimeout(() => { loadunsubs.src = "images/logo.png" }, 2250);
+                                })
+                                .catch(error => {
+                                    loadunsubs.src = "images/loading-subs-uncom.gif"
+                                    setTimeout(() => { unsubscribe.style.display = "none" }, 2000);
+                                    setTimeout(() => { loadunsubs.src = "images/logo.png" }, 2250);
+                                })
+                        })
 </script>
 </body>
-
 </html>

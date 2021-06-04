@@ -232,10 +232,11 @@
     </div>
 </section>
 <div id="pri-po">
-    <h1 style="text-align: center; background: rgb(12, 79, 110); width: 100%; padding-bottom: 1vh;">Privacy Policy<i
-            class="fa fa-times" style="position: absolute; left: 95%; " id="close-pri"></i></h1>
+    <h1
+        style="text-align: center; background: rgb(0, 192, 48);  padding-bottom: 1vh; position: -webkit-sticky;position: sticky; top: 0; box-shadow:0 0 5px rgba(255, 217, 0, 0.747);">
+        Privacy Policy<i class="fa fa-times" style="position: absolute; left: 96%; " id="close-pri"></i></h1>
 
-    <div style="padding: 5%;">
+    <div style="padding: 5%; " id="pri-po-body">
         <h2>Information Collected from Idea2Innovation Visitors</h2>
         <br>
         <h3>Device Information from Idea2Innovation Visitors</h3>
@@ -244,42 +245,46 @@
             otherwise by their access device
             (“Device Information”), such as:</p>
         <br>
-        <p style="color: white;">Browser Information
+        <ul style="color: white; text-align: justify;">
+            <li> Browser Information</li>
             <br>
+            <li> Operating System Information</li>
             <br>
-            Operating System Information
+            <li> IP address (stored in anonymized form)</li>
             <br>
+            <li> Page Accessed</li>
             <br>
-            IP address (stored in anonymized form)
+            <li> Time of visit (by date, month, year, local)</li>
             <br>
-            <br>
-            Page Accessed
-            <br>
-            <br>
-            Time of visit (by date, month, year, local)
-            <br>
-            <br>
-            Other such Information as may be delivered or shared by the applicable browser or access software or device.
-        </p>
+            <li> Other such Information as may be delivered or shared by the applicable browser or access software or
+                device.</li>
+        </ul>
     </div>
 </div>
+<img src="images/logo.png" alt="loading" id="pri-po-load">
 <script>
     var ap = document.getElementById("pri-po");
     var o = document.getElementById("open-pri");
     var c = document.getElementById("close-pri");
+    var imgp = document.getElementById("pri-po-load");
     o.onclick = function () {
-        ap.style.display = "block";
+        imgp.style.display = "block";
+        setTimeout(() => { imgp.style.display = "none" }, 1000)
+        ap.style.transition = "all 1s ease-in"
+        ap.style.display = "block"
+        setTimeout(() => { ap.style.opacity = "1" }, 1000)
     }
     c.onclick = function () {
         ap.style.display = "none";
+        ap.style.opacity = "0"
     }
 </script>
-        <script>
-            var loader = document.getElementById("loading");
-            function subfor() {
-                loader.style.display = "none";
-            }
-        </script>
+<script>
+    var loader = document.getElementById("loading");
+    function subfor() {
+        loader.style.display = "none";
+    }
+</script>
         <!--Subscribe-->
 <div id="subscribe">
     <div class="subs-box">

@@ -168,7 +168,7 @@ nav ul li a:hover {
   color: darkslateblue;
   padding-left: 10px;
   margin-left: -10px;
-  box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.397);
+  box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.308);
 }
 #fa {
   font-size: 24px;
@@ -824,7 +824,7 @@ i {
 #pri-po {
   width: 75vw;
   height: 75vh;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
   position: fixed;
   left: 10.5vw;
   top: 10.5vh;
@@ -832,11 +832,19 @@ i {
   padding-right: 1vw;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  background: rgb(192, 76, 76);
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(255, 255, 255);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: none;
+  opacity: 0;
   overflow: scroll;
+  background: rgba(45, 70, 107, 0.562);
+  box-shadow: 0 25px 40px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  align-items: center;
+  text-decoration: wavy;
 }
 #open-pri {
   cursor: pointer;
@@ -848,19 +856,34 @@ i {
   color: deepskyblue;
 }
 #close-pri:hover {
-  color: deepskyblue;
+  background: red;
 }
 #pri-po::-webkit-scrollbar {
   width: 0.75vw;
 }
-
+#pri-po ul {
+  list-style: none;
+}
+#pri-po ul li::before {
+  content: "\2022";
+  color: gold;
+}
 #pri-po::-webkit-scrollbar-track {
   background: transparent;
 }
 
 #pri-po::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.295);
+  background-color: rgba(255, 255, 255, 0.658);
   border-radius: 2mm;
+  height: 0.5vh;
+}
+#pri-po-load {
+  width: 20vw;
+  position: fixed;
+  left: 40vw;
+  top: 30vh;
+  box-shadow: 0 0 50vw gold;
+  display: none;
 }
 /*subscribe*/
 #subscribe {

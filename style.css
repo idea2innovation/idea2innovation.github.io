@@ -831,7 +831,6 @@ i {
 #pri-po {
   width: 75vw;
   height: 75vh;
-
   position: fixed;
   left: 10.5vw;
   top: 10.5vh;
@@ -1574,5 +1573,10 @@ html {
   }
   #r-submit {
     font-size: 4vw;
+  }
+  #pri-po {
+    position: fixed;
+    left: 10.5vw;
+    top: 8vh;
   }
 }

@@ -231,9 +231,11 @@
             ideatoinnovation</small>
     </div>
 </section>
+<!--Privacy Policy-->
+<img src="images/logo.png" alt="loading" id="pri-po-load">
 <div id="pri-po">
     <h1
-        style="text-align: center; background: rgb(0, 192, 48);  padding-bottom: 1vh; position: -webkit-sticky;position: sticky; top: 0; box-shadow:0 0 5px rgba(255, 217, 0, 0.747);">
+        style="text-align: center; background:  linear-gradient(to left, rgb(0, 192, 48),rgb(217, 255, 0));  padding-bottom: 1vh; position: -webkit-sticky;position: sticky; top: 0; box-shadow:0 0 5px rgba(255, 217, 0, 0.747);">
         Privacy Policy<i class="fa fa-times" style="position: absolute; left: 96%; " id="close-pri"></i></h1>
 
     <div style="padding: 5%; " id="pri-po-body">
@@ -241,9 +243,9 @@
         <br>
         <h3>Device Information from Idea2Innovation Visitors</h3>
         <br>
-        <p style="color:white;">We may receive and collect certain Information furnished by the visitor's browser or
+        <h3 style="color:white;">We may receive and collect certain Information furnished by the visitor's browser or
             otherwise by their access device
-            (“Device Information”), such as:</p>
+            (“Device Information”), such as:</h3>
         <br>
         <ul style="color: white; text-align: justify;">
             <li> Browser Information</li>
@@ -261,7 +263,15 @@
         </ul>
     </div>
 </div>
-<img src="images/logo.png" alt="loading" id="pri-po-load">
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+<script type="text/javascript">
+    VanillaTilt.init(document.querySelector("#pri-po"), {
+        max: 5,
+        speed: 100,
+        reverse: true,
+        easing: "cubic-bezier(.03,.98,.52,.99)",
+    });
+</script>
 <script>
     var ap = document.getElementById("pri-po");
     var o = document.getElementById("open-pri");

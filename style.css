@@ -492,6 +492,7 @@ nav ul li a:hover {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   margin-top: 1%;
   background: white;
+  border-radius: 2mm;
 }
 .footer-links {
   width: 100%;
@@ -693,6 +694,9 @@ i {
   border-bottom: gold 0.75vh solid;
   color: white;
 }
+#count-block {
+  color: white;
+}
 .cin {
   padding: 0.5%;
 }
@@ -719,6 +723,9 @@ i {
   width: 100%;
   height: 100%;
   color: white;
+}
+#count {
+  color: gold;
 }
 #com-head {
   font-family: Arial, Helvetica, sans-serif;
@@ -888,6 +895,40 @@ i {
   top: 30vh;
   box-shadow: 0 0 50vw gold;
   display: none;
+}
+#pri-po-body {
+  color: white;
+}
+#pri-po-body ul {
+  color: white;
+}
+#pri-po-body ul li {
+  color: white;
+}
+#pri-po-body ul li strong {
+  color: white;
+}
+#pri-po-body ul li p {
+  color: white;
+}
+#pri-po-body ul li {
+  color: white;
+}
+#pri-po-body p {
+  color: white;
+}
+#pri-po-body h2 {
+  color: white;
+}
+#pri-po-body h3 {
+  color: white;
+}
+#pri-po-body a {
+  color: rgb(247, 252, 0);
+  text-decoration: none;
+}
+#pri-po-body a:hover {
+  color: rgb(252, 206, 0);
 }
 /*subscribe*/
 #subscribe {

@@ -289,6 +289,8 @@ nav ul li a:hover {
   flex-basis: 20%;
   text-align: center;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.432);
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
   padding-bottom: 3%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -708,11 +710,12 @@ i {
   cursor: pointer;
   font-size: 18px;
   color: white;
-  background: rgb(221, 192, 31);
+  background: rgb(226, 194, 12);
+  transition: ease-in 0.5s;
 }
 .sub-btn:hover {
-  box-shadow: 0 0 1px rgba(255, 255, 255, 0.726);
-  background: gold;
+  box-shadow: inset 100px 0 0 0 rgb(255, 238, 0);
+  color: rgba(44, 44, 43, 0.849);
 }
 #myForm {
   font-size: 20px;
@@ -886,6 +889,9 @@ i {
   background-color: rgba(255, 255, 255, 0.658);
   border-radius: 2mm;
   height: 0.5vh;
+}
+#pri-po::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(199, 199, 199, 0.705);
 }
 #pri-po-load {
   width: 20vw;

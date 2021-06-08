@@ -265,6 +265,11 @@ nav ul li a:hover {
   font-style: italic;
 }
 /*--Members--*/
+#mem-back {
+  background: white;
+  background-size: cover;
+  background-attachment: fixed;
+}
 #members {
   padding-top: 5vh;
   padding-bottom: 5vh;
@@ -294,9 +299,10 @@ nav ul li a:hover {
   padding-bottom: 3%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: ease-in 0.25s;
 }
 .member-col:hover {
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 #fa1 {
   text-decoration: none;
@@ -365,7 +371,28 @@ nav ul li a:hover {
 /*--Activity--*/
 #activities {
   padding: 50px 0;
-  background: rgb(250, 222, 198);
+  background-attachment: fixed;
+}
+#ac-bac {
+  background: radial-gradient(
+    circle at bottom center,
+    rgb(197, 234, 55) 0%,
+    rgb(197, 234, 55) 12%,
+    rgb(170, 222, 63) 12%,
+    rgb(170, 222, 63) 18%,
+    rgb(144, 210, 72) 18%,
+    rgb(144, 210, 72) 23%,
+    rgb(117, 198, 80) 23%,
+    rgb(117, 198, 80) 47%,
+    rgb(90, 187, 88) 47%,
+    rgb(90, 187, 88) 59%,
+    rgb(63, 175, 96) 59%,
+    rgb(63, 175, 96) 68%,
+    rgb(37, 163, 105) 68%,
+    rgb(37, 163, 105) 86%,
+    rgb(10, 151, 113) 86%,
+    rgb(10, 151, 113) 100%
+  );
   background-attachment: fixed;
 }
 .activity-row {
@@ -374,13 +401,13 @@ nav ul li a:hover {
   flex-wrap: wrap;
 }
 .activity-right-col {
-  flex-basis: 50%;
+  flex-basis: 55%;
 }
 .activity-right-col img {
   width: 100%;
 }
 .activity-left-col {
-  flex-basis: 50%;
+  flex-basis: 45%;
 }
 .activity-text {
   max-width: 350px;
@@ -495,6 +522,30 @@ nav ul li a:hover {
   margin-top: 1%;
   background: white;
   border-radius: 2mm;
+  background: radial-gradient(
+      circle at 99% 30%,
+      orange 0%,
+      gold 12%,
+      transparent 12%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgb(0, 255, 106) 0%,
+      rgb(0, 255, 106) 15%,
+      transparent 15%
+    ),
+    radial-gradient(
+      circle at 20% 0%,
+      rgb(0, 153, 255) 0%,
+      rgb(0, 153, 255) 10%,
+      transparent 10%
+    ),
+    radial-gradient(
+      circle at 60% 100%,
+      rgb(255, 79, 217) 0%,
+      rgb(238, 130, 215) 10%,
+      transparent 10%
+    );
 }
 .footer-links {
   width: 100%;
@@ -846,10 +897,23 @@ i {
   opacity: 0;
   overflow: scroll;
   background: linear-gradient(
-    to top left,
-    rgba(144, 152, 223, 0.562),
-    rgba(19, 23, 65, 0.562)
-  );
+      to top left,
+      rgba(144, 152, 223, 0.562),
+      rgba(19, 23, 65, 0.562)
+    ),
+    radial-gradient(circle at 0% 100%, rgb(234, 0, 255) 10%, transparent 10%),
+    radial-gradient(circle at 9% 100%, rgb(234, 0, 255) 12%, transparent 12%),
+    radial-gradient(circle at 22% 100%, rgb(234, 0, 255) 5%, transparent 5%),
+    radial-gradient(circle at 30% 100%, rgb(234, 0, 255) 8%, transparent 8%),
+    radial-gradient(circle at 39% 100%, rgb(234, 0, 255) 11%, transparent 11%),
+    radial-gradient(circle at 50% 100%, rgb(234, 0, 255) 8%, transparent 8%),
+    radial-gradient(circle at 60% 100%, rgb(234, 0, 255) 12%, transparent 12%),
+    radial-gradient(circle at 69% 100%, rgb(234, 0, 255) 6%, transparent 6%),
+    radial-gradient(circle at 78% 100%, rgb(234, 0, 255) 9%, transparent 9%),
+    radial-gradient(circle at 87% 100%, rgb(234, 0, 255) 5%, transparent 5%),
+    radial-gradient(circle at 93% 100%, rgb(234, 0, 255) 6%, transparent 6%),
+    radial-gradient(circle at 100% 100%, rgb(234, 0, 255) 10%, transparent 10%);
+
   box-shadow: 0 25px 40px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(15px);
@@ -858,6 +922,8 @@ i {
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
   border-left: 1.5px solid rgba(255, 255, 255, 0.507);
   align-items: center;
+  background-attachment: scroll;
+  background-size: cover;
 }
 #open-pri {
   cursor: pointer;
@@ -1326,6 +1392,9 @@ html {
   }
   .mem-con-btn {
     font-size: 1.75vh;
+  }
+  .activity-row {
+    margin-left: 10px;
   }
   .activity-left-col {
     flex-basis: 100%;

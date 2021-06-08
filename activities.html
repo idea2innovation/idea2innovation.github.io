@@ -18,7 +18,7 @@
 </style>
 <body id="click" onload="subfor()" >
             <div id="loading"></div>
-    <div style="background: rgb(250, 222, 198);">
+    <div  id="ac-bac">
     <div style="margin-left: 7vw;">
         <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
     </div>
@@ -26,7 +26,7 @@
         <div class="container activity-row">
             <div class="activity-left-col">
                 <div class="activity-text">
-                    <h1>--Activities--</h1><br><br>
+                    <h1 style="color: white;">--Activities--</h1><br><br>
                     <div class="acon" id="a1">
                     <h3>Activity 1</h3>
                     <br>
@@ -52,7 +52,7 @@
                     <p>Coming up soon... <br>Coming up soon... <br>Coming up soon...</p>
                     </div>
                     </span>
-                    <button class="common-btn" id="read" onclick="read()">View all</button>
+                    <button class="common-btn" id="read" onclick="read()" style="color: white;">View all</button>
                     <script type="text/javascript">
                         var i = 0;
                         function read() {
@@ -71,7 +71,6 @@
                 </div>
             </div>
             <div class="activity-right-col">
-                <img src="images/activity.jpg">
             </div>
         </div>
     <!--Navigation-->
@@ -457,13 +456,13 @@
 <script type="text/javascript">
     VanillaTilt.init(document.querySelector("#pri-po"), {
         max: 5,
-        speed: 100,
+        speed: 1000,
         reverse: true,
         easing: "cubic-bezier(.03,.98,.52,.99)",
     });
     VanillaTilt.init(document.querySelectorAll(".acon"), {
             max: 10,
-            speed: 100,
+            speed: 400,
             reverse: true,
             easing: "cubic-bezier(.03,.98,.52,.99)",
             

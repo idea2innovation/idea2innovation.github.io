@@ -1216,6 +1216,7 @@ i {
   padding-right: 0.75vw;
   border-radius: 1.5vw;
   transition: ease-in 0.35s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 #subs-un1 {
   cursor: pointer;
@@ -1226,6 +1227,7 @@ i {
   padding-right: 0.75vw;
   border-radius: 1.5vw;
   transition: ease-in 0.35s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 #subs-sub1:hover {
   background: rgb(187, 74, 33);

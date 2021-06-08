@@ -266,7 +266,40 @@ nav ul li a:hover {
 }
 /*--Members--*/
 #mem-back {
-  background: white;
+  background: radial-gradient(
+      circle at 11% 63%,
+      rgba(82, 82, 82, 0.06) 0%,
+      rgba(82, 82, 82, 0.06) 25%,
+      rgba(136, 136, 136, 0.06) 25%,
+      rgba(136, 136, 136, 0.06) 50%,
+      rgba(191, 191, 191, 0.06) 50%,
+      rgba(191, 191, 191, 0.06) 75%,
+      rgba(245, 245, 245, 0.06) 75%,
+      rgba(245, 245, 245, 0.06) 100%
+    ),
+    radial-gradient(
+      circle at 16% 28%,
+      rgba(80, 80, 80, 0.06) 0%,
+      rgba(80, 80, 80, 0.06) 25%,
+      rgba(68, 68, 68, 0.06) 25%,
+      rgba(68, 68, 68, 0.06) 50%,
+      rgba(56, 56, 56, 0.06) 50%,
+      rgba(56, 56, 56, 0.06) 75%,
+      rgba(44, 44, 44, 0.06) 75%,
+      rgba(44, 44, 44, 0.06) 100%
+    ),
+    radial-gradient(
+      circle at 51% 54%,
+      rgba(179, 179, 179, 0.06) 0%,
+      rgba(179, 179, 179, 0.06) 25%,
+      rgba(121, 121, 121, 0.06) 25%,
+      rgba(121, 121, 121, 0.06) 50%,
+      rgba(62, 62, 62, 0.06) 50%,
+      rgba(62, 62, 62, 0.06) 75%,
+      rgba(4, 4, 4, 0.06) 75%,
+      rgba(4, 4, 4, 0.06) 100%
+    ),
+    linear-gradient(303deg, rgb(255, 255, 255), rgb(255, 255, 255));
   background-size: cover;
   background-attachment: fixed;
 }

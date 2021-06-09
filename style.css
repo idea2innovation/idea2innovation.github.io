@@ -1265,7 +1265,384 @@ body::-webkit-scrollbar-thumb:hover {
 html {
   scroll-behavior: smooth;
 }
-@media all and (max-width: 400px) {
+
+@media all and (max-width: 950px) {
+  #header {
+    background: url(images/abc.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .header-text {
+    max-width: 90%;
+  }
+  .header-text p {
+    color: black;
+    background: rgba(241, 241, 241, 0.9);
+    border-radius: 1mm;
+    padding: 2%;
+    font-size: 12px;
+    line-height: 4mm;
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .container {
+    margin-right: 50px;
+    margin-left: 50px;
+    font-family: sans-serif;
+  }
+  .show-btn {
+    font-size: 10px;
+    width: 40px;
+  }
+  .show-btn1 {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+  form .btn {
+    margin: 20px 0;
+    height: 20px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+  }
+  form .btn button {
+    background: white;
+    border: darkslateblue solid 0.25mm;
+    font-size: 12px;
+  }
+  #sideNav {
+    width: 200px;
+    height: 200vh;
+  }
+  nav ul li a {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  nav ul {
+    height: 200vh;
+    width: 200px;
+    font-size: 15px;
+    line-height: 45px;
+    overflow: scroll;
+  }
+  nav ul h2 {
+    margin-left: 30px;
+    font-size: 16px;
+  }
+  nav ul li {
+    float: bottom;
+    width: 180px;
+  }
+  nav ul li a:hover {
+    position: relative;
+    left: 10px;
+    width: 170px;
+    padding-left: 10px;
+    margin-left: -10px;
+  }
+  .active a {
+    background-color: white;
+    color: darkslateblue;
+    position: relative;
+    left: 10px;
+    width: 170px;
+    padding-left: 10px;
+    margin-left: -10px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.397);
+  }
+  .active i {
+    background: transparent;
+  }
+  .nav1 {
+    width: 30px;
+    height: 100vh;
+  }
+  .nav1 {
+    display: none;
+  }
+  #menuBtn {
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    left: 1px;
+    top: 3px;
+  }
+  #fa {
+    font-size: 16px;
+  }
+  .logo {
+    margin-top: 2px;
+    margin-left: 20px;
+    width: 50px;
+  }
+  .header-text {
+    margin-top: 90px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  .common-btn {
+    padding: 10px 16px;
+  }
+  .common-btn1 {
+    background: rgba(241, 241, 241, 0.9);
+    padding: 10px 16px;
+  }
+  .social-icons img {
+    width: 30px;
+    margin: 15px auto;
+  }
+  .about-left-col,
+  .about-right-col {
+    flex-basis: 100%;
+  }
+  .about-text {
+    margin: 50px 50px 0;
+    display: inline-block;
+  }
+  .about-text h2 {
+    font-size: 18px;
+  }
+  .member-row {
+    width: 80%;
+  }
+  .member-row1 {
+    width: 80%;
+  }
+  .member-col {
+    flex-basis: 30%;
+    margin-bottom: 2vh;
+  }
+  #fa1 {
+    font-size: 2.5vh;
+  }
+  .middle {
+    text-align: center;
+    display: none;
+    padding-top: 3%;
+    padding-bottom: 2%;
+  }
+  .member-col h4 {
+    margin-bottom: 1vh;
+    font-size: 3vw;
+  }
+  .mem-con-btn {
+    font-size: 2.5vw;
+  }
+  .activity-row {
+    margin-left: 10px;
+  }
+  .activity-left-col {
+    flex-basis: 100%;
+  }
+  .activity-right-col {
+    flex-basis: 100%;
+    margin-top: 70px;
+  }
+  .contact-left-col,
+  .contact-right-col {
+    flex-basis: 100%;
+  }
+  .contact-right-col img {
+    margin-top: 35px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .header-text {
+    margin-top: 5%;
+  }
+  .link-title {
+    flex-basis: 24vw;
+    font-size: 1.5vw;
+    padding-bottom: 0.75vw;
+  }
+  .link-title h3 {
+    font-size: 1.75vw;
+  }
+  #im1 {
+    flex-basis: 16vw;
+  }
+  #mem-fol {
+    flex-basis: 20vw;
+    margin-right: 2vw;
+  }
+  #mem-fol1 {
+    flex-basis: 15vw;
+  }
+  .fend {
+    font-size: 10px;
+  }
+  #abend {
+    font-size: 18px;
+  }
+  #logo123 {
+    margin-right: 0;
+  }
+  .comments {
+    margin-left: 18%;
+    margin-top: 5%;
+    padding: 5%;
+    width: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .comin {
+    height: 15px;
+    width: 100%;
+    font-size: 100%;
+    border-bottom: gold 0.75vh solid;
+  }
+  .sub-btn {
+    padding: 5px 5px;
+    outline: none;
+    border-radius: 0.5mm;
+    font-size: 10px;
+    background: rgb(221, 192, 31);
+  }
+  #com-text {
+    font-size: 100%;
+  }
+  #myForm {
+    font-size: 12px;
+    line-height: 5mm;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  #com-box {
+    width: 100%;
+    height: 100%;
+  }
+  #com-head {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20%;
+    padding: 1%;
+    text-align: center;
+    background: white;
+    width: 60%;
+  }
+  #sub-load0-1 {
+    width: 55%;
+    height: 25vh;
+    background: white url(images/feed-pre2.gif) no-repeat center;
+    margin-left: 25%;
+    margin-top: 35vh;
+  }
+  #sub-load1-1 {
+    width: 55%;
+    height: 25vh;
+    background: rgb(2, 173, 2);
+    margin-left: 25%;
+    margin-top: 35vh;
+  }
+  #sub-load1-3 {
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    top: 30%;
+    color: white;
+  }
+  #sub-load1-2 {
+    text-align: center;
+    position: relative;
+    top: 25%;
+  }
+  #sub-load2-1 {
+    width: 55%;
+    height: 25vh;
+    background: rgb(255, 195, 205);
+    margin-left: 25%;
+    margin-top: 35vh;
+  }
+  #sub-load2-3 {
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    top: 30%;
+    color: rgb(255, 0, 0);
+  }
+  #sub-load2-2 {
+    text-align: center;
+    position: relative;
+    top: 25%;
+  }
+  .subs-box {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    left: 0%;
+    top: 40%;
+  }
+  .subs-head {
+    font-size: 2.5vh;
+  }
+  #subs-email1 {
+    font-size: 2.25vh;
+    border-bottom: gold 0.45vh solid;
+  }
+  #subs-email2 {
+    font-size: 2.25vh;
+    border-bottom: gold 0.45vh solid;
+  }
+  #subs-tell {
+    font-size: 2.25vh;
+    border-bottom: gold 0.45vh solid;
+  }
+  #subs-btn2 {
+    font-size: 1.25vh;
+  }
+  #subs-btn1 {
+    font-size: 1.25vh;
+  }
+  #r-box {
+    width: 50vw;
+    height: 44vh;
+    background: white;
+    position: absolute;
+    left: 25vw;
+    top: 28vh;
+  }
+  #r-head {
+    font-size: 2.5vh;
+  }
+  .r-input {
+    font-size: 2vh;
+    border-bottom: 0.2vh solid black;
+  }
+  #r-submit {
+    font-size: 2vh;
+  }
+  #subs-top {
+    font-size: 1.75vh;
+  }
+  #subs-sub1 {
+    padding-left: 0.75vh;
+    padding-right: 0.75vh;
+    border-radius: 2vw;
+    font-size: 3vw;
+  }
+  #subs-un1 {
+    padding-left: 0.75vh;
+    padding-right: 0.75vh;
+    border-radius: 2vw;
+    font-size: 3vw;
+  }
+  .ecol {
+    margin-bottom: 5%;
+  }
+}
+@media all and (max-width: 500px) {
   #header {
     background: url(images/abc.jpg);
     background-position: center;
@@ -1688,381 +2065,5 @@ html {
     position: fixed;
     left: 10.5vw;
     top: 8vh;
-  }
-}
-@media all and (max-width: 950px) {
-  #header {
-    background: url(images/abc.jpg);
-    background-position: center;
-    background-size: cover;
-  }
-  .header-text {
-    max-width: 90%;
-  }
-  .header-text p {
-    color: black;
-    background: rgba(241, 241, 241, 0.9);
-    border-radius: 1mm;
-    padding: 2%;
-    font-size: 12px;
-    line-height: 4mm;
-    opacity: 1;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  .container {
-    margin-right: 50px;
-    margin-left: 50px;
-    font-family: sans-serif;
-  }
-  .show-btn {
-    font-size: 10px;
-    width: 40px;
-  }
-  .show-btn1 {
-    font-size: 16px;
-    padding: 10px 16px;
-  }
-  form .btn {
-    margin: 20px 0;
-    height: 20px;
-    width: 50%;
-    position: absolute;
-    left: 50%;
-  }
-  form .btn button {
-    background: white;
-    border: darkslateblue solid 0.25mm;
-    font-size: 12px;
-  }
-  #sideNav {
-    width: 200px;
-    height: 200vh;
-  }
-  nav ul li a {
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-  nav ul {
-    height: 200vh;
-    width: 200px;
-    font-size: 15px;
-    line-height: 45px;
-    overflow: scroll;
-  }
-  nav ul h2 {
-    margin-left: 30px;
-    font-size: 16px;
-  }
-  nav ul li {
-    float: bottom;
-    width: 180px;
-  }
-  nav ul li a:hover {
-    position: relative;
-    left: 10px;
-    width: 170px;
-    padding-left: 10px;
-    margin-left: -10px;
-  }
-  .active a {
-    background-color: white;
-    color: darkslateblue;
-    position: relative;
-    left: 10px;
-    width: 170px;
-    padding-left: 10px;
-    margin-left: -10px;
-    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.397);
-  }
-  .active i {
-    background: transparent;
-  }
-  .nav1 {
-    width: 30px;
-    height: 100vh;
-  }
-  .nav1 {
-    display: none;
-  }
-  #menuBtn {
-    width: 25px;
-    height: 25px;
-    position: fixed;
-    left: 1px;
-    top: 3px;
-  }
-  #fa {
-    font-size: 16px;
-  }
-  .logo {
-    margin-top: 2px;
-    margin-left: 20px;
-    width: 50px;
-  }
-  .header-text {
-    margin-top: 90px;
-  }
-  h1 {
-    font-size: 25px;
-  }
-  .common-btn {
-    padding: 10px 16px;
-  }
-  .common-btn1 {
-    background: rgba(241, 241, 241, 0.9);
-    padding: 10px 16px;
-  }
-  .social-icons img {
-    width: 30px;
-    margin: 15px auto;
-  }
-  .about-left-col,
-  .about-right-col {
-    flex-basis: 100%;
-  }
-  .about-text {
-    margin: 50px 50px 0;
-    display: inline-block;
-  }
-  .about-text h2 {
-    font-size: 18px;
-  }
-  .member-row {
-    width: 80%;
-  }
-  .member-row1 {
-    width: 80%;
-  }
-  .member-col {
-    flex-basis: 30%;
-    margin-bottom: 2vh;
-  }
-  #fa1 {
-    font-size: 2.5vh;
-  }
-  .middle {
-    text-align: center;
-    display: none;
-    padding-top: 3%;
-    padding-bottom: 2%;
-  }
-  .member-col h4 {
-    margin-bottom: 1vh;
-    font-size: 3vw;
-  }
-  .mem-con-btn {
-    font-size: 2.5vw;
-  }
-  .activity-row {
-    margin-left: 10px;
-  }
-  .activity-left-col {
-    flex-basis: 100%;
-  }
-  .activity-right-col {
-    flex-basis: 100%;
-    margin-top: 70px;
-  }
-  .contact-left-col,
-  .contact-right-col {
-    flex-basis: 100%;
-  }
-  .contact-right-col img {
-    margin-top: 35px;
-  }
-  h1 {
-    font-size: 18px;
-  }
-  h2 {
-    font-size: 16px;
-  }
-  h3 {
-    font-size: 15px;
-  }
-  h4 {
-    font-size: 14px;
-  }
-  p {
-    font-size: 12px;
-  }
-  .header-text {
-    margin-top: 5%;
-  }
-  .link-title {
-    flex-basis: 24vw;
-    font-size: 1.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .link-title h3 {
-    font-size: 1.75vw;
-  }
-  #im1 {
-    flex-basis: 16vw;
-  }
-  #mem-fol {
-    flex-basis: 20vw;
-    margin-right: 2vw;
-  }
-  #mem-fol1 {
-    flex-basis: 15vw;
-  }
-  .fend {
-    font-size: 10px;
-  }
-  #abend {
-    font-size: 18px;
-  }
-  #logo123 {
-    margin-right: 0;
-  }
-  .comments {
-    margin-left: 18%;
-    margin-top: 5%;
-    padding: 5%;
-    width: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-  .comin {
-    height: 15px;
-    width: 100%;
-    font-size: 100%;
-    border-bottom: gold 0.75vh solid;
-  }
-  .sub-btn {
-    padding: 5px 5px;
-    outline: none;
-    border-radius: 0.5mm;
-    font-size: 10px;
-    background: rgb(221, 192, 31);
-  }
-  #com-text {
-    font-size: 100%;
-  }
-  #myForm {
-    font-size: 12px;
-    line-height: 5mm;
-    font-family: Georgia, "Times New Roman", Times, serif;
-  }
-  #com-box {
-    width: 100%;
-    height: 100%;
-  }
-  #com-head {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 20%;
-    padding: 1%;
-    text-align: center;
-    background: white;
-    width: 60%;
-  }
-  #sub-load0-1 {
-    width: 55%;
-    height: 25vh;
-    background: white url(images/feed-pre2.gif) no-repeat center;
-    margin-left: 25%;
-    margin-top: 35vh;
-  }
-  #sub-load1-1 {
-    width: 55%;
-    height: 25vh;
-    background: rgb(2, 173, 2);
-    margin-left: 25%;
-    margin-top: 35vh;
-  }
-  #sub-load1-3 {
-    text-align: center;
-    font-size: 30px;
-    position: relative;
-    top: 30%;
-    color: white;
-  }
-  #sub-load1-2 {
-    text-align: center;
-    position: relative;
-    top: 25%;
-  }
-  #sub-load2-1 {
-    width: 55%;
-    height: 25vh;
-    background: rgb(255, 195, 205);
-    margin-left: 25%;
-    margin-top: 35vh;
-  }
-  #sub-load2-3 {
-    text-align: center;
-    font-size: 30px;
-    position: relative;
-    top: 30%;
-    color: rgb(255, 0, 0);
-  }
-  #sub-load2-2 {
-    text-align: center;
-    position: relative;
-    top: 25%;
-  }
-  .subs-box {
-    width: 100%;
-    height: 20%;
-    position: absolute;
-    left: 0%;
-    top: 40%;
-  }
-  .subs-head {
-    font-size: 2.5vh;
-  }
-  #subs-email1 {
-    font-size: 2.25vh;
-    border-bottom: gold 0.45vh solid;
-  }
-  #subs-email2 {
-    font-size: 2.25vh;
-    border-bottom: gold 0.45vh solid;
-  }
-  #subs-tell {
-    font-size: 2.25vh;
-    border-bottom: gold 0.45vh solid;
-  }
-  #subs-btn2 {
-    font-size: 1.25vh;
-  }
-  #subs-btn1 {
-    font-size: 1.25vh;
-  }
-  #r-box {
-    width: 50vw;
-    height: 44vh;
-    background: white;
-    position: absolute;
-    left: 25vw;
-    top: 28vh;
-  }
-  #r-head {
-    font-size: 2.5vh;
-  }
-  .r-input {
-    font-size: 2vh;
-    border-bottom: 0.2vh solid black;
-  }
-  #r-submit {
-    font-size: 2vh;
-  }
-  #subs-top {
-    font-size: 1.75vh;
-  }
-  #subs-sub1 {
-    padding-left: 0.75vh;
-    padding-right: 0.75vh;
-    border-radius: 2vw;
-    font-size: 3vw;
-  }
-  #subs-un1 {
-    padding-left: 0.75vh;
-    padding-right: 0.75vh;
-    border-radius: 2vw;
-    font-size: 3vw;
-  }
-  .ecol {
-    margin-bottom: 5%;
   }
 }

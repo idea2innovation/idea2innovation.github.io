@@ -139,6 +139,7 @@ nav ul {
   background-color: darkslateblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  overflow: scroll;
 }
 nav ul h2 {
   margin-left: 45px;
@@ -1312,7 +1313,7 @@ html {
   }
   #sideNav {
     width: 200px;
-    height: 200vh;
+    height: 100vh;
   }
   nav ul li a {
     position: relative;
@@ -1320,10 +1321,11 @@ html {
     left: 0px;
   }
   nav ul {
-    height: 200vh;
+    height: 100vh;
     width: 200px;
     font-size: 15px;
     line-height: 45px;
+    overflow: scroll;
     overflow: scroll;
   }
   nav ul h2 {
@@ -1404,8 +1406,12 @@ html {
   .about-text h2 {
     font-size: 18px;
   }
+  #members {
+    flex-wrap: wrap;
+  }
   .member-row {
     width: 80%;
+    flex-wrap: wrap;
   }
   .member-row1 {
     width: 80%;
@@ -1688,7 +1694,7 @@ html {
   }
   #sideNav {
     width: 200px;
-    height: 200vh;
+    height: 100vh;
   }
   nav ul li a {
     position: relative;
@@ -1696,10 +1702,11 @@ html {
     left: 0px;
   }
   nav ul {
-    height: 200vh;
+    height: 100vh;
     width: 200px;
     font-size: 15px;
     line-height: 45px;
+    overflow: scroll;
   }
   nav ul h2 {
     margin-left: 30px;

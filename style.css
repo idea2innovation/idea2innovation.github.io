@@ -47,11 +47,11 @@ h1 {
 /*button*/
 .common-btn,
 .common-btn1 {
-  padding: 18px 40px;
+  padding: 15px 25px;
   background: transparent;
   outline: none;
   border: 2px solid darkslateblue;
-  border-radius: 5mm;
+  border-radius: 10mm;
   font-weight: bold;
   cursor: pointer;
 }
@@ -386,27 +386,25 @@ nav ul li a:hover {
   align-items: center;
   justify-content: space-evenly;
 }
-.mem-con-btn {
+.mem-con {
   margin-top: 10%;
+}
+.mem-con-btn {
   background: rgb(92, 89, 89);
-  width: 75%;
-  margin-left: 12.5%;
+  padding-left: 23%;
+  padding-right: 23%;
   text-align: center;
   cursor: pointer;
   padding-bottom: 2%;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   transition: 0.25s;
-}
-.mem-con-btn > a {
   text-decoration: none;
   color: white;
   cursor: pointer;
 }
 .mem-con-btn:hover {
   background: rgb(65, 63, 63);
-  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
-  margin-top: 8%;
-  cursor: pointer;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.527);
 }
 /*--Activity--*/
 #activities {

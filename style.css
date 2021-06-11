@@ -1100,10 +1100,11 @@ i {
   border: white solid 0.5mm;
   outline: none;
   color: white;
-  transition: 0.5s;
+  transition: ease-in 0.35s;
 }
 #subs-btn1:hover {
-  background: rgb(202, 177, 33);
+  box-shadow: inset 100px 0 0 0 gold;
+  color: black;
 }
 #subs-email1::placeholder {
   color: white;
@@ -1162,10 +1163,11 @@ i {
   border: white solid 0.5mm;
   outline: none;
   color: white;
-  transition: 0.5s;
+  transition: ease-in 0.35s;
 }
 #subs-btn2:hover {
-  background: rgb(202, 177, 33);
+  box-shadow: inset 100px 0 0 0 gold;
+  color: black;
 }
 #subs-close2 {
   position: absolute;
@@ -1592,33 +1594,13 @@ html {
     top: 25%;
   }
   .subs-box {
-    width: 100%;
-    height: 20%;
+    width: 75%;
+    height: 40%;
     position: absolute;
-    left: 0%;
-    top: 40%;
+    left: 12.5%;
+    top: 30%;
   }
-  .subs-head {
-    font-size: 2.5vh;
-  }
-  #subs-email1 {
-    font-size: 2.25vh;
-    border-bottom: gold 0.45vh solid;
-  }
-  #subs-email2 {
-    font-size: 2.25vh;
-    border-bottom: gold 0.45vh solid;
-  }
-  #subs-tell {
-    font-size: 2.25vh;
-    border-bottom: gold 0.45vh solid;
-  }
-  #subs-btn2 {
-    font-size: 1.25vh;
-  }
-  #subs-btn1 {
-    font-size: 1.25vh;
-  }
+
   #r-box {
     width: 50vw;
     height: 44vh;

@@ -634,6 +634,7 @@ nav ul li a:hover {
   padding-top: 4%;
   padding-bottom: 3%;
   border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.295);
 }
 .fend {
   text-align: center;
@@ -1700,20 +1701,22 @@ html {
     font-size: 12px;
   }
   #sideNav {
-    width: 200px;
+    width: 250px;
     height: 100vh;
   }
   nav ul li a {
     position: relative;
     top: 0px;
     left: 0px;
+    margin-left: 10px;
   }
   nav ul {
     height: 100vh;
-    width: 200px;
+    width: 250px;
     font-size: 15px;
     line-height: 45px;
     overflow: scroll;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);
   }
   nav ul h2 {
     margin-left: 30px;
@@ -1721,12 +1724,12 @@ html {
   }
   nav ul li {
     float: bottom;
-    width: 180px;
+    width: 220px;
   }
   nav ul li a:hover {
     position: relative;
     left: 10px;
-    width: 170px;
+    width: 210px;
     padding-left: 10px;
     margin-left: -10px;
   }
@@ -1735,9 +1738,9 @@ html {
     color: darkslateblue;
     position: relative;
     left: 10px;
-    width: 170px;
-    padding-left: 10px;
-    margin-left: -10px;
+    width: 200px;
+    padding-left: 20px;
+    margin-left: -5px;
     box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.397);
   }
   .active i {

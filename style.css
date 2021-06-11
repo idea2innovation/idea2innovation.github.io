@@ -1708,7 +1708,7 @@ html {
     position: relative;
     top: 0px;
     left: 0px;
-    margin-left: 10px;
+    margin-left: 25px;
   }
   nav ul {
     height: 100vh;
@@ -1737,10 +1737,10 @@ html {
     background-color: white;
     color: darkslateblue;
     position: relative;
-    left: 10px;
-    width: 200px;
-    padding-left: 20px;
-    margin-left: -5px;
+    left: 20px;
+    width: 190px;
+    padding-left: 30px;
+    margin-left: -15px;
     box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.397);
   }
   .active i {

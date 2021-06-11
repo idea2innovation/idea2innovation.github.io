@@ -1600,25 +1600,6 @@ html {
     left: 12.5%;
     top: 30%;
   }
-
-  #r-box {
-    width: 50vw;
-    height: 44vh;
-    background: white;
-    position: absolute;
-    left: 25vw;
-    top: 28vh;
-  }
-  #r-head {
-    font-size: 2.5vh;
-  }
-  .r-input {
-    font-size: 2vh;
-    border-bottom: 0.2vh solid black;
-  }
-  #r-submit {
-    font-size: 2vh;
-  }
   #subs-top {
     font-size: 1.75vh;
   }

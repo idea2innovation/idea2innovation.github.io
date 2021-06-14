@@ -2022,4 +2022,9 @@ html {
     color: white;
     font-size: 14px;
   }
+  #pri-po-body ul {
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }

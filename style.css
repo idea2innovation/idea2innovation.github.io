@@ -2021,6 +2021,7 @@ html {
   #pri-po-body ul li {
     color: white;
     font-size: 14px;
+    padding-bottom: 10px;
   }
   #pri-po-body ul {
     color: white;

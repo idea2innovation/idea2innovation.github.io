@@ -493,6 +493,7 @@ nav ul li a:hover {
   top: 0;
   z-index: 99999;
   display: none;
+  overflow: auto;
 }
 #r-head {
   width: 100%;

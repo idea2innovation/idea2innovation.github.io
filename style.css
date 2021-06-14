@@ -938,8 +938,8 @@ i {
   overflow: scroll;
   background: linear-gradient(
       to top left,
-      rgba(144, 152, 223, 0.562),
-      rgba(19, 23, 65, 0.562)
+      rgba(144, 152, 223, 0.712),
+      rgba(32, 37, 94, 0.76)
     ),
     radial-gradient(circle at 0% 100%, rgb(255, 0, 255) 10%, transparent 10%),
     radial-gradient(circle at 9% 100%, rgb(255, 0, 255) 12%, transparent 12%),
@@ -1009,12 +1009,14 @@ i {
 }
 #pri-po-body {
   color: white;
+  line-height: 35px;
 }
 #pri-po-body ul {
   color: white;
 }
 #pri-po-body ul li {
   color: white;
+  font-size: 20px;
 }
 #pri-po-body ul li strong {
   color: white;
@@ -1027,12 +1029,16 @@ i {
 }
 #pri-po-body p {
   color: white;
+  font-size: 20px;
+  line-height: 30px;
 }
 #pri-po-body h2 {
   color: white;
+  font-size: 30px;
 }
 #pri-po-body h3 {
   color: white;
+  font-size: 26px;
 }
 #pri-po-body a {
   color: rgb(247, 252, 0);
@@ -1273,58 +1279,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 html {
   scroll-behavior: smooth;
-}
-@media all and (max-height: 350px) {
-  .subs-box {
-    width: 100%;
-    height: 40%;
-    position: absolute;
-    left: 0;
-    top: 37.5%;
-  }
-  .subs-head {
-    font-size: 3.75vw;
-  }
-  #subs-email1 {
-    font-size: 3.5vw;
-    border-bottom: gold 0.55vw solid;
-  }
-  #subs-email2 {
-    font-size: 3.5vw;
-    border-bottom: gold 0.55vw solid;
-  }
-  #subs-tell {
-    font-size: 3.5vw;
-    border-bottom: gold 0.55vw solid;
-  }
-  #subs-btn2 {
-    font-size: 2.25vw;
-  }
-  #subs-btn1 {
-    font-size: 2.25vw;
-  }
-  #r-box {
-    width: 50vw;
-    height: 90vh;
-    position: absolute;
-    left: 25vw;
-    top: 5vh;
-  }
-  #r-head {
-    font-size: 5vw;
-  }
-  .r-input {
-    font-size: 4vw;
-    border-bottom: 0.2vh solid black;
-  }
-  #r-submit {
-    font-size: 4vw;
-  }
-  #pri-po {
-    position: fixed;
-    left: 10.5vw;
-    top: 8vh;
-  }
 }
 
 @media all and (max-width: 950px) {
@@ -1990,49 +1944,49 @@ html {
   }
   .subs-box {
     width: 100%;
-    height: 20%;
+    height: 4.25cm;
     position: absolute;
     left: 0%;
     top: 40%;
   }
   .subs-head {
-    font-size: 2.5vh;
+    font-size: 0.5cm;
   }
   #subs-email1 {
-    font-size: 2.25vh;
-    border-bottom: gold 0.45vh solid;
+    font-size: 0.45cm;
+    border-bottom: gold 0.12cm solid;
   }
   #subs-email2 {
-    font-size: 2.25vh;
-    border-bottom: gold 0.45vh solid;
+    font-size: 0.45cm;
+    border-bottom: gold 0.12cm solid;
   }
   #subs-tell {
-    font-size: 2.25vh;
-    border-bottom: gold 0.45vh solid;
+    font-size: 0.45cm;
+    border-bottom: gold 0.12cm solid;
   }
   #subs-btn2 {
-    font-size: 1.25vh;
+    font-size: 0.4cm;
   }
   #subs-btn1 {
-    font-size: 1.25vh;
+    font-size: 0.4cm;
   }
   #r-box {
-    width: 50vw;
-    height: 44vh;
+    width: 60vw;
+    height: 9cm;
     background: white;
     position: absolute;
-    left: 25vw;
+    left: 20vw;
     top: 28vh;
   }
   #r-head {
-    font-size: 2.5vh;
+    font-size: 0.6cm;
   }
   .r-input {
-    font-size: 2vh;
-    border-bottom: 0.2vh solid black;
+    font-size: 0.45cm;
+    border-bottom: 0.05cm solid black;
   }
   #r-submit {
-    font-size: 2vh;
+    font-size: 0.5cm;
   }
   #subs-top {
     font-size: 1.75vh;

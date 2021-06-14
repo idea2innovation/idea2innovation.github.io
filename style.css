@@ -2005,4 +2005,21 @@ html {
   .ecol {
     margin-bottom: 5%;
   }
+  #pri-po-body p {
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #pri-po-body h2 {
+    color: white;
+    font-size: 18px;
+  }
+  #pri-po-body h3 {
+    color: white;
+    font-size: 16px;
+  }
+  #pri-po-body ul li {
+    color: white;
+    font-size: 14px;
+  }
 }

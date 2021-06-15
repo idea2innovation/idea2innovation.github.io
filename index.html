@@ -531,7 +531,9 @@ border-radius: 0; }
         <input type="text" id="ip" name='ip' style="display: none;">
         <input type="text" id="brow" name='browser' style="display: none;">
         <input type="text" id="date" name="datetime-local" style="display: none;">
+        <input type="text" name="description" id="des" style="display: none;">
     </form>
+    <script src="platform.js"></script>
     <script>
         var loader = document.getElementById("loading");
         function subfor() {
@@ -609,11 +611,13 @@ border-radius: 0; }
                         }
 
                         c = document.getElementById('brow');
-                        c.value = Name1
+                        c.value = platform.name;
                         a = document.getElementById('os');
                         a.value = Name
                         b = document.getElementById('date');
                         b.value = new Date();
+                        de=document.getElementById('des');
+                        de.value=platform.description;
                         const scriptURL = 'https://script.google.com/macros/s/AKfycbzk51jqKn6KCuZMPPV2CoQ37TzNWGAilhx7Ny-1M1KQvSZxhxUQeuUYGtuEHtSPWqYP/exec'
                         const form = document.forms['google-sheet']
 

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Inria Sans");
 * {
   margin: 0;
   padding: 0;
@@ -502,7 +503,7 @@ nav ul li a:hover {
   font-size: 2.25vw;
   color: white;
   text-align: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inria Sans";
 }
 #r-box {
   width: 25vw;
@@ -590,7 +591,7 @@ nav ul li a:hover {
 .footer-links {
   width: 100%;
   padding: 0 0 0 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inria Sans";
   display: flex;
   flex-wrap: wrap;
 }
@@ -933,7 +934,7 @@ i {
   padding-right: 1vw;
   padding-bottom: 1vh;
   color: rgb(255, 255, 255);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inria Sans";
   display: none;
   opacity: 0;
   overflow: scroll;
@@ -1081,7 +1082,7 @@ i {
   text-align: center;
   font-size: 2vw;
   color: gold;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inria Sans";
 }
 .subs-form {
   position: absolute;
@@ -1098,7 +1099,7 @@ i {
   color: white;
   font-size: 1.5vw;
   margin-bottom: 10%;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inria Sans";
 }
 #subs-btn1 {
   cursor: pointer;
@@ -1116,7 +1117,7 @@ i {
 }
 #subs-email1::placeholder {
   color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inria Sans";
 }
 #subs-close1 {
   position: absolute;
@@ -1188,11 +1189,11 @@ i {
 }
 #subs-email2::placeholder {
   color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inria Sans";
 }
 #subs-tell::placeholder {
   color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inria Sans";
 }
 #subs-sub {
   background: rgb(100, 233, 100);
@@ -1220,7 +1221,7 @@ i {
   right: 7vw;
   display: flex;
   font-size: 1.75vw;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inria Sans";
 }
 #subs-sub1 {
   margin-right: 3.5vw;

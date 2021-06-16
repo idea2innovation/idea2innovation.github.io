@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Inria Sans");
+@import url("https://fonts.googleapis.com/css?family=Mulish");
 * {
   margin: 0;
   padding: 0;
@@ -53,11 +53,14 @@ h1 {
   outline: none;
   border: 2px solid darkslateblue;
   border-radius: 10mm;
-  font-weight: bold;
+  font-weight: bolder;
   cursor: pointer;
+  transition: all 0.35s;
+  font-size: 16px;
 }
 button:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 150px 0 0 rgb(59, 59, 59);
+  color: white;
 }
 .common-btn2 {
   background: transparent;
@@ -351,7 +354,7 @@ nav ul li a:hover {
   transition: cubic-bezier(0.19, 1, 0.22, 1) all 1s;
 }
 #fa1:hover {
-  background: rgb(66, 66, 66);
+  box-shadow: inset 0 100px 0 rgb(0, 0, 0);
 }
 .middle {
   text-align: center;
@@ -503,7 +506,7 @@ nav ul li a:hover {
   font-size: 2.25vw;
   color: white;
   text-align: center;
-  font-family: "Inria Sans";
+  font-family: "Mulish";
 }
 #r-box {
   width: 25vw;
@@ -591,7 +594,7 @@ nav ul li a:hover {
 .footer-links {
   width: 100%;
   padding: 0 0 0 0;
-  font-family: "Inria Sans";
+  font-family: "Mulish";
   display: flex;
   flex-wrap: wrap;
 }
@@ -619,8 +622,9 @@ nav ul li a:hover {
   font-size: 2vw;
 }
 .link-title a:hover {
-  color: deepskyblue;
+  color: rgb(0, 217, 255);
 }
+
 .link-title small {
   font-size: 100%;
 }
@@ -637,7 +641,7 @@ nav ul li a:hover {
   padding-top: 4%;
   padding-bottom: 3%;
   border-radius: 50%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.295);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);
 }
 .fend {
   text-align: center;
@@ -934,7 +938,7 @@ i {
   padding-right: 1vw;
   padding-bottom: 1vh;
   color: rgb(255, 255, 255);
-  font-family: "Inria Sans";
+  font-family: "Mulish";
   display: none;
   opacity: 0;
   overflow: scroll;
@@ -1082,7 +1086,7 @@ i {
   text-align: center;
   font-size: 2vw;
   color: gold;
-  font-family: "Inria Sans";
+  font-family: "Mulish";
 }
 .subs-form {
   position: absolute;
@@ -1099,7 +1103,7 @@ i {
   color: white;
   font-size: 1.5vw;
   margin-bottom: 10%;
-  font-family: "Inria Sans";
+  font-family: "Mulish";
 }
 #subs-btn1 {
   cursor: pointer;
@@ -1117,7 +1121,7 @@ i {
 }
 #subs-email1::placeholder {
   color: white;
-  font-family: "Inria Sans";
+  font-family: "Mulish";
 }
 #subs-close1 {
   position: absolute;
@@ -1189,11 +1193,11 @@ i {
 }
 #subs-email2::placeholder {
   color: white;
-  font-family: "Inria Sans";
+  font-family: "Mulish";
 }
 #subs-tell::placeholder {
   color: white;
-  font-family: "Inria Sans";
+  font-family: "Mulish";
 }
 #subs-sub {
   background: rgb(100, 233, 100);
@@ -1221,7 +1225,7 @@ i {
   right: 7vw;
   display: flex;
   font-size: 1.75vw;
-  font-family: "Inria Sans";
+  font-family: "Mulish";
 }
 #subs-sub1 {
   margin-right: 3.5vw;
@@ -1398,7 +1402,7 @@ html {
     margin-top: 90px;
   }
   h1 {
-    font-size: 25px;
+    font-size: 35px;
   }
   .common-btn {
     padding: 10px 16px;
@@ -1473,7 +1477,7 @@ html {
     margin-top: 35px;
   }
   h1 {
-    font-size: 18px;
+    font-size: 25px;
   }
   h2 {
     font-size: 16px;
@@ -2012,7 +2016,7 @@ html {
   #subs-sub1 {
     padding-left: 0.75vh;
     padding-right: 0.75vh;
-    border-radius: 1.5vh;
+    border-radius: 1.5mm;
   }
   #subs-un1 {
     padding-left: 0.75vh;

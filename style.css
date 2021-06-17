@@ -1819,7 +1819,8 @@ html {
     font-size: 25px;
   }
   .common-btn {
-    padding: 10px 16px;
+    padding: 8px 12px;
+    font-size: 12px;
   }
   .common-btn1 {
     background: rgba(241, 241, 241, 0.9);

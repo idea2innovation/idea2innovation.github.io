@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6e8ea0ad06.js" crossorigin="anonymous"></script>
 </head>
 <style type="text/css">
     ::placeholder {
@@ -69,22 +70,23 @@ border-radius: 0; }
                         learning techniques. At <b>I2I</b> we believe practical and interactive way of learning will
                         boost and enhance the creative and logical thinking levels of the students who aim at achieving
                         high in the field of their passion and interests.</span></p>
-                <button class="common-btn1" id="read" onclick="read()">Read More</button>
-                <script type="text/javascript">
-                    var i = 0;
-                    function read() {
-                        if (!i) {
-                            document.getElementById("more").style.display = "inline";
-                            document.getElementById("read").innerHTML = "Read less";
-                            i = 1;
+                <button class="common-btn" id="read" ><i  class="fas fa-chevron-circle-down" style="font-size: 16px;"></i>&nbsp Read More</button>
+                    <button class="common-btn" id="close"  style=" display: none;"><i  class="fas fa-chevron-circle-up" style="font-size: 16px;"></i>&nbsp Read Less</button>
+                    <script type="text/javascript">
+                        var actread=document.getElementById("read")
+                        var actmore=document.getElementById("more")
+                        var actclose=document.getElementById("close")
+                        actread.onclick=function(){
+                            actmore.style.display="block"
+                            actclose.style.display="block"
+                            actread.style.display="none"
                         }
-                        else {
-                            document.getElementById("more").style.display = "none";
-                            document.getElementById("read").innerHTML = "Read More";
-                            i = 0;
+                        actclose.onclick=function(){
+                            actmore.style.display="none"
+                            actclose.style.display="none"
+                            actread.style.display="block"
                         }
-                    }
-                </script>
+                    </script>
             </div>
         </div>
     </section>
@@ -112,7 +114,7 @@ border-radius: 0; }
                 <input type="text" name="datetime-local" class="comin" style="display: none;">
                 <input type="text" name="OS" class="comin" style="display: none;">
             </form>
-            <button onclick="SubForm()" class="sub-btn">Submit</button>
+            <button onclick="SubForm()" class="sub-btn">Submit&nbsp<i class="fas fa-arrow-right" id="sub-btn-fa"></i></button>
         </div>
     </div>
     <script>
@@ -217,15 +219,15 @@ border-radius: 0; }
                         <h3>Subscription</h3>
                         <div class="link-title1">
                             <div id="subs-sub">
-                                <small>Subscribe</small>
+                                <small><i class="fas fa-bell" id="pri-po-fa"></i>&nbspSubscribe</small>
                             </div>
                             <div id="subs-un">
-                                <small>Unsubscribe</small>
+                                <small><i class="fas fa-bell-slash" id="pri-po-fa"></i>&nbspUnsubscribe</small>
                             </div>
                         </div>
                 
             </div>
-            <div class="link-title">
+            <div class="link-title" id="mem-fol2">
                 <h3>Contact us</h3>
                 <small id="mem-con"><i class="fa fa-google"></i>&nbsp ideatoinnovation01@gmail.com</small>
                 <br>
@@ -234,7 +236,7 @@ border-radius: 0; }
                 <br>
                 <h3>Legal</h3>
                 <div class="link-title1">
-                    <small id="open-pri">Privacy Policy</small>
+                    <small id="open-pri"><i class="fas fa-globe" id="pri-po-fa"></i>&nbspPrivacy Policy</small>
                 </div>
             </div>
             <div class="link-title" id="im1">
@@ -243,7 +245,7 @@ border-radius: 0; }
         </div>
         <div class="fend">
             <small id="sm" style="color: black;">made with <i class="fa fa-heart" title="Love"></i> <i></i><i
-                    class="fa fa-html5" title="HTML"></i>
+                    class="fa fa-html5" title="HTML"></i>&nbsp<i class="fab fa-js-square" title="javascript" style="font-size: 14px;"></i>
                 <i></i>& <i></i><i class="fa fa-css3" title="CSS"></i> in <a
                     href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i
                         class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
@@ -669,10 +671,10 @@ border-radius: 0; }
 </div>
 <div id="subs-top">
     <div id="subs-sub1">
-        <small>Subscribe</small>
+        <small><i class="fas fa-bell" id="subfa"></i>&nbsp Subscribe</small>
     </div>
     <div id="subs-un1">
-        <small>Unsubscribe</small>
+        <small><i class="fas fa-bell-slash" id="unsubfa"></i>&nbsp Unsubscribe</small>
     </div>
 </div>
 <script>
@@ -740,5 +742,4 @@ border-radius: 0; }
     })
 </script>
 </body>
-
 </html>

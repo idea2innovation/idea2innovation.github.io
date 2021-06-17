@@ -59,7 +59,7 @@ h1 {
   font-size: 16px;
 }
 button:hover {
-  box-shadow: inset 150px 0 0 rgb(59, 59, 59);
+  box-shadow: inset 170px 0 0 rgb(59, 59, 59);
   color: white;
 }
 .common-btn2 {
@@ -410,6 +410,9 @@ nav ul li a:hover {
   background: rgb(65, 63, 63);
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.527);
 }
+#mem-con-fa {
+  font-size: 16px;
+}
 /*--Activity--*/
 #activities {
   padding: 50px 0;
@@ -540,9 +543,13 @@ nav ul li a:hover {
   color: white;
   border: none;
   outline: none;
+  transition: all 0.75s;
+}
+#r-fa {
+  font-size: 1.5vw;
 }
 #r-submit:hover {
-  background: rgb(51, 61, 167);
+  box-shadow: inset 500px 0 0 rgb(26, 31, 88);
 }
 .r-in2 {
   text-align: center;
@@ -600,9 +607,12 @@ nav ul li a:hover {
 }
 .link-title {
   margin-left: 5%;
-  flex-basis: 21vw;
+  flex-basis: 20vw;
   font-size: 1.35vw;
   padding-bottom: 0.77vw;
+}
+#pri-po-fa {
+  font-size: 1.35vw;
 }
 #im1 {
   flex-basis: 16%;
@@ -667,6 +677,9 @@ nav ul li a:hover {
 }
 #mem-fol1 {
   flex-basis: 15vw;
+}
+#mem-fol2 {
+  flex-basis: 22vw;
 }
 /*--Social Media--*/
 .social-icons {
@@ -809,6 +822,9 @@ i {
   color: white;
   background: rgb(226, 194, 12);
   transition: ease-in 0.5s;
+}
+#sub-btn-fa {
+  font-size: 18px;
 }
 .sub-btn:hover {
   box-shadow: inset 100px 0 0 0 rgb(255, 238, 0);
@@ -1227,6 +1243,12 @@ i {
   font-size: 1.75vw;
   font-family: "Mulish";
 }
+#subfa {
+  font-size: 1.75vw;
+}
+#unsubfa {
+  font-size: 1.75vw;
+}
 #subs-sub1 {
   margin-right: 3.5vw;
   cursor: pointer;
@@ -1457,7 +1479,10 @@ html {
     font-size: 3vw;
   }
   .mem-con-btn {
-    font-size: 2.5vw;
+    font-size: 2.3vw;
+  }
+  #mem-con-fa {
+    font-size: 2.3vw;
   }
   .activity-row {
     margin-left: 10px;
@@ -1502,6 +1527,9 @@ html {
   .link-title h3 {
     font-size: 1.75vw;
   }
+  #pri-po-fa {
+    font-size: 1.5vw;
+  }
   #im1 {
     flex-basis: 16vw;
   }
@@ -1540,6 +1568,9 @@ html {
     border-radius: 0.5mm;
     font-size: 10px;
     background: rgb(221, 192, 31);
+  }
+  #sub-btn-fa {
+    font-size: 10px;
   }
   #com-text {
     font-size: 100%;
@@ -1629,6 +1660,9 @@ html {
   #r-submit {
     font-size: 0.5cm;
   }
+  #r-fa {
+    font-size: 0.5cm;
+  }
   #subs-top {
     font-size: 1.75vh;
   }
@@ -1636,6 +1670,12 @@ html {
     padding-left: 0.75vh;
     padding-right: 0.75vh;
     border-radius: 2vw;
+    font-size: 3vw;
+  }
+  #subfa {
+    font-size: 3vw;
+  }
+  #unsubfa {
     font-size: 3vw;
   }
   #subs-un1 {
@@ -1817,6 +1857,9 @@ html {
   .mem-con-btn {
     font-size: 1.75vh;
   }
+  #mem-con-fa {
+    font-size: 1.75vh;
+  }
   .activity-row {
     margin-left: 10px;
   }
@@ -1860,6 +1903,9 @@ html {
   .link-title h3 {
     font-size: 1.75vw;
   }
+  #pri-po-fa {
+    font-size: 1.5vw;
+  }
   #im1 {
     flex-basis: 16vw;
   }
@@ -1898,6 +1944,9 @@ html {
     border-radius: 0.5mm;
     font-size: 10px;
     background: rgb(221, 192, 31);
+  }
+  #sub-btn-fa {
+    font-size: 10px;
   }
   #com-text {
     font-size: 100%;
@@ -2010,7 +2059,16 @@ html {
   #r-submit {
     font-size: 0.5cm;
   }
+  #r-fa {
+    font-size: 0.5cm;
+  }
   #subs-top {
+    font-size: 1.75vh;
+  }
+  #subfa {
+    font-size: 1.75vh;
+  }
+  #unsubfa {
     font-size: 1.75vh;
   }
   #subs-sub1 {

@@ -1927,7 +1927,7 @@ html {
     margin-right: 2vw;
   }
   #js-sq {
-    font-size: 1.5vh;
+    font-size: 1.25vh;
   }
   #mem-fol1 {
     flex-basis: 13vw;
@@ -2088,7 +2088,7 @@ html {
     font-size: 1.5vh;
     position: absolute;
     top: 1vh;
-    right: 0;
+    right: 5px;
   }
   #subfa {
     font-size: 1.5vh;

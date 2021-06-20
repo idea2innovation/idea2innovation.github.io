@@ -569,6 +569,9 @@ nav ul li a:hover {
   border-bottom: black 0.35vh solid;
   font-size: 1.5vw;
 }
+select {
+  -webkit-appearance: none;
+}
 #r-submit {
   width: 75%;
   font-size: 1.75vw;

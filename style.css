@@ -513,21 +513,43 @@ nav ul li a:hover {
 }
 #r-head {
   width: 100%;
-  height: 8%;
-  background: rgb(92, 71, 224);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to left,
+    rgb(195, 0, 255),
+    rgb(92, 71, 224),
+    rgb(0, 238, 255)
+  );
   font-size: 2.25vw;
   color: white;
   text-align: center;
   font-family: "Mulish";
 }
-#r-box {
-  width: 25vw;
-  height: 66vh;
-  background: white;
+#r-head2 {
+  width: 100%;
+  height: 1.5%;
   position: absolute;
-  left: 37.5vw;
-  top: 17vh;
+  top: 7%;
+  left: 0;
+  background: linear-gradient(
+    to left,
+    rgb(232, 156, 255),
+    rgb(152, 140, 230),
+    rgb(160, 249, 255)
+  );
+}
+#r-box {
+  position: absolute;
+  top: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
+  width: 90%;
+  background: white;
   overflow: auto;
+  height: 90%;
 }
 #r-data {
   width: 100%;
@@ -535,7 +557,10 @@ nav ul li a:hover {
 }
 .r-in {
   text-align: center;
-  padding-top: 10%;
+  padding-top: 12%;
+}
+#r-in1 {
+  padding-top: 16%;
 }
 .r-input {
   width: 75%;
@@ -546,19 +571,18 @@ nav ul li a:hover {
 }
 #r-submit {
   width: 75%;
-  font-size: 1.5vw;
+  font-size: 1.75vw;
   padding: 0.75%;
-  background: rgb(92, 71, 224);
+  background: rgb(110, 106, 106);
   color: white;
   border: none;
   outline: none;
-  transition: all 0.75s;
 }
 #r-fa {
   font-size: 1.5vw;
 }
 #r-submit:hover {
-  box-shadow: inset 500px 0 0 rgb(26, 31, 88);
+  background: rgb(58, 58, 58);
 }
 .r-in2 {
   text-align: center;
@@ -573,6 +597,11 @@ nav ul li a:hover {
 }
 #r-close:hover {
   background: #ff1100;
+}
+#r-box input[type="text"]:focus,
+textarea:focus,
+input[type="email"]:focus {
+  border-bottom: rgb(0, 140, 255) 0.35vh solid;
 }
 /*--Footer--*/
 #footer {
@@ -760,6 +789,7 @@ i {
 }
 .ecol {
   flex-basis: 380px;
+  perspective: 2000px;
 }
 .evcontainer1 {
   text-align: left;
@@ -777,6 +807,9 @@ img:hover {
 }
 #ev1 {
   background-color: cornflowerblue;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
 }
 #ev2 {
   background-color: palevioletred;
@@ -805,6 +838,11 @@ img:hover {
 .evcontainer1 p {
   color: cornsilk;
 }
+#ec1 {
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
 /*Feedback*/
 .comments {
   margin-left: 31%;
@@ -875,7 +913,7 @@ img:hover {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: rgb(33, 28, 34) url(images/preloader.gif) no-repeat center;
+  background: rgb(255, 255, 255) url(images/preloader4.svg) no-repeat center;
   z-index: 99999;
 }
 /*feedback submission loader*/
@@ -1680,12 +1718,6 @@ html {
     left: 12.5%;
     top: 30%;
   }
-  #r-box {
-    height: 9cm;
-    background: white;
-    position: absolute;
-    top: 20vh;
-  }
   #r-head {
     font-size: 0.6cm;
   }
@@ -2101,14 +2133,6 @@ html {
   }
   #subs-btn1 {
     font-size: 0.4cm;
-  }
-  #r-box {
-    width: 60vw;
-    height: 9cm;
-    background: white;
-    position: absolute;
-    left: 20vw;
-    top: 20vh;
   }
   #r-head {
     font-size: 0.6cm;

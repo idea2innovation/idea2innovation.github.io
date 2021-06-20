@@ -577,6 +577,7 @@ nav ul li a:hover {
   color: white;
   border: none;
   outline: none;
+  border-radius: 1mm;
 }
 #r-fa {
   font-size: 1.5vw;

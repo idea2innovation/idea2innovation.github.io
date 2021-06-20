@@ -202,16 +202,16 @@
                                     <i class="fa fa-cubes" id="r-fa" style="color: rgb(0, 192, 48);"></i>
                                     <input type="text" name="roll-number" id="r-ronum" class="r-input" placeholder="Roll Number"
                                         required
-                                        pattern="[1-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9A-Za-z].{0,0}">
+                                        pattern="[1-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9A-Za-z].{0,0}" minlength="10" maxlength="10" >
                                 </div>
                                 <div class="r-in">
                                     <i class="fa fa-envelope" id="r-fa" style="color: rgb(255, 17, 0);"></i>
-                                    <input type="email" name="email" id="r-email" class="r-input" placeholder="Email" required>
+                                    <input type="email" name="email" id="r-email" class="r-input" placeholder="Email" required minlength="3" maxlength="320">
                                 </div>
                                 <div class="r-in">
                                     <i class="fa fa-phone-alt" id="r-fa" style="color: dodgerblue;"></i>
-                                    <input type="text" name="ph-no" id="r-phno" class="r-input" placeholder="Contact number" required
-                                        pattern="[1-9].{6,14}">
+                                    <input type="tel" name="ph-no" id="r-phno" class="r-input" placeholder="Contact number" required
+                                        pattern="[0-9]+" maxlength="14" minlength="6">
                                 </div>
                                 <div class="r-in">
                                     <i class="fa fa-building" id="r-fa" style="color: rgb(204, 0, 255);"></i>
@@ -334,7 +334,7 @@
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwH_9lxbKG_Qh4pyeM3455OsJgf9fm_vdPNvKqc9N-2fhMd16iX-UXeTQWQxW6PtFJI/exec'
             const f = document.forms['google-sheet']
             f.addEventListener('submit', e => {
-                register.style.display = "none"
+                register.style.transform = "rotateY(0deg)"
                 rload.style.display="block"
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(f) })

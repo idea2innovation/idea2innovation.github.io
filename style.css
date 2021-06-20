@@ -571,7 +571,11 @@ nav ul li a:hover {
 }
 select {
   -webkit-appearance: none;
-  -webkit-border-radius: 0px;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 #r-submit {
   width: 75%;

@@ -571,6 +571,7 @@ nav ul li a:hover {
 }
 select {
   -webkit-appearance: none;
+  border-radius: none;
 }
 #r-submit {
   width: 75%;
@@ -1729,6 +1730,11 @@ html {
     font-size: 0.45cm;
     border-bottom: 0.05cm solid black;
   }
+  #r-box input[type="text"]:focus,
+  textarea:focus,
+  input[type="email"]:focus {
+    border-bottom: rgb(0, 140, 255) 0.05cm solid;
+  }
   #r-submit {
     font-size: 0.5cm;
   }
@@ -2144,6 +2150,11 @@ html {
   .r-input {
     font-size: 0.45cm;
     border-bottom: 0.05cm solid black;
+  }
+  #r-box input[type="text"]:focus,
+  textarea:focus,
+  input[type="email"]:focus {
+    border-bottom: rgb(0, 140, 255) 0.05cm solid;
   }
   #r-submit {
     font-size: 0.5cm;

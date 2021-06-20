@@ -175,6 +175,7 @@
                     <h2>Present Events</h2>
                 </div>
                 <br>
+            <div id="ec1">
             <div class="evcontainer1" id="ev1">
                 <h3>Event Name</h3>
                 <br>
@@ -186,6 +187,53 @@
                 <button class="common-btn"><i class="far fa-calendar-check" style="font-size: 16px;"></i>&nbspRegister</button>
                 </div>
             </div>
+                    <div  class="evcontainer1" id="r-box">
+                        <h3 id="r-head">REGISTER<i class="fa fa-times" id="r-close" title="close"
+                                style="position: absolute; right:0% ; cursor: pointer; padding-right: 1%; padding-left: 1%; padding-bottom: 1%; border: none; outline: none;"></i>
+                        </h3>
+                        <div id="r-head2"></div>
+                        <div id="r-data">
+                            <form method="post" autocomplete="off" name="google-sheet">
+                                <div class="r-in" id="r-in1">
+                                    <i class="fa fa-user" id="r-fa" style="color: rgb(255, 217, 0);"></i>
+                                    <input type="text" name="name" id="r-name" class="r-input" placeholder="Name" required>
+                                </div>
+                                <div class="r-in">
+                                    <i class="fa fa-cubes" id="r-fa" style="color: rgb(0, 192, 48);"></i>
+                                    <input type="text" name="roll-number" id="r-ronum" class="r-input" placeholder="Roll Number"
+                                        required
+                                        pattern="[1-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9A-Za-z].{0,0}">
+                                </div>
+                                <div class="r-in">
+                                    <i class="fa fa-envelope" id="r-fa" style="color: rgb(255, 17, 0);"></i>
+                                    <input type="email" name="email" id="r-email" class="r-input" placeholder="Email" required>
+                                </div>
+                                <div class="r-in">
+                                    <i class="fa fa-phone-alt" id="r-fa" style="color: dodgerblue;"></i>
+                                    <input type="text" name="ph-no" id="r-phno" class="r-input" placeholder="Contact number" required
+                                        pattern="[1-9].{6,14}">
+                                </div>
+                                <div class="r-in">
+                                    <i class="fa fa-building" id="r-fa" style="color: rgb(204, 0, 255);"></i>
+                                    <select name="branch" id="r-branch" class="r-input" required>
+                                        <option value="" style="color: rgb(0, 0, 0);">Select Branch</option>
+                                        <option value="CSE" style="color: rgb(0, 0, 0);">CSE</option>
+                                        <option value="IT" style="color: rgb(0, 0, 0);">IT</option>
+                                        <option value="ECE" style="color: rgb(0, 0, 0);">ECE</option>
+                                        <option value="EEE" style="color: rgb(0, 0, 0);">EEE</option>
+                                        <option value="Mech" style="color: rgb(0, 0, 0);">Mechanical Engineering</option>
+                                        <option value="Civil" style="color: rgb(0, 0, 0);">Civil Engineering</option>
+                                        <option value="AERO" style="color: rgb(0, 0, 0);">Aeronautical Engineering</option>
+                                    </select>
+                                </div>
+                                <div class="r-in2">
+                                    <button type="submit" id="r-submit">Register &nbsp<i class="fas fa-angle-right"
+                                            id="r-fa"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
             </div>
             <div class="ecol">
                 <div class="ehcontainer2" id="eh2">
@@ -270,59 +318,18 @@
         </div>
     </div>
     </div>
-    <div id="register">
-        <div id="r-box">
-                <h3 id="r-head">REGISTER<i class="fa fa-times" id="r-close" title="close" style="position: absolute; right:0% ; cursor: pointer; padding-right: 1%; padding-left: 1%; padding-bottom: 1%; border: none; outline: none;" ></i></h3>
-            <div id="r-data">
-                <form method="post" autocomplete="off" name="google-sheet">
-                    <div class="r-in">
-                        <i class="fa fa-user"></i>
-                        <input type="text" name="name" id="r-name" class="r-input" placeholder="Name" required>
-                    </div>
-                    <div class="r-in">
-                        <i class="fa fa-cubes"></i>
-                        <input type="text" name="roll-number" id="r-ronum" class="r-input" placeholder="Roll Number" required pattern="[1-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9A-Za-z].{0,0}">
-                    </div>
-                    <div class="r-in">
-                        <i class="fa fa-envelope"></i>
-                        <input type="email" name="email" id="r-email" class="r-input" placeholder="Email" required>
-                    </div>
-                    <div class="r-in">
-                        <i class="fa fa-phone"></i>
-                        <input type="text" name="ph-no" id="r-phno" class="r-input" placeholder="Contact number" required pattern="[1-9].{6,14}">
-                    </div>
-                    <div class="r-in">
-                        <i class="fa fa-building"></i>
-                    <select name="branch" id="r-branch" class="r-input" required>
-                        <option value="" style="color: rgb(73, 73, 73);">Select Branch</option>
-                        <option value="CSE">CSE</option>
-                        <option value="IT">IT</option>
-                        <option value="ECE">ECE</option>
-                        <option value="EEE">EEE</option>
-                        <option value="Mech">Mechanical Engineering</option>
-                        <option value="Civil">Civil Engineering</option>
-                        <option value="AERO">Aeronautical Engineering</option>
-                    </select>
-                    </div>
-                    <div class="r-in2">
-                        <button type="submit" id="r-submit">Register &nbsp<i class="fas fa-angle-right" id="r-fa"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
     <script>
         var rclose=document.getElementById("r-close");
-        var register=document.getElementById("register");
         var ropen=document.getElementById("r-open");
+        var register=document.getElementById("ec1")
         var rload=document.getElementById("sub-load");
         var rload1=document.getElementById("sub-load1");
         var rload2=document.getElementById("sub-load2");
         rclose.onclick = function(){
-            register.style.display="none"
+            register.style.transform = "rotateY(0deg)"
         }
         ropen.onclick=function(){
-            register.style.display="block"
+            register.style.transform="rotateY(180deg)"
         }
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwH_9lxbKG_Qh4pyeM3455OsJgf9fm_vdPNvKqc9N-2fhMd16iX-UXeTQWQxW6PtFJI/exec'
             const f = document.forms['google-sheet']

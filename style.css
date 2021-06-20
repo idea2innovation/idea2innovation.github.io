@@ -607,10 +607,21 @@ select {
 #r-close:hover {
   background: #ff1100;
 }
-#r-box input[type="text"]:focus,
-textarea:focus,
-input[type="email"]:focus {
-  border-bottom: rgb(0, 140, 255) 0.35vh solid;
+
+#r-name:focus {
+  border-bottom: rgb(255, 217, 0) 0.35vh solid;
+}
+#r-ronum:focus {
+  border-bottom: rgb(0, 192, 48) 0.35vh solid;
+}
+#r-email:focus {
+  border-bottom: rgb(255, 17, 0) 0.35vh solid;
+}
+#r-phno:focus {
+  border-bottom: dodgerblue 0.35vh solid;
+}
+#r-branch:focus {
+  border-bottom: rgb(204, 0, 255) 0.35vh solid;
 }
 /*--Footer--*/
 #footer {
@@ -1734,10 +1745,20 @@ html {
     font-size: 0.45cm;
     border-bottom: 0.05cm solid black;
   }
-  #r-box input[type="text"]:focus,
-  textarea:focus,
-  input[type="email"]:focus {
-    border-bottom: rgb(0, 140, 255) 0.05cm solid;
+  #r-name:focus {
+    border-bottom: rgb(255, 217, 0) 0.05cm solid;
+  }
+  #r-ronum:focus {
+    border-bottom: rgb(0, 192, 48) 0.05cm solid;
+  }
+  #r-email:focus {
+    border-bottom: rgb(255, 17, 0) 0.05cm solid;
+  }
+  #r-phno:focus {
+    border-bottom: dodgerblue 0.05cm solid;
+  }
+  #r-branch:focus {
+    border-bottom: rgb(204, 0, 255) 0.05cm solid;
   }
   #r-submit {
     font-size: 0.5cm;
@@ -2155,10 +2176,20 @@ html {
     font-size: 0.45cm;
     border-bottom: 0.05cm solid black;
   }
-  #r-box input[type="text"]:focus,
-  textarea:focus,
-  input[type="email"]:focus {
-    border-bottom: rgb(0, 140, 255) 0.05cm solid;
+  #r-name:focus {
+    border-bottom: rgb(255, 217, 0) 0.05cm solid;
+  }
+  #r-ronum:focus {
+    border-bottom: rgb(0, 192, 48) 0.05cm solid;
+  }
+  #r-email:focus {
+    border-bottom: rgb(255, 17, 0) 0.05cm solid;
+  }
+  #r-phno:focus {
+    border-bottom: dodgerblue 0.05cm solid;
+  }
+  #r-branch:focus {
+    border-bottom: rgb(204, 0, 255) 0.05cm solid;
   }
   #r-submit {
     font-size: 0.5cm;

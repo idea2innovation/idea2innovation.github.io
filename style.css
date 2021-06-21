@@ -22,6 +22,7 @@ h3 {
   width: 100%;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 .container {
   margin-right: 100px;
@@ -1417,6 +1418,8 @@ html {
     background: url(images/abc.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
   }
   .header-text {
     max-width: 90%;
@@ -1706,10 +1709,8 @@ html {
   }
   #com-head {
     margin-left: 20%;
-    padding: 1%;
     text-align: center;
     background: transparent;
-    width: 60%;
   }
   #sub-load0-1 {
     width: 55%;
@@ -1828,6 +1829,7 @@ html {
     background: url(images/abc.jpg);
     background-position: center;
     background-size: cover;
+    overflow: hidden;
   }
   .header-text {
     max-width: 90%;

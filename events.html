@@ -9,6 +9,10 @@
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/6e8ea0ad06.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
 </head>
 <style type="text/css">
     input,
@@ -167,7 +171,7 @@
     </script>
     <!--events body-->
     <div class="hev">
-        <h1>--Events--</h1>
+        <h1 style="font-family:Train one; font-weight: 100; color: orangered; ">Events</h1>
         <br>
         <div class="evrow">
             <div class="ecol">
@@ -228,7 +232,16 @@
                                 </div>
                                 <div class="r-in2">
                                     <button type="submit" id="r-submit">Register &nbsp<i class="fas fa-angle-right"
-                                            id="r-fa"></i></button>
+                                            id="r-fa"></i><span id="sp2"></span></button>
+                                    <script>
+                                        let rsub=document.getElementById("r-submit")
+                                        var rip=document.getElementById("sp2")
+                                        rsub.onclick = function(){
+                                        setTimeout(()=>{
+                                            rip.remove()
+                                        },1000)
+                                        }
+                                    </script>
                                 </div>
                             </form>
                         </div>

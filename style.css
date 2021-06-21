@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Mulish");
-@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Train+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Sirin+Stencil&family=Train+One&family=Trykker&display=swap");
 h1 {
   font-family: Train one;
   font-weight: 100;
@@ -8,6 +8,9 @@ h1 {
 h2 {
   font-family: Allerta Stencil;
   font-weight: 300;
+}
+h3 {
+  font-family: Trykker;
 }
 * {
   margin: 0;
@@ -1619,7 +1622,7 @@ html {
     font-size: 23px;
   }
   h3 {
-    font-size: 15px;
+    font-size: 18px;
   }
   h4 {
     font-size: 14px;
@@ -2025,7 +2028,7 @@ html {
     font-size: 20px;
   }
   h3 {
-    font-size: 15px;
+    font-size: 18px;
   }
   h4 {
     font-size: 14px;

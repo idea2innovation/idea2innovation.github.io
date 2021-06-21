@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Mulish");
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Train+One&display=swap");
+h1 {
+  font-family: Train one;
+  font-weight: 100;
+  text-shadow: 1px 1px 1px grey;
+}
+h2 {
+  font-family: Allerta Stencil;
+  font-weight: 300;
+}
 * {
   margin: 0;
   padding: 0;
@@ -578,6 +588,15 @@ select {
   border-radius: 0;
   background: transparent;
 }
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: transparent;
+}
 #r-submit {
   width: 75%;
   font-size: 1.75vw;
@@ -587,12 +606,14 @@ select {
   border: none;
   outline: none;
   border-radius: 1mm;
+  box-shadow: none;
+  transition: box-shadow 0.75s;
 }
 #r-fa {
   font-size: 1.5vw;
 }
 #r-submit:hover {
-  background: rgb(58, 58, 58);
+  box-shadow: inset 400px 0 0 rgb(58, 58, 58);
 }
 .r-in2 {
   text-align: center;
@@ -922,12 +943,13 @@ img:hover {
   color: gold;
 }
 #com-head {
-  font-family: Arial, Helvetica, sans-serif;
   margin-left: 40%;
   padding: 1%;
   text-align: center;
-  background: white;
+  background: transparent;
+  color: gold;
   width: 20%;
+  font-weight: bold;
 }
 /*Preloader*/
 #loading {
@@ -1361,12 +1383,12 @@ img:hover {
 /*select text*/
 ::-moz-selection {
   background: rgb(255, 230, 0);
-  color: white;
+  color: black;
 }
 
 ::selection {
   background: rgb(255, 230, 0);
-  color: white;
+  color: black;
 }
 body::-webkit-scrollbar {
   width: 0.8vw;
@@ -1680,11 +1702,10 @@ html {
     height: 100%;
   }
   #com-head {
-    font-family: Arial, Helvetica, sans-serif;
     margin-left: 20%;
     padding: 1%;
     text-align: center;
-    background: white;
+    background: transparent;
     width: 60%;
   }
   #sub-load0-1 {
@@ -2090,11 +2111,10 @@ html {
     height: 100%;
   }
   #com-head {
-    font-family: Arial, Helvetica, sans-serif;
     margin-left: 20%;
     padding: 1%;
     text-align: center;
-    background: white;
+    background: transparent;
     width: 60%;
   }
   #sub-load0-1 {

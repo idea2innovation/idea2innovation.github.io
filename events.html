@@ -194,8 +194,8 @@
                     <div  class="evcontainer1" id="r-box">
                         <h3 id="r-head">REGISTER<i class="fa fa-times" id="r-close" title="close"
                                 style="position: absolute; right:0% ; cursor: pointer; padding-right: 1%; padding-left: 1%; padding-bottom: 1%; border: none; outline: none;"></i>
+                                <div id="r-head2"></div>
                         </h3>
-                        <div id="r-head2"></div>
                         <div id="r-data">
                             <form method="post" autocomplete="off" name="google-sheet">
                                 <div class="r-in" id="r-in1">
@@ -219,7 +219,7 @@
                                 </div>
                                 <div class="r-in">
                                     <i class="fa fa-building" id="r-fa" style="color: rgb(204, 0, 255);"></i>
-                                    <select name="branch" id="r-branch" class="r-input" required>
+                                    <select name="branch" id="r-branch" class="r-input" required >
                                         <option value="" style="color: rgb(0, 0, 0);">Select Branch</option>
                                         <option value="CSE" style="color: rgb(0, 0, 0);">CSE</option>
                                         <option value="IT" style="color: rgb(0, 0, 0);">IT</option>
@@ -334,15 +334,25 @@
     <script>
         var rclose=document.getElementById("r-close");
         var ropen=document.getElementById("r-open");
-        var register=document.getElementById("ec1")
+        var register=document.getElementById("ec1");
         var rload=document.getElementById("sub-load");
         var rload1=document.getElementById("sub-load1");
         var rload2=document.getElementById("sub-load2");
+        var rscolor=document.getElementById("r-branch");
         rclose.onclick = function(){
             register.style.transform = "rotateY(0deg)"
         }
         ropen.onclick=function(){
             register.style.transform="rotateY(-180deg)"
+        }
+        rscolor.style.color="rgb(125,125,125)"
+        rscolor.onclick=function(){
+        if (rscolor.value==""){
+            rscolor.style.color="rgb(125,125,125)"
+        }
+        else{
+            rscolor.style.color="rgb(0,0,0)"
+        }
         }
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwH_9lxbKG_Qh4pyeM3455OsJgf9fm_vdPNvKqc9N-2fhMd16iX-UXeTQWQxW6PtFJI/exec'
             const f = document.forms['google-sheet']

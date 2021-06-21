@@ -1,16 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Mulish");
 @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Sirin+Stencil&family=Train+One&family=Trykker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quantico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Akronim&family=Alatsi&family=Baloo+2&family=DotGothic16&family=Frijole&family=Limelight&family=Megrim&family=Mukta+Vaani:wght@300&family=Philosopher&family=Plaster&family=Ribeye+Marrow&family=Saira+Stencil+One&family=Sirin+Stencil&family=Wallpoet&family=Wendy+One&display=swap");
 h1 {
-  font-family: Train one;
+  font-family: LimeLight;
   font-weight: 100;
-  text-shadow: 1px 1px 1px grey;
+  text-shadow: 2px 2px 2px grey;
 }
 h2 {
   font-family: Allerta Stencil;
   font-weight: 300;
 }
 h3 {
-  font-family: Trykker;
+  font-family: Quantico;
+}
+p {
+  font-family: Mukta Vaani;
+}
+button {
+  font-family: Philosopher;
 }
 * {
   margin: 0;

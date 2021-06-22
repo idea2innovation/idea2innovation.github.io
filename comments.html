@@ -10,263 +10,96 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
+    <script src="https://kit.fontawesome.com/6e8ea0ad06.js" crossorigin="anonymous"></script>
 </head>
 <style>
-    ::placeholder{
-        color: white;
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: gold;
     }
-    #b1{
-        background: url(images/Feedback.jpg);
-        padding-bottom: 10%;
+    .box{
+        display: flex;
+    }
+    .box .eye{
+        position: relative;
+        width: 150px;
+        height: 150px;
+        display: block;
+        background: white;
+        margin: 0 30px;
+        border-radius: 50%;
+        box-shadow: 0 5px 45px rgba(0,0,0,0.2),inset 0 0 15px rgb(255, 187, 0),inset 0 0 20px rgb(255,187,0);
+    }
+    .box .eye::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        transform: translate(-50%,-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: radial-gradient(circle at center, rgb(56, 56, 56) 10%, transparent 30%) rgb(53, 53, 53);
+        border: 15px solid rgb(0, 153, 255);
+    }
+    .mouth{
+        position: absolute;
+        bottom: 10vh;
+        left: 32.5vw;
+        width: 35vw;
+        height: 15vh;
+        border-bottom-right-radius: 100%;
+        border-bottom-left-radius: 100%;
+        border-top-left-radius: -100px;
+        background:repeating-linear-gradient(90deg,transparent 0%,transparent 8%,black 8%,black 8.5%,transparent 8.5%),linear-gradient(transparent 50%,black 50%,black 53%, transparent 53%) white;
+        border: rgb(255, 107, 132) solid 15px;
+    }
+    .text{
+        display: none;
+    }
+    @media all and (max-width: 950px) {
+        .box{
+            display: none;
+        }
+        .text{
+            display: block;
+            text-align: justify;
+            position: absolute;
+            top:20vh;
+        }
     }
 </style>
-<body onload="subfor()">
-            <div id="loading"></div>
-            <div id="sub-load">
-                <div id="sub-load0-1">
-                    <div id="sub-load0-2">
-                        <h2>Submitting</h2>
-                    </div>
-                </div>
-            </div>
-            <div id="sub-load1">
-                <div id="sub-load1-1">
-                    <div id="sub-load1-3">
-                        <i class="fa fa-check"></i>
-                    </div>
-                    <div id="sub-load1-2">
-                        <h2>Feedback Submitted :)</h2>
-                    </div>
-                </div>
-            </div>
-            <div id="sub-load2">
-                <div id="sub-load2-1">
-                    <div id="sub-load2-3">
-                        <i class="fa fa-exclamation-triangle"></i>
-                    </div>
-                    <div id="sub-load2-2">
-                        <h2>There was an error :(</h2>
-                    </div>
-                </div>
-            </div>
-        <!--Navigation-->
-        <nav class="nav1" id="na">
-            <ul>
-                <li ><i class="fa fa-home" id="fa"></i></li>
-                <li><i class="fa fa-hourglass-half" id="fa"></i></li>
-                <li><i class="fa fa-calendar" id="fa"></i></li>
-                <li><i class="fa fa-address-card" id="fa"></i></li>
-                <li><i class="fa fa-users" id="fa"></i></li>
-                <li><i class="fa fa-university" id="fa"></i></li>
-                <li class="active"><i class="fa fa-comments" id="fa"></i></li>
-            </ul>
-        </nav>
-        <nav id="sideNav">
-            <ul>
-                <li><a href="index.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-home" id="fa"></i> Home</a></li>
-                <li><a href="activities.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-hourglass-half" id="fa"></i>Activities</a>
-                </li>
-                <li><a href="events.html">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-calendar" id="fa"></i>Events</a></li>
-                <li><a href="about.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-address-card" id="fa"></i> About Us</a></li>
-                <li><a href="members.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-users" id="fa"></i> Members</a>
-                </li>
-                <li><a href="https://www.iare.ac.in/">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-university" id="fa"></i>About
-                        College</a>
-                </li>
-                <li class="active"><a href="comments.html">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
-                </li>
-            </ul>
-        </nav>
-        <img src="images/men.png" id="menuBtn">
-        <script>
-            var menuBtn = document.getElementById("menuBtn");
-            var sideNav = document.getElementById("sideNav");
-            var click = document.getElementById("click")
-            var na = document.getElementById("na")
-            sideNav.style.left = "-250px";
-            na.onmouseover = function () {
-                sideNav.style.left = "0px"
-            }
-            na.onmouseout = function () {
-                sideNav.style.left = "-250px"
-            }
-            sideNav.onmouseover = function () {
-                sideNav.style.left = "0px"
-            }
-            sideNav.onmouseout = function () {
-                sideNav.style.left = "-250px"
-            }
-            var i1 = 0
-            var j1 = 0
-            menuBtn.onclick = function () {
-                j1 = 1
-                if (!i1) {
-                    sideNav.style.left = "0px"
-                    i1 = 1
-                }
-                else {
-                    sideNav.style.left = "-250px"
-                    i1 = 0
-                }
-            }
-            onclick = function () {
-                if (i1 && !j1) {
-                    sideNav.style.left = "-250px"
-                    i1 = 0
-                }
-                j1 = 0
-            }
-        </script>
-    <div id="b1">
-            <h1 id="com-head" >--Feedback--
-            </h1>
-    <div class="comments">
-    <form id="myForm">
-        <h2 style="padding-bottom: 10%; color: white; font-family:Verdana, Geneva, Tahoma, sans-serif; " id="com-text">Write To Us</h2>
-        <div class="cin">
-        <input name="Name" required class="comin" placeholder="Name... " >
-        </div>
-        <br>
-        <div class="cin">
-        <input type="email" name="email" required class="comin" placeholder="Email..." >
-        </div>
-        <br>
-        <div class="cin">
-        <textarea name="Comment Here..." required class="comin" id="com-box" cols="20" rows="5" placeholder="Comments..."></textarea>
-        <br>
-        </div>
-        <input type="text" name="datetime-local" class="comin" style="display: none;">
-        <input type="text" name="OS" class="comin" style="display: none;">
-    </form>
-    <button onclick="SubForm()" class="sub-btn">Submit</button>
+<body>
+    <div class="box">
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
     </div>
+    <div class="text">
+        <h1>What is this madam u should not open this in phone na &nbsp <i class="fas fa-grin-beam-sweat" style="color:rgb(0, 153, 255); font-size: larger;"></i> &nbsp<i class="far fa-grin-squint-tears" style="color:rgb(0, 153, 255); font-size: larger;"></i> </h1>
+        <br>
+        <h1 style="color: black;">open it in laptop pleeeeaseeeeee..............</h1>
+        <br>
+        <h2>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</h2>
     </div>
-        <script>
-            var loa=document.getElementById("sub-load");
-            var loa1=document.getElementById("sub-load1");
-            var loa2=document.getElementById("sub-load2");
-            function SubForm() {
-                var Name = "Unknown OS";
-                if (navigator.userAgent.indexOf("Win") != -1) Name =
-                    "Windows OS";
-                if (navigator.userAgent.indexOf("Mac") != -1) Name =
-                    "Macintosh";
-                if (navigator.userAgent.indexOf("Linux") != -1) Name =
-                    "Linux OS";
-                if (navigator.userAgent.indexOf("Android") != -1) Name =
-                    "Android OS";
-                if (navigator.userAgent.indexOf("like Mac") != -1) Name =
-                    "iOS";
-                a1 = document.getElementsByClassName('comin')
-                i=a1[1].value
-                j=i.indexOf('@')
-                k=i.indexOf('.')
-                a1[3].value=new Date();
-                a1[4].value=Name;
-                if (!a1[0].value) {
-                    alert("Enter your name")
+    <script>
+        document.querySelector('body').addEventListener('mousemove',eyeball);
 
-                }
-                else if (!a1[1].value) {
-                    alert("Enter your email-id")
-                }
-                else if (j == -1 || k == -1) {
-                    alert("Enter a proper email-id")
-                }
-                else if (!a1[2].value) {
-                    alert("write ur comment")
-                }
-                else if (a1[2].value && a1[1].value && a1[0].value){
-                    loa.style.display="block"
-                $.ajax({
-                    url: 'https://api.apispreadsheets.com/data/11735/',
-                    type: 'post',
-                    data: $("#myForm").serializeArray(),
-                    success: function () {
-                        loa.style.display = "none"
-                        loa1.style.display='block'
-                        setTimeout(function () { loa1.style.display="none"; }, 1000);
-                    },
-                    error: function () {
-                        loa.style.display = "none"
-                        loa2.style.display="block"
-                        setTimeout(function () { loa2.style.display="none"; }, 1000);
-                    }
-                });}
-            }
-        </script>
-        <!--Social media-->
-        <div class="social-icons">
-            <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
-            <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png"></a>
-            <a href="https://twitter.com/?lang=en"><img src="images/twitter.png"></a>
-            <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
-            <a href="https://in.linkedin.com/"><img src="images/linkedin.png"></a>
-        </div>
-        <!--Footer-->
-        <section id="footer">
-            <br>
-            <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
-            <br>
-            <div class="footer-links">
-                <div class="link-title" id="mem-fol1">
-                    <h3>Overview</h3>
-                    <small> <a href="about.html"><i class="fa fa-address-card"></i>&nbsp About us</a></small><br>
-                    <small>
-                        <a href="activities.html"><i class="fa fa-hourglass-half"></i>&nbsp Activities</a>
-                        <br>
-                        <a href="events.html"><i class="fa fa-calendar"></i>&nbsp Events</a>
-                        <br>
-                        <a href="index.html"><i class="fa fa-home"></i>&nbsp Home</a>
-                        <br>
-                        <a href="https://www.iare.ac.in/"><i class="fa fa-university"></i>&nbsp About IARE</a>
-                        <br>
-                        <a href="members.html"><i class="fa fa-users"></i>&nbsp Feedback</a>
-                    </small>
-                </div>
-                <div class="link-title" id="mem-fol">
-                    <h3>Follow us</h3>
-                    <div class="link-title1">
-                        <div class="mem-social">
-                            <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="mfa"></i></a>
-                        </div>
-                        <div class="mem-social">
-                            <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="mfa"></i></a>
-                        </div>
-                        <div class="mem-social">
-                            <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="mfa"></i></a>
-                        </div>
-                        <div class="mem-social">
-                            <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="mfa"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="link-title">
-                    <h3>Contact us</h3>
-                    <small id="mem-con"><i class="fa fa-google"></i>&nbsp ideatoinnovation01@gmail.com</small>
-                    <br>
-                    <small id="mem-con"><i class="fa fa-phone"></i>&nbsp+91-6304341895</small>
-                </div>
-                <div class="link-title" id="im1">
-                    <h3><a href="index.html"><img src="images/logo.png" alt="logo" style="width: 50%;"></a></h3>
-                </div>
-            </div>
-            <div class="fend">
-                <small id="sm" style="color: black;">made with <i class="fa fa-heart"></i> <i></i><i class="fa fa-html5"></i>
-                    <i></i>& <i></i><i class="fa fa-css3"></i> in <a
-                        href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i
-                            class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
-                <small id="sm1" style="background: black;"><i class="fa fa-copyright"></i> copyright 2021
-                    ideatoinnovation</small>
-            </div>
-        </section>
-            <script>
-                var loader = document.getElementById("loading");
-                function subfor() {
-                    loader.style.display = "none";
-                }
-            </script>
+        function eyeball(){
+            const eye= document.querySelectorAll(".eye");
+            eye.forEach(function(eye){
+                let x=(eye.getBoundingClientRect().left)+(eye.clientWidth/2);
+                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+                let radian = Math.atan2(event.pageX-x,event.pageY-y);
+                let rotation = (radian*(180/Math.PI)*-1)+270;
+                eye.style.transform="rotate("+rotation+"deg)"
+            })
+        }
+    </script>
 </body>
 
 </html>

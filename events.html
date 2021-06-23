@@ -238,8 +238,8 @@
                                     </select>
                                 </div>
                                 <div class="r-in2">
-                                    <button type="submit" id="r-submit">Register &nbsp<i class="fas fa-angle-right"
-                                            id="r-fa"></i><span id="sp2"></span></button>
+                                    <button type="submit" id="r-submit" onclick="myMove()">Register &nbsp<i class="fas fa-angle-right"
+                                            id="r-fax"></i><span id="sp2"></span></button>
                                     <script>
                                         let rsub=document.getElementById("r-submit")
                                         var rip=document.getElementById("sp2")
@@ -361,6 +361,8 @@
         var rload1=document.getElementById("sub-load1");
         var rload2=document.getElementById("sub-load2");
         var rscolor=document.getElementById("r-branch");
+        var rname=document.getElementById("r-name");
+        var rronum=document.getElementById("r-ronum");
         rclose.onclick = function(){
             register.style.transform = "rotateY(0deg)"
         }
@@ -411,8 +413,8 @@
         <div class="footer-links">
             <div class="link-title" id="mem-fol1">
                 <h3>Overview</h3>
-                <small> <a href="about.html"><i class="fa fa-address-card"></i>&nbsp About us</a></small><br>
-                <small>
+                <small id="fo-li"><a href="about.html"><i class="fa fa-address-card"></i>&nbsp About us</a><br>
+                
                     <a href="activities.html"><i class="fa fa-hourglass-half"></i>&nbsp Activities</a>
                     <br>
                     <a href="members.html"><i class="fa fa-users"></i>&nbsp Events</a>

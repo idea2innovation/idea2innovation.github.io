@@ -972,6 +972,7 @@ img:hover {
   margin-left: 31%;
   margin-top: 5%;
   padding: 5%;
+  padding-top: 1%;
   width: 30%;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
   background: rgba(44, 44, 43, 0.849);
@@ -984,14 +985,31 @@ img:hover {
   width: 100%;
   font-size: 100%;
   background: transparent;
-  border-bottom: gold 0.75vh solid;
+  border-bottom: gold 1mm solid;
   color: white;
+}
+.comin.shake {
+  animation: animate 0.3s ease-in-out infinite;
 }
 #count-block {
   color: white;
 }
 .cin {
   padding: 0.5%;
+}
+@keyframes animate {
+  0%,
+  100% {
+    margin-left: 0;
+  }
+  20%,
+  80% {
+    margin-left: -12px;
+  }
+  40%,
+  60% {
+    margin-left: 12px;
+  }
 }
 .sub-btn {
   padding: 10px 10px;
@@ -1032,6 +1050,20 @@ img:hover {
   color: gold;
   width: 20%;
   font-weight: bold;
+}
+#alert-text {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  background: gold;
+  margin-bottom: 3%;
+  border-radius: 1mm;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  font-family: Ubuntu;
+}
+#b1 {
+  height: 110vh;
 }
 /*Preloader*/
 #loading {
@@ -1756,6 +1788,9 @@ html {
     width: 50%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
+  #b1 {
+    height: 110vh;
+  }
   .comin {
     height: 15px;
     width: 100%;
@@ -1907,17 +1942,18 @@ html {
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    background-attachment: fixed;
   }
   .header-text {
-    max-width: 90%;
+    max-width: 100%;
   }
   .header-text p {
     color: black;
     background: rgba(241, 241, 241, 0.9);
     border-radius: 1mm;
-    padding: 2%;
-    font-size: 12px;
-    line-height: 4mm;
+    padding: 3%;
+    font-size: 18px;
+    line-height: 6mm;
     opacity: 1;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
@@ -1949,6 +1985,7 @@ html {
   #sideNav {
     width: 250px;
     height: 100vh;
+    z-index: 6;
   }
   nav ul li a {
     position: relative;
@@ -2157,31 +2194,45 @@ html {
   #logo123 {
     margin-right: 0;
   }
+  #b1 {
+    height: 100vh;
+  }
   .comments {
-    margin-left: 18%;
-    margin-top: 5%;
+    margin-left: 5%;
+    margin-top: 30%;
     padding: 5%;
-    width: 50%;
+    padding-top: 1%;
+    width: 80%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 5;
+  }
+  #count {
+    font-size: 17px;
+  }
+  #count-block {
+    font-size: 17px;
+    margin-bottom: 10px;
   }
   .comin {
-    height: 15px;
+    height: 43px;
     width: 100%;
-    font-size: 100%;
-    border-bottom: gold 0.75vh solid;
+    font-size: 17px;
+    border-bottom: gold 0.65mm solid;
   }
   .sub-btn {
     padding: 5px 5px;
     outline: none;
     border-radius: 0.5mm;
-    font-size: 10px;
+    font-size: 17px;
     background: rgb(221, 192, 31);
+    margin-bottom: 10px;
   }
   #sub-btn-fa {
-    font-size: 10px;
+    font-size: 17px;
   }
   #com-text {
-    font-size: 100%;
+    font-size: 20px;
   }
   #myForm {
     font-size: 12px;

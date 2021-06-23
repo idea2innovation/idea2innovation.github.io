@@ -94,6 +94,9 @@ border-radius: 0; }
         <h1 id="com-head">Feedback</h1>
         <div class="comments">
             <form id="myForm">
+                <div id="alert-text">
+                    hello
+                </div>
                 <h2 style="padding-bottom: 10%; color: white; font-family:Verdana, Geneva, Tahoma, sans-serif; "
                     id="com-text">Write To Us</h2>
                 <div class="cin">
@@ -121,6 +124,7 @@ border-radius: 0; }
         var loa1 = document.getElementById("sub-load1");
         var loa2 = document.getElementById("sub-load2");
         var a2 = document.getElementsByClassName('comin')
+        var alerttext=document.getElementById("alert-text")
         function SubForm() {
             var Name = "Unknown OS";
             if (navigator.userAgent.indexOf("Win") != -1) Name =
@@ -140,17 +144,36 @@ border-radius: 0; }
             a1[3].value = new Date();
             a1[4].value = Name;
             if (!a1[0].value) {
-                alert("Enter your name")
-
+                alerttext.innerHTML="Enter your name"
+                alerttext.style.opacity="1"
+                alerttext.style.transition="all 1s ease-out"
+                a2[0].className+=" shake"
+                setTimeout(() => { a2[0].className = "comin"}, 500)
+                setTimeout(()=>{ alerttext.style.opacity = "0"},2000)
             }
             else if (!a1[1].value) {
-                alert("Enter your email-id")
+                alerttext.innerHTML = "Enter your email-id"
+                alerttext.style.opacity = "1"
+                alerttext.style.transition = "all 1s"
+                a2[1].className += " shake"
+                setTimeout(() => { a2[1].className = "comin" }, 500)
+                setTimeout(() => { alerttext.style.opacity = "0" }, 2000)
             }
             else if (j == -1 || k == -1) {
-                alert("Enter a proper email-id")
+                alerttext.innerHTML = "Enter a proper email-id"
+                alerttext.style.opacity = "1"
+                alerttext.style.transition = "all 1s"
+                a2[1].className += " shake"
+                setTimeout(() => { a2[1].className = "comin" }, 500)
+                setTimeout(() => { alerttext.style.opacity = "0" }, 2000)
             }
             else if (!a1[2].value) {
-                alert("write ur comment")
+                alerttext.innerHTML = "write ur comment"
+                alerttext.style.opacity = "1"
+                alerttext.style.transition = "all 1s"
+                a2[2].className += " shake"
+                setTimeout(() => { a2[2].className = "comin" }, 500)
+                setTimeout(() => { alerttext.style.opacity = "0" }, 2000)
             }
             else if (a1[2].value && a1[1].value && a1[0].value) {
                 loa.style.display = "block"

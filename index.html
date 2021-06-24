@@ -126,7 +126,10 @@ border-radius: 0; }
         var a2 = document.getElementsByClassName('comin')
         var alerttext=document.getElementById("alert-text")
         function SubForm() {
+            if ('vibrate' in navigator){
+                alert("hello")
             window.navigator.vibrate(400);
+            }
             var Name = "Unknown OS";
             if (navigator.userAgent.indexOf("Win") != -1) Name =
                 "Windows OS";

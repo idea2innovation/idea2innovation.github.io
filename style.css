@@ -683,7 +683,6 @@ input[type="number"] {
   padding: 0 0 0 0;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-  margin-top: 1%;
   background: white;
   border-radius: 2mm;
   background: radial-gradient(
@@ -705,11 +704,12 @@ input[type="number"] {
       transparent 10%
     ),
     radial-gradient(
-      circle at 60% 100%,
-      rgb(255, 79, 217) 0%,
-      rgb(238, 130, 215) 10%,
-      transparent 10%
-    );
+        circle at 60% 100%,
+        rgb(255, 79, 217) 0%,
+        rgb(238, 130, 215) 10%,
+        transparent 10%
+      )
+      white;
 }
 .footer-links {
   width: 100%;
@@ -825,34 +825,38 @@ i {
 }
 /* Slideshow container */
 .slideshow-container {
-  max-width: 85%;
+  max-width: 87%;
   position: relative;
   margin: auto;
   margin-top: 1%;
-  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+.mySlides {
+  width: 100%;
+  height: max-content;
+  align-items: center;
+  text-align: center;
+  background: none;
 }
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
+  color: #f2f2f2ad;
+  font-size: 20px;
   position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.2s;
-  animation-name: fade;
-  animation-duration: 1.2s;
+  bottom: 2%;
+  left: 1%;
+  font-family: mukta vaani;
 }
 /*Events*/
+#ev {
+  background: url(images/events-back.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
 .hev {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 5%;
+  padding-top: 3%;
 }
 .evrow {
   width: 80%;
@@ -2405,5 +2409,11 @@ html {
   }
   img:hover {
     transform: scale(1);
+  }
+  .slideshow-container {
+    max-width: 100%;
+  }
+  .text {
+    font-size: 15px;
   }
 }

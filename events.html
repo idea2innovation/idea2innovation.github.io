@@ -21,10 +21,7 @@
         border-radius: 0;
     }
 </style>
-<body onload="subfor()">
-        <div style="margin-left: 7vw;">
-            <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
-        </div>
+<body onload="subfor()" id="ev">
     <div id="sub-load"style="position: fixed; top: -2vh;height: 105vh;">
         <div id="sub-load0-1">
             <div id="sub-load0-2">
@@ -131,23 +128,27 @@
                 }
             </script>
                 <div id="loading" style="position: fixed; top: -2vh;height: 105vh;"></div>
+    <div class="hev2">
+    <div style="margin-left: 7vw;">
+        <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
+    </div>
     <!--Slideshow-->
     <div class="slideshow-container">
-        <div class="mySlides fade">
+        <div class="mySlides">
             <img src="images/img1.jpg" style="width:100%">
             <div class="text">Event Name</div>
         </div>
     
-        <div class="mySlides fade">
+        <div class="mySlides">
             <img src="images/img2.jpg" style="width:100%">
             <div class="text">Event Name</div>
         </div>
     
-        <div class="mySlides fade">
+        <div class="mySlides">
             <img src="images/img3.jpg" style="width:100%">
             <div class="text">Event Name</div>
         </div>
-        <div class="mySlides fade">
+        <div class="mySlides">
             <img src="images/img1.jpg" style="width:100%">
             <div class="text">Event Name</div>
         </div>
@@ -169,6 +170,7 @@
                 setTimeout(showSlides, 2500);
             }
     </script>
+    </div>
     <!--events body-->
     <div class="hev">
         <h1 style=" color: orangered; " >Events</h1>
@@ -377,6 +379,12 @@
         else{
             rscolor.style.color="rgb(0,0,0)"
         }
+        }
+        function myMove(){
+             navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+             if (navigator.vibrate) {
+                navigator.vibrate([500]);
+            }
         }
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwH_9lxbKG_Qh4pyeM3455OsJgf9fm_vdPNvKqc9N-2fhMd16iX-UXeTQWQxW6PtFJI/exec'
             const f = document.forms['google-sheet']

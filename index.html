@@ -126,10 +126,7 @@ border-radius: 0; }
         var a2 = document.getElementsByClassName('comin')
         var alerttext=document.getElementById("alert-text")
         function SubForm() {
-            if ('vibrate' in navigator){
-                alert("hello")
-            window.navigator.vibrate(400);
-            }
+            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
             var Name = "Unknown OS";
             if (navigator.userAgent.indexOf("Win") != -1) Name =
                 "Windows OS";
@@ -152,8 +149,7 @@ border-radius: 0; }
                 alerttext.style.opacity="1"
                 alerttext.style.transition="all 1s ease-out"
                 a2[0].className+=" shake"
-                navigator.vibrate(300);
-                navigator.vibrate(0);
+                navigator.vibrate([500, 300, 100]);
                 setTimeout(() => { a2[0].className = "comin"}, 500)
                 setTimeout(()=>{ alerttext.style.opacity = "0"},2000)
             }
@@ -162,8 +158,7 @@ border-radius: 0; }
                 alerttext.style.opacity = "1"
                 alerttext.style.transition = "all 1s"
                 a2[1].className += " shake"
-                navigator.vibrate(300);
-                navigator.vibrate(0);
+                navigator.vibrate([500, 300, 100]);
                 setTimeout(() => { a2[1].className = "comin" }, 500)
                 setTimeout(() => { alerttext.style.opacity = "0" }, 2000)
             }
@@ -172,8 +167,7 @@ border-radius: 0; }
                 alerttext.style.opacity = "1"
                 alerttext.style.transition = "all 1s"
                 a2[1].className += " shake"
-                navigator.vibrate(300);
-                navigator.vibrate(0);
+                navigator.vibrate([500, 300, 100]);
                 setTimeout(() => { a2[1].className = "comin" }, 500)
                 setTimeout(() => { alerttext.style.opacity = "0" }, 2000)
             }
@@ -182,8 +176,7 @@ border-radius: 0; }
                 alerttext.style.opacity = "1"
                 alerttext.style.transition = "all 1s"
                 a2[2].className += " shake"
-                navigator.vibrate(300);
-                navigator.vibrate(0);
+                navigator.vibrate([500, 300, 100]);
                 setTimeout(() => { a2[2].className = "comin" }, 500)
                 setTimeout(() => { alerttext.style.opacity = "0" }, 2000)
             }

@@ -645,6 +645,9 @@ input[type="number"] {
 #r-fa {
   font-size: 1.5vw;
 }
+#r-fax {
+  font-size: 1.5vw;
+}
 #r-submit:hover {
   box-shadow: inset 400px 0 0 rgb(58, 58, 58);
 }
@@ -1908,6 +1911,9 @@ html {
   #r-fa {
     font-size: 0.5cm;
   }
+  #r-fax {
+    font-size: 0.5cm;
+  }
   #subs-top {
     font-size: 1.75vh;
   }
@@ -2353,6 +2359,9 @@ html {
     font-size: 0.5cm;
   }
   #r-fa {
+    font-size: 0.5cm;
+  }
+  #r-fax {
     font-size: 0.5cm;
   }
   #subs-top {

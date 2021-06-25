@@ -902,11 +902,15 @@ img:hover {
   width: 100%;
   border: cornflowerblue solid;
   border-radius: 2mm;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 #eh2 {
   width: 100%;
   border: palevioletred solid;
   border-radius: 2mm;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 #eh1 h2 {
   margin-top: 2%;

@@ -18,6 +18,15 @@
     }
 </style>
 <body id="click" onload="subfor()" >
+        <div class="scroll-am"></div>
+        <script>
+            var sc = document.getElementsByClassName("scroll-am");
+            var th=document.body.scrollHeight-window.innerHeight;
+            window.onscroll=function(){
+                let p=(window.pageYOffset/ (document.body.scrollHeight - window.innerHeight)) * 100;
+                sc[0].style.width=p+'%';
+            }
+        </script>
             <div id="loading"></div>
     <div  id="ac-bac">
     <div style="margin-left: 7vw;">
@@ -211,10 +220,13 @@
             </div>
             <div class="link-title" id="mem-fol2">
                 <h3>Contact us</h3>
-                <small id="mem-con"><i class="fa fa-google"></i>&nbsp ideatoinnovation01@gmail.com</small>
-                <br>
-                <small id="mem-con"><i class="fa fa-phone"></i>&nbsp+91-6304341895</small>
-                <br>
+                <div>
+                    <small id="mem-con"><a href="mailto:ideatoinnovation01@gmail.com"><i class="fa fa-google"></i>&nbsp
+                            ideatoinnovation01@gmail.com</a></small>
+                    <br>
+                    <small id="mem-con"><a href="index.html#b1"><i class="fas fa-comment-alt" id="pri-po-fa"></i>&nbspWrite
+                            to Us</a></small>
+                </div>
                 <br>
                 <h3>Legal</h3>
                 <div class="link-title1">

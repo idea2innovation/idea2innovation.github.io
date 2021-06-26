@@ -731,7 +731,7 @@ input[type="number"] {
   padding-bottom: 0.77vw;
 }
 #pri-po-fa {
-  font-size: 1.35vw;
+  font-size: 20px;
 }
 #im1 {
   flex-basis: 16%;
@@ -761,6 +761,11 @@ input[type="number"] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.link-title2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
 .mem-social {
   margin-right: 1%;
@@ -799,6 +804,45 @@ input[type="number"] {
 }
 #mem-fol2 {
   flex-basis: 22vw;
+}
+.mem-social:nth-child(1) {
+  background: dodgerblue;
+}
+.mem-social:nth-child(1) a {
+  color: white;
+}
+.mem-social:nth-child(1) a:hover {
+  color: black;
+}
+.mem-social:nth-child(2) {
+  background: deepskyblue;
+}
+.mem-social:nth-child(2) a {
+  color: white;
+  transition: color 0.5s;
+}
+.mem-social:nth-child(2) a:hover {
+  color: black;
+}
+.mem-social:nth-child(3) {
+  background: rgb(255, 0, 157);
+}
+.mem-social:nth-child(3) a {
+  color: white;
+  transition: color 0.5s;
+}
+.mem-social:nth-child(3) a:hover {
+  color: black;
+}
+.mem-social:nth-child(4) {
+  background: rgb(0, 119, 181);
+}
+.mem-social:nth-child(4) a {
+  color: white;
+  transition: color 0.5s;
+}
+.mem-social:nth-child(4) a:hover {
+  color: black;
 }
 /*--Social Media--*/
 .social-icons {
@@ -1441,24 +1485,35 @@ img:hover {
   font-family: "Mulish";
 }
 #subs-sub {
-  background: rgb(100, 233, 100);
   padding: 0.25vw;
   cursor: pointer;
-  border-radius: 5%;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 35px;
+  background: red;
+  color: white;
+  margin-right: 30px;
+  transition: box-shadow 0.5s;
 }
 #subs-sub:hover {
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  color: white;
+  box-shadow: inset 0 100px 0px rgb(129, 129, 129);
 }
 #subs-un {
-  background: rgb(247, 117, 117);
   padding: 0.25vw;
   cursor: pointer;
-  border-radius: 5%;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 35px;
+  background: rgb(66, 66, 66);
+  color: white;
+  transition: box-shadow 0.5s;
 }
 #subs-un:hover {
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  color: white;
+  box-shadow: inset 0 100px 0px rgb(129, 129, 129);
 }
 #subs-top {
   position: absolute;
@@ -1765,7 +1820,7 @@ html {
     font-size: 1.75vw;
   }
   #pri-po-fa {
-    font-size: 1.5vw;
+    font-size: 15px;
   }
   #im1 {
     flex-basis: 15vw;
@@ -1926,6 +1981,21 @@ html {
     padding-right: 0.75vh;
     border-radius: 2vw;
     font-size: 3vw;
+  }
+  #subs-sub {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 25px;
+    margin-right: 20px;
+  }
+  #subs-un {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 25px;
   }
   #subfa {
     font-size: 3vw;
@@ -2178,7 +2248,7 @@ html {
     font-size: 1.75vw;
   }
   #pri-po-fa {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
   #im1 {
     flex-basis: 16vw;
@@ -2389,6 +2459,21 @@ html {
     padding-left: 0.75vh;
     padding-right: 0.75vh;
     border-radius: 1.5vh;
+  }
+  #subs-sub {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 14px;
+    margin-right: 15px;
+  }
+  #subs-un {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 14px;
   }
   .ecol {
     margin-bottom: 5%;

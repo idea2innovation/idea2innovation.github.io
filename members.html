@@ -18,6 +18,15 @@
     }
 </style>
 <body id="click" onload="subfor()">
+        <div class="scroll-am"></div>
+        <script>
+            var sc = document.getElementsByClassName("scroll-am");
+            var th = document.body.scrollHeight - window.innerHeight;
+            window.onscroll = function () {
+                let p = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
+                sc[0].style.width =p + '%';
+            }
+        </script>
     <div id="loading"></div>
     <div id="mem-back">
         <div style="margin-left: 7vw;">
@@ -656,79 +665,82 @@
         <a href="https://in.linkedin.com/"><img src="images/linkedin.png"></a>
     </div>
             <!--Footer-->
-<section id="footer">
-    <br>
-    <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
-    <br>
-    <div class="footer-links">
-        <div class="link-title" id="mem-fol1">
-            <h3>Overview</h3>
-            <small id="fo-li"><a href="about.html"><i class="fa fa-address-card"></i>&nbsp About us</a><br>
-
-                <a href="activities.html"><i class="fa fa-hourglass-half"></i>&nbsp Activities</a>
-                <br>
-                <a href="members.html"><i class="fa fa-users"></i>&nbsp Events</a>
-                <br>
-                <a href="index.html"><i class="fa fa-home"></i>&nbsp Home</a>
-                <br>
-                <a href="https://www.iare.ac.in/"><i class="fa fa-university"></i>&nbsp About IARE</a>
-                <br>
-                <a href="index.html#b1"><i class="fa fa-comments"></i>&nbsp Feedback</a>
-            </small>
-        </div>
-        <div class="link-title" id="mem-fol">
-            <h3>Follow us</h3>
-            <div class="link-title1">
-                <div class="mem-social">
-                    <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="mfa"></i></a>
+    <section id="footer">
+        <br>
+        <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
+        <br>
+        <div class="footer-links">
+            <div class="link-title" id="mem-fol1">
+                <h3>Overview</h3>
+                <small id="fo-li"><a href="about.html"><i class="fa fa-address-card"></i>&nbsp About us</a><br>
+    
+                    <a href="activities.html"><i class="fa fa-hourglass-half"></i>&nbsp Activities</a>
+                    <br>
+                    <a href="members.html"><i class="fa fa-users"></i>&nbsp Events</a>
+                    <br>
+                    <a href="index.html"><i class="fa fa-home"></i>&nbsp Home</a>
+                    <br>
+                    <a href="https://www.iare.ac.in/"><i class="fa fa-university"></i>&nbsp About IARE</a>
+                    <br>
+                    <a href="index.html#b1"><i class="fa fa-comments"></i>&nbsp Feedback</a>
+                </small>
+            </div>
+            <div class="link-title" id="mem-fol">
+                <h3>Follow us</h3>
+                <div class="link-title1">
+                    <div class="mem-social">
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="mfa"></i></a>
+                    </div>
+                    <div class="mem-social">
+                        <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="mfa"></i></a>
+                    </div>
+                    <div class="mem-social">
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="mfa"></i></a>
+                    </div>
+                    <div class="mem-social">
+                        <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="mfa"></i></a>
+                    </div>
                 </div>
-                <div class="mem-social">
-                    <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="mfa"></i></a>
-                </div>
-                <div class="mem-social">
-                    <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="mfa"></i></a>
-                </div>
-                <div class="mem-social">
-                    <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="mfa"></i></a>
+                <br>
+                <h3>Subscription</h3>
+                <div class="link-title2">
+                    <div id="subs-sub">
+                        <small><i class="fas fa-bell" id="pri-po-fa" title="subscribe"></i></small>
+                    </div>
+                    <div id="subs-un">
+                        <small><i class="fas fa-bell-slash" id="pri-po-fa" title="unsubscribe"></i></small>
+                    </div>
                 </div>
             </div>
-            <br>
-            <h3>Subscription</h3>
-            <div class="link-title2">
-                <div id="subs-sub">
-                    <small><i class="fas fa-bell" id="pri-po-fa" title="subscribe"></i></small>
+            <div class="link-title" id="mem-fol2">
+                <h3>Contact us</h3>
+                <div>
+                    <small id="mem-con"><a href="mailto:ideatoinnovation01@gmail.com"><i class="fa fa-google"></i>&nbsp
+                            ideatoinnovation01@gmail.com</a></small>
+                    <br>
+                    <small id="mem-con"><a href="index.html#b1"><i class="fas fa-comment-alt" id="pri-po-fa"></i>&nbspWrite
+                            to Us</a></small>
                 </div>
-                <div id="subs-un">
-                    <small><i class="fas fa-bell-slash" id="pri-po-fa" title="unsubscribe"></i></small>
+                <br>
+                <h3>Legal</h3>
+                <div class="link-title1">
+                    <small id="open-pri"><i class="fas fa-globe" id="pri-po-fa"></i>&nbspPrivacy Policy</small>
                 </div>
             </div>
-        </div>
-        <div class="link-title" id="mem-fol2">
-            <h3>Contact us</h3>
-            <small id="mem-con"><i class="fa fa-google"></i>&nbsp ideatoinnovation01@gmail.com</small>
-            <br>
-            <small id="mem-con"><i class="fa fa-phone"></i>&nbsp+91-6304341895</small>
-            <br>
-            <br>
-            <h3>Legal</h3>
-            <div class="link-title1">
-                <small id="open-pri"><i class="fas fa-globe" id="pri-po-fa"></i>&nbspPrivacy Policy</small>
+            <div class="link-title" id="im1">
+                <h3><a href="index.html"><img src="images/logo.png" alt="logo" style="width: 50%;"></a></h3>
             </div>
         </div>
-        <div class="link-title" id="im1">
-            <h3><a href="index.html"><img src="images/logo.png" alt="logo" style="width: 50%;"></a></h3>
+        <div class="fend">
+            <small id="sm" style="color: black;">made with <i class="fa fa-heart" title="Love"></i> <i></i><i
+                    class="fa fa-html5" title="HTML"></i>&nbsp<i class="fab fa-js-square" id="js-sq" title="javascript"></i>
+                <i></i>& <i></i><i class="fa fa-css3" title="CSS"></i> in <a
+                    href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i
+                        class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
+            <small id="sm1" style="background: black;"><i class="fa fa-copyright"></i> copyright 2021
+                ideatoinnovation</small>
         </div>
-    </div>
-    <div class="fend">
-        <small id="sm" style="color: black;">made with <i class="fa fa-heart" title="Love"></i> <i></i><i
-                class="fa fa-html5" title="HTML"></i>&nbsp<i class="fab fa-js-square" id="js-sq" title="javascript"></i>
-            <i></i>& <i></i><i class="fa fa-css3" title="CSS"></i> in <a
-                href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i
-                    class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
-        <small id="sm1" style="background: black;"><i class="fa fa-copyright"></i> copyright 2021
-            ideatoinnovation</small>
-    </div>
-</section>
+    </section>
     <!--Privacy Policy-->
     <img src="images/logo.png" alt="loading" id="pri-po-load">
     <div id="pri-po">

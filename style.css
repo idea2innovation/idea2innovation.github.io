@@ -517,9 +517,25 @@ nav ul li a:hover {
   background: white;
   border-radius: 2mm;
   display: none;
+  overflow: scroll;
+}
+.mainacon::-webkit-scrollbar {
+  width: 0.8vw;
+}
+
+.mainacon::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mainacon::-webkit-scrollbar-thumb {
+  background: rgb(129, 129, 129);
+  border-radius: 2mm;
+}
+.mainacon::-webkit-scrollbar-thumb:hover {
+  background: rgba(158, 158, 158, 0.774);
 }
 .aniwa {
-  animation: aniw 1s forwards;
+  animation: aniw 1.5s forwards;
 }
 @keyframes aniw {
   0% {

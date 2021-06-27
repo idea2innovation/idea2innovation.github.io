@@ -498,18 +498,42 @@ nav ul li a:hover {
   width: 100%;
 }
 .activity-left-col {
-  flex-basis: 45%;
+  flex-basis: 100%;
 }
 .activity-text {
-  max-width: 350px;
+  max-width: 100%;
 }
 .activity-text button {
   margin: 30px 0;
 }
-.acon {
+.exacon {
   width: 100%;
+  height: 100%;
+  display: flex;
+}
+.mainacon {
+  width: 0%;
+  padding: 2%;
+  background: white;
+  border-radius: 2mm;
+  display: none;
+}
+.aniwa {
+  animation: aniw 1s forwards;
+}
+@keyframes aniw {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+.acon {
+  width: 35%;
+  height: fit-content;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  padding: 5%;
+  padding: 2%;
   border-radius: 2mm;
   background: rgba(0, 0, 0, 0.3);
 }
@@ -535,6 +559,16 @@ nav ul li a:hover {
 }
 #a3 {
   background: #35bbb9;
+}
+.fa-external-link-alt,
+.fa-times-circle {
+  font-size: 1.5vw;
+}
+.fa-external-link-alt:hover {
+  color: rgb(0, 0, 0);
+}
+.fa-times-circle:hover {
+  color: red;
 }
 /*Event register*/
 #register {
@@ -2525,5 +2559,30 @@ html {
   }
   .text {
     font-size: 15px;
+  }
+  .exacon {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  @keyframes aniw {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 97%;
+    }
+  }
+  .acon {
+    width: 100%;
+    height: fit-content;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 3%;
+    border-radius: 2mm;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .fa-external-link-alt,
+  .fa-times-circle {
+    font-size: 2.5vh;
   }
 }

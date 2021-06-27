@@ -107,17 +107,21 @@
                         var exlink=document.getElementsByClassName("fa-external-link-alt")
                         var macon=document.getElementsByClassName("mainacon");
                         var exlinkclose=document.getElementsByClassName("fa-times-circle")
+                        var acon=document.getElementsByClassName("acon")
                         exlink[0].onclick=function(){
                             macon[0].style.display="block"
                             macon[0].className+=" aniwa"
+                            macon[0].style.height=acon[0].offsetHeight+'px'
                         }
                         exlinkclose[0].onclick=function(){
                             macon[0].style.display = "none"
                             macon[0].className = "mainacon"
+                            
                         }
                         exlink[1].onclick = function () {
                                 macon[1].style.display = "block"
                                 macon[1].className += " aniwa"
+                                macon[1].style.height = acon[1].offsetHeight + 'px'
                             }
                             exlinkclose[1].onclick = function () {
                                 macon[1].style.display = "none"
@@ -126,6 +130,7 @@
                         exlink[2].onclick = function () {
                                 macon[2].style.display = "block"
                                 macon[2].className += " aniwa"
+                                macon[2].style.height = acon[2].offsetHeight + 'px'
                             }
                             exlinkclose[2].onclick = function () {
                                 macon[2].style.display = "none"

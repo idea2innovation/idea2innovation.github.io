@@ -519,6 +519,9 @@ nav ul li a:hover {
   display: none;
   overflow: scroll;
 }
+.mainacon p {
+  color: black;
+}
 .mainacon::-webkit-scrollbar {
   width: 0.8vw;
 }

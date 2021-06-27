@@ -2565,6 +2565,7 @@ html {
     width: 100%;
     height: 100%;
     display: block;
+    filter: contrast(150%);
   }
   @keyframes aniw {
     0% {

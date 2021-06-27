@@ -2172,6 +2172,7 @@ html {
     position: fixed;
     left: 1px;
     top: 3px;
+    z-index: 7;
   }
   #fa {
     font-size: 18px;

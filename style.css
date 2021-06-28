@@ -422,14 +422,10 @@ nav ul li a:hover {
   -moz-backdrop-filter: blur(4px);
   border-radius: 2mm;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transform-origin: top;
-  -moz-transform-origin: top;
   transform-origin: top;
-  -webkit-transform: rotateX(-90deg) translateY(150px);
-  -moz-transform: rotateX(-90deg) translateY(150px);
+  -webkit-transform: rotateX(-90deg) translate(0, 150px);
   transform: rotateX(-90deg) translateY(150px);
   transition: all 0.5s ease;
   z-index: 99999;

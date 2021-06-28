@@ -2001,11 +2001,32 @@ html {
     top: 25%;
   }
   .subs-box {
-    width: 75%;
-    height: 40%;
+    width: 60%;
+    height: 4.5cm;
     position: absolute;
-    left: 12.5%;
+    left: 20%;
     top: 30%;
+  }
+  #subs-email1 {
+    font-size: 0.45cm;
+    border-bottom: gold 0.1cm solid;
+  }
+  #subs-email2 {
+    font-size: 0.45cm;
+    border-bottom: gold 0.1cm solid;
+  }
+  #subs-tell {
+    font-size: 0.45cm;
+    border-bottom: gold 0.1cm solid;
+  }
+  #subs-btn2 {
+    font-size: 0.4cm;
+  }
+  #subs-btn1 {
+    font-size: 0.4cm;
+  }
+  .subs-head {
+    font-size: 0.5cm;
   }
   #r-head {
     font-size: 0.6cm;

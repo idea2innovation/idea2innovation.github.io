@@ -374,6 +374,9 @@ nav ul li a:hover {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   transition: all ease 0.25s;
   overflow: hidden;
+  border-radius: 2mm;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
 }
 .member-col:hover {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);

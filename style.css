@@ -513,8 +513,6 @@ nav ul li a:hover {
 }
 .activity-left-col {
   flex-basis: 100%;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
 }
 .activity-text {
   max-width: 100%;

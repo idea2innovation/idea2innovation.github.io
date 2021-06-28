@@ -1832,7 +1832,6 @@ html {
   }
   .middle {
     text-align: center;
-    display: none;
     padding-top: 3%;
     padding-bottom: 2%;
   }
@@ -2278,14 +2277,13 @@ html {
     transform: scale(1);
   }
   #fa1 {
-    font-size: 2.5vh;
+    font-size: 1.9vh;
     width: 23px;
     height: 23px;
     line-height: 23px;
   }
   .middle {
     text-align: center;
-    display: none;
     padding-top: 3%;
     padding-bottom: 2%;
   }

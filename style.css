@@ -423,7 +423,6 @@ nav ul li a:hover {
   border-radius: 2mm;
   border: 1px solid rgba(255, 255, 255, 0.18);
   transform-style: preserve-3d;
-  -webkit-transform-origin: top;
   transform-origin: top;
   -webkit-transform: rotateX(-90deg) translateY(150px);
   transform: rotateX(-90deg) translateY(150px);

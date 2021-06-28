@@ -452,6 +452,7 @@ nav ul li a:hover {
 .mem-con {
   margin-top: 10%;
   transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
 }
 .mem-con-btn {
   background: rgb(92, 89, 89);

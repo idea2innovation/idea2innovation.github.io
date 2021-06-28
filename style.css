@@ -424,14 +424,14 @@ nav ul li a:hover {
   border: 1px solid rgba(255, 255, 255, 0.18);
   transform-style: preserve-3d;
   transform-origin: top;
-  -webkit-transform: rotateX(-90deg) translateY(150px);
-  transform: rotateX(-90deg) translateY(150px);
+  -webkit-transform: rotateX(-89.9deg) translateY(150px);
+  transform: rotateX(-89.9deg) translateY(150px);
   transition: all 0.5s ease;
   z-index: 99999;
 }
 .member-col:hover > .middle {
-  -webkit-transform: rotateX(0deg);
-  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0.1deg);
+  transform: rotateX(0.1deg);
 }
 .member-col img {
   width: 100%;
@@ -451,8 +451,6 @@ nav ul li a:hover {
 }
 .mem-con {
   margin-top: 10%;
-  transform: rotateZ(180deg);
-  -webkit-transform: rotateZ(180deg);
 }
 .mem-con-btn {
   background: rgb(92, 89, 89);

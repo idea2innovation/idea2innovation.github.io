@@ -53,11 +53,13 @@ select {
 }
 #logo123 {
   margin-right: 2%;
+  border-radius: 1mm;
 }
 .logo {
   margin-top: 5px;
   margin-left: 0px;
   width: 100px;
+  border-radius: 1mm;
 }
 .header-text {
   max-width: 45%;
@@ -93,6 +95,8 @@ h1 {
   cursor: pointer;
   transition: all 0.35s;
   font-size: 16px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 button:hover {
   box-shadow: inset 170px 0 0 rgb(59, 59, 59);
@@ -106,6 +110,8 @@ button:hover {
   cursor: pointer;
   font-size: 35px;
   color: rgb(73, 72, 72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .common-btn2:hover {
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -801,6 +807,7 @@ input[type="number"] {
   flex-basis: 20vw;
   font-size: 1.35vw;
   padding-bottom: 0.77vw;
+  justify-content: space-evenly;
 }
 #pri-po-fa {
   font-size: 20px;
@@ -846,6 +853,39 @@ input[type="number"] {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);
 }
+.mem-social1 {
+  margin-right: 1%;
+  flex-basis: 18%;
+  background: rgb(189, 189, 189);
+  text-align: center;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);
+  cursor: pointer;
+}
+.mem-social1:nth-child(1) {
+  background: red;
+  color: white;
+  margin-right: 10%;
+  transition: all 0.5s;
+}
+.mem-social1:nth-child(1):hover {
+  box-shadow: inset 0 100px 5px rgb(99, 0, 0);
+  color: gold;
+  filter: brightness(150%);
+}
+.mem-social1:nth-child(2) {
+  background: black;
+  color: white;
+  margin-right: 10%;
+  transition: all 0.5s;
+}
+.mem-social1:nth-child(2):hover {
+  box-shadow: inset 0 100px 5px rgba(124, 124, 124, 0.486);
+  color: gold;
+  filter: brightness(150%);
+}
 .fend {
   text-align: center;
   font-size: 1.25vw;
@@ -863,6 +903,9 @@ input[type="number"] {
 }
 #im1 {
   flex-basis: 16vw;
+}
+#im1 a img {
+  border-radius: 1mm;
 }
 #mem-fol {
   flex-basis: 20vw;
@@ -1100,7 +1143,7 @@ img:hover {
   width: 30%;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
   background: rgba(44, 44, 43, 0.849);
-  border-radius: 1%;
+  border-radius: 2mm;
 }
 .comin {
   border: none;
@@ -1111,6 +1154,7 @@ img:hover {
   background: transparent;
   border-bottom: gold 1mm solid;
   color: white;
+  font-family: mulish;
 }
 .comin.shake {
   animation: animate 0.3s ease-in-out infinite;
@@ -1431,6 +1475,7 @@ img:hover {
   top: 35%;
   overflow-y: auto;
   overflow-x: hidden;
+  border-radius: 2mm;
 }
 .subs-img {
   width: 35%;
@@ -1471,6 +1516,7 @@ img:hover {
   outline: none;
   color: white;
   transition: ease-in 0.35s;
+  border-radius: 1mm;
 }
 #subs-btn1:hover {
   box-shadow: inset 100px 0 0 0 gold;
@@ -1485,6 +1531,9 @@ img:hover {
   left: 95%;
   color: white;
   cursor: pointer;
+  border-radius: 1mm;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 #subs-close1:hover {
   background: red;
@@ -1536,6 +1585,7 @@ img:hover {
   outline: none;
   color: white;
   transition: ease-in 0.35s;
+  border-radius: 1mm;
 }
 #subs-btn2:hover {
   box-shadow: inset 100px 0 0 0 gold;
@@ -1546,6 +1596,9 @@ img:hover {
   left: 95%;
   color: white;
   cursor: pointer;
+  border-radius: 1mm;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 #subs-close2:hover {
   background: red;
@@ -1559,39 +1612,10 @@ img:hover {
   font-family: "Mulish";
 }
 #subs-sub {
-  padding: 0.25vw;
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
-  border-radius: 100%;
-  text-align: center;
-  line-height: 35px;
-  background: red;
-  color: white;
-  margin-right: 30px;
-  transition: ease box-shadow 0.5s;
-}
-#subs-sub:hover {
-  box-shadow: inset 0 100px 5px rgb(99, 0, 0);
-  color: gold;
-  filter: brightness(150%);
+  font-size: 2vw;
 }
 #subs-un {
-  padding: 0.25vw;
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
-  border-radius: 100%;
-  text-align: center;
-  line-height: 35px;
-  background: rgb(66, 66, 66);
-  color: white;
-  transition: ease box-shadow 0.5s;
-}
-#subs-un:hover {
-  box-shadow: inset 0 100px 5px rgba(124, 124, 124, 0.486);
-  color: gold;
-  filter: brightness(150%);
+  font-size: 2vw;
 }
 #subs-top {
   position: absolute;
@@ -1855,7 +1879,8 @@ html {
   #mem-con-fa {
     font-size: 2.3vw;
   }
-  .mem-social {
+  .mem-social,
+  .mem-social1 {
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.295);
   }
   .activity-row {
@@ -2087,21 +2112,6 @@ html {
     padding-right: 0.75vh;
     border-radius: 2vw;
     font-size: 3vw;
-  }
-  #subs-sub {
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 25px;
-    margin-right: 20px;
-  }
-  #subs-un {
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 25px;
   }
   #subfa {
     font-size: 3vw;
@@ -2372,7 +2382,8 @@ html {
   #mem-fol2 {
     flex-basis: 26vw;
   }
-  .mem-social {
+  .mem-social,
+  .mem-social1 {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.295);
   }
   .fend {
@@ -2565,21 +2576,6 @@ html {
     padding-left: 0.75vh;
     padding-right: 0.75vh;
     border-radius: 1.5vh;
-  }
-  #subs-sub {
-    width: 12px;
-    height: 12px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 14px;
-    margin-right: 15px;
-  }
-  #subs-un {
-    width: 12px;
-    height: 12px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 14px;
   }
   .ecol {
     margin-bottom: 5%;

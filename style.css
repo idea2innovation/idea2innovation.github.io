@@ -433,8 +433,8 @@ nav ul li a:hover {
   z-index: 99999;
 }
 .member-col:hover > .middle {
-  -webkit-transform: rotateX(0deg);
-  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg) translateY(0);
+  transform: rotateX(0deg) translateY(0);
 }
 .member-col img {
   width: 100%;

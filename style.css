@@ -156,6 +156,7 @@ p {
   background: darkslateblue;
   z-index: 2;
   transition: 0.5s;
+  border-radius: 3mm;
 }
 nav ul li a {
   position: relative;
@@ -179,6 +180,7 @@ nav ul {
   background-color: darkslateblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 3mm;
 }
 nav ul h2 {
   margin-left: 45px;
@@ -427,8 +429,8 @@ nav ul li a:hover {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transform-origin: top;
-  -webkit-transform: rotateX(-90deg) translateY(150px);
-  transform: rotateX(-90deg) translateY(150px);
+  -webkit-transform: rotateX(-90deg) translateY(200px);
+  transform: rotateX(-90deg) translateY(200px);
   transition: all 0.5s ease;
   z-index: 99999;
 }
@@ -803,9 +805,6 @@ input[type="number"] {
 #pri-po-fa {
   font-size: 20px;
 }
-#im1 {
-  flex-basis: 16%;
-}
 .link-title h3 {
   color: darkslateblue;
   margin-bottom: 5%;
@@ -863,7 +862,7 @@ input[type="number"] {
   color: deepskyblue;
 }
 #im1 {
-  flex-basis: 17vw;
+  flex-basis: 16vw;
 }
 #mem-fol {
   flex-basis: 20vw;
@@ -1318,6 +1317,7 @@ img:hover {
   box-shadow: 0 25px 40px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(15px);
+  -moz-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
@@ -1418,6 +1418,8 @@ img:hover {
   left: 0;
   z-index: 99999;
   display: none;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
 }
 .subs-box {
   width: 40%;
@@ -1496,6 +1498,8 @@ img:hover {
   left: 0;
   z-index: 99999;
   display: none;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
 }
 .subs-form1 {
   position: absolute;

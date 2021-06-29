@@ -799,6 +799,9 @@ input[type="number"] {
   display: flex;
   flex-wrap: wrap;
 }
+#footer h2 {
+  font-size: 2vw;
+}
 #js-sq {
   font-size: 14px;
 }

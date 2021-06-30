@@ -145,43 +145,36 @@
             <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
         </div>
         <!--Slideshow-->
-        <div class="slideshow-container">
-            <div class="mySlides">
-                <img src="images/img1.jpg" style="width:100%">
-                <div class="text">Event Name</div>
+    <div id="slideshow">
+        <div id="slideshow-container">
+            <div class="im">
+                <img src="images/img1.jpg" alt="">
+                <div class="text">
+                    <h4>Event Name-1</h4>
+                </div>
             </div>
-
-            <div class="mySlides">
-                <img src="images/img2.jpg" style="width:100%">
-                <div class="text">Event Name</div>
+            <div class="im">
+                <img src="images/img2.jpg" alt="">
+                <div class="text">
+                    <h4>Event Name-1</h4>
+                </div>
             </div>
-
-            <div class="mySlides">
-                <img src="images/img3.jpg" style="width:100%">
-                <div class="text">Event Name</div>
+            <div class="im">
+                <img src="images/img3.jpg" alt="">
+                <div class="text">
+                    <h4>Event Name-1</h4>
+                </div>
             </div>
-            <div class="mySlides">
-                <img src="images/img1.jpg" style="width:100%">
-                <div class="text">Event Name</div>
+            <div class="im">
+                <img src="images/img2.jpg" alt="">
+                <div class="text">
+                    <h4>Event Name-1</h4>
+                </div>
             </div>
         </div>
+    </div>
         <br>
         <br>
-        <script>
-            var slideIndex = 0;
-            showSlides();
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1 }
-                slides[slideIndex - 1].style.display = "block";
-                setTimeout(showSlides, 2500);
-            }
-        </script>
     </div>
     <!--events body-->
     <div class="hev">

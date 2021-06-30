@@ -8,116 +8,1750 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6e8ea0ad06.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <input type="number" name="value" id="n1">
-    <input type="number" name="value" id="n2">
+<style type="text/css">
+    #b1 {
+        background: url(images/Feedback.jpg);
+        background-attachment: fixed;
+        padding-bottom: 10%;
+    }
+
+    input,
+    textarea {
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
+</style>
+
+<body id="click" onload="subfor()">
+    <div class="scroll-am"></div>
     <script>
-        var b=document.getElementById("n2");
-        console.log(b)
+        var sc = document.getElementsByClassName("scroll-am");
+        var th = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+            let p = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
+            sc[0].style.width = p + '%';
+        }
     </script>
-        <!--Register and Login-->
-        <div class="center">
-            <label for="show" class="show-btn">LOGIN</label>
-            <input type="checkbox" name="show" id="show">
-            <div class="container1">
-                <label for="show" class="close-btn"><i class="fa fa-times"></i></label>
-                <div class="text">
-                    <h1>Login</h1>
-                    <h2>for eventname</h2>
-                </div>
-                <form>
-                    <div class="data">
-                        <input type="text" required placeholder="Roll Number">
-                    </div>
-                    <div class="data">
-                        <input type="password" required placeholder="Password">
-                    </div>
-                    <div class="forgot-pass"><a href="#">Forgot Password?</a></div>
-                    <div class="btn">
-                        <div class="inner"></div>
-                        <button type="submit">
-                            <h3>login</h3>
-                        </button>
-                    </div>
-                    <div class="signup_link">Not Registered? <label for="show1"> Register Now</label></a></div>
-                </form>
+    <div id="loading"></div>
+    <div id="sub-load" style="position: fixed; top: -2vh;height: 105vh;">
+        <div id="sub-load0-1">
+            <div id="sub-load0-2">
+                <h2>Submitting :|</h2>
             </div>
         </div>
-    <section>
-    <div class="center">
-        <label for="show1" class="show-btn1">Register</label>
-        <input type="checkbox" name="show1" id="show1">
-        <div class="container2">
-            <label for="show" class="close-btn1"><i class="fa fa-times"></i></label>
-            <div class="text">
-                <h1>Register</h1>
-                <h2>for eventname</h2>
+    </div>
+    <div id="sub-load1" style="position: fixed; top: -2vh;height: 105vh;">
+        <div id="sub-load1-1">
+            <div id="sub-load1-3">
+                <i class="fa fa-check"></i>
             </div>
-            <form>
-                <div class="data">
-                    <input type="text" required placeholder="Roll Number">
-                    </div>
-                <div class="data">
-                    <input type="password" required placeholder="New Password">
-                    </div>
-                <div class="data">
-                    <input type="password" required placeholder="Conform Password">
-                </div>
-                <div class="btn">
-                    <div class="inner"></div>
-                    <button type="submit">
-                        <h3>Register</h3>
-                    </button>
-                </div>
-                <div class="login_link">Already Registerd?<label for="show">Login</label></div>
-            </form>
-        </div>
+            <div id="sub-load1-2">
+                <h2>Submitted :)</h2>
+            </div>
         </div>
     </div>
-    <nav id="sideNav">
-    <ul>
-        <li><a href="index.html">&nbsp &nbsp Home</a></li>
-        <li><a href="activities.html">&nbsp &nbsp Activities</a></li>
-        <li><a href="#events">&nbsp &nbsp Events</a></li>
-        <li><a href="members.html">&nbsp &nbsp Members</a></li>
-        <li><a href="about.html">&nbsp &nbsp About Us</a></li>
-        <li class="active"><a href="contact.html">&nbsp &nbsp Contact</a></li>
-    </ul>
-    </nav>
-    <img src="images/men.png" id="menuBtn">
-    <div class="social-icons">
-        <img src="images/facebook.png">
-        <img src="images/whatsapp.png">
-        <img src="images/twitter.png">
-        <img src="images/instagram.png">
-        <img src="images/linkedin.png">
+    <div id="sub-load2" style="position: fixed; top: -2vh;height: 105vh;">
+        <div id="sub-load2-1">
+            <div id="sub-load2-3">
+                <i class="fa fa-exclamation-triangle"></i>
+            </div>
+            <div id="sub-load2-2">
+                <h2>Submission Failed :(</h2>
+            </div>
+        </div>
     </div>
+    <section id="header">
+        <div class="container">
+            <a href="index.html"><img src="images/logo.png" class="logo" id="logo123" style="margin-left: -5px;"></a>
+            <a href="https://www.iare.ac.in/"><img src="images/iarelogo.jpg" class="logo"></a>
+            <div class="header-text">
+                <h1 style="color:gold  ; text-shadow: 1px 1px 1px  grey;">Welcome to I2I website!</h1><br><br>
+                <p><b>Idea to Innovation</b> is a club started by the students of Institute of Aeronautical Engineering
+                    in the year 2021 to evoke students’ creativity levels by encouraging them to take-up projects with
+                    varying levels of complexities. This Club aims at taking up various <b>innovative ideas</b> and
+                    <b>methodologies</b> of the students’ and help them execute it by providing technical assistance
+                    backed by eminent faculty support.<span id="more"> The club mainly focuses on <b>critical and
+                            competitive problem-solving skills</b> by inculcating group discussions and effective
+                        learning techniques. At <b>I2I</b> we believe practical and interactive way of learning will
+                        boost and enhance the creative and logical thinking levels of the students who aim at achieving
+                        high in the field of their passion and interests.</span>
+                </p>
+                <button class="common-btn" id="read"><i class="fas fa-chevron-circle-down"
+                        style="font-size: 16px;"></i>&nbsp Read More</button>
+                <button class="common-btn" id="close" style=" display: none;"><i class="fas fa-chevron-circle-up"
+                        style="font-size: 16px;"></i>&nbsp Read Less</button>
+                <script type="text/javascript">
+                    var actread = document.getElementById("read")
+                    var actmore = document.getElementById("more")
+                    var actclose = document.getElementById("close")
+                    actread.onclick = function () {
+                        actmore.style.display = "block"
+                        actclose.style.display = "block"
+                        actread.style.display = "none"
+                    }
+                    actclose.onclick = function () {
+                        actmore.style.display = "none"
+                        actclose.style.display = "none"
+                        actread.style.display = "block"
+                    }
+                </script>
+            </div>
+        </div>
     </section>
+    <section id="about">
+        <div class="about-left-col">
+            <img src="images/about.jpg">
+        </div>
+        <div class="about-right-col">
+            <div class="about-text">
+                <h1>About Us</h1>
+                <span class="square"></span>
+                <p>Unlike ever before, computer science engineers are addressing the most acute global and social issues
+                    impacting our future. Through cutting edge research, innovations, and multi-disciplinary collaborations,
+                    addressing challenges has become the most significant part of the real world. Idea to Innovation
+                    promises to play an integral role in shaping your ideas for these future developments. The motto <b>
+                        Think – Innovate – Achieve</b> is what that keeps the torch of the club, Idea to Innovation burning.
+                    <br>I2I is a lively, inclusive community of students and faculty, conducting various events and
+                    activities to develop critical thinking and problem- solving skills, as well as hands-on learning.
+                    Innovation is central to our mission. Our aim for innovation focus is grounded in the strengths of our
+                    supportive team-mates and faculty who are sure to guide and assist in the fields of Competitive
+                    programming, Web-development (front-end, back-end and server-side), Mobile-based applications, Photoshop
+                    and much more..
+                </p><br>
+                <div class="line">
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+                <h2>Eagerly waiting for all those students with interactive, inquisitive, and innovative minds to be a part
+                    of the I2I club
+                    and get “your Ideas turned into Innovations”.</h2>
+            </div>
+            <div id="abend">
+                <b>--Team I2I</b>
+            </div>
+        </div>
+    </section>
+        <div id="ac-bac">
+            <section id="activities">
+                <div class="container activity-row">
+                    <div class="activity-left-col">
+                        <div class="activity-text">
+                            <h1 style="color: white;">Activities</h1><br><br>
+                            <div class="exacon">
+                                <div class="acon" id="a1">
+                                    <h3>Activity 1<i class="fas fa-external-link-alt"
+                                            style="float: right; cursor: pointer;"></i></h3>
+                                    <br>
+                                    <h1><i class="fa fa-graduation-cap"></i></h1>
+                                    <br>
+                                    <p>Coming up soon... <br>Coming up soon... <br>Coming up soon... </p>
+                                </div>
+                                <div class="mainacon" style="border: 2mm rgb(250, 151, 65) solid;">
+                                    <i class="fas fa-times-circle" style="float: right; cursor: pointer;"></i>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente labore laborum
+                                        obcaecati temporibus possimus
+                                        ipsa adipisci dignissimos sunt ex optio! Provident aut beatae ipsa iusto sapiente totam
+                                        velit, rerum, pariatur
+                                        sed error ex nesciunt odio illo culpa! Cupiditate assumenda numquam reiciendis ullam.
+                                        Itaque ipsum, commodi
+                                        repellendus delectus iusto excepturi iste nesciunt laborum nihil quidem cum perferendis
+                                        distinctio voluptas odio
+                                        velit minus officia recusandae dolores fugit cupiditate est aliquam. Rerum error porro
+                                        vero natus, quibusdam
+                                        odit facilis deserunt iure pariatur nobis, optio voluptatibus excepturi neque labore
+                                        dolor? Alias saepe ratione
+                                        rem, minus fugiat facilis ea! Sit, porro distinctio vel nihil fugiat beatae accusantium
+                                        harum architecto vitae
+                                        modi at temporibus id quia voluptatibus expedita aperiam placeat ullam exercitationem
+                                        aliquam in perferendis
+                                        labore. Ipsa cum voluptatum nemo obcaecati fuga aliquam. Ipsam tenetur soluta dolorem
+                                        enim quidem neque</p>
+                                </div>
+                            </div>
+                            <span id="morea">
+                                <br>
+                                <div class="exacon">
+                                    <div class="acon" id="a2">
+                                        <h3>Activity 2<i class="fas fa-external-link-alt"
+                                                style="float: right; cursor: pointer;"></i></h3>
+                                        <br>
+                                        <h1><i class="fa fa-briefcase"></i></h1>
+                                        <br>
+                                        <p>Coming up soon... <br>Coming up soon... <br>Coming up soon...</p>
+                                    </div>
+                                    <div class="mainacon" style="border: 2mm #ff5b4f solid;">
+                                        <i class="fas fa-times-circle" style="float: right; cursor: pointer;"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente labore laborum
+                                            obcaecati temporibus possimus
+                                            ipsa adipisci dignissimos sunt ex optio! Provident aut beatae ipsa iusto sapiente
+                                            totam velit, rerum, pariatur
+                                            sed error ex nesciunt odio illo culpa! Cupiditate assumenda numquam reiciendis
+                                            ullam. Itaque ipsum, commodi
+                                            repellendus delectus iusto excepturi iste nesciunt laborum nihil quidem cum
+                                            perferendis distinctio voluptas odio
+                                            velit minus officia recusandae dolores fugit cupiditate est aliquam. Rerum error
+                                            porro vero natus, quibusdam
+                                            odit facilis deserunt iure pariatur nobis, optio voluptatibus excepturi neque labore
+                                            dolor? Alias saepe ratione
+                                            rem, minus fugiat facilis ea! Sit, porro distinctio vel nihil fugiat beatae
+                                            accusantium harum architecto vitae
+                                            modi at temporibus id quia voluptatibus expedita aperiam placeat ullam
+                                            exercitationem aliquam in perferendis
+                                            labore. Ipsa cum voluptatum nemo obcaecati fuga aliquam. Ipsam tenetur soluta
+                                            dolorem enim quidem neque</p>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="exacon">
+                                    <div class="acon" id="a3">
+                                        <h3>Activity 3<i class="fas fa-external-link-alt"
+                                                style="float: right; cursor: pointer;"></i></h3>
+                                        <br>
+                                        <h1><i class="fa fa-thumbs-up"></i></h1>
+                                        <br>
+                                        <p>Coming up soon... <br>Coming up soon... <br>Coming up soon...</p>
+                                    </div>
+                                    <div class="mainacon" style="border: 2mm #35bbb9 solid;">
+                                        <i class="fas fa-times-circle" style="float: right; cursor: pointer;"></i>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente labore laborum
+                                            obcaecati temporibus possimus
+                                            ipsa adipisci dignissimos sunt ex optio! Provident aut beatae ipsa iusto sapiente
+                                            totam velit, rerum, pariatur
+                                            sed error ex nesciunt odio illo culpa! Cupiditate assumenda numquam reiciendis
+                                            ullam. Itaque ipsum, commodi
+                                            repellendus delectus iusto excepturi iste nesciunt laborum nihil quidem cum
+                                            perferendis distinctio voluptas odio
+                                            velit minus officia recusandae dolores fugit cupiditate est aliquam. Rerum error
+                                            porro vero natus, quibusdam
+                                            odit facilis deserunt iure pariatur nobis, optio voluptatibus excepturi neque labore
+                                            dolor? Alias saepe ratione
+                                            rem, minus fugiat facilis ea! Sit, porro distinctio vel nihil fugiat beatae
+                                            accusantium harum architecto vitae
+                                            modi at temporibus id quia voluptatibus expedita aperiam placeat ullam
+                                            exercitationem aliquam in perferendis
+                                            labore. Ipsa cum voluptatum nemo obcaecati fuga aliquam. Ipsam tenetur soluta
+                                            dolorem enim quidem neque</p>
+                                    </div>
+                                </div>
+                                <script>
+                                    var exlink = document.getElementsByClassName("fa-external-link-alt")
+                                    var macon = document.getElementsByClassName("mainacon");
+                                    var exlinkclose = document.getElementsByClassName("fa-times-circle")
+                                    var acon = document.getElementsByClassName("acon")
+                                    exlink[0].onclick = function () {
+                                        macon[0].style.display = "block"
+                                        macon[0].className += " aniwa"
+                                        macon[0].style.height = acon[0].offsetHeight + 'px'
+                                    }
+                                    exlinkclose[0].onclick = function () {
+                                        macon[0].style.display = "none"
+                                        macon[0].className = "mainacon"
+
+                                    }
+                                    exlink[1].onclick = function () {
+                                        macon[1].style.display = "block"
+                                        macon[1].className += " aniwa"
+                                        macon[1].style.height = acon[1].offsetHeight + 'px'
+                                    }
+                                    exlinkclose[1].onclick = function () {
+                                        macon[1].style.display = "none"
+                                        macon[1].className = "mainacon"
+                                    }
+                                    exlink[2].onclick = function () {
+                                        macon[2].style.display = "block"
+                                        macon[2].className += " aniwa"
+                                        macon[2].style.height = acon[0].offsetHeight + 'px'
+                                    }
+                                    exlinkclose[2].onclick = function () {
+                                        macon[2].style.display = "none"
+                                        macon[2].className = "mainacon"
+                                    }
+                                </script>
+                            </span>
+                            <button class="common-btn" id="reada" style="color: white;"><i class="fas fa-chevron-down"
+                                    style="font-size: 16px;"></i>&nbsp View all</button>
+                            <button class="common-btn" id="closea" style="color: white; display: none;"><i
+                                    class="fas fa-chevron-up" style="font-size: 16px;"></i>&nbsp Close</button>
+                            <script type="text/javascript">
+                                var actreada = document.getElementById("reada")
+                                var actmorea = document.getElementById("morea")
+                                var actclosea = document.getElementById("closea")
+                                actreada.onclick = function () {
+                                    actclosea.style.display = "block"
+                                    actreada.style.display = "none"
+                                    actmorea.style.display = "block"
+                                }
+                                actclosea.onclick = function () {
+                                    actmorea.style.display = "none"
+                                    actclosea.style.display = "none"
+                                    actreada.style.display = "block"
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="activity-right-col">
+        
+                    </div>
+                </div>
+            </section>
+        </div>
+    <script>
+        var loa = document.getElementById("sub-load");
+        var loa1 = document.getElementById("sub-load1");
+        var loa2 = document.getElementById("sub-load2");
+        var a2 = document.getElementsByClassName('comin')
+        var alerttext = document.getElementById("alert-text")
+        function SubForm() {
+            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+            var Name = "Unknown OS";
+            if (navigator.userAgent.indexOf("Win") != -1) Name =
+                "Windows OS";
+            if (navigator.userAgent.indexOf("Mac") != -1) Name =
+                "Macintosh";
+            if (navigator.userAgent.indexOf("Linux") != -1) Name =
+                "Linux OS";
+            if (navigator.userAgent.indexOf("Android") != -1) Name =
+                "Android OS";
+            if (navigator.userAgent.indexOf("like Mac") != -1) Name =
+                "iOS";
+            a1 = document.getElementsByClassName('comin')
+            i = a1[1].value
+            j = i.indexOf('@')
+            k = i.indexOf('.')
+            a1[3].value = new Date();
+            a1[4].value = Name;
+            if (!a1[0].value) {
+                alerttext.innerHTML = "Enter your name"
+                alerttext.style.opacity = "1"
+                alerttext.style.transition = "all 1s ease-out"
+                a2[0].className += " shake"
+                if (navigator.vibrate) {
+                    navigator.vibrate([500]);
+                }
+                setTimeout(() => { a2[0].className = "comin" }, 500)
+                setTimeout(() => { alerttext.style.opacity = "0" }, 2000)
+            }
+            else if (!a1[1].value) {
+                alerttext.innerHTML = "Enter your email-id"
+                alerttext.style.opacity = "1"
+                alerttext.style.transition = "all 1s"
+                a2[1].className += " shake"
+                if (navigator.vibrate) {
+                    navigator.vibrate([500]);
+                }
+                setTimeout(() => { a2[1].className = "comin" }, 500)
+                setTimeout(() => { alerttext.style.opacity = "0" }, 2000)
+            }
+            else if (j == -1 || k == -1) {
+                alerttext.innerHTML = "Enter a proper email-id"
+                alerttext.style.opacity = "1"
+                alerttext.style.transition = "all 1s"
+                a2[1].className += " shake"
+                if (navigator.vibrate) {
+                    navigator.vibrate([500]);
+                }
+                setTimeout(() => { a2[1].className = "comin" }, 500)
+                setTimeout(() => { alerttext.style.opacity = "0" }, 2000)
+            }
+            else if (!a1[2].value) {
+                alerttext.innerHTML = "write ur comment"
+                alerttext.style.opacity = "1"
+                alerttext.style.transition = "all 1s"
+                a2[2].className += " shake"
+                if (navigator.vibrate) {
+                    navigator.vibrate([500]);
+                }
+                setTimeout(() => { a2[2].className = "comin" }, 500)
+                setTimeout(() => { alerttext.style.opacity = "0" }, 2000)
+            }
+            else if (a1[2].value && a1[1].value && a1[0].value) {
+                loa.style.display = "block"
+                $.ajax({
+                    url: 'https://api.apispreadsheets.com/data/11735/',
+                    type: 'post',
+                    data: $("#myForm").serializeArray(),
+                    success: function () {
+                        loa.style.display = "none"
+                        loa1.style.display = 'block'
+                        setTimeout(function () { loa1.style.display = "none"; }, 2000);
+                    },
+                    error: function () {
+                        loa.style.display = "none"
+                        loa2.style.display = "block"
+                        setTimeout(function () { loa2.style.display = "none"; }, 2000);
+                    }
+                });
+            }
+        }
+        function countchecker() {
+            const tl = a2[2].value.length
+            console.log(tl)
+            document.getElementById("count").innerHTML = tl
+        }
+    </script>
+        <div id="ev">
+                <!--Slideshow-->
+                <div class="slideshow-container">
+                    <div class="mySlides">
+                        <img src="images/img1.jpg" style="width:100%">
+                        <div class="text">Event Name</div>
+                    </div>
+        
+                    <div class="mySlides">
+                        <img src="images/img2.jpg" style="width:100%">
+                        <div class="text">Event Name</div>
+                    </div>
+        
+                    <div class="mySlides">
+                        <img src="images/img3.jpg" style="width:100%">
+                        <div class="text">Event Name</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="images/img1.jpg" style="width:100%">
+                        <div class="text">Event Name</div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <script>
+                    var slideIndex = 0;
+                    showSlides();
+                    function showSlides() {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) { slideIndex = 1 }
+                        slides[slideIndex - 1].style.display = "block";
+                        setTimeout(showSlides, 2500);
+                    }
+                </script>
+
+            <!--events body-->
+            <div class="hev">
+                <h1 style=" color: orangered;">Events</h1>
+                <br>
+                <div class="evrow">
+                    <div class="ecol">
+                        <div class="ehcontainer2" id="eh1">
+                            <h2>Present Events</h2>
+                        </div>
+                        <br>
+                        <div id="ec1">
+                            <div class="evcontainer1" id="ev1">
+                                <h3>Event Name</h3>
+                                <br>
+                                <img src="images/event-poster.jpg" alt="event poster" style="width: 100%;">
+                                <br>
+                                <br>
+                                <p>Coming up soon... <br>Coming up soon...</p>
+                                <div class="member-btn" id="r-open">
+                                    <button class="common-btn"><i class="far fa-calendar-check"
+                                            style="font-size: 16px;"></i>&nbspRegister</button>
+                                </div>
+                                <br>
+                                <br>
+                                <div id="ev-social">
+                                    <a href="https://www.facebook.com/?lang=en" class="evsl"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/" class="evsl"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://twitter.com/?lang=en" class="evsl"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                            <div class="evcontainer1" id="r-box">
+                                <h3 id="r-head">REGISTER<i class="fa fa-times" id="r-close" title="close"
+                                        style="position: absolute; right:0% ; cursor: pointer; padding-right: 1%; padding-left: 1%; padding-bottom: 1%; border: none; outline: none;"></i>
+                                    <div id="r-head2"></div>
+                                </h3>
+                                <div id="r-data">
+                                    <form method="post" autocomplete="off" name="google-sheet">
+                                        <div class="r-in" id="r-in1">
+                                            <i class="fa fa-user" id="r-fa" style="color: rgb(255, 217, 0);"></i>
+                                            <input type="text" name="name" id="r-name" class="r-input" placeholder="Name"
+                                                required>
+                                        </div>
+                                        <div class="r-in">
+                                            <i class="fa fa-cubes" id="r-fa" style="color: rgb(0, 192, 48);"></i>
+                                            <input type="text" name="roll-number" id="r-ronum" class="r-input"
+                                                placeholder="Roll Number" required
+                                                pattern="[1-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9]+[0-9]+[0-9A-Za-z]+[0-9A-Za-z].{0,0}"
+                                                minlength="10" maxlength="10">
+                                        </div>
+                                        <div class="r-in">
+                                            <i class="fa fa-envelope" id="r-fa" style="color: rgb(255, 17, 0);"></i>
+                                            <input type="email" name="email" id="r-email" class="r-input" placeholder="Email"
+                                                required minlength="3" maxlength="320">
+                                        </div>
+                                        <div class="r-in">
+                                            <i class="fa fa-phone-alt" id="r-fa" style="color: dodgerblue;"></i>
+                                            <input type="tel" name="ph-no" id="r-phno" class="r-input"
+                                                placeholder="Contact number" required pattern="[0-9]+" maxlength="14"
+                                                minlength="6">
+                                        </div>
+                                        <div class="r-in">
+                                            <i class="fa fa-building" id="r-fa" style="color: rgb(204, 0, 255);"></i>
+                                            <select name="branch" id="r-branch" class="r-input" required>
+                                                <option value="" style="color: rgb(0, 0, 0);">Select Branch</option>
+                                                <option value="CSE" style="color: rgb(0, 0, 0);">CSE</option>
+                                                <option value="IT" style="color: rgb(0, 0, 0);">IT</option>
+                                                <option value="ECE" style="color: rgb(0, 0, 0);">ECE</option>
+                                                <option value="EEE" style="color: rgb(0, 0, 0);">EEE</option>
+                                                <option value="Mech" style="color: rgb(0, 0, 0);">Mechanical Engineering
+                                                </option>
+                                                <option value="Civil" style="color: rgb(0, 0, 0);">Civil Engineering</option>
+                                                <option value="AERO" style="color: rgb(0, 0, 0);">Aeronautical Engineering
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="r-in2">
+                                            <button type="submit" id="r-submit">Register &nbsp<i class="fas fa-angle-right"
+                                                    id="r-fax"></i><span id="sp2"></span></button>
+                                            <script>
+                                                let rsub = document.getElementById("r-submit")
+                                                var rip = document.getElementById("sp2")
+                                                rsub.onclick = function () {
+                                                    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+                                                    if (navigator.vibrate) {
+                                                        navigator.vibrate([500]);
+                                                    }
+                                                    setTimeout(() => {
+                                                        rip.remove()
+                                                    }, 1000)
+                                                }
+                                            </script>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ecol">
+                        <div class="ehcontainer2" id="eh2">
+                            <h2>Past Events</h2>
+                        </div>
+                        <br>
+                        <div class="evcontainer1" id="ev2">
+                            <div class="ce1">
+                                <h3>Event-1 Name</h3>
+                                <br>
+                                <img src="images/event-poster.jfif" alt="event-poster" style="width: 100%;">
+                                <br>
+                                <br>
+                                <p>Coming up soon... <br>Coming up soon...</p>
+                                <div id="ev-social">
+                                    <a href="https://www.facebook.com/?lang=en" class="evsl"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/" class="evsl"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://twitter.com/?lang=en" class="evsl"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                            <span id="more1">
+                                <div class="ce1">
+                                    <h3>Event-2 Name</h3>
+                                    <br>
+                                    <img src="images/event-poster.jpg" alt="event-poster" style="width: 100%;">
+                                    <br>
+                                    <br>
+                                    <p>Coming up soon... <br>Coming up soon...</p>
+                                    <div id="ev-social">
+                                        <a href="https://www.facebook.com/?lang=en" class="evsl"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/" class="evsl"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://twitter.com/?lang=en" class="evsl"><i class="fab fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                                <div class="ce1">
+                                    <h3>Event-3 Name</h3>
+                                    <br>
+                                    <img src="images/event-poster2.jpg" alt="event-poster" style="width: 100%;">
+                                    <br>
+                                    <br>
+                                    <p>Coming up soon... <br>Coming up soon...</p>
+                                    <div id="ev-social">
+                                        <a href="https://www.facebook.com/?lang=en" class="evsl"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/" class="evsl"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://twitter.com/?lang=en" class="evsl"><i class="fab fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="member-btn" id="evmembtn">
+                                <button class="common-btn2" id="read1e" title="previous"><i
+                                        class="fa fa-chevron-left"></i></button>
+                                <lar class="light">EXPLORE</lar>
+                                <button class="common-btn2" id="reade" title="next"><i class="fa fa-chevron-right"></i></button>
+                                <script type="text/javascript">
+                                    var i = 0;
+                                    var sl = document.getElementsByClassName("ce1");
+                                    var r = document.getElementById("reade");
+                                    var r1 = document.getElementById("read1e");
+                                    for (i = 0; i < sl.length; i++) {
+                                        sl[i].style.opacity = "0"
+                                        sl[i].style.visibility = "hidden"
+                                        sl[i].style.display = "none"
+                                    }
+                                    sl[0].style.transition = "0.35s"
+                                    sl[0].style.display = "block"
+                                    sl[0].style.visibility = "visible"
+                                    sl[0].style.opacity = "1"
+                                    i = 0
+                                    r.onclick = function () {
+                                        sl[i].style.opacity = "0"
+                                        sl[i].style.visibility = "hidden"
+                                        sl[i].style.display = "none";
+                                        if (i == sl.length - 1) {
+                                            i = -1
+                                        }
+                                        i++
+                                        sl[i].style.transition = "0.35s"
+                                        sl[i].style.display = "block"
+                                        sl[i].style.visibility = "visible"
+                                        setTimeout(function () { sl[i].style.opacity = "1"; }, 0);
+                                    }
+                                    r1.onclick = function () {
+                                        sl[i].style.opacity = "0"
+                                        sl[i].style.visibility = "hidden"
+                                        sl[i].style.display = "none";
+                                        if (i == 0) {
+                                            i = sl.length
+                                        }
+                                        i--
+                                        sl[i].style.transition = "0.35s"
+                                        sl[i].style.display = "block"
+                                        sl[i].style.visibility = "visible"
+                                        setTimeout(function () { sl[i].style.opacity = "1"; }, 0);
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var rclose = document.getElementById("r-close");
+                var ropen = document.getElementById("r-open");
+                var register = document.getElementById("ec1");
+                var rload = document.getElementById("sub-load");
+                var rload1 = document.getElementById("sub-load1");
+                var rload2 = document.getElementById("sub-load2");
+                var rscolor = document.getElementById("r-branch");
+                var rname = document.getElementById("r-name");
+                var rronum = document.getElementById("r-ronum");
+                rclose.onclick = function () {
+                    register.style.transform = "rotateY(0deg)"
+                }
+                ropen.onclick = function () {
+                    register.style.transform = "rotateY(-180deg)"
+                }
+                rscolor.style.color = "rgb(125,125,125)"
+                rscolor.onclick = function () {
+                    if (rscolor.value == "") {
+                        rscolor.style.color = "rgb(125,125,125)"
+                    }
+                    else {
+                        rscolor.style.color = "rgb(0,0,0)"
+                    }
+                }
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwH_9lxbKG_Qh4pyeM3455OsJgf9fm_vdPNvKqc9N-2fhMd16iX-UXeTQWQxW6PtFJI/exec'
+                const f = document.forms['google-sheet']
+                f.addEventListener('submit', e => {
+                    register.style.transform = "rotateY(0deg)"
+                    rload.style.display = "block"
+                    e.preventDefault()
+                    fetch(scriptURL, { method: 'POST', body: new FormData(f) })
+                        .then(Response => {
+                            rload.style.display = "none"
+                            rload1.style.display = "block"
+                            setTimeout(function () { rload1.style.display = "none"; }, 2000);
+                        })
+                        .catch(error => {
+                            rload.style.display = "none"
+                            rload2.style.display = "block"
+                            setTimeout(function () { rload2.style.display = "none"; }, 2000);
+                        })
+                })
+            </script>            
+        </div>
+    <div id="mem-back">
+        <h1 style=" margin-left: 5%; padding: 1%; text-align: center;">Members</h1>
+        <section id="members">
+            <div class="member-row">
+                <div class="member-col" style="background: rgb(195, 240, 255); ">
+                    <img src="images/pic.png">
+                    <h4>Member 1</h4>
+                    <p>about mem_1</p>
+                    <div class="middle">
+                        <div class="info">
+                            <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                            <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                            <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                        </div>
+                    </div>
+                    <div class="mem-con">
+                        <a href="mailto:member1@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                id="mem-con-fa"></i>&nbspContact</a>
+                    </div>
+                </div>
+                <div class="member-col" style="background: yellow;">
+                    <img src="images/pic.png">
+                    <h4>Member 2</h4>
+                    <p>about mem_2</p>
+                    <div class="middle">
+                        <div class="info">
+                            <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                            <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                            <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                        </div>
+                    </div>
+                    <div class="mem-con">
+                        <a href="mailto:member2@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                id="mem-con-fa"></i>&nbspContact</a>
+                    </div>
+                </div>
+                <div class="member-col" style="background: rgb(247, 157, 187); ">
+                    <img src="images/pic.png">
+                    <h4>Member 3</h4>
+                    <p>about mem_3</p>
+                    <div class="middle">
+                        <div class="info">
+                            <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                            <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                            <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                        </div>
+                    </div>
+                    <div class="mem-con">
+                        <a href="mailto:member3@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                id="mem-con-fa"></i>&nbspContact</a>
+                    </div>
+                </div>
+                <div class="member-col" style="background: palegreen; ">
+                    <img src="images/pic.png">
+                    <h4>Member 4</h4>
+                    <p>about mem_4</p>
+                    <div class="middle">
+                        <div class="info">
+                            <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                            <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                            <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                        </div>
+                    </div>
+                    <div class="mem-con">
+                        <a href="mailto:member4@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                id="mem-con-fa"></i>&nbspContact</a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <span id="morem">
+                <div class="member-row">
+                    <div class="member-col" style="background:rgb(105, 238, 194);">
+                        <img src="images/pic.png">
+                        <h4>Member 5</h4>
+                        <p>about mem_5</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member5@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background: lightgray;">
+                        <img src="images/pic.png">
+                        <h4>Member 6</h4>
+                        <p>about mem_6</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member6@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background: orange;">
+                        <img src="images/pic.png">
+                        <h4>Member 7</h4>
+                        <p>about mem_7</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member7@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background:rgb(170, 178, 212);">
+                        <img src="images/pic.png">
+                        <h4>Member 8</h4>
+                        <p>about mem_8</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member8@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="member-row1">
+                    <div class="member-col" style="background: rgb(255, 251, 205);">
+                        <img src="images/pic.png">
+                        <h4>Member 9</h4>
+                        <p>about mem_9</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member9@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background:w;">
+                        <img src="images/pic.png">
+                        <h4>Member 10</h4>
+                        <p>about mem_10</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member10@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background:greenyellow;">
+                        <img src="images/pic.png">
+                        <h4>Member 11</h4>
+                        <p>about mem_11</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member11@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background:rgb(47, 172, 245);">
+                        <img src="images/pic.png">
+                        <h4>Member 12</h4>
+                        <p>about mem_12</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member11@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-row1">
+                    <div class="member-col" style="background: rgb(252, 111, 111);">
+                        <img src="images/pic.png">
+                        <h4>Member 13</h4>
+                        <p>about mem_13</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member13@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background: rgb(165, 201, 255);">
+                        <img src="images/pic.png">
+                        <h4>Member 14</h4>
+                        <p>about mem_14</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member15@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background:rgb(184, 184, 184);">
+                        <img src="images/pic.png">
+                        <h4>Member 15</h4>
+                        <p>about mem_15</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member13@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background:rgb(184, 255, 137);">
+                        <img src="images/pic.png">
+                        <h4>Member 16</h4>
+                        <p>about mem_16</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member16@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-row1">
+                    <div class="member-col" style="background: rgb(247, 157, 187);">
+                        <img src="images/pic.png">
+                        <h4>Member 17</h4>
+                        <p>about mem_17</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member17@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background: rgb(195, 240, 255);">
+                        <img src="images/pic.png">
+                        <h4>Member 18</h4>
+                        <p>about mem_18</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member17@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background: palegreen;">
+                        <img src="images/pic.png">
+                        <h4>Member 19</h4>
+                        <p>about mem_19</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member19@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                    <div class="member-col" style="background: yellow;">
+                        <img src="images/pic.png">
+                        <h4>Member 20</h4>
+                        <p>about mem_20</p>
+                        <div class="middle">
+                            <div class="info">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa1"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa1"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa1"></i></a>
+                                <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="fa1"></i></a>
+                            </div>
+                        </div>
+                        <div class="mem-con">
+                            <a href="mailto:member20@example.com" class="mem-con-btn"><i class="fas fa-paper-plane"
+                                    id="mem-con-fa"></i>&nbspContact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="member-btn">
+                    <button class="common-btn2" id="read1" title="previous"><i class="fa fa-chevron-left"></i></button>
+                    <button class="common-btn2" id="read2" title="next"><i class="fa fa-chevron-right"></i></button>
+                    <script type="text/javascript">
+                        var j = 0;
+                        var sl = document.getElementsByClassName("member-row1");
+                        var r = document.getElementById("read2");
+                        var r1 = document.getElementById("read1");
+                        var c1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                        var arr = ["#F8F049"]
+                        var colo = document.getElementsByClassName("member-col");
+                        for (j = 0; j < colo.length; j++) {
+                            colo[j].style.background = arr[Math.floor(Math.random() * arr.length)]
+                        }
+                        for (j = 0; j < sl.length; j++) {
+                            sl[j].style.opacity = "0"
+                            sl[j].style.visibility = "hidden"
+                            sl[j].style.display = "none"
+                        }
+                        sl[0].style.transition = "0.35s"
+                        sl[0].style.display = "flex"
+                        sl[0].style.visibility = "visible"
+                        sl[0].style.opacity = "1"
+                        j = 0
+                        r.onclick = function () {
+                            sl[j].style.opacity = "0"
+                            sl[j].style.visibility = "hidden"
+                            sl[j].style.display = "none";
+                            if (j == sl.length - 1) {
+                                j = -1
+                            }
+                            j++
+                            sl[j].style.transition = "0.35s"
+                            sl[j].style.display = "flex"
+                            sl[j].style.visibility = "visible"
+                            setTimeout(function () { sl[j].style.opacity = "1"; }, 0);
+                        }
+                        r1.onclick = function () {
+                            sl[j].style.opacity = "0"
+                            sl[j].style.visibility = "hidden"
+                            sl[j].style.display = "none";
+                            if (j == 0) {
+                                j = sl.length
+                            }
+                            j--
+                            sl[j].style.transition = "0.35s"
+                            sl[j].style.display = "flex"
+                            sl[j].style.visibility = "visible"
+                            setTimeout(function () { sl[j].style.opacity = "1"; }, 0);
+                        }
+                    </script>
+                </div>
+            </span>
+            <div class="member-btn">
+                <button class="common-btn" id="readm">Explore&nbsp<i class="fas fa-chevron-circle-down"
+                        style="font-size: 16px;"></i></button>
+                <button class="common-btn" id="closem" style=" display: none;">Close&nbsp<i class="fas fa-chevron-circle-up"
+                        style="font-size: 16px;"></i></button>
+                <script type="text/javascript">
+                    var actreadm = document.getElementById("readm")
+                    var actmorem = document.getElementById("morem")
+                    var actclosem = document.getElementById("closem")
+                    actreadm.onclick = function () {
+                        actmorem.style.display = "block"
+                        actclosem.style.display = "block"
+                        actreadm.style.display = "none"
+                    }
+                    actclosem.onclick = function () {
+                        actmorem.style.display = "none"
+                        actclosem.style.display = "none"
+                        actreadm.style.display = "block"
+                    }
+                </script>
+            </div>
+        </section>
+    </div>
+    <div id="b1">
+        <h1 id="com-head">Feedback</h1>
+        <div class="comments">
+            <form id="myForm">
+                <div id="alert-text">
+                    hello
+                </div>
+                <h2 style="padding-bottom: 10%; color: white; font-family:Verdana, Geneva, Tahoma, sans-serif; "
+                    id="com-text">Write To Us</h2>
+                <div class="cin">
+                    <input name="Name" required class="comin" placeholder="Name... ">
+                </div>
+                <br>
+                <div class="cin">
+                    <input type="email" name="email" required class="comin" placeholder="Email...">
+                </div>
+                <br>
+                <div class="cin">
+                    <textarea name="Comment Here..." required class="comin" id="com-box" cols="20" rows="5"
+                        placeholder="Comments..." onkeyup="countchecker()"></textarea>
+                    <div id="count-block"
+                        style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Total
+                        Characters: <span id="count">0</span></div>
+                    <br>
+                </div>
+                <input type="text" name="datetime-local" class="comin" style="display: none;">
+                <input type="text" name="OS" class="comin" style="display: none;">
+            </form>
+            <button onclick="SubForm()" class="sub-btn">Submit&nbsp<i class="fas fa-arrow-right"
+                    id="sub-btn-fa"></i></button>
+        </div>
+    </div>
+    <script>
+        var fhe=document.getElementById("myForm")
+        var comh=document.getElementById("b1")
+        comh.style.height=fhe.offsetHeight+ (screen.height/2)+"px"
+    </script>
+    <!--Footer-->
+    <section id="footer">
+        <div style="backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); background: rgba(0, 0, 0, 0.017);">
+            <br>
+            <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
+            <br>
+            <div class="footer-links">
+                <div class="link-title" id="mem-fol1">
+                    <h3>Overview</h3>
+                    <small id="fo-li"><a href="about.html"><i class="fa fa-address-card"></i>&nbsp About us</a><br>
+
+                        <a href="activities.html"><i class="fa fa-hourglass-half"></i>&nbsp Activities</a>
+                        <br>
+                        <a href="members.html"><i class="fa fa-users"></i>&nbsp Events</a>
+                        <br>
+                        <a href="index.html"><i class="fa fa-home"></i>&nbsp Home</a>
+                        <br>
+                        <a href="https://www.iare.ac.in/"><i class="fa fa-university"></i>&nbsp About IARE</a>
+                        <br>
+                        <a href="index.html#b1"><i class="fa fa-comments"></i>&nbsp Feedback</a>
+                    </small>
+                </div>
+                <div class="link-title" id="mem-fol">
+                    <h3>Follow us</h3>
+                    <div class="link-title1">
+                        <div class="mem-social">
+                            <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="mfa"></i></a>
+                        </div>
+                        <div class="mem-social">
+                            <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="mfa"></i></a>
+                        </div>
+                        <div class="mem-social">
+                            <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="mfa"></i></a>
+                        </div>
+                        <div class="mem-social">
+                            <a href="https://in.linkedin.com/"><i class="fa fa-linkedin" id="mfa"></i></a>
+                        </div>
+                    </div>
+                    <br>
+                    <h3>Subscription</h3>
+                    <div class="link-title2">
+                        <div class="mem-social1">
+                            <small><i class="fas fa-bell" id="subs-sub" title="subscribe"></i></small>
+                        </div>
+                        <div class="mem-social1">
+                            <small><i class="fas fa-bell-slash" id="subs-un" title="unsubscribe"></i></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="link-title" id="mem-fol2">
+                    <h3>Contact us</h3>
+                    <div>
+                        <small id="mem-con"><a href="mailto:ideatoinnovation01@gmail.com"><i
+                                    class="fa fa-google"></i>&nbsp
+                                ideatoinnovation01@gmail.com</a></small>
+                        <br>
+                        <small id="mem-con"><a href="index.html#b1"><i class="fas fa-comment-alt"
+                                    id="pri-po-fa"></i>&nbspWrite
+                                to Us</a></small>
+                    </div>
+                    <br>
+                    <h3>Legal</h3>
+                    <div class="link-title1">
+                        <small id="open-pri"><i class="fas fa-globe" id="pri-po-fa"></i>&nbspPrivacy Policy</small>
+                    </div>
+                </div>
+                <div class="link-title" id="im1">
+                    <h3><a href="index.html"><img src="images/logo.png" alt="logo" style="width: 50%;"></a></h3>
+                </div>
+            </div>
+
+            <div class="fend">
+                <small id="sm" style="color: black;">made with <i class="fa fa-heart" title="Love"></i> <i></i><i
+                        class="fa fa-html5" title="HTML"></i>&nbsp<i class="fab fa-js-square" id="js-sq"
+                        title="javascript"></i>
+                    <i></i>& <i></i><i class="fa fa-css3" title="CSS"></i> in <a
+                        href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"><i
+                            class="fa fa-map-marker"></i> Institute of Aeronautical Engineering</a></small>
+                <small id="sm1" style="background: black;"><i class="fa fa-copyright"></i> copyright 2021
+                    ideatoinnovation</small>
+            </div>
+        </div>
+    </section>
+    <!--Privacy Policy-->
+    <img src="images/logo.png" alt="loading" id="pri-po-load">
+    <div id="pri-po">
+        <h1
+            style="text-align: center; background:  linear-gradient(to left, rgb(0, 192, 48),rgb(217, 255, 0));  padding-bottom: 1vh; position: -webkit-sticky;position: sticky; top: 0; box-shadow:0 7px 15px rgba(0, 0, 0, 0.507);">
+            Privacy Policy<i class="fa fa-times" style="position: absolute; left: 96%; " id="close-pri"></i>
+        </h1>
+        <div style="padding: 5%;  " id="pri-po-body">
+            <p>Last updated: 14 june 2021
+                <br>
+                <br>
+                This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your
+                information when
+                You use the Service and tells You about Your privacy rights.
+
+                We use Your Personal data to provide and improve the Service. By using the Service, You agree to the
+                collection and use
+                of information in accordance with this Privacy Policy.
+            </p>
+            <br>
+            <h2>Interpretation and Definitions</h2>
+            <h3>Interpretation</h3>
+            <p> words of which the initial letter is capitalized have meanings defined under the following conditions.
+                The
+                following
+                definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+
+            <h3>Definitions</h3>
+            <p>For the purposes of this Privacy Policy:</p>
+            <ul>
+                <li><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any
+                    other
+                    device by a website, containing
+                    the details of Your browsing history on that website among its many uses.</li>
+
+                <li><strong>Device</strong> means any device that can access the Service such as a computer, a cell
+                    phone or
+                    a digital tablet.</li>
+
+                <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable
+                    individual.</li>
+
+                <li><strong>Service</strong> refers to the Website.</li>
+
+                <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf
+                    of
+                    the Company. It refers to
+                    third-party companies or individuals employed by the Company to facilitate the Service, to provide
+                    the
+                    Service on behalf
+                    of the Company, to perform services related to the Service or to assist the Company in analysing how
+                    the
+                    Service is
+                    used.</li>
+
+                <li><strong> Website</strong> refers to idea2innovation, accessible from idea2innovation.github.io</li>
+
+                <li><strong> You</strong> means the individual accessing or using the Service, or the company, or other
+                    legal entity on behalf of which such
+                    individual is accessing or using the Service, as applicable.</li>
+            </ul>
+            <br>
+            <h2>Collecting and Using Your Personal Data</h2>
+            <h3>Types of Data Collected</h3>
+            <h3>Personal Data</h3>
+            <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information
+                that
+                can be used
+                to contact or identify You. Personally identifiable information may include:</p>
+            <ul>
+                <li>Email address</li>
+
+                <li>First name and last name</li>
+
+                <li>Usage Data</li>
+            </ul>
+            <h3>Usage Data</h3>
+            <p>Usage Data is collected automatically when using the Service.
+
+                Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address),
+                browser type,
+                browser version, the pages of our Service that You visit, the time and date of Your visit, the time
+                spent on
+                those
+                pages, unique device identifiers and other diagnostic data.
+
+                When You access the Service by or through a mobile device, We may collect certain information
+                automatically,
+                including,
+                but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of
+                Your
+                mobile
+                device, Your mobile operating system, the type of mobile Internet browser You use, unique device
+                identifiers
+                and other
+                diagnostic data.</p>
+            <br>
+            <h2>Information Collected from Idea2Innovation Visitors</h2>
+
+
+            <h3>Device Information from Idea2Innovation Visitor:</h3>
+
+            <ul>
+                <li>Browser Information</li>
+
+
+                <li>Operating System Information</li>
+
+
+                <li>IP address (stored in anonymized form)</li>
+
+
+                <li>Page Accessed</li>
+
+
+                <li>Time of visit (by date, month, year, local)</li>
+
+
+                <li>Other such Information as may be delivered or shared by the applicable browser or access software or
+                    device.</li>
+            </ul>
+            <p>We may also collect information that Your browser sends whenever You visit our Service or when You access
+                the
+                Service by
+                or through a mobile device.</p>
+            <br>
+            <h2>Retention of Your Personal Data</h2>
+            <p>The Company will retain Usage Data for internal analysis purposes. Usage Data is generally retained for a
+                shorter period
+                of time, except when this data is used to strengthen the security or to improve the functionality of Our
+                Service, or We
+                are legally obligated to retain this data for longer time periods.</p>
+            <br>
+            <h2>Security of Your Personal Data</h2>
+            <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over
+                the
+                Internet, or
+                method of electronic storage is 100% secure. While We strive to use commercially acceptable means to
+                protect
+                Your
+                Personal Data, We cannot guarantee its absolute security.</p>
+            <br>
+            <h2>Links to Other Websites</h2>
+            <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third
+                party
+                link, You
+                will be directed to that third party's site. We strongly advise You to review the Privacy Policy of
+                every
+                site You
+                visit.
+
+                We have no control over and assume no responsibility for the content, privacy policies or practices of
+                any
+                third party
+                sites or services.</p>
+            <br>
+            <h2>Changes to this Privacy Policy</h2>
+            <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new
+                Privacy Policy
+                on this page.
+
+                We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming
+                effective and
+                update the "Last updated" date at the top of this Privacy Policy.
+
+                You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy
+                Policy
+                are effective
+                when they are posted on this page.</p>
+            <br>
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+            <ul>
+                <li> email: ideatoinnovation01@gmail.com</li>
+
+                <li>By visiting this page on our website: idea2innovation.github.io</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var ap = document.getElementById("pri-po");
+        var o = document.getElementById("open-pri");
+        var c = document.getElementById("close-pri");
+        var imgp = document.getElementById("pri-po-load");
+        o.onclick = function () {
+            imgp.style.display = "block";
+            setTimeout(() => { imgp.style.display = "none" }, 1000)
+            ap.style.transition = "all 1s ease-in"
+            ap.style.display = "block"
+            setTimeout(() => { ap.style.opacity = "1" }, 1000)
+        }
+        c.onclick = function () {
+            ap.style.display = "none";
+            ap.style.opacity = "0"
+        }
+    </script>
+    <script>
+        var loader = document.getElementById("loading");
+        function subfor() {
+            loader.style.display = "none";
+        }
+    </script>
+    <script>
+        var loader = document.getElementById("loading");
+        function subfor() {
+            loader.style.display = "none";
+        }
+    </script>
+    <!--Social Media-->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+        <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png"></a>
+        <a href="https://twitter.com/?lang=en"><img src="images/twitter.png"></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
+        <a href="https://in.linkedin.com/"><img src="images/linkedin.png"></a>
+    </div>
+    <!--Navigation-->
+    <nav class="nav1" id="na">
+        <ul id="ulna">
+            <li class="active"><a href="#header"><i class="fa fa-home" id="fa"></i></a></li>
+            <li><a href="#about"><i class="fa fa-address-card" id="fa"></i></a></li>
+            <li><a href="#ac-bac"><i class="fa fa-hourglass-half" id="fa"></i></a></li>
+            <li><a href="#ev"><i class="fa fa-calendar" id="fa"></i></a></li>
+            <li><a href="#mem-back"><i class="fa fa-users" id="fa"></i></a></li>
+            <li><a href="https://www.iare.ac.in/"><i class="fa fa-university" id="fa"></i></a></li>
+            <li><a href="#b1"><i class="fa fa-comments" id="fa"></i></a></li>
+        </ul>
+    </nav>
+    <nav id="sideNav">
+        <ul id="ulnav">
+            <h2>IdeaToInnovation</h2>
+            <li class="active"><a href="#header">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-home" id="fa"></i> Home</a>
+            </li>
+            <li><a href="#about">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-address-card" id="fa"></i> About Us</a></li>
+            <li><a href="#ac-bac">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-hourglass-half" id="fa"></i>
+                    Activities</a></li>
+            <li><a href="#ev">&nbsp &nbsp &nbsp &nbsp <i class="fa fa-calendar" id="fa"></i> Events</a></li>
+            <li><a href="#mem-back">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-users" id="fa"></i> Members</a></li>
+            <li><a href="https://www.iare.ac.in/">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-university" id="fa"></i>About
+                    IARE</a></li>
+            <li><a href="#b1">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
+            </li>
+        </ul>
+    </nav>
+    <script type="text/javascript" src="nav.js"></script>
+    <img src="images/men.jpg" id="menuBtn">
     <script>
         var menuBtn = document.getElementById("menuBtn");
         var sideNav = document.getElementById("sideNav");
-        var click=document.getElementById("click")
+        var click = document.getElementById("click")
+        var na = document.getElementById("na")
         sideNav.style.left = "-250px";
-        var i=0
-        var j=0
+        na.onmouseover = function () {
+            sideNav.style.left = "0px"
+            menuBtn.src = "images/menclose.jpg"
+        }
+        na.onmouseout = function () {
+            sideNav.style.left = "-250px"
+            menuBtn.src = "images/men.jpg"
+        }
+        sideNav.onmouseover = function () {
+            sideNav.style.left = "0px"
+            menuBtn.src = "images/menclose.jpg"
+        }
+        sideNav.onmouseout = function () {
+            sideNav.style.left = "-250px"
+            menuBtn.src = "images/men.jpg"
+        }
+        sideNav.style.transition = "all 0.35s ease-in"
+        var i1 = 0
+        var j1 = 0
         menuBtn.onclick = function () {
-            j=1
-            if (!i) {
+            j1 = 1
+            if (!i1) {
                 sideNav.style.left = "0px"
-                i=1
+                menuBtn.src = "images/menclose.jpg"
+                i1 = 1
             }
             else {
                 sideNav.style.left = "-250px"
-                i=0
+                menuBtn.src = "images/men.jpg"
+                i1 = 0
             }
         }
-        onclick=function(){
-            if(i && !j){
+        onclick = function () {
+            if (i1 && !j1) {
                 sideNav.style.left = "-250px"
-                i = 0
+                menuBtn.src = "images/men.jpg"
+                i1 = 0
             }
-            j=0
+            j1 = 0
         }
+        $('#ulnav').onePageNav({
+                currentClass: 'active',
+                changeHash: false,
+                scrollSpeed: 750,
+                scrollThreshold: 0.5,
+                filter: '',
+                easing: 'swing'
+            });
+        $('#ulna').onePageNav({
+                currentClass: 'active',
+                changeHash: false,
+                scrollSpeed: 750,
+                scrollThreshold: 0.5,
+                filter: '',
+                easing: 'swing'
+            });
+    </script>
+    <form method="post" autocomplete="off" name="google-sheet">
+        <input type="text" name="os" id="os" style="display: none;">
+        <input type="text" id="ip" name='ip' style="display: none;">
+        <input type="text" id="brow" name='browser' style="display: none;">
+        <input type="text" id="date" name="datetime-local" style="display: none;">
+        <input type="text" name="description" id="des" style="display: none;">
+    </form>
+    <script src="platform.js"></script>
+    <script>
+        var loader = document.getElementById("loading");
+        function subfor() {
+            loader.style.display = "none";
+            fetch('https://api.ipify.org/?format=json')
+                .then(results => results.json())
+                .then(
+                    (data) => {
+                        document.getElementById('ip').value = data.ip
+                        var Name = "Unknown OS";
+                        if (navigator.userAgent.indexOf("Win") != -1) Name =
+                            "Windows OS";
+                        if (navigator.userAgent.indexOf("Mac") != -1) Name =
+                            "Macintosh";
+                        if (navigator.userAgent.indexOf("Linux") != -1) Name =
+                            "Linux OS";
+                        if (navigator.userAgent.indexOf("Android") != -1) Name =
+                            "Android OS";
+                        if (navigator.userAgent.indexOf("like Mac") != -1) Name =
+                            "iOS";
+                        let userAgentString =
+                            navigator.userAgent;
+
+                        // Detect Chrome
+                        let chromeAgent =
+                            userAgentString.indexOf("Chrome") > -1;
+
+                        // Detect Internet Explorer
+                        let IExplorerAgent =
+                            userAgentString.indexOf("MSIE") > -1 ||
+                            userAgentString.indexOf("rv:") > -1;
+
+                        // Detect Firefox
+                        let firefoxAgent =
+                            userAgentString.indexOf("Firefox") > -1;
+
+                        // Detect Safari
+                        let safariAgent =
+                            userAgentString.indexOf("Safari") > -1;
+                        let edgeAgent =
+                            userAgentString.indexOf("Edg") > -1;
+                        // Discard Safari since it also matches Chrome
+                        if ((chromeAgent) && (safariAgent))
+                            safariAgent = false;
+
+                        // Detect Opera
+                        let operaAgent =
+                            userAgentString.indexOf("OP") > -1;
+
+                        // Discard Chrome since it also matches Opera     
+                        if ((chromeAgent) && (operaAgent))
+                            chromeAgent = false;
+                        var Name1 = 'unknown';
+                        if (chromeAgent) {
+                            Name1 = 'Chrome';
+                        }
+                        if (edgeAgent) {
+                            Name1 = 'Microsoft Edge';
+                        }
+                        if (safariAgent) {
+                            Name1 = 'Safari';
+                            var chro = !!window.chrome;
+                            if (chro) {
+                                Name1 = 'Chrome'
+                            }
+                        }
+                        if (IExplorerAgent) {
+                            Name1 = 'Internet Explorer';
+                        }
+                        if (firefoxAgent) {
+                            Name1 = 'Firefox'
+                        }
+                        if (operaAgent) {
+                            Name1 = 'Opera';
+                        }
+
+                        c = document.getElementById('brow');
+                        c.value = platform.name;
+                        a = document.getElementById('os');
+                        a.value = Name
+                        b = document.getElementById('date');
+                        b.value = new Date();
+                        de = document.getElementById('des');
+                        de.value = platform.description;
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbzk51jqKn6KCuZMPPV2CoQ37TzNWGAilhx7Ny-1M1KQvSZxhxUQeuUYGtuEHtSPWqYP/exec'
+                        const form = document.forms['google-sheet']
+
+                        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                            .then()
+                            .catch(error => console.error('Error!', error.message))
+                    }
+                );
+        }
+
+    </script>
+    <!--Subscribe-->
+    <div id="subscribe">
+        <div class="subs-box">
+            <img src="images/logo.png" alt="logo" class="subs-img" id="subs-lo">
+            <div class="subs-form-box">
+                <div class="subs-head">
+                    SUBSCRIBE
+                    <i class="fa fa-times" id="subs-close1"></i>
+                </div>
+                <form method="post" autocomplete="off" name="sub-sheet" class="subs-form">
+                    <div class="subs-inputs">
+                        <input type="email" name="email" id="subs-email1" required placeholder="Email">
+                    </div>
+                    <button type="submit" id="subs-btn1">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="unsubscribe">
+        <div class="subs-box">
+            <img src="images/logo.png" alt="logo" class="subs-img" id="unsubs-lo">
+            <div class="subs-form-box">
+                <div class="subs-head">
+                    UNSUBSCRIBE
+                    <i class="fa fa-times" id="subs-close2"></i>
+                </div>
+                <form method="post" autocomplete="off" name="unsub-sheet" class="subs-form1">
+                    <div class="subs-inputs">
+                        <input type="email" name="email" id="subs-email2" required placeholder="Email">
+                    </div>
+                    <div class="subs-inputs">
+                        <input type="text" name="Tell us" id="subs-tell" placeholder="Tell us why">
+                    </div>
+                    <button type="submit" id="subs-btn2">unsubscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="subs-top">
+        <div id="subs-sub1">
+            <small><i class="fas fa-bell" id="subfa"></i>&nbsp Subscribe</small>
+        </div>
+        <div id="subs-un1">
+            <small><i class="fas fa-bell-slash" id="unsubfa"></i>&nbsp Unsubscribe</small>
+        </div>
+    </div>
+    <script>
+        var subs1 = document.getElementById("subs-sub");
+        var subs2 = document.getElementById("subs-sub1");
+        var unsub1 = document.getElementById("subs-un");
+        var unsub2 = document.getElementById("subs-un1");
+        var subscribe = document.getElementById("subscribe");
+        var unsubscribe = document.getElementById("unsubscribe");
+        var sclose1 = document.getElementById("subs-close1");
+        var sclose2 = document.getElementById("subs-close2");
+        var loadsusbs = document.getElementById("subs-lo");
+        var loadunsubs = document.getElementById("unsubs-lo");
+        subs1.onclick = function () {
+            subscribe.style.display = "block";
+        }
+        subs2.onclick = function () {
+            subscribe.style.display = "block";
+        }
+        sclose1.onclick = function () {
+            subscribe.style.display = "none";
+        }
+        unsub1.onclick = function () {
+            unsubscribe.style.display = "block";
+        }
+        unsub2.onclick = function () {
+            unsubscribe.style.display = "block";
+        }
+        sclose2.onclick = function () {
+            unsubscribe.style.display = "none"
+        }
+        const scriptURL1 = 'https://script.google.com/macros/s/AKfycbx2Mhxk7Bu1ExzmiHqFtMGb5hyQ4wG3r4hOgW02Awu3ppLT2IOAsPQGnmXvbKrj747Smg/exec'
+        const fo = document.forms['sub-sheet']
+        fo.addEventListener('submit', e => {
+            loadsusbs.src = "images/loading-subs.gif"
+            e.preventDefault()
+            fetch(scriptURL1, { method: 'POST', body: new FormData(fo) })
+                .then(Response => {
+                    loadsusbs.src = "images/loading-subs-com.gif"
+                    setTimeout(() => { subscribe.style.display = "none" }, 2000);
+                    setTimeout(() => { loadsusbs.src = "images/logo.png" }, 2250);
+                })
+                .catch(error => {
+                    loadsusbs.src = "images/loading-subs-uncom.gif"
+                    setTimeout(() => { subscribe.style.display = "none" }, 2000);
+                    setTimeout(() => { loadsusbs.src = "images/logo.png" }, 2250);
+                })
+        })
+        const scriptURL2 = 'https://script.google.com/macros/s/AKfycbyNzRoYSdT1qd--9FCqs-pAmhNE9FipehPSvYUUygysW-fRftfs5wvDwed49gK8slQ3Yw/exec'
+        const fo1 = document.forms['unsub-sheet']
+        fo1.addEventListener('submit', e => {
+            loadunsubs.src = "images/loading-unsubs.gif"
+            e.preventDefault()
+            fetch(scriptURL2, { method: 'POST', body: new FormData(fo1) })
+                .then(Response => {
+                    loadunsubs.src = "images/loading-unsubs-com.gif"
+                    setTimeout(() => { unsubscribe.style.display = "none" }, 2000);
+                    setTimeout(() => { loadunsubs.src = "images/logo.png" }, 2250);
+                })
+                .catch(error => {
+                    loadunsubs.src = "images/loading-subs-uncom.gif"
+                    setTimeout(() => { unsubscribe.style.display = "none" }, 2000);
+                    setTimeout(() => { loadunsubs.src = "images/logo.png" }, 2250);
+                })
+        })
     </script>
 </body>
+
+</html>

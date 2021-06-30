@@ -70,9 +70,7 @@ select {
   line-height: 7mm;
   text-align: justify;
 }
-#more,
-#morea,
-#morem {
+#more {
   display: none;
 }
 h1 {
@@ -195,7 +193,7 @@ nav ul h2 {
   font-size: 19px;
   color: white;
 }
-#sidenav ul li .active a {
+.active a {
   background-color: rgb(98, 84, 194);
   position: relative;
   left: 10px;
@@ -264,7 +262,7 @@ nav ul li a:hover {
   background-color: white;
   color: darkslateblue;
 }
-.active a i {
+.active i {
   background: rgb(98, 84, 194);
 }
 
@@ -528,7 +526,7 @@ nav ul li a:hover {
 }
 .exacon {
   width: 100%;
-  height: fit-content;
+  height: 100%;
   display: flex;
 }
 .mainacon {
@@ -537,7 +535,6 @@ nav ul li a:hover {
   background: white;
   border-radius: 2mm;
   display: none;
-  height: fit-content;
   overflow: scroll;
   z-index: 2;
 }
@@ -573,7 +570,6 @@ nav ul li a:hover {
 .acon {
   width: 35%;
   height: fit-content;
-  overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   padding: 2%;
   border-radius: 2mm;
@@ -598,21 +594,9 @@ nav ul li a:hover {
 }
 #a2 {
   background: #ff5b4f;
-  width: 35%;
-  height: fit-content;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  padding: 2%;
-  border-radius: 2mm;
 }
 #a3 {
   background: #35bbb9;
-  width: 35%;
-  height: fit-content;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  padding: 2%;
-  border-radius: 2mm;
 }
 .fa-external-link-alt,
 .fa-times-circle {
@@ -1023,12 +1007,12 @@ i {
   background: url(images/events-back.jpg);
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 2%;
 }
 .hev {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   padding-bottom: 5%;
+  padding-top: 3%;
 }
 .evrow {
   width: 80%;
@@ -1172,9 +1156,6 @@ img:hover {
 .comin.shake {
   animation: animate 0.3s ease-in-out infinite;
 }
-.comin::placeholder {
-  color: white;
-}
 #count-block {
   color: white;
 }
@@ -1246,11 +1227,14 @@ img:hover {
   opacity: 0;
   font-family: Ubuntu;
 }
+#b1 {
+  height: 110vh;
+}
 /*Preloader*/
 #loading {
   position: fixed;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   background: rgb(255, 255, 255) url(images/logo.png) no-repeat center;
   z-index: 99999;
 }
@@ -1977,11 +1961,14 @@ html {
     width: 50%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
+  #b1 {
+    height: 110vh;
+  }
   .comin {
     height: 15px;
     width: 100%;
     font-size: 100%;
-    border-bottom: gold 1mm solid;
+    border-bottom: gold 0.75vh solid;
   }
   .sub-btn {
     padding: 5px 5px;
@@ -2006,9 +1993,9 @@ html {
     height: 100%;
   }
   #com-head {
+    margin-left: 20%;
     text-align: center;
     background: transparent;
-    width: min-content;
   }
   #sub-load0-1 {
     width: 55%;
@@ -2405,6 +2392,9 @@ html {
   #logo123 {
     margin-right: 0;
   }
+  #b1 {
+    height: 100vh;
+  }
   .comments {
     margin-left: 5%;
     margin-top: 30%;
@@ -2414,9 +2404,6 @@ html {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     position: absolute;
     z-index: 5;
-  }
-  #b1 {
-    height: 130vh;
   }
   #count {
     font-size: 17px;
@@ -2429,7 +2416,7 @@ html {
     height: 43px;
     width: 100%;
     font-size: 17px;
-    border-bottom: gold 1mm solid;
+    border-bottom: gold 0.65mm solid;
   }
   .sub-btn {
     padding: 5px 5px;
@@ -2455,13 +2442,11 @@ html {
     height: 100%;
   }
   #com-head {
+    margin-left: 20%;
     padding: 1%;
-    padding-left: 0;
-    padding-right: 0%;
-    text-align: justify;
+    text-align: center;
     background: transparent;
-    width: min-content;
-    margin-left: 30vw;
+    width: 60%;
   }
   #sub-load0-1 {
     width: 55%;

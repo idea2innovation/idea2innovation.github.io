@@ -364,12 +364,28 @@ nav ul li a:hover {
   flex-wrap: wrap;
 }
 .member-row1 {
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.member-row2 {
+  display: flex;
+  width: 240vw;
+  animation: memberslide ease 5s infinite;
+  position: relative;
+}
+.member-row3 {
+  overflow: hidden;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: none;
+  padding-bottom: 3%;
+  position: relative;
 }
 .member-col {
   position: relative;

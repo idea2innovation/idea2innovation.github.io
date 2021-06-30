@@ -169,6 +169,8 @@
                 </div>
                 </div>
                 <br>
+                <div class="member-row3">
+                <div class="member-row2">
                 <div class="member-row1">
                     <div class="member-col" style="background: rgb(255, 251, 205);">
                         <img src="images/pic.png">
@@ -367,56 +369,75 @@
                     </div>
                 </div>
                 </div>
+            </div>
+        </div>
                 <div class="member-btn">
                     <button class="common-btn2" id="read1" title="previous"><i class="fa fa-chevron-left"></i></button>
                     <button class="common-btn2" id="read2" title="next"><i class="fa fa-chevron-right"></i></button>
                     <script type="text/javascript">
                         var j = 0;
-                        var sl = document.getElementsByClassName("member-row1");
+                        var sl = document.getElementsByClassName("member-row2");
                         var r = document.getElementById("read2");
                         var r1 = document.getElementById("read1");
                         var c1=[0,0,0,0,0,0,0,0,0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
                         var arr=["#F8F049"]
+                        var sv=0
                         var colo=document.getElementsByClassName("member-col");
                         for(j=0;j<colo.length;j++){
                             colo[j].style.background=arr[Math.floor(Math.random() * arr.length)]
                         }
-                        for(j=0;j<sl.length;j++){
-                            sl[j].style.opacity = "0"
-                            sl[j].style.visibility = "hidden"
-                            sl[j].style.display="none"
-                        }
-                        sl[0].style.transition = "0.35s"
-                        sl[0].style.display = "flex"
-                        sl[0].style.visibility = "visible"
-                        sl[0].style.opacity = "1"
-                        j=0
-                        r.onclick = function () {
-                            sl[j].style.opacity = "0"
-                            sl[j].style.visibility = "hidden"
-                            sl[j].style.display = "none";
-                            if (j == sl.length - 1) {
-                                j = -1
-                               }
-                            j++
-                            sl[j].style.transition = "0.35s"
-                            sl[j].style.display = "flex"
-                            sl[j].style.visibility = "visible"
-                            setTimeout(function () { sl[j].style.opacity = "1"; }, 0);
+                        r.onclick=function(){
+                            if (screen.width>500){
+                            sv=sv-20
+                            if (sv>-200){
+                            sl[0].style.transition="all ease 0.35s"
+                            sl[0].style.left=sv+"vw"
                             }
-                            r1.onclick = function () {
-                                sl[j].style.opacity = "0"
-                                sl[j].style.visibility = "hidden"
-                                sl[j].style.display = "none";
-                                if (j == 0) {
-                                    j = sl.length
+                            else{
+                                sv=0
+                                sl[0].style.transition = "all ease 0.35s"
+                                sl[0].style.left = sv + "vw"
+                            }
+                                                        }
+                            else{
+                                sv = sv - 40
+                                if (sv > -200) {
+                                    sl[0].style.transition = "all ease 0.35s"
+                                    sl[0].style.left = sv + "vw"
                                 }
-                                j--
-                                sl[j].style.transition = "0.35s"
-                                sl[j].style.display = "flex"
-                                sl[j].style.visibility = "visible"
-                                setTimeout(function () { sl[j].style.opacity = "1"; }, 0);
+                                else {
+                                    sv = 0
+                                    sl[0].style.transition = "all ease 0.35s"
+                                    sl[0].style.left = sv + "vw"
+                                }
                             }
+                        }
+                    r1.onclick=function(){
+                        if (screen.width > 500) {
+                        sv = sv + 20
+                        if (sv<-19){
+                            sl[0].style.transition = "all ease 0.35s"
+                            sl[0].style.left = sv + "vw"
+                        }
+                        else{
+                            sv=-200
+                            sl[0].style.transition = "all ease 0.35s"
+                            sl[0].style.left = sv + "vw"
+                        }
+                    }
+                        else{
+                            sv = sv + 40
+                            if (sv < -19) {
+                                sl[0].style.transition = "all ease 0.35s"
+                                sl[0].style.left = sv + "vw"
+                            }
+                            else {
+                                sv = -200
+                                sl[0].style.transition = "all ease 0.35s"
+                                sl[0].style.left = sv + "vw"
+                            }
+                        }
+                    }
                     </script>
                 </div>
             </span>

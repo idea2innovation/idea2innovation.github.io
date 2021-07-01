@@ -583,100 +583,34 @@ border-radius: 0; }
         <input type="text" id="brow" name='browser' style="display: none;">
         <input type="text" id="date" name="datetime-local" style="display: none;">
         <input type="text" name="description" id="des" style="display: none;">
+        <input type="text" name="Provider" id="pro" style="display: none;">
+        <input type="text" name="Location" id="loc" style="display: none;">
     </form>
     <script src="platform.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         var loader = document.getElementById("loading");
         function subfor() {
             loader.style.display = "none";
-            fetch('https://api.ipify.org/?format=json')
-                .then(results => results.json())
-                .then(
-                    (data) => {
-                        document.getElementById('ip').value = data.ip
-                        var Name = "Unknown OS";
-                        if (navigator.userAgent.indexOf("Win") != -1) Name =
-                            "Windows OS";
-                        if (navigator.userAgent.indexOf("Mac") != -1) Name =
-                            "Macintosh";
-                        if (navigator.userAgent.indexOf("Linux") != -1) Name =
-                            "Linux OS";
-                        if (navigator.userAgent.indexOf("Android") != -1) Name =
-                            "Android OS";
-                        if (navigator.userAgent.indexOf("like Mac") != -1) Name =
-                            "iOS";
-                        let userAgentString =
-                            navigator.userAgent;
+            $.get('https://ipinfo.io/', function (res) {
+                document.getElementById("ip").value=res.ip
+                document.getElementById("pro").value = res.org
+                document.getElementById("loc").value= res.city + " " + res.region + " " + res.country + " " + res.timezone + " " + res.loc
+                c = document.getElementById('brow');
+                c.value = platform.name;
+                a = document.getElementById('os');
+                a.value = platform.os
+                b = document.getElementById('date');
+                b.value = new Date();
+                de=document.getElementById('des');
+                de.value=platform.description;
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbzk51jqKn6KCuZMPPV2CoQ37TzNWGAilhx7Ny-1M1KQvSZxhxUQeuUYGtuEHtSPWqYP/exec'
+                const form = document.forms['google-sheet']
 
-                        // Detect Chrome
-                        let chromeAgent =
-                            userAgentString.indexOf("Chrome") > -1;
-
-                        // Detect Internet Explorer
-                        let IExplorerAgent =
-                            userAgentString.indexOf("MSIE") > -1 ||
-                            userAgentString.indexOf("rv:") > -1;
-
-                        // Detect Firefox
-                        let firefoxAgent =
-                            userAgentString.indexOf("Firefox") > -1;
-
-                        // Detect Safari
-                        let safariAgent =
-                            userAgentString.indexOf("Safari") > -1;
-                        let edgeAgent =
-                            userAgentString.indexOf("Edg") > -1;
-                        // Discard Safari since it also matches Chrome
-                        if ((chromeAgent) && (safariAgent))
-                            safariAgent = false;
-
-                        // Detect Opera
-                        let operaAgent =
-                            userAgentString.indexOf("OP") > -1;
-
-                        // Discard Chrome since it also matches Opera     
-                        if ((chromeAgent) && (operaAgent))
-                            chromeAgent = false;
-                        var Name1 = 'unknown';
-                        if (chromeAgent) {
-                            Name1 = 'Chrome';
-                        }
-                        if (edgeAgent) {
-                            Name1 = 'Microsoft Edge';
-                        }
-                        if (safariAgent) {
-                            Name1 = 'Safari';
-                            var chro = !!window.chrome;
-                            if (chro) {
-                                Name1 = 'Chrome'
-                            }
-                        }
-                        if (IExplorerAgent) {
-                            Name1 = 'Internet Explorer';
-                        }
-                        if (firefoxAgent) {
-                            Name1 = 'Firefox'
-                        }
-                        if (operaAgent) {
-                            Name1 = 'Opera';
-                        }
-
-                        c = document.getElementById('brow');
-                        c.value = platform.name;
-                        a = document.getElementById('os');
-                        a.value = Name
-                        b = document.getElementById('date');
-                        b.value = new Date();
-                        de=document.getElementById('des');
-                        de.value=platform.description;
-                        const scriptURL = 'https://script.google.com/macros/s/AKfycbzk51jqKn6KCuZMPPV2CoQ37TzNWGAilhx7Ny-1M1KQvSZxhxUQeuUYGtuEHtSPWqYP/exec'
-                        const form = document.forms['google-sheet']
-
-                        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                            .then()
-                            .catch(error => console.error('Error!', error.message))
-                    }
-                );
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then()
+                    .catch(error => console.error('Error!', error.message))
+                 }, 'json');
         }
         
     </script>

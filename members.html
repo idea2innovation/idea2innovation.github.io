@@ -415,7 +415,7 @@
                     r1.onclick=function(){
                         if (screen.width > 500) {
                         sv = sv + 20
-                        if (sv<-19){
+                        if (sv<=0){
                             sl[0].style.transition = "all ease 0.35s"
                             sl[0].style.left = sv + "vw"
                         }
@@ -427,7 +427,7 @@
                     }
                         else{
                             sv = sv + 40
-                            if (sv < -19) {
+                            if (sv <=0) {
                                 sl[0].style.transition = "all ease 0.35s"
                                 sl[0].style.left = sv + "vw"
                             }

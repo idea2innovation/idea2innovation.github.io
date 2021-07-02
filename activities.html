@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/6e8ea0ad06.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <style type="text/css">
     input,
@@ -43,14 +42,14 @@
             <div id="loading"></div>
     <div  id="ac-bac">
     <div style="margin-left: 7vw;">
-        <a href="index.html"><img src="images/logo.png" class="logo" id="logo123" data-aos="fade-right"></a>
+        <a href="index.html"><img src="images/logo.png" class="logo" id="logo123"></a>
     </div>
-    <section id="activities" style="overflow: hidden;">
-        <div class="container activity-row" >
+    <section id="activities">
+        <div class="container activity-row">
             <div class="activity-left-col">
                 <div class="activity-text">
                     <h1 style="color: white;">Activities</h1><br><br>
-                    <div class="exacon" data-aos="fade-up" >
+                    <div class="exacon">
                         <div class="acon" id="a1">
                             <h3>Activity 1<i class="fas fa-external-link-alt" style="float: right; cursor: pointer;"></i></h3>
                             <br>
@@ -71,8 +70,9 @@
                                 labore. Ipsa cum voluptatum nemo obcaecati fuga aliquam. Ipsam tenetur soluta dolorem enim quidem neque</p>
                         </div>
                     </div>
+                    <span id="more">
                         <br>
-                    <div class="exacon" data-aos="fade-right">
+                    <div class="exacon">
                     <div class="acon" id="a2">
                     <h3>Activity 2<i class="fas fa-external-link-alt" style="float: right; cursor: pointer;"></i></h3>
                     <br>
@@ -94,7 +94,7 @@
                     </div>
                     </div>
                         <br>
-                    <div class="exacon"  data-aos="fade-left">
+                    <div class="exacon">
                     <div class="acon" id="a3">
                     <h3>Activity 3<i class="fas fa-external-link-alt" style="float: right; cursor: pointer;"></i></h3>
                     <br>
@@ -148,6 +148,24 @@
                                 macon[2].style.display = "none"
                                 macon[2].className = "mainacon"
                             }
+                    </script>
+                    </span>
+                    <button class="common-btn" id="read"  style="color: white;"><i  class="fas fa-chevron-down" style="font-size: 16px;"></i>&nbsp View all</button>
+                    <button class="common-btn" id="close"  style="color: white; display: none;"><i  class="fas fa-chevron-up" style="font-size: 16px;"></i>&nbsp Close</button>
+                    <script type="text/javascript">
+                        var actread=document.getElementById("read")
+                        var actmore=document.getElementById("more")
+                        var actclose=document.getElementById("close")
+                        actread.onclick=function(){
+                            actmore.style.display="block"
+                            actclose.style.display="block"
+                            actread.style.display="none"
+                        }
+                        actclose.onclick=function(){
+                            actmore.style.display="none"
+                            actclose.style.display="none"
+                            actread.style.display="block"
+                        }
                     </script>
                 </div>
             </div>
@@ -234,7 +252,7 @@
     }
 </script>
     <!--Social media-->
-    <div class="social-icons" >
+    <div class="social-icons">
         <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
         <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png"></a>
         <a href="https://twitter.com/?lang=en"><img src="images/twitter.png"></a>
@@ -561,7 +579,7 @@
         </div>
     </div>
 </div>
-<div id="subs-top" data-aos="fade-left">
+<div id="subs-top">
     <div id="subs-sub1">
         <small><i class="fas fa-bell" id="subfa"></i>&nbsp Subscribe</small>
     </div>
@@ -691,13 +709,6 @@
             }
         }
         updatestatus()
-    </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset:200,
-            duration:700,
-        });
     </script>
 </body>
 </html>

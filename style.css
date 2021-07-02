@@ -1308,6 +1308,7 @@ img:hover {
   background: white url(images/feed-pre.gif) no-repeat center;
   margin-left: 38.5%;
   margin-top: 35vh;
+  border-radius: 2mm;
 }
 #sub-load0-2 {
   text-align: center;
@@ -1316,6 +1317,7 @@ img:hover {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: orangered;
+  border-radius: 2mm;
 }
 #sub-load1 {
   background: rgba(0, 0, 0, 0.5);
@@ -1331,6 +1333,7 @@ img:hover {
   background: rgb(2, 173, 2);
   margin-left: 38.5%;
   margin-top: 35vh;
+  border-radius: 2mm;
 }
 #sub-load1-3 {
   text-align: center;
@@ -1338,6 +1341,7 @@ img:hover {
   position: relative;
   top: 35%;
   color: white;
+  border-radius: 2mm;
 }
 #sub-load1-2 {
   text-align: center;
@@ -1346,6 +1350,7 @@ img:hover {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
+  border-radius: 2mm;
 }
 #sub-load2 {
   background: rgba(0, 0, 0, 0.5);
@@ -1361,6 +1366,7 @@ img:hover {
   background: rgb(255, 195, 205);
   margin-left: 38.5%;
   margin-top: 35vh;
+  border-radius: 2mm;
 }
 #sub-load2-3 {
   text-align: center;
@@ -1368,6 +1374,7 @@ img:hover {
   position: relative;
   top: 35%;
   color: rgb(255, 0, 0);
+  border-radius: 2mm;
 }
 #sub-load2-2 {
   text-align: center;
@@ -1376,6 +1383,7 @@ img:hover {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: red;
+  border-radius: 2mm;
 }
 /*privacy*/
 #pri-po {
@@ -1463,43 +1471,54 @@ img:hover {
   top: 30vh;
   box-shadow: 0 0 50vw gold;
   display: none;
+  border-radius: 2mm;
 }
 #pri-po-body {
   color: white;
   line-height: 35px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 #pri-po-body ul {
   color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 #pri-po-body ul li {
   color: white;
   font-size: 20px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 #pri-po-body ul li strong {
   color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 #pri-po-body ul li p {
   color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 #pri-po-body ul li {
   color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 #pri-po-body p {
   color: white;
   font-size: 20px;
   line-height: 30px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 #pri-po-body h2 {
   color: white;
   font-size: 30px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 #pri-po-body h3 {
   color: white;
   font-size: 26px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 #pri-po-body a {
   color: rgb(247, 252, 0);
   text-decoration: none;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 #pri-po-body a:hover {
   color: rgb(252, 206, 0);
@@ -1776,8 +1795,8 @@ html {
   top: 5px;
   width: fit-content;
   background: white;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
@@ -1813,10 +1832,16 @@ html {
 }
 #state-close1,
 #state-close2 {
-  font-size: 20px;
-  margin-top: 10px;
-  color: rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 100%;
+  margin-top: 2.5px;
+  color: rgba(0, 0, 0, 0.582);
+  background: rgba(95, 95, 95, 0.151);
   cursor: pointer;
+  text-align: center;
 }
 #state-close1:hover,
 #state-close2:hover {
@@ -1827,7 +1852,7 @@ html {
   font-size: 25px;
   width: 40px;
   height: 40px;
-  background: rgba(0, 0, 0, 0.418);
+  background: rgba(68, 66, 66, 0.418);
   border-radius: 100%;
   line-height: 40px;
   text-align: center;
@@ -1837,16 +1862,16 @@ html {
   top: 5px;
   width: fit-content;
   background: white;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
   justify-content: space-between;
   border-radius: 2mm;
   z-index: 9;
-  border-left: rgba(0, 0, 0, 0.418) 7px solid;
-  border-right: rgba(0, 0, 0, 0.418) 7px solid;
+  border-left: rgba(68, 66, 66, 0.418) 7px solid;
+  border-right: rgba(68, 66, 66, 0.418) 7px solid;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 @media all and (max-width: 950px) {

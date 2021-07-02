@@ -1784,8 +1784,9 @@ html {
   justify-content: space-between;
   border-radius: 2mm;
   z-index: 9;
-  border-left: rgb(0, 207, 45) 5px solid;
-  border-right: rgb(0, 207, 45) 5px solid;
+  border-left: rgb(0, 207, 45) 7px solid;
+  border-right: rgb(0, 207, 45) 7px solid;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 #fa3 {
   color: rgb(255, 255, 255);
@@ -1844,8 +1845,9 @@ html {
   justify-content: space-between;
   border-radius: 2mm;
   z-index: 9;
-  border-left: rgba(0, 0, 0, 0.418) 5px solid;
-  border-right: rgba(0, 0, 0, 0.418) 5px solid;
+  border-left: rgba(0, 0, 0, 0.418) 7px solid;
+  border-right: rgba(0, 0, 0, 0.418) 7px solid;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 @media all and (max-width: 950px) {
   #header {

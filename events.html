@@ -861,6 +861,7 @@
         var state2=document.getElementById("status2");
         var sw =window.innerWidth;
         sh=state1.offsetWidth
+        sh1 = state2.offsetWidth;
         restate=0
         state1.style.top = "-110px"
         state2.style.top = "-110px"
@@ -882,7 +883,7 @@
                 setTimeout(() => { restate=0 }, 3001)
             }
             if(!navigator.onLine){
-                state2.style.left = (sw - sh) / 2 + "px"
+                state2.style.left = (sw - sh1) / 2 + "px"
                 state1.style.top = "-110px"
                 state2.style.transition="all ease-in 0.35s"
                 state2.style.top="5px"

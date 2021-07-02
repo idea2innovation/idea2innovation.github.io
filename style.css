@@ -163,6 +163,7 @@ p {
   z-index: 2;
   transition: 0.5s;
   border-radius: 3mm;
+  z-index: 6;
 }
 nav ul li a {
   position: relative;
@@ -272,7 +273,7 @@ nav ul li a:hover {
   position: fixed;
   left: 1px;
   top: 5px;
-  z-index: 2;
+  z-index: 7;
   cursor: pointer;
 }
 /*--About--*/
@@ -495,6 +496,7 @@ nav ul li a:hover {
 .mem-con-btn:hover {
   background: rgb(65, 63, 63);
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.527);
+  color: gold;
 }
 #mem-con-fa {
   font-size: 16px;
@@ -1748,6 +1750,103 @@ html {
   background: rgb(255, 136, 0);
   z-index: 99999;
 }
+#top-marker {
+  position: fixed;
+  bottom: 10%;
+  z-index: 7;
+  text-align: center;
+  left: 2px;
+  display: none;
+}
+#fa2 {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.781);
+  font-size: 2vw;
+  width: 40px;
+  height: 40px;
+  background: darkslateblue;
+  border-radius: 100%;
+  line-height: 40px;
+}
+#fa2:hover {
+  color: white;
+}
+#status {
+  position: fixed;
+  top: 5px;
+  width: fit-content;
+  background: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2mm;
+  z-index: 9;
+  border-left: rgb(0, 207, 45) 5px solid;
+  border-right: rgb(0, 207, 45) 5px solid;
+}
+#fa3 {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  background: rgb(0, 207, 45);
+  border-radius: 100%;
+  line-height: 40px;
+  text-align: center;
+}
+#symbol {
+  padding-right: 20px;
+}
+#status-text {
+  padding-right: 20px;
+}
+#status-text h3,
+#status-text h4 {
+  font-family: mulish;
+}
+#status-text h4 {
+  color: rgba(0, 0, 0, 0.5);
+}
+#state-close1,
+#state-close2 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+#state-close1:hover,
+#state-close2:hover {
+  color: red;
+}
+#fa4 {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.418);
+  border-radius: 100%;
+  line-height: 40px;
+  text-align: center;
+}
+#status2 {
+  position: fixed;
+  top: 5px;
+  width: fit-content;
+  background: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2mm;
+  z-index: 9;
+  border-left: rgba(0, 0, 0, 0.418) 5px solid;
+  border-right: rgba(0, 0, 0, 0.418) 5px solid;
+}
 @media all and (max-width: 950px) {
   #header {
     background: url(images/abc.jpg);
@@ -1797,6 +1896,7 @@ html {
   #sideNav {
     width: 200px;
     height: 100vh;
+    z-index: 6;
   }
   nav ul li a {
     position: relative;
@@ -1908,7 +2008,8 @@ html {
   .member-col img:hover {
     transform: scale(1);
   }
-  #fa1 {
+  #fa1,
+  #fa2 {
     font-size: 2vw;
     width: 25px;
     height: 25px;
@@ -2346,7 +2447,8 @@ html {
   .member-col img:hover {
     transform: scale(1);
   }
-  #fa1 {
+  #fa1,
+  #fa2 {
     font-size: 1.9vh;
     width: 23px;
     height: 23px;

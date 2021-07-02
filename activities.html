@@ -9,6 +9,7 @@
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/6e8ea0ad06.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <style type="text/css">
     input,
@@ -18,15 +19,26 @@
     }
 </style>
 <body id="click" onload="subfor()" >
-        <div class="scroll-am"></div>
-        <script>
-            var sc = document.getElementsByClassName("scroll-am");
-            var th=document.body.scrollHeight-window.innerHeight;
-            window.onscroll=function(){
-                let p=(window.pageYOffset/ (document.body.scrollHeight - window.innerHeight)) * 100;
-                sc[0].style.width=p+'%';
+    <div id="marker"></div>
+    <div id="top-marker">
+        <a href="#marker"><i class="fas fa-arrow-up" id="fa2"></i></a>
+    </div>
+    <div class="scroll-am"></div>
+    <script>
+        var sc = document.getElementsByClassName("scroll-am");
+        var th = document.body.scrollHeight - window.innerHeight;
+        var marker = document.getElementById("top-marker")
+        window.onscroll = function () {
+            let p = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if (p > 10) {
+                marker.style.display = "block"
             }
-        </script>
+            else {
+                marker.style.display = "none"
+            }
+            sc[0].style.width = p + '%';
+        }
+    </script>
             <div id="loading"></div>
     <div  id="ac-bac">
     <div style="margin-left: 7vw;">
@@ -158,6 +170,7 @@
                 </div>
             </div>
             <div class="activity-right-col">
+
             </div>
         </div>
     <!--Navigation-->
@@ -638,5 +651,63 @@
                     })
             })
 </script>
+    <div id="status">
+        <div id="symbol">
+            <i class="material-icons" id="fa3">wifi</i>
+        </div>
+        <div id="status-text">
+            <h3 id="main">You are back online</h3>
+            <h4>Connected to internet</h4>
+        </div>
+        <i class="fas fa-times-circle" id="state-close1"></i>
+    </div>
+    <div id="status2">
+        <div id="symbol">
+            <i class="material-icons" id="fa4">wifi_off</i>
+        </div>
+        <div id="status-text">
+            <h3 id="main">You are offline</h3>
+            <h4>Trying to connect</h4>
+        </div>
+        <i class="fas fa-times-circle" id="state-close2"></i>
+    </div>
+    <script>
+        window.addEventListener('online', updatestatus);
+        window.addEventListener('offline', updatestatus);
+        var state1 = document.getElementById("status");
+        var state2 = document.getElementById("status2");
+        var sw = window.innerWidth;
+        sh = state1.offsetWidth
+        restate = 0
+        state1.style.top = "-110px"
+        state2.style.top = "-110px"
+        var stcl1 = document.getElementById("state-close1");
+        stcl1.onclick = function () {
+            state1.style.top = "-110px"
+        }
+        var stcl2 = document.getElementById("state-close2");
+        stcl2.onclick = function () {
+            state2.style.top = "-110px"
+        }
+        function updatestatus() {
+            if (navigator.onLine && restate == 1) {
+                state1.style.left = (sw - sh) / 2 + "px"
+                state2.style.top = "-110px"
+                state1.style.transition = "all ease-in 0.35s"
+                state1.style.top = "5px"
+                setTimeout(() => { state1.style.top = "-110px" }, 4000)
+                setTimeout(() => { restate = 0 }, 3001)
+            }
+            if (!navigator.onLine) {
+                state2.style.left = (sw - sh) / 2 + "px"
+                state1.style.top = "-110px"
+                state2.style.transition = "all ease-in 0.35s"
+                state2.style.top = "5px"
+                restate = 1
+
+            }
+        }
+        updatestatus()
+    </script>
 </body>
 </html>

@@ -93,13 +93,13 @@ h1 {
   border-radius: 10mm;
   font-weight: bolder;
   cursor: pointer;
-  transition: all 0.35s;
+  transition: box-shadow 0.35s ease-in;
   font-size: 16px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
 button:hover {
-  box-shadow: inset 170px 0 0 rgb(59, 59, 59);
+  box-shadow: inset 0px 0 0 rgb(255, 255, 255), inset -160px 0 0 rgb(59, 59, 59);
   color: white;
 }
 .common-btn2 {
@@ -739,7 +739,7 @@ input[type="number"] {
   font-size: 1.5vw;
 }
 #r-submit:hover {
-  box-shadow: inset 400px 0 0 rgb(58, 58, 58);
+  box-shadow: inset -400px 0 0 rgb(58, 58, 58);
 }
 #r-termlink {
   text-decoration: none;

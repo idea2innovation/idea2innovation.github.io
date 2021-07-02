@@ -12,6 +12,7 @@
             crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/6e8ea0ad06.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <style type="text/css">
     ::placeholder {
@@ -27,7 +28,7 @@ input, textarea {
 -webkit-appearance: none;
 border-radius: 0; }
 </style>
-<body id="click" onload="subfor()">
+<body id="click" onload="subfor()" style="overflow-x: hidden;">
     <div id="marker"></div>
     <div id="top-marker">
         <a href="#marker"><i class="fas fa-arrow-up" id="fa2"></i></a>
@@ -78,9 +79,9 @@ border-radius: 0; }
     </div>
     <section id="header">
         <div class="container">
-            <a href="index.html"><img src="images/logo.png" class="logo" id="logo123" style="margin-left: -5px;"></a>
-            <a href="https://www.iare.ac.in/"><img src="images/iarelogo.jpg" class="logo"></a>
-            <div class="header-text">
+            <a href="index.html"><img src="images/logo.png" class="logo" id="logo123" style="margin-left: -5px;" data-aos="slide-right"></a>
+            <a href="https://www.iare.ac.in/"><img src="images/iarelogo.jpg" class="logo" data-aos="slide-right"></a>
+            <div class="header-text" data-aos="slide-right">
                 <h1 style="color:gold  ; text-shadow: 1px 1px 1px  grey;">Welcome to I2I website!</h1><br><br>
                 <p><b>Idea to Innovation</b> is a club started by the students of Institute of Aeronautical Engineering
                     in the year 2021 to evoke students’ creativity levels by encouraging them to take-up projects with
@@ -113,8 +114,8 @@ border-radius: 0; }
     </section>
     <div id="b1">
         <h1 id="com-head">Feedback</h1>
-        <div class="comments">
-            <form id="myForm">
+        <div class="comments" data-aos="zoom-out">
+            <form id="myForm" data-aos="zoom-in">
                 <div id="alert-text">
                     hello
                 </div>
@@ -235,13 +236,13 @@ border-radius: 0; }
         }
     </script>
     <!--Footer-->
-    <section id="footer">
+    <section id="footer" >
         <div style="backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); background: rgba(0, 0, 0, 0.017);">
         <br>
         <h2 style="text-align: center; color: gold; text-shadow: 0.5px 0.5px 0.5px grey;">IDEA-2-INNOVATION</h2>
         <br>
-        <div class="footer-links">
-            <div class="link-title" id="mem-fol1">
+        <div class="footer-links" >
+            <div class="link-title" id="mem-fol1" data-aos="slide-right">
                 <h3>Overview</h3>
                 <small id="fo-li"><a href="about.html"><i class="fa fa-address-card"></i>&nbsp About us</a><br>
     
@@ -256,7 +257,7 @@ border-radius: 0; }
                     <a href="index.html#b1"><i class="fa fa-comments"></i>&nbsp Feedback</a>
                 </small>
             </div>
-            <div class="link-title" id="mem-fol">
+            <div class="link-title" id="mem-fol" data-aos="slide-right">
                 <h3>Follow us</h3>
                 <div class="link-title1">
                     <div class="mem-social">
@@ -283,7 +284,7 @@ border-radius: 0; }
                     </div>
                 </div>
             </div>
-            <div class="link-title" id="mem-fol2">
+            <div class="link-title" id="mem-fol2" data-aos="slide-left">
                 <h3>Contact us</h3>
                 <div>
                     <small id="mem-con"><a href="mailto:ideatoinnovation01@gmail.com"><i class="fa fa-google"></i>&nbsp
@@ -298,7 +299,7 @@ border-radius: 0; }
                     <small id="open-pri"><i class="fas fa-globe" id="pri-po-fa"></i>&nbspPrivacy Policy</small>
                 </div>
             </div>
-            <div class="link-title" id="im1">
+            <div class="link-title" id="im1" data-aos="slide-left">
                 <h3><a href="index.html"><img src="images/logo.png" alt="logo" style="width: 50%;"></a></h3>
             </div>
         </div>
@@ -664,7 +665,7 @@ border-radius: 0; }
         </div>
     </div>
 </div>
-<div id="subs-top">
+<div id="subs-top" data-aos="slide-left">
     <div id="subs-sub1">
         <small><i class="fas fa-bell" id="subfa"></i>&nbsp Subscribe</small>
     </div>
@@ -794,6 +795,14 @@ border-radius: 0; }
             }
         }
         updatestatus()
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1500,
+        }
+        );
     </script>
 </body>
 </html>

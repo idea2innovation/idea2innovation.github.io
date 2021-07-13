@@ -70,7 +70,8 @@ select {
   line-height: 7mm;
   text-align: justify;
 }
-#more {
+#more,
+#morem {
   display: none;
 }
 h1 {
@@ -194,14 +195,14 @@ nav ul h2 {
   font-size: 19px;
   color: white;
 }
-.active a {
+#sideNav .active a {
   background-color: rgb(98, 84, 194);
   position: relative;
   left: 10px;
   padding-left: 10px;
   margin-left: -10px;
 }
-.active a i {
+#sideNav .active a i {
   background: transparent;
 }
 nav ul li {
@@ -263,7 +264,7 @@ nav ul li a:hover {
   background-color: white;
   color: darkslateblue;
 }
-.active i {
+.nav1 .active i {
   background: rgb(98, 84, 194);
 }
 
@@ -285,13 +286,18 @@ nav ul li a:hover {
 }
 .about-left-col {
   flex-basis: 50%;
+  overflow: hidden;
 }
 .about-left-col img {
   width: 100%;
 }
 .about-right-col {
   flex-basis: 50%;
-  text-align: center;
+  text-align: justify;
+  transition: 0.35s;
+}
+.about-right-col:hover {
+  transform: translateY(-30px);
 }
 .about-right-col p {
   font-size: 18px;
@@ -314,44 +320,6 @@ nav ul li a:hover {
   font-style: italic;
 }
 /*--Members--*/
-#mem-back {
-  background: radial-gradient(
-      circle at 11% 63%,
-      rgba(82, 82, 82, 0.06) 0%,
-      rgba(82, 82, 82, 0.06) 25%,
-      rgba(136, 136, 136, 0.06) 25%,
-      rgba(136, 136, 136, 0.06) 50%,
-      rgba(191, 191, 191, 0.06) 50%,
-      rgba(191, 191, 191, 0.06) 75%,
-      rgba(245, 245, 245, 0.06) 75%,
-      rgba(245, 245, 245, 0.06) 100%
-    ),
-    radial-gradient(
-      circle at 16% 28%,
-      rgba(80, 80, 80, 0.06) 0%,
-      rgba(80, 80, 80, 0.06) 25%,
-      rgba(68, 68, 68, 0.06) 25%,
-      rgba(68, 68, 68, 0.06) 50%,
-      rgba(56, 56, 56, 0.06) 50%,
-      rgba(56, 56, 56, 0.06) 75%,
-      rgba(44, 44, 44, 0.06) 75%,
-      rgba(44, 44, 44, 0.06) 100%
-    ),
-    radial-gradient(
-      circle at 51% 54%,
-      rgba(179, 179, 179, 0.06) 0%,
-      rgba(179, 179, 179, 0.06) 25%,
-      rgba(121, 121, 121, 0.06) 25%,
-      rgba(121, 121, 121, 0.06) 50%,
-      rgba(62, 62, 62, 0.06) 50%,
-      rgba(62, 62, 62, 0.06) 75%,
-      rgba(4, 4, 4, 0.06) 75%,
-      rgba(4, 4, 4, 0.06) 100%
-    ),
-    linear-gradient(303deg, rgb(255, 255, 255), rgb(255, 255, 255));
-  background-size: cover;
-  background-attachment: fixed;
-}
 #members {
   padding-top: 5vh;
   padding-bottom: 5vh;
@@ -507,91 +475,181 @@ nav ul li a:hover {
   background-attachment: fixed;
 }
 #ac-bac {
-  background: radial-gradient(
-    circle at bottom center,
-    rgb(197, 234, 55) 0%,
-    rgb(197, 234, 55) 12%,
-    rgb(170, 222, 63) 12%,
-    rgb(170, 222, 63) 18%,
-    rgb(144, 210, 72) 18%,
-    rgb(144, 210, 72) 23%,
-    rgb(117, 198, 80) 23%,
-    rgb(117, 198, 80) 47%,
-    rgb(90, 187, 88) 47%,
-    rgb(90, 187, 88) 59%,
-    rgb(63, 175, 96) 59%,
-    rgb(63, 175, 96) 68%,
-    rgb(37, 163, 105) 68%,
-    rgb(37, 163, 105) 86%,
-    rgb(10, 151, 113) 86%,
-    rgb(10, 151, 113) 100%
-  );
-
+  background: linear-gradient(
+      161deg,
+      rgba(121, 121, 121, 0.02) 0%,
+      rgba(121, 121, 121, 0.02) 16.667%,
+      rgba(193, 193, 193, 0.02) 16.667%,
+      rgba(193, 193, 193, 0.02) 33.334%,
+      rgba(177, 177, 177, 0.02) 33.334%,
+      rgba(177, 177, 177, 0.02) 50.001000000000005%,
+      rgba(5, 5, 5, 0.02) 50.001%,
+      rgba(5, 5, 5, 0.02) 66.668%,
+      rgba(229, 229, 229, 0.02) 66.668%,
+      rgba(229, 229, 229, 0.02) 83.33500000000001%,
+      rgba(211, 211, 211, 0.02) 83.335%,
+      rgba(211, 211, 211, 0.02) 100.002%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(223, 223, 223, 0.02) 0%,
+      rgba(223, 223, 223, 0.02) 14.286%,
+      rgba(70, 70, 70, 0.02) 14.286%,
+      rgba(70, 70, 70, 0.02) 28.572%,
+      rgba(109, 109, 109, 0.02) 28.572%,
+      rgba(109, 109, 109, 0.02) 42.858%,
+      rgba(19, 19, 19, 0.02) 42.858%,
+      rgba(19, 19, 19, 0.02) 57.144%,
+      rgba(180, 180, 180, 0.02) 57.144%,
+      rgba(180, 180, 180, 0.02) 71.42999999999999%,
+      rgba(63, 63, 63, 0.02) 71.43%,
+      rgba(63, 63, 63, 0.02) 85.71600000000001%,
+      rgba(87, 87, 87, 0.02) 85.716%,
+      rgba(87, 87, 87, 0.02) 100.002%
+    ),
+    linear-gradient(
+      337deg,
+      rgba(142, 142, 142, 0.02) 0%,
+      rgba(142, 142, 142, 0.02) 20%,
+      rgba(164, 164, 164, 0.02) 20%,
+      rgba(164, 164, 164, 0.02) 40%,
+      rgba(203, 203, 203, 0.02) 40%,
+      rgba(203, 203, 203, 0.02) 60%,
+      rgba(228, 228, 228, 0.02) 60%,
+      rgba(228, 228, 228, 0.02) 80%,
+      rgba(54, 54, 54, 0.02) 80%,
+      rgba(54, 54, 54, 0.02) 100%
+    ),
+    linear-gradient(
+      314deg,
+      rgba(187, 187, 187, 0.02) 0%,
+      rgba(187, 187, 187, 0.02) 12.5%,
+      rgba(170, 170, 170, 0.02) 12.5%,
+      rgba(170, 170, 170, 0.02) 25%,
+      rgba(214, 214, 214, 0.02) 25%,
+      rgba(214, 214, 214, 0.02) 37.5%,
+      rgba(187, 187, 187, 0.02) 37.5%,
+      rgba(187, 187, 187, 0.02) 50%,
+      rgba(190, 190, 190, 0.02) 50%,
+      rgba(190, 190, 190, 0.02) 62.5%,
+      rgba(6, 6, 6, 0.02) 62.5%,
+      rgba(6, 6, 6, 0.02) 75%,
+      rgba(206, 206, 206, 0.02) 75%,
+      rgba(206, 206, 206, 0.02) 87.5%,
+      rgba(171, 171, 171, 0.02) 87.5%,
+      rgba(171, 171, 171, 0.02) 100%
+    ),
+    linear-gradient(
+      300deg,
+      rgba(243, 243, 243, 0.01) 0%,
+      rgba(243, 243, 243, 0.01) 12.5%,
+      rgba(209, 209, 209, 0.01) 12.5%,
+      rgba(209, 209, 209, 0.01) 25%,
+      rgba(179, 179, 179, 0.01) 25%,
+      rgba(179, 179, 179, 0.01) 37.5%,
+      rgba(3, 3, 3, 0.01) 37.5%,
+      rgba(3, 3, 3, 0.01) 50%,
+      rgba(211, 211, 211, 0.01) 50%,
+      rgba(211, 211, 211, 0.01) 62.5%,
+      rgba(151, 151, 151, 0.01) 62.5%,
+      rgba(151, 151, 151, 0.01) 75%,
+      rgba(16, 16, 16, 0.01) 75%,
+      rgba(16, 16, 16, 0.01) 87.5%,
+      rgba(242, 242, 242, 0.01) 87.5%,
+      rgba(242, 242, 242, 0.01) 100%
+    ),
+    linear-gradient(
+      6deg,
+      rgba(31, 31, 31, 0.02) 0%,
+      rgba(31, 31, 31, 0.02) 20%,
+      rgba(193, 193, 193, 0.02) 20%,
+      rgba(193, 193, 193, 0.02) 40%,
+      rgba(139, 139, 139, 0.02) 40%,
+      rgba(139, 139, 139, 0.02) 60%,
+      rgba(14, 14, 14, 0.02) 60%,
+      rgba(14, 14, 14, 0.02) 80%,
+      rgba(122, 122, 122, 0.02) 80%,
+      rgba(122, 122, 122, 0.02) 100%
+    ),
+    linear-gradient(
+      279deg,
+      rgba(190, 190, 190, 0.02) 0%,
+      rgba(190, 190, 190, 0.02) 14.286%,
+      rgba(160, 160, 160, 0.02) 14.286%,
+      rgba(160, 160, 160, 0.02) 28.572%,
+      rgba(23, 23, 23, 0.02) 28.572%,
+      rgba(23, 23, 23, 0.02) 42.858%,
+      rgba(60, 60, 60, 0.02) 42.858%,
+      rgba(60, 60, 60, 0.02) 57.144%,
+      rgba(149, 149, 149, 0.02) 57.144%,
+      rgba(149, 149, 149, 0.02) 71.42999999999999%,
+      rgba(4, 4, 4, 0.02) 71.43%,
+      rgba(4, 4, 4, 0.02) 85.71600000000001%,
+      rgba(50, 50, 50, 0.02) 85.716%,
+      rgba(50, 50, 50, 0.02) 100.002%
+    ),
+    linear-gradient(
+      109deg,
+      rgba(124, 124, 124, 0.03) 0%,
+      rgba(124, 124, 124, 0.03) 12.5%,
+      rgba(61, 61, 61, 0.03) 12.5%,
+      rgba(61, 61, 61, 0.03) 25%,
+      rgba(187, 187, 187, 0.03) 25%,
+      rgba(187, 187, 187, 0.03) 37.5%,
+      rgba(207, 207, 207, 0.03) 37.5%,
+      rgba(207, 207, 207, 0.03) 50%,
+      rgba(206, 206, 206, 0.03) 50%,
+      rgba(206, 206, 206, 0.03) 62.5%,
+      rgba(118, 118, 118, 0.03) 62.5%,
+      rgba(118, 118, 118, 0.03) 75%,
+      rgba(89, 89, 89, 0.03) 75%,
+      rgba(89, 89, 89, 0.03) 87.5%,
+      rgba(96, 96, 96, 0.03) 87.5%,
+      rgba(96, 96, 96, 0.03) 100%
+    ),
+    linear-gradient(
+      329deg,
+      rgba(35, 35, 35, 0.02) 0%,
+      rgba(35, 35, 35, 0.02) 20%,
+      rgba(246, 246, 246, 0.02) 20%,
+      rgba(246, 246, 246, 0.02) 40%,
+      rgba(118, 118, 118, 0.02) 40%,
+      rgba(118, 118, 118, 0.02) 60%,
+      rgba(245, 245, 245, 0.02) 60%,
+      rgba(245, 245, 245, 0.02) 80%,
+      rgba(140, 140, 140, 0.02) 80%,
+      rgba(140, 140, 140, 0.02) 100%
+    ),
+    linear-gradient(90deg, hsl(314, 0%, 31%), hsl(314, 0%, 31%));
   background-attachment: fixed;
 }
 .activity-row {
   align-items: center;
   flex-wrap: wrap;
 }
-.activity-left-col {
-  flex-basis: 100%;
-}
 .activity-text {
   max-width: 100%;
-}
-.activity-text button {
-  margin: 30px 0;
 }
 .exacon {
   width: 100%;
   height: 100%;
   display: flex;
-}
-.mainacon {
-  width: 0%;
-  padding: 2%;
-  background: white;
-  border-radius: 2mm;
-  display: none;
-  overflow: scroll;
-  z-index: 2;
-}
-.mainacon p {
-  color: black;
-}
-.mainacon::-webkit-scrollbar {
-  width: 0.8vw;
-}
-
-.mainacon::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.mainacon::-webkit-scrollbar-thumb {
-  background: rgb(129, 129, 129);
-  border-radius: 2mm;
-}
-.mainacon::-webkit-scrollbar-thumb:hover {
-  background: rgba(158, 158, 158, 0.774);
-}
-.aniwa {
-  animation: aniw 1.5s forwards;
-}
-@keyframes aniw {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 60%;
-  }
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .acon {
-  width: 35%;
+  width: 380px;
   height: fit-content;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   padding: 2%;
   border-radius: 2mm;
   background: rgba(0, 0, 0, 0.3);
+  margin-top: 5%;
+  transition: 0.35s;
+}
+.acon:hover {
+  transform: translateY(-30px);
 }
 .acon p {
   background: white;
@@ -608,23 +666,16 @@ nav ul li a:hover {
   color: ghostwhite;
 }
 #a1 {
-  background: rgb(250, 151, 65);
+  background: gold;
 }
 #a2 {
   background: #ff5b4f;
 }
 #a3 {
-  background: #35bbb9;
+  background: #35eb72;
 }
-.fa-external-link-alt,
-.fa-times-circle {
-  font-size: 1.5vw;
-}
-.fa-external-link-alt:hover {
-  color: rgb(0, 0, 0);
-}
-.fa-times-circle:hover {
-  color: red;
+#a4 {
+  background: dodgerblue;
 }
 /*Event register*/
 #register {
@@ -778,132 +829,69 @@ input[type="number"] {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   background: white;
   border-radius: 2mm;
-  background: radial-gradient(
-      circle at 99% 30%,
-      orange 0%,
-      gold 12%,
-      transparent 12%
-    ),
-    radial-gradient(
-      circle at 0% 100%,
-      rgb(0, 255, 106) 0%,
-      rgb(0, 255, 106) 15%,
-      transparent 15%
-    ),
-    radial-gradient(
-      circle at 20% 0%,
-      rgb(0, 153, 255) 0%,
-      rgb(0, 153, 255) 10%,
-      transparent 10%
-    ),
-    radial-gradient(
-        circle at 60% 100%,
-        rgb(255, 79, 217) 0%,
-        rgb(238, 130, 215) 10%,
-        transparent 10%
-      )
-      white;
+  background: rgb(49, 49, 49);
+  position: relative;
+  overflow-x: hidden;
 }
 .footer-links {
   width: 100%;
-  padding: 0 0 0 0;
+  padding: 1%;
   font-family: "Mulish";
   display: flex;
   flex-wrap: wrap;
-}
-#footer h2 {
-  font-size: 2vw;
+  align-items: center;
+  flex-direction: column;
+  flex: 3%;
 }
 #js-sq {
-  font-size: 14px;
-}
-.link-title {
-  margin-left: 5%;
-  flex-basis: 20vw;
-  font-size: 1.35vw;
-  padding-bottom: 0.77vw;
-  justify-content: space-evenly;
+  font-size: 15px;
 }
 #pri-po-fa {
   font-size: 20px;
 }
-.link-title h3 {
-  color: darkslateblue;
-  margin-bottom: 5%;
-  font-size: 1.5vw;
+.link-title {
+  margin-bottom: 1%;
 }
-
 .link-title a {
   text-decoration: none;
-  color: black;
+  color: white;
   display: inline;
 }
-#mfa {
-  font-size: 2vw;
-}
 .link-title a:hover {
-  color: rgb(0, 217, 255);
+  color: deepskyblue;
 }
 
 .link-title small {
   font-size: 100%;
+  color: white;
 }
 .link-title1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex: 1;
 }
 .link-title2 {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: space-evenly;
+  width: 100px;
 }
-.mem-social {
-  margin-right: 1%;
-  flex-basis: 18%;
-  background: rgb(189, 189, 189);
+#subs-sub,
+#subs-un {
+  font-size: 25px;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  line-height: 35px;
+  background: white;
   text-align: center;
-  padding-top: 4%;
-  padding-bottom: 3%;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);
-}
-.mem-social1 {
-  margin-right: 1%;
-  flex-basis: 18%;
-  background: rgb(189, 189, 189);
-  text-align: center;
-  padding-top: 4%;
-  padding-bottom: 3%;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);
   cursor: pointer;
-}
-.mem-social1:nth-child(1) {
-  background: red;
-  color: white;
-  margin-right: 10%;
-  transition: all 0.5s;
-}
-.mem-social1:nth-child(1):hover {
-  box-shadow: inset 0 100px 5px rgb(99, 0, 0);
-  color: gold;
-  filter: brightness(150%);
-}
-.mem-social1:nth-child(2) {
-  background: black;
-  color: white;
-  margin-right: 10%;
-  transition: all 0.5s;
-}
-.mem-social1:nth-child(2):hover {
-  box-shadow: inset 0 100px 5px rgba(124, 124, 124, 0.486);
-  color: gold;
-  filter: brightness(150%);
+  color: black;
 }
 .fend {
   text-align: center;
-  font-size: 1.25vw;
+  font-size: 20px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -917,63 +905,17 @@ input[type="number"] {
   color: deepskyblue;
 }
 #im1 {
-  flex-basis: 16vw;
+  position: absolute;
+  right: 0;
+  width: 10%;
+  top: 25%;
 }
 #im1 a img {
   border-radius: 1mm;
 }
-#mem-fol {
-  flex-basis: 20vw;
-  margin-right: 5vw;
-}
-#mem-fol1 {
-  flex-basis: 15vw;
-}
-#mem-fol2 {
-  flex-basis: 22vw;
-}
-.mem-social:nth-child(1) {
-  background: dodgerblue;
-}
-.mem-social:nth-child(1) a {
-  color: white;
-}
-.mem-social:nth-child(1) a:hover {
-  color: black;
-}
-.mem-social:nth-child(2) {
-  background: deepskyblue;
-}
-.mem-social:nth-child(2) a {
-  color: white;
-  transition: color 0.5s;
-}
-.mem-social:nth-child(2) a:hover {
-  color: black;
-}
-.mem-social:nth-child(3) {
-  background: rgb(255, 0, 157);
-}
-.mem-social:nth-child(3) a {
-  color: white;
-  transition: color 0.5s;
-}
-.mem-social:nth-child(3) a:hover {
-  color: black;
-}
-.mem-social:nth-child(4) {
-  background: rgb(0, 119, 181);
-}
-.mem-social:nth-child(4) a {
-  color: white;
-  transition: color 0.5s;
-}
-.mem-social:nth-child(4) a:hover {
-  color: black;
-}
+
 /*--Social Media--*/
 .social-icons {
-  width: 50px;
   position: fixed;
   top: 50%;
   right: 0;
@@ -997,6 +939,9 @@ i {
 #a1 {
   height: 20%;
 }
+#logo-social {
+  display: none;
+}
 /* Slideshow container */
 #slideshow {
   width: 90vw;
@@ -1005,6 +950,7 @@ i {
   position: relative;
   border-radius: 2mm;
   z-index: 5;
+  padding-bottom: 5%;
 }
 #slideshow-container {
   display: flex;
@@ -1059,15 +1005,162 @@ i {
 }
 /*Events*/
 #ev {
-  background: url(images/events-back.jpg);
   background-size: cover;
   background-attachment: fixed;
+  padding-top: 5%;
 }
 .hev {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   padding-bottom: 5%;
   padding-top: 3%;
+  background: linear-gradient(
+      161deg,
+      rgba(121, 121, 121, 0.02) 0%,
+      rgba(121, 121, 121, 0.02) 16.667%,
+      rgba(193, 193, 193, 0.02) 16.667%,
+      rgba(193, 193, 193, 0.02) 33.334%,
+      rgba(177, 177, 177, 0.02) 33.334%,
+      rgba(177, 177, 177, 0.02) 50.001000000000005%,
+      rgba(5, 5, 5, 0.02) 50.001%,
+      rgba(5, 5, 5, 0.02) 66.668%,
+      rgba(229, 229, 229, 0.02) 66.668%,
+      rgba(229, 229, 229, 0.02) 83.33500000000001%,
+      rgba(211, 211, 211, 0.02) 83.335%,
+      rgba(211, 211, 211, 0.02) 100.002%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(223, 223, 223, 0.02) 0%,
+      rgba(223, 223, 223, 0.02) 14.286%,
+      rgba(70, 70, 70, 0.02) 14.286%,
+      rgba(70, 70, 70, 0.02) 28.572%,
+      rgba(109, 109, 109, 0.02) 28.572%,
+      rgba(109, 109, 109, 0.02) 42.858%,
+      rgba(19, 19, 19, 0.02) 42.858%,
+      rgba(19, 19, 19, 0.02) 57.144%,
+      rgba(180, 180, 180, 0.02) 57.144%,
+      rgba(180, 180, 180, 0.02) 71.42999999999999%,
+      rgba(63, 63, 63, 0.02) 71.43%,
+      rgba(63, 63, 63, 0.02) 85.71600000000001%,
+      rgba(87, 87, 87, 0.02) 85.716%,
+      rgba(87, 87, 87, 0.02) 100.002%
+    ),
+    linear-gradient(
+      337deg,
+      rgba(142, 142, 142, 0.02) 0%,
+      rgba(142, 142, 142, 0.02) 20%,
+      rgba(164, 164, 164, 0.02) 20%,
+      rgba(164, 164, 164, 0.02) 40%,
+      rgba(203, 203, 203, 0.02) 40%,
+      rgba(203, 203, 203, 0.02) 60%,
+      rgba(228, 228, 228, 0.02) 60%,
+      rgba(228, 228, 228, 0.02) 80%,
+      rgba(54, 54, 54, 0.02) 80%,
+      rgba(54, 54, 54, 0.02) 100%
+    ),
+    linear-gradient(
+      314deg,
+      rgba(187, 187, 187, 0.02) 0%,
+      rgba(187, 187, 187, 0.02) 12.5%,
+      rgba(170, 170, 170, 0.02) 12.5%,
+      rgba(170, 170, 170, 0.02) 25%,
+      rgba(214, 214, 214, 0.02) 25%,
+      rgba(214, 214, 214, 0.02) 37.5%,
+      rgba(187, 187, 187, 0.02) 37.5%,
+      rgba(187, 187, 187, 0.02) 50%,
+      rgba(190, 190, 190, 0.02) 50%,
+      rgba(190, 190, 190, 0.02) 62.5%,
+      rgba(6, 6, 6, 0.02) 62.5%,
+      rgba(6, 6, 6, 0.02) 75%,
+      rgba(206, 206, 206, 0.02) 75%,
+      rgba(206, 206, 206, 0.02) 87.5%,
+      rgba(171, 171, 171, 0.02) 87.5%,
+      rgba(171, 171, 171, 0.02) 100%
+    ),
+    linear-gradient(
+      300deg,
+      rgba(243, 243, 243, 0.01) 0%,
+      rgba(243, 243, 243, 0.01) 12.5%,
+      rgba(209, 209, 209, 0.01) 12.5%,
+      rgba(209, 209, 209, 0.01) 25%,
+      rgba(179, 179, 179, 0.01) 25%,
+      rgba(179, 179, 179, 0.01) 37.5%,
+      rgba(3, 3, 3, 0.01) 37.5%,
+      rgba(3, 3, 3, 0.01) 50%,
+      rgba(211, 211, 211, 0.01) 50%,
+      rgba(211, 211, 211, 0.01) 62.5%,
+      rgba(151, 151, 151, 0.01) 62.5%,
+      rgba(151, 151, 151, 0.01) 75%,
+      rgba(16, 16, 16, 0.01) 75%,
+      rgba(16, 16, 16, 0.01) 87.5%,
+      rgba(242, 242, 242, 0.01) 87.5%,
+      rgba(242, 242, 242, 0.01) 100%
+    ),
+    linear-gradient(
+      6deg,
+      rgba(31, 31, 31, 0.02) 0%,
+      rgba(31, 31, 31, 0.02) 20%,
+      rgba(193, 193, 193, 0.02) 20%,
+      rgba(193, 193, 193, 0.02) 40%,
+      rgba(139, 139, 139, 0.02) 40%,
+      rgba(139, 139, 139, 0.02) 60%,
+      rgba(14, 14, 14, 0.02) 60%,
+      rgba(14, 14, 14, 0.02) 80%,
+      rgba(122, 122, 122, 0.02) 80%,
+      rgba(122, 122, 122, 0.02) 100%
+    ),
+    linear-gradient(
+      279deg,
+      rgba(190, 190, 190, 0.02) 0%,
+      rgba(190, 190, 190, 0.02) 14.286%,
+      rgba(160, 160, 160, 0.02) 14.286%,
+      rgba(160, 160, 160, 0.02) 28.572%,
+      rgba(23, 23, 23, 0.02) 28.572%,
+      rgba(23, 23, 23, 0.02) 42.858%,
+      rgba(60, 60, 60, 0.02) 42.858%,
+      rgba(60, 60, 60, 0.02) 57.144%,
+      rgba(149, 149, 149, 0.02) 57.144%,
+      rgba(149, 149, 149, 0.02) 71.42999999999999%,
+      rgba(4, 4, 4, 0.02) 71.43%,
+      rgba(4, 4, 4, 0.02) 85.71600000000001%,
+      rgba(50, 50, 50, 0.02) 85.716%,
+      rgba(50, 50, 50, 0.02) 100.002%
+    ),
+    linear-gradient(
+      109deg,
+      rgba(124, 124, 124, 0.03) 0%,
+      rgba(124, 124, 124, 0.03) 12.5%,
+      rgba(61, 61, 61, 0.03) 12.5%,
+      rgba(61, 61, 61, 0.03) 25%,
+      rgba(187, 187, 187, 0.03) 25%,
+      rgba(187, 187, 187, 0.03) 37.5%,
+      rgba(207, 207, 207, 0.03) 37.5%,
+      rgba(207, 207, 207, 0.03) 50%,
+      rgba(206, 206, 206, 0.03) 50%,
+      rgba(206, 206, 206, 0.03) 62.5%,
+      rgba(118, 118, 118, 0.03) 62.5%,
+      rgba(118, 118, 118, 0.03) 75%,
+      rgba(89, 89, 89, 0.03) 75%,
+      rgba(89, 89, 89, 0.03) 87.5%,
+      rgba(96, 96, 96, 0.03) 87.5%,
+      rgba(96, 96, 96, 0.03) 100%
+    ),
+    linear-gradient(
+      329deg,
+      rgba(35, 35, 35, 0.02) 0%,
+      rgba(35, 35, 35, 0.02) 20%,
+      rgba(246, 246, 246, 0.02) 20%,
+      rgba(246, 246, 246, 0.02) 40%,
+      rgba(118, 118, 118, 0.02) 40%,
+      rgba(118, 118, 118, 0.02) 60%,
+      rgba(245, 245, 245, 0.02) 60%,
+      rgba(245, 245, 245, 0.02) 80%,
+      rgba(140, 140, 140, 0.02) 80%,
+      rgba(140, 140, 140, 0.02) 100%
+    ),
+    linear-gradient(90deg, hsl(314, 0%, 31%), hsl(314, 0%, 31%));
+  background-attachment: fixed;
 }
 .evrow {
   width: 80%;
@@ -1096,15 +1189,23 @@ img:hover {
   transform: scale(1.02);
 }
 #ev1 {
-  background-color: cornflowerblue;
+  background-color: rgb(86, 144, 250);
   backface-visibility: hidden;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   border-right: 1px solid white;
   border-top: 1px solid white;
+  transition: 0.35s;
+}
+#ev1:hover {
+  transform: translateY(-10px);
 }
 #ev2 {
-  background-color: palevioletred;
+  background-color: rgb(240, 114, 156);
+  transition: 0.35s;
+}
+#ev2:hover {
+  transform: translateY(-10px);
 }
 #eh1 {
   width: 100%;
@@ -1121,10 +1222,12 @@ img:hover {
   -webkit-backdrop-filter: blur(4px);
 }
 #eh1 h2 {
+  color: white;
   margin-top: 2%;
   margin-bottom: 2%;
 }
 #eh2 h2 {
+  color: white;
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -1187,15 +1290,36 @@ img:hover {
   margin-bottom: 12%;
 }
 /*Feedback*/
+#b1 {
+  background: repeating-linear-gradient(
+    rgb(241, 241, 241) 0%,
+    rgb(241, 241, 241) 10%,
+    rgb(231, 231, 229) 10%,
+    rgb(231, 231, 229) 10.5%,
+    rgb(241, 241, 241) 10%
+  );
+  background-attachment: fixed;
+  display: flex;
+  height: fit-content;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.comin::placeholder {
+  color: white;
+}
 .comments {
-  margin-left: 31%;
-  margin-top: 5%;
-  padding: 5%;
-  padding-top: 1%;
+  margin-top: 0%;
+  padding: 3%;
+  padding-top: 5px;
+  padding-bottom: 10px;
   width: 30%;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   background: rgba(44, 44, 43, 0.849);
   border-radius: 2mm;
+  overflow-y: hidden;
+  align-self: center;
+  margin-left: 0;
+  z-index: 5;
 }
 .comin {
   border: none;
@@ -1207,9 +1331,13 @@ img:hover {
   border-bottom: gold 1mm solid;
   color: white;
   font-family: mulish;
+  transition: 0.35s;
 }
 .comin.shake {
   animation: animate 0.3s ease-in-out infinite;
+}
+.comin:focus {
+  transform: translateX(5px);
 }
 #count-block {
   color: white;
@@ -1265,7 +1393,6 @@ img:hover {
 #com-head {
   margin-left: 40%;
   padding: 1%;
-  text-align: center;
   background: transparent;
   color: gold;
   width: 20%;
@@ -1282,8 +1409,25 @@ img:hover {
   opacity: 0;
   font-family: Ubuntu;
 }
-#b1 {
-  height: 110vh;
+#feedback h1 {
+  color: gold;
+  line-height: 25mm;
+}
+#feedback small {
+  font-size: 18px;
+  font-family: mulish;
+  line-height: 12mm;
+  transition: 0.35s;
+}
+#feedback a {
+  text-decoration: none;
+  color: black;
+}
+#feed-ele {
+  transition: 0.3s;
+}
+#feed-ele:hover {
+  transform: translateX(10px);
 }
 /*Preloader*/
 #loading {
@@ -1430,6 +1574,7 @@ img:hover {
   background-attachment: scroll;
   background-size: cover;
   scroll-behavior: smooth;
+  z-index: 5;
 }
 #open-pri {
   cursor: pointer;
@@ -1683,12 +1828,6 @@ img:hover {
   color: white;
   font-family: "Mulish";
 }
-#subs-sub {
-  font-size: 2vw;
-}
-#subs-un {
-  font-size: 2vw;
-}
 #subs-top {
   position: absolute;
   top: 1vh;
@@ -1753,11 +1892,11 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: gold;
+  background: rgba(158, 158, 158, 0.774);
   border-radius: 2mm;
 }
 body::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 217, 0, 0.774);
+  background: rgba(75, 75, 75, 0.774);
 }
 html {
   scroll-behavior: smooth;
@@ -1767,7 +1906,7 @@ html {
   top: 0;
   width: 0%;
   height: 4px;
-  background: rgb(255, 136, 0);
+  background: rgba(255, 230, 0, 0.829);
   z-index: 99999;
 }
 #top-marker {
@@ -2099,39 +2238,6 @@ html {
   }
   .header-text {
     margin-top: 5%;
-  }
-  .link-title {
-    flex-basis: 24vw;
-    font-size: 1.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .link-title h3 {
-    font-size: 1.75vw;
-  }
-  #pri-po-fa {
-    font-size: 15px;
-  }
-  #im1 {
-    flex-basis: 15vw;
-  }
-  #mem-fol {
-    flex-basis: 22vw;
-    margin-right: 2vw;
-  }
-  #js-sq {
-    font-size: 1.25vw;
-  }
-  #mem-fol1 {
-    flex-basis: 15vw;
-  }
-  #mem-fol2 {
-    flex-basis: 25vw;
-  }
-  .fend {
-    font-size: 10px;
-  }
-  #abend {
-    font-size: 18px;
   }
   #logo123 {
     margin-right: 0;
@@ -2535,40 +2641,6 @@ html {
   .header-text {
     margin-top: 5%;
   }
-  .link-title {
-    flex-basis: 24vw;
-    font-size: 1.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .link-title h3 {
-    font-size: 1.75vw;
-  }
-  #pri-po-fa {
-    font-size: 2vw;
-  }
-  #im1 {
-    flex-basis: 16vw;
-  }
-  #mem-fol {
-    flex-basis: 22vw;
-    margin-right: 2vw;
-  }
-  #js-sq {
-    font-size: 9px;
-  }
-  #mem-fol1 {
-    flex-basis: 13vw;
-  }
-  #mem-fol2 {
-    flex-basis: 26vw;
-  }
-  .mem-social,
-  .mem-social1 {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.295);
-  }
-  .fend {
-    font-size: 10px;
-  }
   #abend {
     font-size: 18px;
   }
@@ -2576,16 +2648,20 @@ html {
     margin-right: 0;
   }
   #b1 {
-    height: 100vh;
+    height: 120vh;
+    justify-content: first baseline;
+  }
+  #feedback {
+    height: fit-content;
+    overflow: hidden;
   }
   .comments {
-    margin-left: 5%;
-    margin-top: 30%;
+    margin-left: 0%;
+    margin-top: 0%;
     padding: 5%;
     padding-top: 1%;
     width: 80%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    position: absolute;
     z-index: 5;
   }
   #count {
@@ -2850,5 +2926,30 @@ html {
   .fa-external-link-alt,
   .fa-times-circle {
     font-size: 2.5vh;
+  }
+  .fend {
+    font-size: 12px;
+  }
+  #js-sq {
+    font-size: 10px;
+  }
+  .link-title1 {
+    font-size: 12px;
+  }
+  #subs-sub,
+  #subs-un {
+    font-size: 12px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+  }
+  #pri-po-fa {
+    font-size: 10px;
+  }
+  #im1 {
+    width: 15%;
+  }
+  .link-title2 {
+    width: 50px;
   }
 }

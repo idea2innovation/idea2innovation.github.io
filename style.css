@@ -420,8 +420,8 @@ nav ul li a:hover {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transform-origin: top;
-  -webkit-transform: rotateX(-90deg) translateY(200px);
-  transform: rotateX(-90deg) translateY(200px);
+  -webkit-transform: rotateX(-90deg) translateY(2px);
+  transform: rotateX(-90deg) translateY(2px);
   transition: all 0.5s ease;
   z-index: 99999;
 }
@@ -2476,7 +2476,7 @@ html {
     position: relative;
     top: 0px;
     left: 0px;
-    margin-left: 25px;
+    text-align: justify;
   }
   nav ul {
     height: 100vh;
@@ -2493,6 +2493,7 @@ html {
   nav ul li {
     float: bottom;
     width: 220px;
+    text-align: center;
   }
   nav ul li a:hover {
     position: relative;
@@ -2501,15 +2502,20 @@ html {
     padding-left: 10px;
     margin-left: -10px;
   }
-  .active a {
+  #sideNav .active {
     background-color: white;
     color: darkslateblue;
     position: relative;
     left: 20px;
     width: 190px;
-    padding-left: 30px;
-    margin-left: -15px;
     box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.397);
+    border-radius: 2mm;
+  }
+  #sideNav .active a {
+    background: transparent;
+    color: darkslateblue;
+    box-shadow: none;
+    margin-left: -20px;
   }
   .active i {
     background: transparent;

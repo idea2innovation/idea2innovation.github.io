@@ -2476,7 +2476,7 @@ html {
     position: relative;
     top: 0px;
     left: 0px;
-    text-align: justify;
+    text-align: left;
   }
   nav ul {
     height: 100vh;
@@ -2493,7 +2493,7 @@ html {
   nav ul li {
     float: bottom;
     width: 220px;
-    text-align: center;
+    text-align: left;
   }
   nav ul li a:hover {
     position: relative;
@@ -2503,19 +2503,20 @@ html {
     margin-left: -10px;
   }
   #sideNav .active {
-    background-color: white;
-    color: darkslateblue;
+    background-color: transparent;
+    color: transparent;
     position: relative;
-    left: 20px;
-    width: 190px;
+    left: 0px;
+    width: 220px;
     box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.397);
     border-radius: 2mm;
+    box-shadow: none;
+    text-align: justify;
   }
   #sideNav .active a {
     background: transparent;
-    color: darkslateblue;
+    color: white;
     box-shadow: none;
-    margin-left: -20px;
   }
   .active i {
     background: transparent;

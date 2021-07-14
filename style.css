@@ -245,6 +245,10 @@ nav ul li a:hover {
     rgb(41, 41, 41) 63px
   );
 }
+.dark2 {
+  color: white;
+  background: rgb(41, 41, 41);
+}
 .dark .about-text p {
   color: white;
 }

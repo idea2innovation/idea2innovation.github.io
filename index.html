@@ -67,7 +67,7 @@
             </div>
         </div>
     </div>
-    <section id="header">
+    <section id="header" class="lighthead">
         <div class="container">
             <a href="index.html" data-aos="fade-down"><img src="images/logo.png" class="logo" id="logo123" style="margin-left: -5px;"></a>
             <a href="https://www.iare.ac.in/" data-aos="fade-down"><img src="images/iarelogo.jpg" class="logo"></a>
@@ -1017,11 +1017,11 @@
         </div>
     </section>
     </div>
-    <div id="b1">
+    <div id="b1" class="light">
         <div id="feedback" data-aos="fade-right">
         <h1>Feedback</h1>
         <div id="feed-ele">
-            <small id="mem-con"><a href="mailto:ideatoinnovation01@gmail.com"><i class="fa fa-google"></i>&nbsp
+            <small id="mem-con"><a href="mailto:ideatoinnovation01@gmail.com" class="linkdark" id="linkdarkid"><i class="fa fa-google"></i>&nbsp
                     ideatoinnovation01@gmail.com</a></small>
             </div>
             <div id="feed-ele">
@@ -1454,6 +1454,50 @@
                     IARE</a></li>
             <li><a href="#b1">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
             </li>
+            <li><div class="toggle"><i class="fas fa-moon" id="sunmoon"></i></div></li>
+            <script>
+                var tog=document.querySelector(".toggle");
+                var about=document.querySelector("#about")
+                var sunmoon=document.querySelector("#sunmoon")
+                var eventss=document.querySelector("#ev")
+                var  memberss=document.querySelector("#mem-back")
+                var feedback = document.querySelector("#b1")
+                var linkdarklight=document.querySelector("#linkdarkid")
+                var header=document.querySelector("#header")
+                var navigate=document.querySelector("#sideNav")
+                var navigate1 = document.querySelector("#ulnav")
+                var navigate2 = document.querySelector("#na")
+                var navigate3 = document.querySelector("#ulna")
+                var counti=0
+                tog.onclick=function(){
+                    about.classList.toggle("dark")
+                    eventss.classList.toggle("dark")
+                    memberss.classList.toggle("dark")
+                    if (counti%2==0){
+                        sunmoon.className="fas fa-sun"
+                        feedback.className="dark"
+                        linkdarklight.className="linklight"
+                        header.className="dark"
+                        navigate.style.background="black"
+                        navigate1.style.background = "black"
+                        navigate2.style.background = "black"
+                        navigate3.style.background = "black"
+                        tog.style.color="black"
+                    }
+                    else{
+                        sunmoon.className = "fas fa-moon"
+                        feedback.className="light"
+                        linkdarklight.className="linkdark"
+                        header.className="lighthead"
+                        navigate.style.background = "darkslateblue"
+                        navigate1.style.background = "darkslateblue"
+                        navigate2.style.background = "darkslateblue"
+                        navigate3.style.background = "darkslateblue"
+                        tog.style.color = "darkslateblue"
+                    }
+                    counti++
+                }
+            </script>
         </ul>
     </nav>
     <script type="text/javascript" src="nav.js"></script>

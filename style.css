@@ -238,11 +238,11 @@ nav ul li a:hover {
 .dark {
   color: white;
   background: repeating-linear-gradient(
-    rgb(41, 41, 41) 0%,
-    rgb(41, 41, 41) 8%,
-    rgba(0, 0, 0, 0.5) 8%,
-    rgba(0, 0, 0.5) 8.35%,
-    rgb(41, 41, 41) 8.35%
+    rgb(41, 41, 41) 0,
+    rgb(41, 41, 41) 60px,
+    rgba(0, 0, 0, 0.5) 60px,
+    rgba(0, 0, 0.5) 63px,
+    rgb(41, 41, 41) 63px
   );
 }
 .dark .about-text p {

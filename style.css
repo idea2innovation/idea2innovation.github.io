@@ -38,8 +38,10 @@ select {
   margin: 0;
   padding: 0;
 }
-#header {
+.lighthead {
   background: url(images/abc.jpg);
+}
+#header {
   background-attachment: fixed;
   width: 100%;
   background-position: center;
@@ -111,8 +113,6 @@ button:hover {
   cursor: pointer;
   font-size: 35px;
   color: rgb(73, 72, 72);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
 }
 .common-btn2:hover {
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -223,7 +223,52 @@ nav ul li a:hover {
 #fa {
   font-size: 24px;
 }
-
+.toggle {
+  float: right;
+  background: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+  color: darkslateblue;
+}
+.dark {
+  color: white;
+  background: repeating-linear-gradient(
+    rgb(41, 41, 41) 0%,
+    rgb(41, 41, 41) 8%,
+    rgba(0, 0, 0, 0.5) 8%,
+    rgba(0, 0, 0.5) 8.35%,
+    rgb(41, 41, 41) 8.35%
+  );
+}
+.dark .about-text p {
+  color: white;
+}
+.dark .about-text span {
+  background-color: white;
+}
+.dark .common-btn,
+.dark .common-btn1,
+.dark .common-btn2 {
+  color: white;
+}
+.dark button:hover {
+  box-shadow: inset -160px 0 0 rgb(255, 255, 255), inset 0px 0 0 rgb(59, 59, 59);
+  color: black;
+}
+.dark .member-col {
+  color: black;
+}
+.dark .common-btn2:hover {
+  color: black;
+  background-color: black;
+  border: none;
+  text-shadow: none;
+}
 .nav1 {
   display: block;
   position: fixed;
@@ -283,13 +328,16 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .about-left-col {
   flex-basis: 50%;
   overflow: hidden;
 }
 .about-left-col img {
-  width: 100%;
+  width: 85%;
+  margin: auto;
+  display: block;
 }
 .about-right-col {
   flex-basis: 50%;
@@ -1290,14 +1338,16 @@ img:hover {
   margin-bottom: 12%;
 }
 /*Feedback*/
-#b1 {
+.light {
   background: repeating-linear-gradient(
     rgb(241, 241, 241) 0%,
     rgb(241, 241, 241) 10%,
     rgb(231, 231, 229) 10%,
     rgb(231, 231, 229) 10.5%,
-    rgb(241, 241, 241) 10%
+    rgb(241, 241, 241) 10.5%
   );
+}
+#b1 {
   background-attachment: fixed;
   display: flex;
   height: fit-content;
@@ -1419,9 +1469,13 @@ img:hover {
   line-height: 12mm;
   transition: 0.35s;
 }
-#feedback a {
+.linkdark {
   text-decoration: none;
   color: black;
+}
+.linklight {
+  text-decoration: none;
+  color: white;
 }
 #feed-ele {
   transition: 0.3s;
@@ -2028,8 +2082,10 @@ html {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 @media all and (max-width: 950px) {
-  #header {
+  .lighthead {
     background: url(images/abc.jpg);
+  }
+  #header {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -2435,8 +2491,10 @@ html {
   }
 }
 @media all and (max-width: 500px) {
-  #header {
+  .lighthead {
     background: url(images/abc.jpg);
+  }
+  #header {
     background-position: center;
     background-size: cover;
     overflow: hidden;

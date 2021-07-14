@@ -245,11 +245,14 @@ nav ul li a:hover {
     rgb(41, 41, 41) 63px
   );
 }
+.dark p {
+  color: white;
+}
 .dark2 {
   color: white;
-  background: rgb(41, 41, 41);
+  background: rgb(68, 68, 68);
 }
-.dark .about-text p {
+.dark2 .about-text p {
   color: white;
 }
 .dark .about-text span {
@@ -264,10 +267,25 @@ nav ul li a:hover {
   box-shadow: inset -160px 0 0 rgb(255, 255, 255), inset 0px 0 0 rgb(59, 59, 59);
   color: black;
 }
-.dark .member-col {
+.dark2 .common-btn,
+.dark2 .common-btn1,
+.dark2 .common-btn2 {
+  color: white;
+}
+.dark2 button:hover {
+  box-shadow: inset -160px 0 0 rgb(255, 255, 255), inset 0px 0 0 rgb(59, 59, 59);
+  color: black;
+}
+.dark2 .member-col {
   color: black;
 }
 .dark .common-btn2:hover {
+  color: black;
+  background-color: black;
+  border: none;
+  text-shadow: none;
+}
+.dark2 .common-btn2:hover {
   color: black;
   background-color: black;
   border: none;

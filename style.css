@@ -291,6 +291,13 @@ nav ul li a:hover {
   border: none;
   text-shadow: none;
 }
+.dark h1,
+.dar h1 {
+  color: gold;
+  font-family: LimeLight;
+  font-weight: 100;
+  text-shadow: 2px 2px 2px grey;
+}
 .nav1 {
   display: block;
   position: fixed;
@@ -3066,5 +3073,10 @@ html {
   }
   .link-title2 {
     width: 50px;
+  }
+}
+@media all and (max-height: 400px) {
+  #b1 {
+    height: 200vh;
   }
 }

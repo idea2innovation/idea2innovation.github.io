@@ -1402,12 +1402,18 @@
     </script>
     <!--Social Media-->
     <div class="social-icons">
-        <a href="#header" id="logo-social"><img src="images/logo.png" alt="logo" style="border-radius: 50%;"></a>
-        <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
-        <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png" alt="whatsapp"></a>
-        <a href="https://twitter.com/?lang=en"><img src="images/twitter.png" alt="twitter"></a>
-        <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a>
-        <a href="https://in.linkedin.com/"><img src="images/linkedin.png" alt="linkedin"></a>
+        <a href="#header" id="logo-social"><img src="images/logo.png" alt="logo" style="border-radius: 50%;" data-aos="fade-down" data-aos-anchor="#header"
+     data-aos-anchor-placement="top-top"></a>
+        <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook" data-aos="fade-down" data-aos-anchor="#header"
+     data-aos-anchor-placement="top-top"></a>
+        <a href="https://web.whatsapp.com/"><img src="images/whatsapp.png" alt="whatsapp" data-aos="fade-down"data-aos-anchor="#header"
+     data-aos-anchor-placement="top-top"></a>
+        <a href="https://twitter.com/?lang=en"><img src="images/twitter.png" alt="twitter" data-aos="fade-down" data-aos-anchor="#header"
+     data-aos-anchor-placement="top-top"></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram" data-aos="fade-down" data-aos-anchor="#header"
+     data-aos-anchor-placement="top-top"></a>
+        <a href="https://in.linkedin.com/"><img src="images/linkedin.png" alt="linkedin" data-aos="fade-down" data-aos-anchor="#header"
+     data-aos-anchor-placement="top-top"></a>
     </div>
         <script>
             var sc = document.getElementsByClassName("scroll-am");
@@ -1432,7 +1438,8 @@
             }
         </script>
     <!--Navigation-->
-    <nav class="nav1" id="na">
+    <nav class="nav1" id="na" data-aos="fade-down" data-aos-anchor="#header"
+     data-aos-anchor-placement="top-top">
         <ul id="ulna">
             <li class="active"><a href="#header"><i class="fa fa-home" id="fa"></i></a></li>
             <li><a href="#about"><i class="fa fa-address-card" id="fa"></i></a></li>
@@ -1457,9 +1464,19 @@
                     IARE</a></li>
             <li><a href="#b1">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
             </li>
-            <li><div class="toggle"><i class="fas fa-moon" id="sunmoon"></i></div></li>
+            <li id="nav-last-row">
+                <div id="nav-sub" class="toggle" title="subscribe">
+                    <i class="material-icons" >notifications</i>
+                </div>
+                <div id="nav-unsub" class="toggle" title="unsubscribe">
+                    <i class="material-icons">notifications_off</i>
+                </div>
+                <div class="toggle" title="toggle dark/light modes">
+                    <i class="fas fa-moon" id="sunmoon"></i>
+                </div>
+            </li>
             <script>
-                var tog=document.querySelector(".toggle");
+                var tog=document.querySelectorAll(".toggle");
                 var about=document.querySelector("#about")
                 var sunmoon=document.querySelector("#sunmoon")
                 var eventss=document.querySelector("#ev")
@@ -1472,7 +1489,7 @@
                 var navigate2 = document.querySelector("#na")
                 var navigate3 = document.querySelector("#ulna")
                 var counti=0
-                tog.onclick=function(){
+                tog[2].onclick=function(){
                     about.classList.toggle("dark2")
                     eventss.classList.toggle("dark")
                     memberss.classList.toggle("dark2")
@@ -1485,7 +1502,9 @@
                         navigate1.style.background = "black"
                         navigate2.style.background = "black"
                         navigate3.style.background = "black"
-                        tog.style.color="black"
+                        tog[0].style.color="black"
+                        tog[1].style.color = "black"
+                        tog[2].style.color = "black"
                     }
                     else{
                         sunmoon.className = "fas fa-moon"
@@ -1496,7 +1515,9 @@
                         navigate1.style.background = "darkslateblue"
                         navigate2.style.background = "darkslateblue"
                         navigate3.style.background = "darkslateblue"
-                        tog.style.color = "darkslateblue"
+                        tog[0].style.color = "darkslateblue"
+                        tog[1].style.color = "darkslateblue"
+                        tog[2].style.color = "darkslateblue"
                     }
                     counti++
                 }
@@ -1662,10 +1683,15 @@
         var sclose2 = document.getElementById("subs-close2");
         var loadsusbs = document.getElementById("subs-lo");
         var loadunsubs = document.getElementById("unsubs-lo");
+        var navsub=document.getElementById("nav-sub")
+        var navunsub=document.getElementById("nav-unsub")
         subs1.onclick = function () {
             subscribe.style.display = "block";
         }
         subs2.onclick = function () {
+            subscribe.style.display = "block";
+        }
+        navsub.onclick = function(){
             subscribe.style.display = "block";
         }
         sclose1.onclick = function () {
@@ -1675,6 +1701,9 @@
             unsubscribe.style.display = "block";
         }
         unsub2.onclick = function () {
+            unsubscribe.style.display = "block";
+        }
+        navunsub.onclick = function(){
             unsubscribe.style.display = "block";
         }
         sclose2.onclick = function () {
@@ -1781,7 +1810,9 @@
             debounceDelay: 50, 
             throttleDelay: 99,
             once: true,
-            disable: 'mobile'
+            disable: 'mobile',
+            easing: 'ease-in-out-back',
+            duration: 600
         });
     </script>
 </body>

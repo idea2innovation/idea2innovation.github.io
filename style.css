@@ -239,6 +239,9 @@ nav ul li a:hover {
   cursor: pointer;
   color: darkslateblue;
   transition: 0.25s;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.295), 0 0 6px rgba(0, 0, 0, 0.295),
+    0 0 9px rgba(0, 0, 0, 0.295), 0 0 12px rgba(0, 0, 0, 0.295),
+    0 0 15px rgba(0, 0, 0, 0.295);
 }
 .toggle:nth-child(1) {
   font-size: 30px;

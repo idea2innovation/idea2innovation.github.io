@@ -359,14 +359,30 @@ nav ul li a:hover {
   background: rgb(98, 84, 194);
 }
 
-#menuBtn {
+.menuBtn,
+.backclose {
   width: 40px;
-  height: 40px;
+  height: fit-content;
   position: fixed;
   left: 1px;
   top: 5px;
   z-index: 7;
   cursor: pointer;
+  background: darkslateblue;
+  text-align: center;
+  font-size: 30px;
+}
+.menuBtn::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0c9";
+  color: white;
+}
+.backclose::before {
+  font-family: fontAwesome, mulish;
+  font-weight: 900;
+  content: "\f057";
+  color: white;
 }
 /*--About--*/
 #about {
@@ -458,25 +474,22 @@ nav ul li a:hover {
   border-right: 1px solid white;
   border-bottom: 1px solid white;
   padding-bottom: 2%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: mulish;
   transition: all ease 0.25s;
   overflow: hidden;
   border-radius: 2mm;
-  backdrop-filter: blur(1.5px);
-  -webkit-backdrop-filter: blur(3.5px);
   height: 100%;
 }
 .member-col:hover {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
 }
 .member-col img {
   transform: scale(1);
   transition: ease-in 0.25s;
-  overflow: hidden;
 }
 .member-col img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 #fa1 {
   text-decoration: none;
@@ -525,12 +538,20 @@ nav ul li a:hover {
 }
 .member-col img {
   width: 100%;
-  margin-bottom: 2%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.308);
+}
+.member-img {
+  width: 100%;
+  overflow: hidden;
+  height: fit-content;
+  padding: 0;
+  background: white;
 }
 .member-col h4 {
   margin-bottom: 1vh;
   font-size: 1.5vw;
   font-weight: 400;
+  margin-top: 10px;
 }
 .member-btn {
   margin: 5vh auto 0;
@@ -540,7 +561,7 @@ nav ul li a:hover {
   justify-content: space-evenly;
 }
 .mem-con {
-  margin-top: 10%;
+  margin-top: 6%;
 }
 .mem-con-btn {
   background: rgb(92, 89, 89);
@@ -735,15 +756,23 @@ nav ul li a:hover {
 .acon {
   width: 380px;
   height: fit-content;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   padding: 2%;
   border-radius: 2mm;
   background: rgba(0, 0, 0, 0.3);
   margin-top: 5%;
   transition: 0.35s;
 }
-.acon:hover {
+.acon:nth-child(1):hover {
   transform: translateY(-30px);
+}
+.acon:nth-child(2):hover {
+  transform: translateY(30px);
+}
+.acon:nth-child(3):hover {
+  transform: translateX(30px);
+}
+.acon:nth-child(4):hover {
+  transform: translateX(-30px);
 }
 .acon p {
   background: white;
@@ -761,15 +790,23 @@ nav ul li a:hover {
 }
 #a1 {
   background: gold;
+  box-shadow: 0 0 5px rgba(255, 217, 0, 0.904), 0 0 10px rgba(255, 217, 0, 0.7),
+    0 0 15px rgba(255, 217, 0, 0.616), 0 0 20px rgba(255, 217, 0, 0.5);
 }
 #a2 {
   background: #ff5b4f;
+  box-shadow: 0 0 5px #ff5b4fe1, 0 0 10px #ff5b4fce, 0 0 15px #ff5b4fb0,
+    0 0 20px #ff5b4f88;
 }
 #a3 {
   background: #35eb72;
+  box-shadow: 0 0 5px #35eb72e0, 0 0 10px #35eb72cb, 0 0 15px #35eb729c,
+    0 0 20px #35eb7285;
 }
 #a4 {
   background: dodgerblue;
+  box-shadow: 0 0 5px rgba(30, 143, 255, 0.9), 0 0 10px rgba(30, 143, 255, 0.8),
+    0 0 15px rgba(30, 143, 255, 0.7), 0 0 20px rgba(30, 143, 255, 0.616);
 }
 /*Event register*/
 #register {
@@ -952,7 +989,7 @@ input[type="number"] {
   display: inline;
 }
 .link-title a:hover {
-  color: deepskyblue;
+  color: gold;
 }
 
 .link-title small {
@@ -996,7 +1033,7 @@ input[type="number"] {
 }
 
 .fend a:hover {
-  color: deepskyblue;
+  color: gold;
 }
 #im1 {
   position: absolute;
@@ -1410,12 +1447,14 @@ img:hover {
   padding-bottom: 10px;
   width: 30%;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  background: rgba(44, 44, 43, 0.849);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 2mm;
   overflow-y: hidden;
   align-self: center;
   margin-left: 0;
   z-index: 5;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .comin {
   border: none;
@@ -1534,8 +1573,19 @@ img:hover {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: rgb(255, 255, 255) url(images/logo.png) no-repeat center;
+  background: rgb(255, 255, 255) url(images/logo2.png) no-repeat center;
   z-index: 99999;
+  animation: loading 2s infinite;
+  overflow: hidden;
+}
+@keyframes loading {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 /*feedback submission loader*/
 #sub-load {
@@ -1555,6 +1605,8 @@ img:hover {
   margin-left: 38.5%;
   margin-top: 35vh;
   border-radius: 2mm;
+  box-shadow: 0 0 5px white, 0 0 10px rgba(255, 255, 255),
+    0 0 15px rgba(255, 255, 255), 0 0 20px rgba(255, 255, 255);
 }
 #sub-load0-2 {
   text-align: center;
@@ -1582,6 +1634,8 @@ img:hover {
   margin-left: 38.5%;
   margin-top: 35vh;
   border-radius: 2mm;
+  box-shadow: 0 0 5px rgb(2, 173, 2), 0 0 10px rgb(2, 173, 2),
+    0 0 15px rgb(2, 173, 2), 0 0 20px rgb(2, 173, 2);
 }
 #sub-load1-3 {
   text-align: center;
@@ -1617,6 +1671,8 @@ img:hover {
   margin-left: 38.5%;
   margin-top: 35vh;
   border-radius: 2mm;
+  box-shadow: 0 0 5px rgb(255, 195, 205), 0 0 10px rgb(255, 195, 205),
+    0 0 15px rgb(255, 195, 205), 0 0 20px rgb(255, 195, 205);
 }
 #sub-load2-3 {
   text-align: center;
@@ -1696,7 +1752,7 @@ img:hover {
   cursor: pointer;
 }
 #open-pri:hover {
-  color: deepskyblue;
+  color: gold;
 }
 #close-pri:hover {
   background: red;
@@ -2228,12 +2284,15 @@ html {
   .nav1 {
     display: none;
   }
-  #menuBtn {
+  .menuBtn,
+  .backclose {
     width: 25px;
     height: 25px;
     position: fixed;
     left: 1px;
     top: 3px;
+    font-size: 20px;
+    line-height: 25px;
   }
   #fa {
     font-size: 16px;
@@ -2652,13 +2711,16 @@ html {
   .nav1 {
     display: none;
   }
-  #menuBtn {
+  .menuBtn,
+  .backclose {
     width: 25px;
     height: 25px;
     position: fixed;
     left: 1px;
     top: 3px;
     z-index: 7;
+    font-size: 20px;
+    line-height: 25px;
   }
   #fa {
     font-size: 18px;

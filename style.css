@@ -253,7 +253,7 @@ nav ul li a:hover {
   font-size: 24px;
 }
 .toggle:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(360deg);
 }
 .dark {
   color: white;
@@ -787,9 +787,10 @@ nav ul li a:hover {
   text-align: center;
   color: ghostwhite;
 }
-.acon h1 {
+.acon h2 {
   text-align: center;
   color: ghostwhite;
+  font-size: xx-large;
 }
 #a1 {
   background: gold;
@@ -1450,9 +1451,8 @@ img:hover {
   padding-bottom: 10px;
   width: 30%;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  background: rgba(0, 0, 0, 0.7);
+  background: rgb(0, 0, 0, 0.7);
   border-radius: 2mm;
-  overflow-y: hidden;
   align-self: center;
   margin-left: 0;
   z-index: 5;
@@ -1547,7 +1547,7 @@ img:hover {
   opacity: 0;
   font-family: Ubuntu;
 }
-#feedback h1 {
+#feedback h2 {
   color: gold;
   line-height: 25mm;
 }

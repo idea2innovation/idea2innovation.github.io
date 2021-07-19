@@ -206,6 +206,9 @@ nav ul h2 {
 #sideNav .active a i {
   background: transparent;
 }
+.dark .active a {
+  background-color: black;
+}
 nav ul li {
   float: bottom;
   width: 220px;
@@ -361,7 +364,21 @@ nav ul li a:hover {
 .nav1 .active i {
   background: rgb(98, 84, 194);
 }
-
+.nav1 .dark .active i {
+  background: grey;
+  color: white;
+}
+.nav1 .dark .active a {
+  color: white;
+  background: transparent;
+}
+.nav1 .dark ul li {
+  color: white;
+}
+.nav1 .dark ul li i:hover {
+  background-color: grey;
+  color: white;
+}
 .menuBtn,
 .backclose {
   width: 40px;
@@ -371,7 +388,7 @@ nav ul li a:hover {
   top: 5px;
   z-index: 7;
   cursor: pointer;
-  background: darkslateblue;
+  background: transparent;
   text-align: center;
   font-size: 30px;
 }
@@ -2296,6 +2313,7 @@ html {
     top: 3px;
     font-size: 20px;
     line-height: 25px;
+    background: darkslateblue;
   }
   #fa {
     font-size: 16px;
@@ -2724,6 +2742,7 @@ html {
     z-index: 7;
     font-size: 20px;
     line-height: 25px;
+    background: darkslateblue;
   }
   #fa {
     font-size: 18px;

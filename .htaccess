@@ -1,0 +1,3 @@
+ RewriteEngine on
+RewriteCond %{HTTP_HOST} ^idea2innovation.github.io [NC]
+RewriteRule ^(.*)$ http://www.idea2innovation.github.io/$1 [L,R=301,NC]

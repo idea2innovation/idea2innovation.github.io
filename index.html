@@ -77,10 +77,10 @@
     <section id="header" class="lighthead">
         <div class="container">
             <a href="index.html" data-aos="fade-down"><img src="images/logo.png" class="logo" id="logo123"
-                    style="margin-left: -5px;"></a>
-            <a href="https://www.iare.ac.in/" data-aos="fade-down"><img src="images/iarelogo.jpg" class="logo"></a>
+                    style="margin-left: -5px;" alt="logo"></a>
+            <a href="https://www.iare.ac.in/" data-aos="fade-down"><img src="images/iarelogo.jpg" class="logo" alt="iare-logo"></a>
             <div class="header-text" data-aos="fade-right">
-                <h1 style="color:gold  ; text-shadow: 1px 1px 1px  grey;">Idea to Innovation</h1><br><br>
+                <h1 style="color:gold  ; text-shadow: 1px 1px 1px  grey;">Idea to Innovation Club</h1><br><br>
                 <p><b>Idea to Innovation</b> is a club started by the students of Institute of Aeronautical Engineering
                     in the year 2021 to evoke students’ creativity levels by encouraging them to take-up projects with
                     varying levels of complexities. This Club aims at taking up various <b>innovative ideas</b> and
@@ -1566,6 +1566,7 @@
                 var navigate1 = document.querySelector("#ulnav")
                 var navigate2 = document.querySelector("#na")
                 var navigate3 = document.querySelector("#ulna")
+                var markerattop = document.querySelector("#fa2")
                 var counti = 0
                 tog[2].onclick = function () {
                     about.classList.toggle("dark2")
@@ -1587,6 +1588,7 @@
                         tog[0].style.color = "black"
                         tog[1].style.color = "black"
                         tog[2].style.color = "black"
+                        markerattop.style.background="grey"
                     }
                     else {
                         sunmoon.className = "fas fa-moon"
@@ -1604,6 +1606,7 @@
                         tog[0].style.color = "darkslateblue"
                         tog[1].style.color = "darkslateblue"
                         tog[2].style.color = "darkslateblue"
+                        markerattop.style.background="darkslateblue"
                     }
                     counti++
                 }

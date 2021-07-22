@@ -242,9 +242,8 @@ nav ul li a:hover {
   cursor: pointer;
   color: darkslateblue;
   transition: 0.25s;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.295), 0 0 6px rgba(0, 0, 0, 0.295),
-    0 0 9px rgba(0, 0, 0, 0.295), 0 0 12px rgba(0, 0, 0, 0.295),
-    0 0 15px rgba(0, 0, 0, 0.295);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.527);
+  text-shadow: 2px 2px 2px grey;
 }
 .toggle:nth-child(1) {
   font-size: 30px;
@@ -1041,6 +1040,14 @@ input[type="number"] {
   cursor: pointer;
   color: black;
 }
+#subs-sub:hover {
+  background: red;
+  color: white;
+}
+#subs-un:hover {
+  background: dodgerblue;
+  color: white;
+}
 .fend {
   text-align: center;
   font-size: 20px;
@@ -1093,6 +1100,7 @@ i {
 }
 #logo-social {
   display: none;
+  transform: translateX(100px);
 }
 /* Slideshow container */
 #slideshow {
@@ -1772,7 +1780,7 @@ img:hover {
   cursor: pointer;
 }
 #open-pri:hover {
-  color: gold;
+  color: greenyellow;
 }
 #close-pri:hover {
   background: red;
@@ -2104,7 +2112,7 @@ html {
   z-index: 7;
   text-align: center;
   left: 2px;
-  display: none;
+  transform: translateY(200px);
 }
 #fa2 {
   text-decoration: none;

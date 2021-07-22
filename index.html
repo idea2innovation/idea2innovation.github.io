@@ -1467,18 +1467,22 @@
         var logosocial = document.getElementById("logo-social")
         window.onscroll = function () {
             let p = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
-            if (p > 10) {
-                marker.style.display = "block"
+            if (p > 7) {
+                marker.style.transition="all 0.35s"
+                marker.style.transform = "translateY(0px)"
             }
             else {
-                marker.style.display = "none"
+                marker.style.transform = "translateY(200px)"
             }
             sc[0].style.width = p + '%';
             if (p > 3) {
                 logosocial.style.display = "block"
+                logosocial.style.transition="all 0.35s"
+                setTimeout(()=>{ logosocial.style.transform = "translateX(0px)"},350)
             }
             else {
                 logosocial.style.display = "none"
+                logosocial.style.transform = "translateX(100px)"
             }
         }
     </script>

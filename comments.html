@@ -1,105 +1,354 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Idea2Innovation</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/6e8ea0ad06.js" crossorigin="anonymous"></script>
 </head>
 <style>
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: gold;
-    }
-    .box{
-        display: flex;
-    }
-    .box .eye{
+    #myform{
+        width: 100%;
+        height: 100vh;
         position: relative;
-        width: 150px;
-        height: 150px;
-        display: block;
-        background: white;
-        margin: 0 30px;
-        border-radius: 50%;
-        box-shadow: 0 5px 45px rgba(0,0,0,0.2),inset 0 0 15px rgb(255, 187, 0),inset 0 0 20px rgb(255,187,0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .box .eye::before{
-        content: '';
+    #form{
+        width: 300px;
+        padding: 10px;
+        display: flex;
+        align-items:flex-end;
+        justify-content: center;
+        border-radius: 2mm;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        position: relative;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 5mm;
+        border: 10px solid rgb(250,224,66);
+        background: white;
+    }
+    #form-part{
+        background: white;
+        width: 100%;
         position: absolute;
-        top: 50%;
-        left: 50px;
-        transform: translate(-50%,-50%);
+        width: 900px;
+        display: flex;
+        align-items: center;
+        border-radius: 2mm;
+        transition: all 0.35s;
+        left: 0px;
+    }
+    .container{
+        width: 250px;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 200px;
+        justify-content:space-evenly;
+        position: relative;
+    }
+    .submit{
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .stages{
+        position: absolute;
+        top: 90px;
+        display: flex;
+        width: 250px;
+        align-items: center;
+        justify-content: center;
+    }
+    span{
+        font-size: larger;
+        color: gray;
+    }
+    .active{
+        color: orange;
+    }
+    .inputs{
+        width: 250px;
+        position: relative;
+    }
+    .inputs i{
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 20px;
+        color: gray;
+    }
+    .field{
+        width: 220px;
+        border: none;
+        outline: none;
+        border-bottom: orange solid 3px;
+        font-size: large;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 30px;
+    }
+    button{
+        font-size: large;
+        color: white;
+        background: linear-gradient(to right,orange,rgb(250,224,66));
+        outline: none;
+        border: none;
+        border-radius: 50%;
         width: 40px;
         height: 40px;
-        border-radius: 50%;
-        background: radial-gradient(circle at center, rgb(56, 56, 56) 10%, transparent 30%) rgb(53, 53, 53);
-        border: 15px solid rgb(0, 153, 255);
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        transition:all 0.35s;
     }
-    .mouth{
+    button:hover{
+        width: 80px;
+        border-radius: 5mm;
+        background: rgb(46, 46, 46);
+    }
+    .head{
+        font-size: xx-large;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         position: absolute;
-        bottom: 10vh;
-        left: 32.5vw;
-        width: 35vw;
-        height: 15vh;
-        border-bottom-right-radius: 100%;
-        border-bottom-left-radius: 100%;
-        border-top-left-radius: -100px;
-        background:repeating-linear-gradient(90deg,transparent 0%,transparent 8%,black 8%,black 8.5%,transparent 8.5%),linear-gradient(transparent 50%,black 50%,black 53%, transparent 53%) white;
-        border: rgb(255, 107, 132) solid 15px;
+        top: 10px;
+        color: orange;
+        font-weight:500px;
+        text-align: center;
     }
-    .text{
+    #one{
+        visibility: hidden;
+    }
+    .fa-minus{
+        opacity: 0;
+    }
+    #line{
+        width: 310px;
+        height: 1.5px;
+        background: rgba(94, 94, 94, 0.171);
+        border-radius: 2mm;
+    }
+    #after-submit{
+        width: 100%;
+        height: 100%;
         display: none;
+        z-index: 99999;
     }
-    @media all and (max-width: 950px) {
-        .box{
-            display: none;
+    #submitting{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: orange;
+        opacity: 0;
+    }
+    .sub-part{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        flex-direction: column;
+        font-size: larger;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .fa-circle{
+        animation: animate 1s linear infinite;
+    }
+    .fa-check-circle{
+        font-size: larger;
+        animation: scaleanimate 1s linear infinite;
+    }
+    .fa-times{
+        font-size: larger;
+        animation: scaleanimate 1s linear infinite;
+    }
+    @keyframes scaleanimate{
+        0%,100%{
+            transform: scale(1);
         }
-        .text{
-            display: block;
-            text-align: justify;
-            position: absolute;
-            top:20vh;
+        50%{
+            transform: scale(2);
         }
+    }
+    @keyframes animate{
+        0%,100%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(-100px);
+        }
+    }
+    #successfull{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: yellowgreen;
+        opacity: 0;
+        animation: colorchange linear 1s infinite;
+    }
+    @keyframes colorchange{
+        0%,100%{
+            background:yellowgreen ;
+        }
+        50%{
+            background: rgb(138, 205, 50);
+        }
+    }
+    #unsuccesfull{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: tomato;
+        opacity: 0;
     }
 </style>
 <body>
-    <div class="box">
-        <div class="eye"></div>
-        <div class="eye"></div>
-        <div class="mouth"></div>
-    </div>
-    <div class="text">
-        <h1>What is this madam u should not open this in phone na &nbsp <i class="fas fa-grin-beam-sweat" style="color:rgb(0, 153, 255); font-size: larger;"></i> &nbsp<i class="far fa-grin-squint-tears" style="color:rgb(0, 153, 255); font-size: larger;"></i> </h1>
-        <br>
-        <h1 style="color: black;">open it in laptop pleeeeaseeeeee..............</h1>
-        <br>
-        <h2>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</h2>
+    <div id="myform">
+        <div id="form">
+            <div class="head">Register
+                <div id="line"></div>
+            </div>
+            <div class="stages">
+                <span class="items"><i class="fas fa-dot-circle"></i></span>
+                <span class="items"><i class="fas fa-minus"></i></span>
+                <span class="items"><i class="fas fa-minus"></i></span>
+                <span class="items"><i class="fas fa-minus"></i></span>
+                <span class="items"><i class="fas fa-dot-circle"></i></span>
+                <span class="items"><i class="fas fa-minus"></i></span>
+                <span class="items"><i class="fas fa-minus"></i></span>
+                <span class="items"><i class="fas fa-minus"></i></span>
+                <span class="items"><i class="fas fa-dot-circle"></i></span>
+            </div>
+            <div id="form-part">
+        <div class="container">
+            <div class="inputs">
+                <input type="text" placeholder="Name" class="field" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="inputs">
+                <input type="text" placeholder="Roll Number" class="field" required>
+                <i class="fas fa-id-card"></i>
+            </div>
+            <div class="submit">
+                <button id="one"><i class="fas fa-arrow-left"></i></button>
+                <button id="two" type="submit"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="inputs">
+                <input type="text" placeholder="Contact number" class="field" required>
+                <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="inputs">
+                <input type="email" name="" id="" placeholder="Email" class="field" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="submit">
+                <button id="three"><i class="fas fa-arrow-left"></i></button>
+                <button id="four" type="submit"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="inputs">
+                <input type="text" name="" id="" placeholder="Branch" class="field" required>
+                <i class="fas fa-building"></i>
+            </div>
+            <div class="inputs">
+                <input type="text" name="" id="" placeholder="address" class="field" required>
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="submit">
+                <button id="five"><i class="fas fa-arrow-left"></i></button>
+                <button id="six" type="submit"><i class="fas fa-check"></i></button>
+            </div>
+        </div>
+        </div>
+        <div id="after-submit">
+            <div id="submitting">
+                <div class="sub-part">
+                    <i class="fas fa-circle"></i>
+                    <p>Submitting</p>
+                </div>
+            </div>
+            <div id="successfull">
+                <div class="sub-part">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Submitted</p>
+                </div>
+            </div>
+            <div id="unsuccesfull">
+                <div class="sub-part">
+                    <i class="fas fa-times"></i>
+                    <p>Failed</p>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
     <script>
-        document.querySelector('body').addEventListener('mousemove',eyeball);
-
-        function eyeball(){
-            const eye= document.querySelectorAll(".eye");
-            eye.forEach(function(eye){
-                let x=(eye.getBoundingClientRect().left)+(eye.clientWidth/2);
-                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
-                let radian = Math.atan2(event.pageX-x,event.pageY-y);
-                let rotation = (radian*(180/Math.PI)*-1)+270;
-                eye.style.transform="rotate("+rotation+"deg)"
-            })
+        var one = document.getElementById("one")
+        var two = document.getElementById("two")
+        var three = document.getElementById("three")
+        var four = document.getElementById("four")
+        var five = document.getElementById("five")
+        var six = document.getElementById("six")
+        var form = document.getElementById("form-part")
+        var items = document.querySelectorAll(".items")
+        var asub = document.getElementById("after-submit")
+        var asub3 = document.getElementById("unsuccesfull")
+        var asub2 = document.getElementById("successfull")
+        var asub1 = document.getElementById("submitting")
+        form.style.transition="all 0.35s"
+        items[0].style.color="orange"
+        items[4].style.color = "grey"
+        items[8].style.color = "grey"
+        one.onclick=function(){
+            form.style.left="0px"
+        }
+        two.onclick=function(){
+            form.style.left="-300px"
+            items[4].style.color = "orange"
+            items[0].style.color = "grey"
+            items[8].style.color = "grey"
+        }
+        three.onclick=function(){
+            form.style.left='-0px'
+            items[0].style.color = "orange"
+            items[4].style.color = "grey"
+            items[8].style.color = "grey"
+        }
+        four.onclick=function(){
+            form.style.left="-600px"
+            items[8].style.color = "orange"
+            items[4].style.color = "grey"
+            items[0].style.color = "grey"
+        }
+        five.onclick=function(){
+            form.style.left="-300px"
+            items[4].style.color = "orange"
+            items[0].style.color = "grey"
+            items[8].style.color = "grey"
+        }
+        six.onclick=function(){
+            asub.style.display="block"
+            asub1.style.transition="all 0.3s ease-in-out 0.35s"
+            setTimeout(()=>{ asub1.style.opacity = "1"},5)
+            asub2.style.transition = "all 0.5s ease-in-out 0.55s"
+            setTimeout(()=>{asub2.style.opacity = "1"},2000)
         }
     </script>
 </body>
-
-</html>

@@ -565,6 +565,7 @@ input[type="number"],input[type="text"] {
             form.style.left = "0px"
         }
         two.onclick = function () {
+            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
             var a = fields[0].value;
             var b = fields[1].value;
             var flag=0
@@ -572,12 +573,18 @@ input[type="number"],input[type="text"] {
                 flag=1
             }
             if (a==''){
+                if (navigator.vibrate) {
+                    navigator.vibrate([500]);
+                }
                 ale[0].style.visibility='visible'
                 fields[0].focus();
                 fields[0].style.borderBottomColor='rgb(232, 0, 0)'
                 setTimeout(()=>{ ale[0].style.visibility = 'hidden', fields[0].style.borderBottomColor = 'orange'},3000);
             }
             else if(b == '' || flag==0){
+                if (navigator.vibrate) {
+                    navigator.vibrate([500]);
+                }
                 ale[1].style.visibility = 'visible'
                 fields[1].focus();
                 fields[1].style.borderBottomColor = 'rgb(232, 0, 0)'
@@ -599,17 +606,24 @@ input[type="number"],input[type="text"] {
             items[8].style.color = "grey"
         }
         four.onclick = function () {
+            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
             var c = fields[2].value;
             var d = fields[3].value;
             i=d.indexOf('@')
             j=d.indexOf('.')
             if (c=='' || c.length<6 ||c.length>15){
+                if (navigator.vibrate) {
+                    navigator.vibrate([500]);
+                }
                 ale[2].style.visibility='visible'
                 fields[2].focus();
                 fields[2].style.borderBottomColor = 'rgb(232, 0, 0)'
                 setTimeout(() => { ale[2].style.visibility = 'hidden', fields[2].style.borderBottomColor = 'orange' }, 3000);
             }
             else if(d=='' || i==-1 ||j==-1){
+                if (navigator.vibrate) {
+                    navigator.vibrate([500]);
+                }
                 ale[3].style.visibility = 'visible'
                 fields[3].focus();
                 fields[3].style.borderBottomColor = 'rgb(232, 0, 0)'
@@ -632,15 +646,22 @@ input[type="number"],input[type="text"] {
             items[8].style.color = "grey"
         }
         six.onclick = function () {
+            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
             var e = fields[4].value;
             var f = fields[5].value;
             if(e==''){
+                if (navigator.vibrate) {
+                    navigator.vibrate([500]);
+                }
                 ale[4].style.visibility = 'visible'
                 fields[4].focus();
                 fields[4].style.borderBottomColor = 'rgb(232, 0, 0)'
                 setTimeout(() => { ale[4].style.visibility = 'hidden', fields[4].style.borderBottomColor = 'orange' }, 3000);
             }
             else if(f=='' || f.length<4 || f.length>14){
+                if (navigator.vibrate) {
+                    navigator.vibrate([500]);
+                }
                 ale[5].style.visibility = 'visible'
                 fields[5].focus();
                 fields[5].style.borderBottomColor = 'rgb(232, 0, 0)'

@@ -8,9 +8,20 @@
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/6e8ea0ad06.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <style>
-    #myform{
+    body {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    #myform {
         width: 100%;
         height: 100vh;
         position: relative;
@@ -18,22 +29,23 @@
         align-items: center;
         justify-content: center;
     }
-    #form{
+
+    #form {
         width: 300px;
         padding: 10px;
         display: flex;
-        align-items:flex-end;
+        align-items: flex-end;
         justify-content: center;
         border-radius: 2mm;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
         position: relative;
-        height: 350px;
+        height: 400px;
         overflow: hidden;
-        border-radius: 5mm;
-        border: 10px solid rgb(250,224,66);
+        border-radius: 2mm;
         background: white;
     }
-    #form-part{
+
+    #form-part {
         background: white;
         width: 100%;
         position: absolute;
@@ -44,60 +56,73 @@
         transition: all 0.35s;
         left: 0px;
     }
-    .container{
+
+    .container {
         width: 250px;
         padding: 25px;
         display: flex;
         align-items: center;
         flex-direction: column;
         height: 200px;
-        justify-content:space-evenly;
+        justify-content: space-between;
         position: relative;
     }
-    .submit{
+
+    .submit {
         width: 250px;
         display: flex;
         justify-content: space-between;
     }
-    .stages{
+
+    .stages {
         position: absolute;
-        top: 90px;
+        top: 120px;
         display: flex;
         width: 250px;
         align-items: center;
         justify-content: center;
     }
-    span{
-        font-size: larger;
+
+    span {
+        font-size: 17px;
         color: gray;
     }
-    .active{
+
+    .active {
         color: orange;
     }
-    .inputs{
+
+    .inputs {
         width: 250px;
         position: relative;
     }
-    .inputs i{
+
+    .inputs i {
         position: absolute;
         left: 0;
-        top: 0;
-        font-size: 20px;
-        color: gray;
+        top: 3px;
+        font-size: 18px;
+        color: rgb(94, 94, 94);
     }
-    .field{
+
+    .field {
         width: 220px;
         border: none;
         outline: none;
-        border-bottom: orange solid 3px;
-        font-size: large;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        padding-left: 30px;
+        border-bottom: orange solid 1px;
+        font-size: 15px;
+        font-family: poppins;
+        padding-left: 25px;
+        color: rgb(71, 71, 71);
+        font-weight: 600;
     }
-    button{
+    .field:focus{
+        border-bottom: orange solid 2px;
+    }
+    button {
         font-size: large;
         color: white;
-        background: linear-gradient(to right,orange,rgb(250,224,66));
+        background: linear-gradient(to right, orange, rgb(250, 224, 66));
         outline: none;
         border: none;
         border-radius: 50%;
@@ -106,51 +131,104 @@
         line-height: 40px;
         text-align: center;
         cursor: pointer;
-        box-shadow: 0 0 5px rgba(0,0,0,0.5);
-        transition:all 0.35s;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        transition: all 0.35s;
     }
-    button:hover{
+    button:hover {
         width: 80px;
         border-radius: 5mm;
         background: rgb(46, 46, 46);
     }
-    .head{
-        font-size: xx-large;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    button .btext{
+        display: none;
+        opacity: 0;
+        transition: 0.9s;
+    }
+    button:hover i{
+        display: none;
+    }
+    button:hover .btext{
+        display: block;
+        opacity: 1;
+    }
+    .btext{
+        color: white;
+        font-size: 16px;
+        font-family: poppins;
+    }
+    .head {
+        font-size:22px;
+        font-family:'Poppins' ;
+        font-weight: bold;
         position: absolute;
-        top: 10px;
-        color: orange;
-        font-weight:500px;
+        top: 55px;
+        color: rgb(56, 56, 56);
+        font-weight: 500px;
         text-align: center;
     }
-    #one{
+    .headline2{
+        font-size:18px;
+        font-family:'Poppins' ;
+        font-weight: bold;
+        position: absolute;
+        top: 20px;
+        color: orange;
+        font-weight: 500px;
+        text-align: center;
+    }
+    #one {
         visibility: hidden;
     }
-    .fa-minus{
+
+    .fa-minus {
         opacity: 0;
     }
-    #line{
+
+    #line {
         width: 310px;
         height: 1.5px;
         background: rgba(94, 94, 94, 0.171);
         border-radius: 2mm;
     }
-    #after-submit{
+
+    #after-submit {
         width: 100%;
         height: 100%;
-        display: none;
         z-index: 99999;
+        display: none;
     }
-    #submitting{
+
+    #submitting {
         position: absolute;
-        top: 0;
+        top: -10px;
         left: 0;
         width: 100%;
+        height: 4%;
+        background: rgb(190, 190, 190);
+        opacity: 1;
+        overflow: hidden;
+    }
+    #subload{
+        width: 15%;
         height: 100%;
         background: orange;
-        opacity: 0;
+        animation: submitnext linear 1.25s infinite;
+        color: orange;
     }
-    .sub-part{
+    @keyframes submitnext{
+        0%{
+            transform: translateX(0px);
+            width: 15%;
+        }
+        35%{
+            width: 50%;
+        }
+        100%{
+            transform: translateX(320px);
+            width: 15%;
+        }
+    }
+    .sub-part {
         width: 100%;
         height: 100%;
         display: flex;
@@ -161,34 +239,46 @@
         font-size: larger;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
-    .fa-circle{
+
+    .fa-circle {
         animation: animate 1s linear infinite;
     }
-    .fa-check-circle{
+
+    .fa-check-circle {
         font-size: larger;
         animation: scaleanimate 1s linear infinite;
     }
-    .fa-times{
+
+    .fa-times {
         font-size: larger;
         animation: scaleanimate 1s linear infinite;
     }
-    @keyframes scaleanimate{
-        0%,100%{
+
+    @keyframes scaleanimate {
+
+        0%,
+        100% {
             transform: scale(1);
         }
-        50%{
+
+        50% {
             transform: scale(2);
         }
     }
-    @keyframes animate{
-        0%,100%{
+
+    @keyframes animate {
+
+        0%,
+        100% {
             transform: translateY(0);
         }
-        50%{
+
+        50% {
             transform: translateY(-100px);
         }
     }
-    #successfull{
+
+    #successfull {
         position: absolute;
         top: 0;
         left: 0;
@@ -198,15 +288,20 @@
         opacity: 0;
         animation: colorchange linear 1s infinite;
     }
-    @keyframes colorchange{
-        0%,100%{
-            background:yellowgreen ;
+
+    @keyframes colorchange {
+
+        0%,
+        100% {
+            background: yellowgreen;
         }
-        50%{
+
+        50% {
             background: rgb(138, 205, 50);
         }
     }
-    #unsuccesfull{
+
+    #unsuccesfull {
         position: absolute;
         top: 0;
         left: 0;
@@ -215,12 +310,97 @@
         background: tomato;
         opacity: 0;
     }
+
+    .alert {
+        font-size: small;
+        font-family: Montserrat;
+        font-weight: 500;
+        color: rgb(232, 0, 0);
+        text-align: center;
+        display: flex;
+        visibility: hidden;
+        transition: 0.35s ;
+    }
+
+    .material-icons {
+        color: rgb(232, 0, 0);
+        font-size: medium;
+        margin-right: 10px;
+    }
+    .images{
+        position: fixed;
+        top: 5px ;
+        left: 10px;
+        height: 80px;
+        width:200px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .images img{
+        border-radius: 2mm;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    }
+    .label{
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        font-family: poppins;
+        font-size: 14px;
+        opacity: 0;
+        transition: 0.35s;
+        color: rgb(73, 73, 73);
+    }
+    .field:focus + .label{
+        opacity: 1;
+        top: -25px;
+        left: 0;
+    }
+    .field:focus::placeholder{
+        opacity: 0;
+    }
+    .field:not(:placeholder-shown) + .label{
+        opacity: 1;
+        top: -25px;
+        left: 0;
+        
+    }
+    .bottomtext{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        z-index: -1;
+    }
+    .btcontent{
+        width: 300px;
+        height: 120px;
+        color: rgb(71, 71, 71);
+        font-size: small;
+        font-family: poppins;
+    }
+    @media all and (max-width: 500px) {
+        .images{
+        height: 60px;
+        width:160px;
+        }
+        
+    }
 </style>
+
 <body>
-    <div id="myform">
+    <div class="images">
+        <img src="images/logo.png" alt="logo">
+        <img src="images/iarelogo.jpg" alt="iarelogo">
+    </div>
+    <form autocomplete="off" method="post" id="myform" name="sub-sheet" onsubmit="return false;">
         <div id="form">
-            <div class="head">Register
-                <div id="line"></div>
+            <div class="headline2">Idea to Innovation</div>
+            <div class="head">Join with us
             </div>
             <div class="stages">
                 <span class="items"><i class="fas fa-dot-circle"></i></span>
@@ -234,70 +414,95 @@
                 <span class="items"><i class="fas fa-dot-circle"></i></span>
             </div>
             <div id="form-part">
-        <div class="container">
-            <div class="inputs">
-                <input type="text" placeholder="Name" class="field" required>
-                <i class="fas fa-user"></i>
-            </div>
-            <div class="inputs">
-                <input type="text" placeholder="Roll Number" class="field" required>
-                <i class="fas fa-id-card"></i>
-            </div>
-            <div class="submit">
-                <button id="one"><i class="fas fa-arrow-left"></i></button>
-                <button id="two" type="submit"><i class="fas fa-arrow-right"></i></button>
-            </div>
-        </div>
-        <div class="container">
-            <div class="inputs">
-                <input type="text" placeholder="Contact number" class="field" required>
-                <i class="fas fa-phone-alt"></i>
-            </div>
-            <div class="inputs">
-                <input type="email" name="" id="" placeholder="Email" class="field" required>
-                <i class="fas fa-envelope"></i>
-            </div>
-            <div class="submit">
-                <button id="three"><i class="fas fa-arrow-left"></i></button>
-                <button id="four" type="submit"><i class="fas fa-arrow-right"></i></button>
-            </div>
-        </div>
-        <div class="container">
-            <div class="inputs">
-                <input type="text" name="" id="" placeholder="Branch" class="field" required>
-                <i class="fas fa-building"></i>
-            </div>
-            <div class="inputs">
-                <input type="text" name="" id="" placeholder="address" class="field" required>
-                <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="submit">
-                <button id="five"><i class="fas fa-arrow-left"></i></button>
-                <button id="six" type="submit"><i class="fas fa-check"></i></button>
-            </div>
-        </div>
-        </div>
-        <div id="after-submit">
-            <div id="submitting">
-                <div class="sub-part">
-                    <i class="fas fa-circle"></i>
-                    <p>Submitting</p>
+                <div class="container">
+                    <div class="inputs">
+                        <input type="text" placeholder="Name" class="field" name="Name">
+                        <span class="label">Name</span>
+                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" placeholder="Roll Number" class="field" name="Roll number">
+                        <span class="label">Roll number</span>
+                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div class="submit">
+                        <button id="one"><i class="fas fa-arrow-left"></i></button>
+                        <button id="two" type="button"><i class="fas fa-arrow-right"></i><span class="btext">Next</span></button>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="inputs">
+                        <input type="text" placeholder="Contact number" class="field" name="Contact Number">
+                        <span class="label">Contact number</span>
+                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="inputs">
+                        <input type="email" placeholder="Email" class="field" name="email">
+                        <span class="label">Email</span>
+                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="submit">
+                        <button id="three" type="button"><i class="fas fa-arrow-left"></i><span class="btext">Previous</span></button>
+                        <button id="four" type="button"><i class="fas fa-arrow-right"></i><span class="btext">Next</span></button>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="inputs">
+                        <select name="branch" id="" class="field"  style="width: 100%;" name="branch">
+                            <option value="" style="color: rgb(0, 0, 0);">Select Branch</option>
+                            <option value="CSE" style="color: rgb(0, 0, 0);">CSE</option>
+                            <option value="IT" style="color: rgb(0, 0, 0);">IT</option>
+                            <option value="ECE" style="color: rgb(0, 0, 0);">ECE</option>
+                            <option value="EEE" style="color: rgb(0, 0, 0);">EEE</option>
+                            <option value="Mech" style="color: rgb(0, 0, 0);">Mechanical Engineering
+                            </option>
+                            <option value="Civil" style="color: rgb(0, 0, 0);">Civil Engineering
+                            </option>
+                            <option value="AERO" style="color: rgb(0, 0, 0);">Aeronautical Engineering
+                            </option>
+                        </select>
+                        <span class="label">Branch</span>
+                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="Codechef" id="" placeholder="Codechef username" class="field" >
+                        <span class="label">Codechef username</span>
+                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="submit">
+                        <button id="five" type="button"><i class="fas fa-arrow-left"></i><span class="btext">Previous</span></button>
+                        <button id="six" type="submit"><i class="fas fa-check"></i><span class="btext">Submit</span></button>
+                    </div>
                 </div>
             </div>
-            <div id="successfull">
-                <div class="sub-part">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Submitted</p>
+            <div id="after-submit">
+                <div id="submitting">
+                    <div id="subload">sfsdf</div>
                 </div>
-            </div>
-            <div id="unsuccesfull">
-                <div class="sub-part">
-                    <i class="fas fa-times"></i>
-                    <p>Failed</p>
+                <div id="successfull">
+                    <div class="sub-part">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Submitted</p>
+                    </div>
+                </div>
+                <div id="unsuccesfull">
+                    <div class="sub-part">
+                        <i class="fas fa-times"></i>
+                        <p>Failed</p>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
+    </form>
+    <div class="bottomtext">
+        <div class="btcontent">
+            <p><strong>Note</strong> You will recieve a mail after submitting the details</p></div>
     </div>
     <script>
         var one = document.getElementById("one")
@@ -312,43 +517,113 @@
         var asub3 = document.getElementById("unsuccesfull")
         var asub2 = document.getElementById("successfull")
         var asub1 = document.getElementById("submitting")
-        form.style.transition="all 0.35s"
-        items[0].style.color="orange"
+        var fields = document.querySelectorAll('.field')
+        var ale = document.querySelectorAll('.alert')
+        var label = document.querySelectorAll('.label')
+        form.style.transition = "all 0.35s"
+        items[0].style.color = "orange"
         items[4].style.color = "grey"
         items[8].style.color = "grey"
-        one.onclick=function(){
-            form.style.left="0px"
+        one.onclick = function () {
+            form.style.left = "0px"
         }
-        two.onclick=function(){
-            form.style.left="-300px"
+        two.onclick = function () {
+            var a = fields[0].value;
+            var b = fields[1].value;
+            var flag=0
+            if (b.length==10 && b[0]==1 || b[0]==2 && b[5]=='A' || b[5]=='a'){
+                flag=1
+            }
+            if (a==''){
+                ale[0].style.visibility='visible'
+                fields[0].focus();
+                fields[0].style.borderBottomColor='rgb(232, 0, 0)'
+                setTimeout(()=>{ ale[0].style.visibility = 'hidden', fields[0].style.borderBottomColor = 'orange'},3000);
+            }
+            else if(b == '' || flag==0){
+                ale[1].style.visibility = 'visible'
+                fields[1].focus();
+                fields[1].style.borderBottomColor = 'rgb(232, 0, 0)'
+                setTimeout(() => { ale[1].style.visibility = 'hidden', fields[1].style.borderBottomColor = 'orange' }, 3000);
+            }
+            else{
+            asub.style.display = "block"
+            asub1.style.opacity = "1"
+            setTimeout(() => { asub1.style.opacity = "0", asub.style.display = "none" }, 1000)
+            form.style.left = "-300px"
             items[4].style.color = "orange"
             items[0].style.color = "grey"
-            items[8].style.color = "grey"
+            items[8].style.color = "grey"}
         }
-        three.onclick=function(){
-            form.style.left='-0px'
+        three.onclick = function () {
+            form.style.left = '-0px'
             items[0].style.color = "orange"
             items[4].style.color = "grey"
             items[8].style.color = "grey"
         }
-        four.onclick=function(){
-            form.style.left="-600px"
+        four.onclick = function () {
+            var c = fields[2].value;
+            var d = fields[3].value;
+            i=d.indexOf('@')
+            j=d.indexOf('.')
+            if (c=='' || c.length<6 ||c.length>15){
+                ale[2].style.visibility='visible'
+                fields[2].focus();
+                fields[2].style.borderBottomColor = 'rgb(232, 0, 0)'
+                setTimeout(() => { ale[2].style.visibility = 'hidden', fields[2].style.borderBottomColor = 'orange' }, 3000);
+            }
+            else if(d=='' || i==-1 ||j==-1){
+                ale[3].style.visibility = 'visible'
+                fields[3].focus();
+                fields[3].style.borderBottomColor = 'rgb(232, 0, 0)'
+                setTimeout(() => { ale[3].style.visibility = 'hidden', fields[3].style.borderBottomColor = 'orange' }, 3000);
+            }
+            else{
+            asub.style.display = "block"
+            asub1.style.opacity = "1"
+            setTimeout(() => { asub1.style.opacity = "0", asub.style.display = "none" }, 1000)
+            form.style.left = "-600px"
             items[8].style.color = "orange"
             items[4].style.color = "grey"
             items[0].style.color = "grey"
+            }
         }
-        five.onclick=function(){
-            form.style.left="-300px"
+        five.onclick = function () {
+            form.style.left = "-300px"
             items[4].style.color = "orange"
             items[0].style.color = "grey"
             items[8].style.color = "grey"
         }
-        six.onclick=function(){
-            asub.style.display="block"
-            asub1.style.transition="all 0.3s ease-in-out 0.35s"
-            setTimeout(()=>{ asub1.style.opacity = "1"},5)
-            asub2.style.transition = "all 0.5s ease-in-out 0.55s"
-            setTimeout(()=>{asub2.style.opacity = "1"},2000)
+        six.onclick = function () {
+            var e = fields[4].value;
+            var f = fields[5].value;
+            if(e==''){
+                ale[4].style.visibility = 'visible'
+                fields[4].focus();
+                fields[4].style.borderBottomColor = 'rgb(232, 0, 0)'
+                setTimeout(() => { ale[4].style.visibility = 'hidden', fields[4].style.borderBottomColor = 'orange' }, 3000);
+            }
+            else if(f=='' || f.length<4 || f.length>14){
+                ale[5].style.visibility = 'visible'
+                fields[5].focus();
+                fields[5].style.borderBottomColor = 'rgb(232, 0, 0)'
+                setTimeout(() => { ale[5].style.visibility = 'hidden', fields[5].style.borderBottomColor = 'orange' }, 3000);
+            }
+            else{
+                const scriptURL1 = 'https://script.google.com/macros/s/AKfycbx2Mhxk7Bu1ExzmiHqFtMGb5hyQ4wG3r4hOgW02Awu3ppLT2IOAsPQGnmXvbKrj747Smg/exec'
+                const fo = document.forms['sub-sheet']
+                fo.addEventListener('submit', e => {
+                    asub.style.display = "block"
+                    setTimeout(() => { asub1.style.opacity = "1" }, 5)
+                    fetch(scriptURL1, { method: 'POST', body: new FormData(fo) })
+                        .then(Response => {
+                            asub2.style.transition = "all 0.5s ease-in-out 0.55s"
+                            setTimeout(() => { asub2.style.opacity = "1" }, 2000)
+                        })
+                        .catch(error => {
+                        })
+                })
+            }
         }
     </script>
 </body>

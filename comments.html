@@ -43,6 +43,7 @@
         overflow: hidden;
         border-radius: 2mm;
         background: white;
+        z-index: 99999;
     }
 
     #form-part {
@@ -374,7 +375,7 @@
         align-items: center;
         justify-content: flex-end;
         flex-direction: column;
-        z-index: -1;
+        z-index: 10;
     }
     .btcontent{
         width: 300px;
@@ -383,6 +384,38 @@
         font-size: small;
         font-family: poppins;
     }
+    .btcontent a{
+        background: transparent;
+        color: rgb(71, 71, 71);
+        border: none;
+        border-radius: 0;
+        outline: none;
+        box-shadow: none;
+        font-size: small;
+        font-family: poppins;
+        cursor: pointer;
+        float: right;
+        z-index: 99999;
+        margin: 0;
+        height: 10px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    select {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: transparent;
+}
+input[type="number"],input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: transparent;
+}
     @media all and (max-width: 500px) {
         .images{
         height: 60px;
@@ -393,6 +426,12 @@
 </style>
 
 <body>
+        <div class="bottomtext">
+            <div class="btcontent">
+                <p><strong>Note</strong> You will recieve a mail after submitting the details</p>
+                <a href="https://idea2innovation.github.io/#b1">Help</a>
+            </div>
+        </div>
     <div class="images">
         <img src="images/logo.png" alt="logo">
         <img src="images/iarelogo.jpg" alt="iarelogo">
@@ -434,7 +473,7 @@
                 </div>
                 <div class="container">
                     <div class="inputs">
-                        <input type="text" placeholder="Contact number" class="field" name="Contact Number">
+                        <input type="tel" placeholder="Contact number" class="field" name="Contact Number">
                         <span class="label">Contact number</span>
                         <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
                         <i class="fas fa-phone-alt"></i>
@@ -500,10 +539,6 @@
             </div>
         </div>
     </form>
-    <div class="bottomtext">
-        <div class="btcontent">
-            <p><strong>Note</strong> You will recieve a mail after submitting the details</p></div>
-    </div>
     <script>
         var one = document.getElementById("one")
         var two = document.getElementById("two")

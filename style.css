@@ -822,7 +822,6 @@ nav ul li a:hover {
   align-self: baseline;
   justify-content: center;
   border-top: 1px solid rgba(204, 204, 204, 0.336);
-  background: rgba(128, 255, 0, 0.267);
 }
 .lasttop .values {
   display: flex;
@@ -831,7 +830,6 @@ nav ul li a:hover {
   align-self: baseline;
   justify-content: center;
   border-top: 1px solid rgba(204, 204, 204, 0.336);
-  background: rgba(128, 255, 0, 0.267);
   max-width: 100%;
   min-width: 25%;
 }

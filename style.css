@@ -3218,6 +3218,10 @@ html {
   .conteststart {
     display: none;
   }
+  .contest {
+    color: rgb(0, 26, 59);
+    background: rgba(210, 228, 250, 0.932);
+  }
 }
 @media all and (max-height: 400px) {
   #b1 {

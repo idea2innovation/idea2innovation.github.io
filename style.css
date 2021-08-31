@@ -732,6 +732,7 @@ nav ul li a:hover {
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 1%;
+  overflow: hidden;
 }
 .topped .rank,
 .lasttop .rank {
@@ -3220,8 +3221,8 @@ html {
     display: none;
   }
   .contest {
-    color: rgb(116, 17, 17);
-    background: rgba(255, 193, 193, 0.856);
+    color: rgb(37, 37, 37);
+    background: rgba(255, 255, 113, 0.911);
   }
 }
 @media all and (max-height: 400px) {

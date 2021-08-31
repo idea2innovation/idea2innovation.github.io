@@ -658,8 +658,8 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgb(116, 17, 17);
-  background: rgba(255, 193, 193, 0.856);
+  color: rgb(0, 59, 20);
+  background: rgba(210, 250, 223, 0.932);
   border-radius: 5mm;
   padding-left: 2%;
   padding-right: 2%;
@@ -667,8 +667,8 @@ nav ul li a:hover {
 .contestend {
   display: flex;
   align-items: center;
-  color: rgb(37, 37, 37);
-  background: rgba(255, 255, 113, 0.911);
+  color: rgb(0, 26, 59);
+  background: rgba(210, 228, 250, 0.932);
   border-radius: 5mm;
   padding-left: 2%;
   padding-right: 2%;
@@ -716,9 +716,10 @@ nav ul li a:hover {
   border-radius: 2mm;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 5%;
+  overflow: hidden;
 }
 .lasttop {
   border-top: cornflowerblue 5px solid;
@@ -744,6 +745,7 @@ nav ul li a:hover {
   font-family: poppins;
   color: rgb(0, 26, 59);
   background: rgba(210, 228, 250, 0.932);
+  font-weight: bold;
 }
 .topped .division,
 .lasttop .division {
@@ -755,6 +757,7 @@ nav ul li a:hover {
   font-family: poppins;
   color: rgb(0, 59, 20);
   background: rgba(210, 250, 223, 0.932);
+  font-weight: bold;
 }
 .topped .rankDiv {
   display: flex;
@@ -797,15 +800,20 @@ nav ul li a:hover {
 .topped a,
 .lasttop a {
   text-decoration: none;
-  font-size: medium;
-  background: rgb(252, 168, 0);
-  color: rgb(255, 245, 159);
+  font-size: small;
+  color: cornflowerblue;
   padding: 5px;
   padding-left: 12px;
   padding-right: 12px;
   border-radius: 5mm;
   display: flex;
   height: fit-content;
+  transition: 0.25s;
+}
+.topped a:hover,
+.lasttop a:hover {
+  background: rgba(210, 228, 250, 0.932);
+  color: rgb(0, 26, 59);
 }
 .topped .star,
 .lasttop .star {
@@ -813,7 +821,7 @@ nav ul li a:hover {
 }
 .topped .arrow,
 .lasttop .arrow {
-  font-size: medium;
+  font-size: larger;
 }
 .topped .values {
   display: flex;
@@ -822,57 +830,49 @@ nav ul li a:hover {
   align-self: baseline;
   justify-content: center;
   border-top: 1px solid rgba(204, 204, 204, 0.336);
+  margin: 0;
+  background: rgb(21, 173, 79);
 }
 .lasttop .values {
   display: flex;
   justify-content: space-evenly;
   width: fit-content;
-  align-self: baseline;
+  align-self: center;
   justify-content: center;
   border-top: 1px solid rgba(204, 204, 204, 0.336);
   max-width: 100%;
-  min-width: 25%;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: rgb(21, 173, 79);
+  border-radius: 4mm;
 }
-.topped .values .score,
-.topped .values .rating,
-.topped .values .change,
-.lasttop .values .score,
-.lasttop .values .rating,
-.lasttop .values .change {
-  background: rgba(255, 255, 255, 0.856);
-  width: 33%;
-  text-align: center;
-  border-left: 0.5px solid rgba(204, 204, 204, 0.336);
-  border-right: 0.5px solid rgba(204, 204, 204, 0.336);
-  font-size: medium;
-  font-family: poppins;
-  color: rgb(0, 26, 59);
-}
-.topped .values .score p,
-.topped .values .rating p,
-.topped .values .change p,
-.lasttop .values .score p,
-.lasttop .values .rating p,
-.lasttop .values .change p {
-  color: rgb(0, 26, 59);
-  font-size: x-small;
-  font-family: poppins;
-}
-.topped .values .score p,
-.topped .values .score,
-.lasttop .values .score p,
-.lasttop .values .score {
-  color: rgb(17, 114, 14);
-}
-.topped .values .change p,
-.topped .values .change,
-.lasttop .values .change p,
-.lasttop .values .change {
-  color: rgb(116, 17, 17);
-}
-.lasttop .lastvalues {
+.topped .values .score {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  font-size: large;
+  font-family: poppins;
+  color: white;
+  background: rgb(21, 173, 79);
+  justify-content: space-between;
+}
+.topped .values .score p {
+  color: white;
+  font-size: large;
+  margin-right: 10px;
+}
+.lasttop .values .score {
+  display: flex;
+  align-items: center;
+  font-size: large;
+  font-family: poppins;
+  color: white;
+  text-align: center;
+  justify-content: space-between;
+}
+.lasttop .values .score p {
+  color: white;
+  font-size: large;
+  margin-right: 10px;
 }
 /*.activity-row {
   align-items: center;
@@ -3217,10 +3217,6 @@ html {
   }
   .conteststart {
     display: none;
-  }
-  .contest {
-    color: rgb(37, 37, 37);
-    background: rgba(255, 255, 113, 0.911);
   }
 }
 @media all and (max-height: 400px) {

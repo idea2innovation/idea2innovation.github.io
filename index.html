@@ -163,7 +163,7 @@
         <section id="activities">
                         <h2 style="text-align: center; color: white;font-family: limelight; font-size: xx-large;text-shadow: 2px 2px 2px grey;">
                             Leaderboard</h2>
-            <div class="contestname">
+            <div class="contestname" data-aos="fade-up">
                 <div class="contestcode"><span class="material-icons contestsysmbols">
                     done
                 </span>LTIME99</div>
@@ -179,7 +179,7 @@
             </div>
             <div class="top5">
                 <div class="top3">
-                    <div class="topped">
+                    <div class="topped" data-aos="fade-right">
                         <div class="rankDiv">
                         <div class="rank">1</div>
                         <div class="division">Div 2</div>
@@ -219,7 +219,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="topped">
+                    <div class="topped" data-aos="fade-down">
                         <div class="rankDiv">
                         <div class="rank">2</div>
                         <div class="division">Div 2</div>
@@ -259,7 +259,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="topped">
+                    <div class="topped" data-aos="fade-left">
                         <div class="rankDiv">
                             <div class="rank">3</div>
                             <div class="division">Div 2</div>
@@ -301,7 +301,7 @@
                     </div>
                 </div>
                 <div class="last2">
-                    <div class="lasttop">
+                    <div class="lasttop" data-aos="fade-up">
                         <div class="rankDiv2">
                             <div class="rank">4</div>
                             <div class="division">Div 2</div>
@@ -347,7 +347,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lasttop">
+                    <div class="lasttop" data-aos="fade-up">
                         <div class="rankDiv2">
                             <div class="rank">5</div>
                             <div class="division">Div 2</div>
@@ -1412,7 +1412,7 @@
                 <div class="link-title" id="mem-fol">
                     <div class="link-title2">
                         <div class="mem-social1">
-                            <small><i class="fas fa-bell" id="subs-sub" title="subscribe"></i></small>
+                            <small><i class="fas fa-bell" id="subs-sub" title="Join with us"></i></small>
                         </div>
                         <div class="mem-social1">
                             <small><i class="fas fa-bell-slash" id="subs-un" title="unsubscribe"></i></small>
@@ -1703,7 +1703,7 @@
             <li><a href="#b1">&nbsp &nbsp &nbsp &nbsp<i class="fa fa-comments" id="fa"></i> Feedback</a>
             </li>
             <li id="nav-last-row">
-                <div id="nav-sub" class="toggle" title="subscribe">
+                <div id="nav-sub" class="toggle" title="Join with us">
                     <i class="material-icons">notifications</i>
                 </div>
                 <div id="nav-unsub" class="toggle" title="unsubscribe">
@@ -1882,7 +1882,7 @@
 
     </script>
     <!--Subscribe-->
-    <div id="subscribe">
+    <!--<div id="subscribe">
         <div class="subs-box">
             <img src="images/logo.png" alt="logo" class="subs-img" id="subs-lo">
             <div class="subs-form-box">
@@ -1898,7 +1898,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div>-->
     <div id="unsubscribe">
         <div class="subs-box">
             <img src="images/logo.png" alt="logo" class="subs-img" id="unsubs-lo">
@@ -1921,7 +1921,7 @@
     </div>
     <div id="subs-top">
         <div id="subs-sub1">
-            <small><i class="fas fa-bell" id="subfa"></i>&nbsp Subscribe</small>
+            <small><i class="fas fa-bell" id="subfa"></i>&nbsp Join with us</small>
         </div>
         <div id="subs-un1">
             <small><i class="fas fa-bell-slash" id="unsubfa"></i>&nbsp Unsubscribe</small>
@@ -1932,25 +1932,20 @@
         var subs2 = document.getElementById("subs-sub1");
         var unsub1 = document.getElementById("subs-un");
         var unsub2 = document.getElementById("subs-un1");
-        var subscribe = document.getElementById("subscribe");
         var unsubscribe = document.getElementById("unsubscribe");
-        var sclose1 = document.getElementById("subs-close1");
         var sclose2 = document.getElementById("subs-close2");
         var loadsusbs = document.getElementById("subs-lo");
         var loadunsubs = document.getElementById("unsubs-lo");
         var navsub = document.getElementById("nav-sub")
         var navunsub = document.getElementById("nav-unsub")
         subs1.onclick = function () {
-            subscribe.style.display = "block";
+            window.open('https://idea2innovation.github.io/comments.html', '_blank');
         }
         subs2.onclick = function () {
-            subscribe.style.display = "block";
+            window.open('https://idea2innovation.github.io/comments.html', '_blank');
         }
         navsub.onclick = function () {
-            subscribe.style.display = "block";
-        }
-        sclose1.onclick = function () {
-            subscribe.style.display = "none";
+            window.open('https://idea2innovation.github.io/comments.html', '_blank');
         }
         unsub1.onclick = function () {
             unsubscribe.style.display = "block";

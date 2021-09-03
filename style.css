@@ -390,6 +390,7 @@ nav ul li a:hover {
   background: transparent;
   text-align: center;
   font-size: 30px;
+  border-radius: 1mm;
 }
 .menuBtn::before {
   font-family: "Font Awesome 5 Free";

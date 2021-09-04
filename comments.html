@@ -1,687 +1,843 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Idea2Innovation</title>
-    <link rel="icon" href="images/logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/6e8ea0ad06.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-</head>
-<style>
+    <link rel="icon" href="images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/6e8ea0ad06.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
     body {
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        height: 100vh;
-        margin: 0;
-        padding: 0;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      height: 100vh;
+      margin: 0;
+      padding: 0;
     }
 
     #myform {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     #form {
-        width: 300px;
-        padding: 10px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        border-radius: 2mm;
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-        position: relative;
-        height: 400px;
-        overflow: hidden;
-        border-radius: 2mm;
-        background: white;
-        z-index: 99999;
+      width: 300px;
+      padding: 10px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      border-radius: 2mm;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 2mm;
+      background: white;
+      z-index: 99999;
     }
 
     #form-part {
-        background: white;
-        width: 100%;
-        position: absolute;
-        width: 900px;
-        display: flex;
-        align-items: center;
-        border-radius: 2mm;
-        transition: all 0.35s;
-        left: 0px;
+      background: white;
+      width: 100%;
+      position: absolute;
+      width: 900px;
+      display: flex;
+      align-items: center;
+      border-radius: 2mm;
+      transition: all 0.35s;
+      left: 0px;
     }
 
     .container {
-        width: 250px;
-        padding: 25px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        height: 200px;
-        justify-content: space-between;
-        position: relative;
+      width: 250px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: 200px;
+      justify-content: space-between;
+      position: relative;
     }
 
     .submit {
-        width: 250px;
-        display: flex;
-        justify-content: space-between;
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
     }
 
     .stages {
-        position: absolute;
-        top: 120px;
-        display: flex;
-        width: 250px;
-        align-items: center;
-        justify-content: center;
+      position: absolute;
+      top: 120px;
+      display: flex;
+      width: 250px;
+      align-items: center;
+      justify-content: center;
     }
 
     span {
-        font-size: 17px;
-        color: gray;
+      font-size: 17px;
+      color: gray;
     }
 
     .active {
-        color: orange;
+      color: orange;
     }
 
     .inputs {
-        width: 250px;
-        position: relative;
+      width: 250px;
+      position: relative;
     }
 
     .inputs i {
-        position: absolute;
-        left: 0;
-        top: 3px;
-        font-size: 18px;
-        color: rgb(94, 94, 94);
+      position: absolute;
+      left: 0;
+      top: 3px;
+      font-size: 18px;
+      color: rgb(94, 94, 94);
     }
 
     .field {
-        width: 220px;
-        border: none;
-        outline: none;
-        border-bottom: orange solid 1px;
-        font-size: 15px;
-        font-family: poppins;
-        padding-left: 25px;
-        color: rgb(71, 71, 71);
-        font-weight: 600;
+      width: 220px;
+      border: none;
+      outline: none;
+      border-bottom: orange solid 1px;
+      font-size: 15px;
+      font-family: poppins;
+      padding-left: 25px;
+      color: rgb(71, 71, 71);
+      font-weight: 600;
     }
-    .field:focus{
-        border-bottom: orange solid 2px;
+    .field:focus {
+      border-bottom: orange solid 2px;
     }
     button {
-        font-size: large;
-        color: white;
-        background: linear-gradient(to right, orange, rgb(250, 224, 66));
-        outline: none;
-        border: none;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        cursor: pointer;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-        transition: all 0.35s;
+      font-size: large;
+      color: white;
+      background: linear-gradient(to right, orange, rgb(250, 224, 66));
+      outline: none;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transition: all 0.35s;
     }
     button:hover {
-        width: 80px;
-        border-radius: 5mm;
-        background: rgb(46, 46, 46);
+      width: 80px;
+      border-radius: 5mm;
+      background: rgb(46, 46, 46);
     }
-    button .btext{
-        display: none;
-        opacity: 0;
-        transition: 0.9s;
+    button .btext {
+      display: none;
+      opacity: 0;
+      transition: 0.9s;
     }
-    button:hover i{
-        display: none;
+    button:hover i {
+      display: none;
     }
-    button:hover .btext{
-        display: block;
-        opacity: 1;
+    button:hover .btext {
+      display: block;
+      opacity: 1;
     }
-    .btext{
-        color: white;
-        font-size: 16px;
-        font-family: poppins;
+    .btext {
+      color: white;
+      font-size: 16px;
+      font-family: poppins;
     }
     .head {
-        font-size:22px;
-        font-family:'Poppins' ;
-        font-weight: bold;
-        position: absolute;
-        top: 55px;
-        color: rgb(56, 56, 56);
-        font-weight: 500px;
-        text-align: center;
+      font-size: 22px;
+      font-family: "Poppins";
+      font-weight: bold;
+      position: absolute;
+      top: 55px;
+      color: rgb(56, 56, 56);
+      font-weight: 500px;
+      text-align: center;
     }
-    .headline2{
-        font-size:18px;
-        font-family:'Poppins' ;
-        font-weight: bold;
-        position: absolute;
-        top: 20px;
-        color: orange;
-        font-weight: 500px;
-        text-align: center;
+    .headline2 {
+      font-size: 18px;
+      font-family: "Poppins";
+      font-weight: bold;
+      position: absolute;
+      top: 20px;
+      color: orange;
+      font-weight: 500px;
+      text-align: center;
     }
     #one {
-        visibility: hidden;
+      visibility: hidden;
     }
 
     .fa-minus {
-        opacity: 0;
+      opacity: 0;
     }
 
     #line {
-        width: 310px;
-        height: 1.5px;
-        background: rgba(94, 94, 94, 0.171);
-        border-radius: 2mm;
+      width: 310px;
+      height: 1.5px;
+      background: rgba(94, 94, 94, 0.171);
+      border-radius: 2mm;
     }
 
     #after-submit {
-        width: 100%;
-        height: 100%;
-        z-index: 99999;
-        display: none;
+      width: 100%;
+      height: 100%;
+      z-index: 99999;
+      display: none;
     }
 
     #submitting {
-        position: absolute;
-        top: -10px;
-        left: 0;
-        width: 100%;
-        height: 4%;
-        background: rgb(190, 190, 190);
-        opacity: 1;
-        overflow: hidden;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 100%;
+      height: 4%;
+      background: rgb(190, 190, 190);
+      opacity: 1;
+      overflow: hidden;
     }
-    #subload{
+    #subload {
+      width: 15%;
+      height: 100%;
+      background: orange;
+      animation: submitnext linear 1.25s infinite;
+      color: orange;
+    }
+    @keyframes submitnext {
+      0% {
+        transform: translateX(0px);
         width: 15%;
-        height: 100%;
-        background: orange;
-        animation: submitnext linear 1.25s infinite;
-        color: orange;
-    }
-    @keyframes submitnext{
-        0%{
-            transform: translateX(0px);
-            width: 15%;
-        }
-        35%{
-            width: 50%;
-        }
-        100%{
-            transform: translateX(320px);
-            width: 15%;
-        }
+      }
+      35% {
+        width: 50%;
+      }
+      100% {
+        transform: translateX(320px);
+        width: 15%;
+      }
     }
     .sub-part {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        flex-direction: column;
-        font-size: larger;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-direction: column;
+      font-size: larger;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     }
 
     .fa-circle {
-        animation: animate 1s linear infinite;
+      animation: animate 1s linear infinite;
     }
 
     .fa-check-circle {
-        font-size: larger;
-        animation: scaleanimate 1s linear infinite;
+      font-size: larger;
+      animation: scaleanimate 1s linear infinite;
     }
 
     .fa-times {
-        font-size: larger;
-        animation: scaleanimate 1s linear infinite;
+      font-size: larger;
+      animation: scaleanimate 1s linear infinite;
     }
 
     @keyframes scaleanimate {
+      0%,
+      100% {
+        transform: scale(1);
+      }
 
-        0%,
-        100% {
-            transform: scale(1);
-        }
-
-        50% {
-            transform: scale(2);
-        }
+      50% {
+        transform: scale(2);
+      }
     }
 
     @keyframes animate {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
 
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-100px);
-        }
+      50% {
+        transform: translateY(-100px);
+      }
     }
 
     #successfull {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: yellowgreen;
-        opacity: 0;
-        animation: colorchange linear 1s infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: yellowgreen;
+      opacity: 0;
+      animation: colorchange linear 1s infinite;
     }
 
     @keyframes colorchange {
+      0%,
+      100% {
+        background: yellowgreen;
+      }
 
-        0%,
-        100% {
-            background: yellowgreen;
-        }
-
-        50% {
-            background: rgb(138, 205, 50);
-        }
+      50% {
+        background: rgb(138, 205, 50);
+      }
     }
 
     #unsuccesfull {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: tomato;
-        opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: tomato;
+      opacity: 0;
     }
 
     .alert {
-        font-size: small;
-        font-family: Montserrat;
-        font-weight: 500;
-        color: rgb(232, 0, 0);
-        text-align: center;
-        display: flex;
-        visibility: hidden;
-        transition: 0.35s ;
+      font-size: small;
+      font-family: Montserrat;
+      font-weight: 500;
+      color: rgb(232, 0, 0);
+      text-align: center;
+      display: flex;
+      visibility: hidden;
+      transition: 0.35s;
     }
 
     .material-icons {
-        color: rgb(232, 0, 0);
-        font-size: medium;
-        margin-right: 10px;
+      color: rgb(232, 0, 0);
+      font-size: medium;
+      margin-right: 10px;
     }
-    .images{
-        position: fixed;
-        top: 5px ;
-        left: 10px;
-        height: 80px;
-        width:200px;
-        display: flex;
-        justify-content: space-evenly;
+    .images {
+      position: fixed;
+      top: 5px;
+      left: 10px;
+      height: 80px;
+      width: 200px;
+      display: flex;
+      justify-content: space-evenly;
     }
-    .images img{
-        border-radius: 2mm;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    .images img {
+      border-radius: 2mm;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
     }
-    .label{
-        position: absolute;
-        top: 15px;
-        left: 20px;
-        font-family: poppins;
-        font-size: 14px;
-        opacity: 0;
-        transition: 0.35s;
-        color: rgb(73, 73, 73);
+    .label {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-family: poppins;
+      font-size: 14px;
+      opacity: 0;
+      transition: 0.35s;
+      color: rgb(73, 73, 73);
     }
-    .field:focus + .label{
-        opacity: 1;
-        top: -25px;
-        left: 0;
+    .field:focus + .label {
+      opacity: 1;
+      top: -25px;
+      left: 0;
     }
-    .field:focus::placeholder{
-        opacity: 0;
+    .field:focus::placeholder {
+      opacity: 0;
     }
-    .field:not(:placeholder-shown) + .label{
-        opacity: 1;
-        top: -25px;
-        left: 0;
-        
+    .field:not(:placeholder-shown) + .label {
+      opacity: 1;
+      top: -25px;
+      left: 0;
     }
-    .bottomtext{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex-direction: column;
-        z-index: 10;
+    .bottomtext {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: column;
+      z-index: 10;
     }
-    .btcontent{
-        width: 300px;
-        height: 120px;
-        color: rgb(71, 71, 71);
-        font-size: small;
-        font-family: poppins;
+    .btcontent {
+      width: 300px;
+      height: 120px;
+      color: rgb(71, 71, 71);
+      font-size: small;
+      font-family: poppins;
     }
-    .btcontent a{
-        background: transparent;
-        color: rgb(71, 71, 71);
-        border: none;
-        border-radius: 0;
-        outline: none;
-        box-shadow: none;
-        font-size: small;
-        font-family: poppins;
-        cursor: pointer;
-        float: right;
-        z-index: 99999;
-        margin: 0;
-        height: 10px;
-        text-decoration: none;
-        font-weight: 600;
+    .btcontent a {
+      background: transparent;
+      color: rgb(71, 71, 71);
+      border: none;
+      border-radius: 0;
+      outline: none;
+      box-shadow: none;
+      font-size: small;
+      font-family: poppins;
+      cursor: pointer;
+      float: right;
+      z-index: 99999;
+      margin: 0;
+      height: 10px;
+      text-decoration: none;
+      font-weight: 600;
     }
     select {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  background: transparent;
-}
-input[type="number"],input[type="text"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  background: transparent;
-}
-    @media all and (max-width: 500px) {
-        .images{
-        height: 60px;
-        width:160px;
-        }
-        .btcontent{
-        height: 180px;
-        }
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      background: transparent;
     }
-</style>
+    input[type="number"],
+    input[type="text"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      background: transparent;
+    }
+    @media all and (max-width: 500px) {
+      .images {
+        height: 60px;
+        width: 160px;
+      }
+      .btcontent {
+        height: 180px;
+      }
+    }
+    option {
+      font-family: poppins;
+      font-size: small;
+      font: -moz-pull-down-menu;
+    }
+  </style>
 
-<body>
-        <div class="bottomtext">
-            <div class="btcontent">
-                <p><strong>Note</strong> You will recieve a mail after submitting the details</p>
-                <a href="https://idea2innovation.github.io/#b1">Help</a>
-            </div>
-        </div>
-    <div class="images">
-        <img src="images/logo.png" alt="logo">
-        <img src="images/iarelogo.jpg" alt="iarelogo">
+  <body>
+    <div class="bottomtext">
+      <div class="btcontent">
+        <p>
+          <strong>Note</strong> You will recieve a mail after submitting the
+          details
+        </p>
+        <a href="https://idea2innovation.github.io/#b1">Help</a>
+      </div>
     </div>
-    <form autocomplete="off" method="post" id="myform" name="sub-sheet" onsubmit="return false;">
-        <div id="form">
-            <div class="headline2">Idea to Innovation</div>
-            <div class="head">Join with us
-            </div>
-            <div class="stages">
-                <span class="items"><i class="fas fa-dot-circle"></i></span>
-                <span class="items"><i class="fas fa-minus"></i></span>
-                <span class="items"><i class="fas fa-minus"></i></span>
-                <span class="items"><i class="fas fa-minus"></i></span>
-                <span class="items"><i class="fas fa-dot-circle"></i></span>
-                <span class="items"><i class="fas fa-minus"></i></span>
-                <span class="items"><i class="fas fa-minus"></i></span>
-                <span class="items"><i class="fas fa-minus"></i></span>
-                <span class="items"><i class="fas fa-dot-circle"></i></span>
-            </div>
-            <div id="form-part">
-                <div class="container">
-                    <div class="inputs">
-                        <input type="text" placeholder="Name" class="field" name="Name">
-                        <span class="label">Name</span>
-                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="inputs">
-                        <input type="text" placeholder="Roll Number" class="field" name="Roll number">
-                        <span class="label">Roll number</span>
-                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
-                        <i class="fas fa-id-card"></i>
-                    </div>
-                    <div class="submit">
-                        <button id="one"><i class="fas fa-arrow-left"></i></button>
-                        <button id="two" type="button"><i class="fas fa-arrow-right"></i><span class="btext">Next</span></button>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="inputs">
-                        <input type="tel" placeholder="Contact number" class="field" name="Contact Number">
-                        <span class="label">Contact number</span>
-                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <div class="inputs">
-                        <input type="email" placeholder="Email" class="field" name="email">
-                        <span class="label">Email</span>
-                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="submit">
-                        <button id="three" type="button"><i class="fas fa-arrow-left"></i><span class="btext">Previous</span></button>
-                        <button id="four" type="button"><i class="fas fa-arrow-right"></i><span class="btext">Next</span></button>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="inputs">
-                        <select name="branch" id="" class="field"  style="width: 100%;" name="branch">
-                            <option value="" style="color: rgb(0, 0, 0);">Select Branch</option>
-                            <option value="CSE" style="color: rgb(0, 0, 0);">CSE</option>
-                            <option value="IT" style="color: rgb(0, 0, 0);">IT</option>
-                            <option value="ECE" style="color: rgb(0, 0, 0);">ECE</option>
-                            <option value="EEE" style="color: rgb(0, 0, 0);">EEE</option>
-                            <option value="Mech" style="color: rgb(0, 0, 0);">Mechanical Engineering
-                            </option>
-                            <option value="Civil" style="color: rgb(0, 0, 0);">Civil Engineering
-                            </option>
-                            <option value="AERO" style="color: rgb(0, 0, 0);">Aeronautical Engineering
-                            </option>
-                        </select>
-                        <span class="label">Branch</span>
-                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="inputs">
-                        <input type="text" name="Codechef" id="" placeholder="Codechef username" class="field" >
-                        <span class="label">Codechef username</span>
-                        <span class="alert"><span class="material-icons">error</span> Please fill this out field properly</span>
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="submit">
-                        <button id="five" type="button"><i class="fas fa-arrow-left"></i><span class="btext">Previous</span></button>
-                        <button id="six" type="submit"><i class="fas fa-check"></i><span class="btext">Submit</span></button>
-                    </div>
-                </div>
-            </div>
-            <div id="after-submit">
-                <div id="submitting">
-                    <div id="subload">sfsdf</div>
-                </div>
-                <div id="successfull">
-                    <div class="sub-part">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Submitted</p>
-                    </div>
-                </div>
-                <div id="unsuccesfull">
-                    <div class="sub-part">
-                        <i class="fas fa-times"></i>
-                        <p>Failed</p>
-                    </div>
-                </div>
-            </div>
+    <div class="images">
+      <img src="images/logo.png" alt="logo" />
+      <img src="images/iarelogo.jpg" alt="iarelogo" />
+    </div>
+    <form
+      autocomplete="off"
+      method="post"
+      id="myform"
+      name="sub-sheet"
+      onsubmit="return false;"
+    >
+      <div id="form">
+        <div class="headline2">Idea to Innovation</div>
+        <div class="head">Join us</div>
+        <div class="stages">
+          <span class="items"><i class="fas fa-dot-circle"></i></span>
+          <span class="items"><i class="fas fa-minus"></i></span>
+          <span class="items"><i class="fas fa-minus"></i></span>
+          <span class="items"><i class="fas fa-minus"></i></span>
+          <span class="items"><i class="fas fa-dot-circle"></i></span>
+          <span class="items"><i class="fas fa-minus"></i></span>
+          <span class="items"><i class="fas fa-minus"></i></span>
+          <span class="items"><i class="fas fa-minus"></i></span>
+          <span class="items"><i class="fas fa-dot-circle"></i></span>
         </div>
+        <div id="form-part">
+          <div class="container">
+            <div class="inputs">
+              <input type="text" placeholder="Name" class="field" name="Name" />
+              <span class="label">Name</span>
+              <span class="alert"
+                ><span class="material-icons">error</span> Please fill this out
+                field properly</span
+              >
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="inputs">
+              <input
+                type="text"
+                placeholder="Roll Number"
+                class="field"
+                name="Roll number"
+              />
+              <span class="label">Roll number</span>
+              <span class="alert"
+                ><span class="material-icons">error</span> Please fill this out
+                field properly</span
+              >
+              <i class="fas fa-id-card"></i>
+            </div>
+            <div class="submit">
+              <button id="one"><i class="fas fa-arrow-left"></i></button>
+              <button id="two" type="button">
+                <i class="fas fa-arrow-right"></i
+                ><span class="btext">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="container">
+            <div class="inputs">
+              <input
+                type="tel"
+                placeholder="Contact number"
+                class="field"
+                name="Contact Number"
+              />
+              <span class="label">Contact number</span>
+              <span class="alert"
+                ><span class="material-icons">error</span> Please fill this out
+                field properly</span
+              >
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="inputs">
+              <input
+                type="text"
+                placeholder="Email"
+                class="field"
+                name="email"
+              />
+              <span class="label">Email</span>
+              <span class="alert"
+                ><span class="material-icons">error</span> Please fill this out
+                field properly</span
+              >
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="submit">
+              <button id="three" type="button">
+                <i class="fas fa-arrow-left"></i
+                ><span class="btext">Previous</span>
+              </button>
+              <button id="four" type="button">
+                <i class="fas fa-arrow-right"></i
+                ><span class="btext">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="container">
+            <div class="inputs">
+              <select
+                name="branch"
+                id=""
+                class="field"
+                style="width: 100%"
+                name="branch"
+              >
+                <option value="" style="color: rgb(0, 0, 0)">
+                  Select Branch
+                </option>
+                <option value="CSE" style="color: rgb(0, 0, 0)">
+                  Computer Science and Engineering
+                </option>
+                <option value="CSE(AI & ML)" style="color: rgb(0, 0, 0)">
+                  Computer Science and Engineering (AI & ML)
+                </option>
+                <option value="CSE(Data Science)" style="color: rgb(0, 0, 0)">
+                  Computer Science and Engineering (Data Science)
+                </option>
+                <option
+                  value="CSE (Cyber Security)"
+                  style="color: rgb(0, 0, 0)"
+                >
+                  Computer Science and Engineering (Cyber Security)
+                </option>
+                <option value="CSIT" style="color: rgb(0, 0, 0)">
+                  Computer Science and Information Technology
+                </option>
+                <option value="IT" style="color: rgb(0, 0, 0)">
+                  Information Technology
+                </option>
+                <option value="ECE" style="color: rgb(0, 0, 0)">
+                  Electronics and Communication Engineering
+                </option>
+                <option value="EEE" style="color: rgb(0, 0, 0)">
+                  Electrical and Electronics Engineering
+                </option>
+                <option value="Mech" style="color: rgb(0, 0, 0)">
+                  Mechanical Engineering
+                </option>
+                <option value="Civil" style="color: rgb(0, 0, 0)">
+                  Civil Engineering
+                </option>
+                <option value="AERO" style="color: rgb(0, 0, 0)">
+                  Aeronautical Engineering
+                </option>
+              </select>
+              <span class="label">Branch</span>
+              <span class="alert"
+                ><span class="material-icons">error</span> Please fill this out
+                field properly</span
+              >
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="inputs">
+              <input
+                type="text"
+                name="Codechef"
+                id=""
+                placeholder="Codechef username"
+                class="field"
+              />
+              <span class="label">Codechef username</span>
+              <span class="alert"
+                ><span class="material-icons">error</span> Please fill this out
+                field properly</span
+              >
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="submit">
+              <button id="five" type="button">
+                <i class="fas fa-arrow-left"></i
+                ><span class="btext">Previous</span>
+              </button>
+              <button id="six" type="submit">
+                <i class="fas fa-check"></i><span class="btext">Submit</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="after-submit">
+          <div id="submitting">
+            <div id="subload">sfsdf</div>
+          </div>
+          <div id="successfull">
+            <div class="sub-part">
+              <i class="fas fa-check-circle"></i>
+              <p>Submitted</p>
+            </div>
+          </div>
+          <div id="unsuccesfull">
+            <div class="sub-part">
+              <i class="fas fa-times"></i>
+              <p>Failed</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </form>
     <script>
-        var one = document.getElementById("one")
-        var two = document.getElementById("two")
-        var three = document.getElementById("three")
-        var four = document.getElementById("four")
-        var five = document.getElementById("five")
-        var six = document.getElementById("six")
-        var form = document.getElementById("form-part")
-        var items = document.querySelectorAll(".items")
-        var asub = document.getElementById("after-submit")
-        var asub3 = document.getElementById("unsuccesfull")
-        var asub2 = document.getElementById("successfull")
-        var asub1 = document.getElementById("submitting")
-        var fields = document.querySelectorAll('.field')
-        var ale = document.querySelectorAll('.alert')
-        var label = document.querySelectorAll('.label')
-        form.style.transition = "all 0.35s"
-        items[0].style.color = "orange"
-        items[4].style.color = "grey"
-        items[8].style.color = "grey"
-        one.onclick = function () {
-            form.style.left = "0px"
+      var one = document.getElementById("one");
+      var two = document.getElementById("two");
+      var three = document.getElementById("three");
+      var four = document.getElementById("four");
+      var five = document.getElementById("five");
+      var six = document.getElementById("six");
+      var form = document.getElementById("form-part");
+      var items = document.querySelectorAll(".items");
+      var asub = document.getElementById("after-submit");
+      var asub3 = document.getElementById("unsuccesfull");
+      var asub2 = document.getElementById("successfull");
+      var asub1 = document.getElementById("submitting");
+      var fields = document.querySelectorAll(".field");
+      var ale = document.querySelectorAll(".alert");
+      var label = document.querySelectorAll(".label");
+      form.style.transition = "all 0.35s";
+      items[0].style.color = "orange";
+      items[4].style.color = "grey";
+      items[8].style.color = "grey";
+      one.onclick = function () {
+        form.style.left = "0px";
+      };
+      two.onclick = function () {
+        navigator.vibrate =
+          navigator.vibrate ||
+          navigator.webkitVibrate ||
+          navigator.mozVibrate ||
+          navigator.msVibrate;
+        var a = fields[0].value;
+        var b = fields[1].value;
+        var flag = 0;
+        if (
+          (b.length == 10 && b[0] == 1) ||
+          (b[0] == 2 && b[5] == "A") ||
+          b[5] == "a"
+        ) {
+          flag = 1;
         }
-        two.onclick = function () {
-            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-            var a = fields[0].value;
-            var b = fields[1].value;
-            var flag=0
-            if (b.length==10 && b[0]==1 || b[0]==2 && b[5]=='A' || b[5]=='a'){
-                flag=1
-            }
-            if (a==''){
-                if (navigator.vibrate) {
-                    navigator.vibrate([500]);
-                }
-                ale[0].style.visibility='visible'
-                fields[0].focus();
-                fields[0].style.borderBottomColor='rgb(232, 0, 0)'
-                setTimeout(()=>{ ale[0].style.visibility = 'hidden', fields[0].style.borderBottomColor = 'orange'},3000);
-            }
-            else if(b == '' || flag==0){
-                if (navigator.vibrate) {
-                    navigator.vibrate([500]);
-                }
-                ale[1].style.visibility = 'visible'
-                fields[1].focus();
-                fields[1].style.borderBottomColor = 'rgb(232, 0, 0)'
-                setTimeout(() => { ale[1].style.visibility = 'hidden', fields[1].style.borderBottomColor = 'orange' }, 3000);
-            }
-            else{
-            asub.style.display = "block"
-            asub1.style.opacity = "1"
-            setTimeout(() => { asub1.style.opacity = "0", asub.style.display = "none" }, 1000)
-            form.style.left = "-300px"
-            items[4].style.color = "orange"
-            items[0].style.color = "grey"
-            items[8].style.color = "grey"}
+        if (a == "") {
+          if (navigator.vibrate) {
+            navigator.vibrate([500]);
+          }
+          ale[0].style.visibility = "visible";
+          fields[0].focus();
+          fields[0].style.borderBottomColor = "rgb(232, 0, 0)";
+          setTimeout(() => {
+            (ale[0].style.visibility = "hidden"),
+              (fields[0].style.borderBottomColor = "orange");
+          }, 3000);
+        } else if (b == "" || flag == 0) {
+          if (navigator.vibrate) {
+            navigator.vibrate([500]);
+          }
+          ale[1].style.visibility = "visible";
+          fields[1].focus();
+          fields[1].style.borderBottomColor = "rgb(232, 0, 0)";
+          setTimeout(() => {
+            (ale[1].style.visibility = "hidden"),
+              (fields[1].style.borderBottomColor = "orange");
+          }, 3000);
+        } else {
+          asub.style.display = "block";
+          asub1.style.opacity = "1";
+          setTimeout(() => {
+            (asub1.style.opacity = "0"), (asub.style.display = "none");
+          }, 1000);
+          form.style.left = "-300px";
+          items[4].style.color = "orange";
+          items[0].style.color = "grey";
+          items[8].style.color = "grey";
         }
-        three.onclick = function () {
-            form.style.left = '-0px'
-            items[0].style.color = "orange"
-            items[4].style.color = "grey"
-            items[8].style.color = "grey"
+      };
+      three.onclick = function () {
+        form.style.left = "-0px";
+        items[0].style.color = "orange";
+        items[4].style.color = "grey";
+        items[8].style.color = "grey";
+      };
+      four.onclick = function () {
+        navigator.vibrate =
+          navigator.vibrate ||
+          navigator.webkitVibrate ||
+          navigator.mozVibrate ||
+          navigator.msVibrate;
+        var c = fields[2].value;
+        var d = fields[3].value;
+        i = d.indexOf("@");
+        j = d.indexOf(".");
+        if (c == "" || c.length < 6 || c.length > 15) {
+          if (navigator.vibrate) {
+            navigator.vibrate([500]);
+          }
+          ale[2].style.visibility = "visible";
+          fields[2].focus();
+          fields[2].style.borderBottomColor = "rgb(232, 0, 0)";
+          setTimeout(() => {
+            (ale[2].style.visibility = "hidden"),
+              (fields[2].style.borderBottomColor = "orange");
+          }, 3000);
+        } else if (
+          d == "" ||
+          i == -1 ||
+          j == -1 ||
+          d.length < 4 ||
+          Math.abs(i - j) < 2
+        ) {
+          if (navigator.vibrate) {
+            navigator.vibrate([500]);
+          }
+          ale[3].style.visibility = "visible";
+          fields[3].focus();
+          fields[3].style.borderBottomColor = "rgb(232, 0, 0)";
+          setTimeout(() => {
+            (ale[3].style.visibility = "hidden"),
+              (fields[3].style.borderBottomColor = "orange");
+          }, 3000);
+        } else {
+          asub.style.display = "block";
+          asub1.style.opacity = "1";
+          setTimeout(() => {
+            (asub1.style.opacity = "0"), (asub.style.display = "none");
+          }, 1000);
+          form.style.left = "-600px";
+          items[8].style.color = "orange";
+          items[4].style.color = "grey";
+          items[0].style.color = "grey";
         }
-        four.onclick = function () {
-            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-            var c = fields[2].value;
-            var d = fields[3].value;
-            i=d.indexOf('@')
-            j=d.indexOf('.')
-            if (c=='' || c.length<6 ||c.length>15){
-                if (navigator.vibrate) {
-                    navigator.vibrate([500]);
-                }
-                ale[2].style.visibility='visible'
-                fields[2].focus();
-                fields[2].style.borderBottomColor = 'rgb(232, 0, 0)'
-                setTimeout(() => { ale[2].style.visibility = 'hidden', fields[2].style.borderBottomColor = 'orange' }, 3000);
-            }
-            else if(d=='' || i==-1 ||j==-1){
-                if (navigator.vibrate) {
-                    navigator.vibrate([500]);
-                }
-                ale[3].style.visibility = 'visible'
-                fields[3].focus();
-                fields[3].style.borderBottomColor = 'rgb(232, 0, 0)'
-                setTimeout(() => { ale[3].style.visibility = 'hidden', fields[3].style.borderBottomColor = 'orange' }, 3000);
-            }
-            else{
-            asub.style.display = "block"
-            asub1.style.opacity = "1"
-            setTimeout(() => { asub1.style.opacity = "0", asub.style.display = "none" }, 1000)
-            form.style.left = "-600px"
-            items[8].style.color = "orange"
-            items[4].style.color = "grey"
-            items[0].style.color = "grey"
-            }
+      };
+      five.onclick = function () {
+        form.style.left = "-300px";
+        items[4].style.color = "orange";
+        items[0].style.color = "grey";
+        items[8].style.color = "grey";
+      };
+      six.onclick = function () {
+        navigator.vibrate =
+          navigator.vibrate ||
+          navigator.webkitVibrate ||
+          navigator.mozVibrate ||
+          navigator.msVibrate;
+        var e = fields[4].value;
+        var f = fields[5].value;
+        if (e == "") {
+          if (navigator.vibrate) {
+            navigator.vibrate([500]);
+          }
+          ale[4].style.visibility = "visible";
+          fields[4].focus();
+          fields[4].style.borderBottomColor = "rgb(232, 0, 0)";
+          setTimeout(() => {
+            (ale[4].style.visibility = "hidden"),
+              (fields[4].style.borderBottomColor = "orange");
+          }, 3000);
+        } else if (f == "" || f.length < 4 || f.length > 14) {
+          if (navigator.vibrate) {
+            navigator.vibrate([500]);
+          }
+          ale[5].style.visibility = "visible";
+          fields[5].focus();
+          fields[5].style.borderBottomColor = "rgb(232, 0, 0)";
+          setTimeout(() => {
+            (ale[5].style.visibility = "hidden"),
+              (fields[5].style.borderBottomColor = "orange");
+          }, 3000);
+        } else {
+          const scriptURL1 =
+            "https://script.google.com/macros/s/AKfycbx2Mhxk7Bu1ExzmiHqFtMGb5hyQ4wG3r4hOgW02Awu3ppLT2IOAsPQGnmXvbKrj747Smg/exec";
+          const fo = document.forms["sub-sheet"];
+          fo.addEventListener("submit", (e) => {
+            asub.style.display = "block";
+            setTimeout(() => {
+              asub1.style.opacity = "1";
+            }, 5);
+            fetch(scriptURL1, { method: "POST", body: new FormData(fo) })
+              .then((Response) => {
+                asub2.style.transition = "all 0.5s ease-in-out 0.55s";
+                setTimeout(() => {
+                  asub2.style.opacity = "1";
+                }, 2000);
+              })
+              .catch((error) => {});
+          });
         }
-        five.onclick = function () {
-            form.style.left = "-300px"
-            items[4].style.color = "orange"
-            items[0].style.color = "grey"
-            items[8].style.color = "grey"
-        }
-        six.onclick = function () {
-            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-            var e = fields[4].value;
-            var f = fields[5].value;
-            if(e==''){
-                if (navigator.vibrate) {
-                    navigator.vibrate([500]);
-                }
-                ale[4].style.visibility = 'visible'
-                fields[4].focus();
-                fields[4].style.borderBottomColor = 'rgb(232, 0, 0)'
-                setTimeout(() => { ale[4].style.visibility = 'hidden', fields[4].style.borderBottomColor = 'orange' }, 3000);
-            }
-            else if(f=='' || f.length<4 || f.length>14){
-                if (navigator.vibrate) {
-                    navigator.vibrate([500]);
-                }
-                ale[5].style.visibility = 'visible'
-                fields[5].focus();
-                fields[5].style.borderBottomColor = 'rgb(232, 0, 0)'
-                setTimeout(() => { ale[5].style.visibility = 'hidden', fields[5].style.borderBottomColor = 'orange' }, 3000);
-            }
-            else{
-                const scriptURL1 = 'https://script.google.com/macros/s/AKfycbx2Mhxk7Bu1ExzmiHqFtMGb5hyQ4wG3r4hOgW02Awu3ppLT2IOAsPQGnmXvbKrj747Smg/exec'
-                const fo = document.forms['sub-sheet']
-                fo.addEventListener('submit', e => {
-                    asub.style.display = "block"
-                    setTimeout(() => { asub1.style.opacity = "1" }, 5)
-                    fetch(scriptURL1, { method: 'POST', body: new FormData(fo) })
-                        .then(Response => {
-                            asub2.style.transition = "all 0.5s ease-in-out 0.55s"
-                            setTimeout(() => { asub2.style.opacity = "1" }, 2000)
-                        })
-                        .catch(error => {
-                        })
-                })
-            }
-        }
+      };
     </script>
-</body>
+  </body>
+</html>

@@ -734,6 +734,8 @@ nav ul li a:hover {
   align-items: center;
   margin-bottom: 1%;
   overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .topped .rank,
 .lasttop .rank {
@@ -780,6 +782,8 @@ nav ul li a:hover {
   height: 40px;
   border-radius: 100%;
   border: 1px gray solid;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 .topped .Name,
 .lasttop .Name {
@@ -796,6 +800,15 @@ nav ul li a:hover {
   color: rgb(88, 88, 88);
   font-size: small;
   font-family: poppins;
+}
+.topped .rollnumber,
+.lasttop .rollnumber {
+  font-size: large;
+  font-family: poppins;
+  font-weight: bold;
+  color: rgb(255, 55, 55);
+  margin-left: 3px;
+  margin-right: 3px;
 }
 .topped a,
 .lasttop a {
@@ -1146,7 +1159,7 @@ input[type="number"] {
 }
 #subs-sub,
 #subs-un {
-  font-size: 25px;
+  font-size: 20px;
   width: 35px;
   height: 35px;
   border-radius: 100%;
@@ -1226,13 +1239,12 @@ i {
   position: relative;
   border-radius: 2mm;
   z-index: 5;
-  padding-bottom: 5%;
 }
 #slideshow-container {
   display: flex;
   width: 360vw;
-  justify-content:center;
-  height:fit-content;
+  justify-content: stretch;
+  height: max-content;
   position: relative;
   left: 0;
   animation: slide 10s forwards infinite;
@@ -1240,10 +1252,12 @@ i {
 }
 .im {
   width: 100%;
+  height: fit-content;
   border-radius: 2mm;
 }
 .im img {
   width: 100%;
+  height: 70vh;
   border-radius: 2mm;
 }
 .text {
@@ -1283,7 +1297,7 @@ i {
 #ev {
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 5%;
+  padding-top: 3px;
 }
 .hev {
   text-align: center;
@@ -3131,6 +3145,11 @@ html {
   #slideshow-container {
     width: 400vw;
   }
+  .im img {
+    width: 100%;
+    height: fit-content;
+    border-radius: 2mm;
+  }
   @keyframes slide {
     0% {
       left: 0;
@@ -3196,7 +3215,7 @@ html {
   }
   #subs-sub,
   #subs-un {
-    font-size: 12px;
+    font-size: 8px;
     width: 14px;
     height: 14px;
     line-height: 14px;

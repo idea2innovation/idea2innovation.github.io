@@ -390,7 +390,6 @@ nav ul li a:hover {
   background: transparent;
   text-align: center;
   font-size: 30px;
-  border-radius: 1mm;
 }
 .menuBtn::before {
   font-family: "Font Awesome 5 Free";
@@ -614,27 +613,6 @@ nav ul li a:hover {
   background: rgb(90, 90, 90);
   background-attachment: fixed;
 }
-#fallrise {
-  transform-origin: left;
-  width: fit-content;
-}
-#fallrise:hover {
-  animation: fallandrise 1.5s forwards infinite;
-}
-@keyframes fallandrise {
-  0% {
-    transform: rotateZ(0);
-  }
-  5% {
-    transform: rotateZ(10deg);
-  }
-  10% {
-    transform: rotateZ(10deg);
-  }
-  100% {
-    transform: rotateZ(0deg);
-  }
-}
 .contestname {
   width: 90%;
   height: fit-content;
@@ -743,13 +721,6 @@ nav ul li a:hover {
   margin-bottom: 5%;
   overflow: hidden;
 }
-.lasttop .rollnumber,
-.topped .rollnumber {
-  font-family: poppins;
-  color: rgb(255, 73, 73);
-  font-size: large;
-  font-weight: bold;
-}
 .lasttop {
   border-top: cornflowerblue 5px solid;
   max-width: 100%;
@@ -763,8 +734,6 @@ nav ul li a:hover {
   align-items: center;
   margin-bottom: 1%;
   overflow: hidden;
-  padding-top: 3px;
-  padding-bottom: 3px;
 }
 .topped .rank,
 .lasttop .rank {
@@ -801,8 +770,8 @@ nav ul li a:hover {
   justify-content: space-between;
 }
 .topped img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
   border: 1px gray solid;
 }
@@ -1188,11 +1157,11 @@ input[type="number"] {
   color: black;
 }
 #subs-sub:hover {
-  background: red;
+  background: dodgerblue;
   color: white;
 }
 #subs-un:hover {
-  background: dodgerblue;
+  background: red;
   color: white;
 }
 .fend {
@@ -1262,8 +1231,8 @@ i {
 #slideshow-container {
   display: flex;
   width: 360vw;
-  justify-content: stretch;
-  height: max-content;
+  justify-content:center;
+  height:fit-content;
   position: relative;
   left: 0;
   animation: slide 10s forwards infinite;
@@ -2164,10 +2133,12 @@ html {
 }
 #top-marker {
   position: fixed;
+  width: 0%;
+  height: 0vh;
   bottom: 10%;
   z-index: 7;
   text-align: center;
-  left: 2px;
+  left: 1px;
   transform: translateY(200px);
 }
 #fa2 {

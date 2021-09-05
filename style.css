@@ -2738,12 +2738,9 @@ html {
     height: 100vh;
     width: 250px;
     font-size: 18px;
-    line-height: 45px;
+    line-height: 60px;
     overflow: scroll;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
   }
   nav ul h2 {
     margin-left: 30px;

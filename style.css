@@ -55,13 +55,13 @@ select {
 }
 #logo123 {
   margin-right: 2%;
-  border-radius: 1mm;
+  border-radius: 3mm;
 }
 .logo {
   margin-top: 5px;
   margin-left: 0px;
-  width: 100px;
-  border-radius: 1mm;
+  width: 80px;
+  border-radius: 3mm;
 }
 .header-text {
   max-width: 45%;
@@ -246,10 +246,12 @@ nav ul li a:hover {
   text-shadow: 2px 2px 2px grey;
 }
 .toggle:nth-child(1) {
-  font-size: 30px;
+  font-size: 10px;
+  line-height: 45px;
 }
 .toggle:nth-child(2) {
-  font-size: 30px;
+  font-size: 10px;
+  line-height: 45px;
 }
 .toggle:nth-child(3) {
   font-size: 24px;
@@ -390,6 +392,7 @@ nav ul li a:hover {
   background: transparent;
   text-align: center;
   font-size: 30px;
+  border-radius: 1mm;
 }
 .menuBtn::before {
   font-family: "Font Awesome 5 Free";
@@ -2067,7 +2070,7 @@ img:hover {
 #subs-top {
   position: absolute;
   top: 1vh;
-  right: 7vw;
+  right: 3vw;
   display: flex;
   font-size: 1.75vw;
   font-family: "Mulish";
@@ -2738,6 +2741,9 @@ html {
     line-height: 45px;
     overflow: scroll;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   nav ul h2 {
     margin-left: 30px;

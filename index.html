@@ -81,11 +81,16 @@
   </style>
 
   <body id="click" onload="subfor()">
+    <!--------------------------------------------------Top marker------------------------------------------->
     <div id="marker"></div>
     <div id="top-marker">
       <a href="#marker"><i class="fas fa-arrow-up" id="fa2"></i></a>
     </div>
+
+    <!----------------------------------------------Horizontal Scrollbar------------------------------------->
     <div class="scroll-am"></div>
+
+    <!-------------------------------------------------Loading cards----------------------------------------->
     <div id="loading"></div>
     <div id="sub-load" style="position: fixed; top: -2vh; height: 105vh">
       <div id="sub-load0-1">
@@ -103,8 +108,6 @@
           <h2>Submitted :)</h2>
         </div>
       </div>
-      <canvas id="my-canvas"></canvas>
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     </div>
     <div id="sub-load2" style="position: fixed; top: -2vh; height: 105vh">
       <div id="sub-load2-1">
@@ -116,6 +119,12 @@
         </div>
       </div>
     </div>
+
+    <!-----------------------------------------------Animate on scroll--------------------------------------->
+    <canvas id="my-canvas"></canvas>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!--------------------------------------------Header and Introduction------------------------------------>
     <section id="header" class="lighthead">
       <div class="container">
         <a href="#marker" data-aos="fade-down"
@@ -177,6 +186,8 @@
         </div>
       </div>
     </section>
+
+    <!------------------------------------------------------About us----------------------------------------->
     <section id="about">
       <div class="about-left-col" data-aos="fade-right">
         <img src="images/about.jpg" alt="about us" />
@@ -230,6 +241,8 @@
         </div>
       </div>
     </section>
+
+    <!------------------------------------------Leaderboard or Activities------------------------------------>
     <div id="ac-bac">
       <section id="activities">
         <h2
@@ -423,117 +436,10 @@
             </div>-->
       </section>
     </div>
-    <script>
-      var loa = document.getElementById("sub-load");
-      var loa1 = document.getElementById("sub-load1");
-      var loa2 = document.getElementById("sub-load2");
-      var a2 = document.getElementsByClassName("comin");
-      var alerttext = document.getElementById("alert-text");
-      function SubForm() {
-        navigator.vibrate =
-          navigator.vibrate ||
-          navigator.webkitVibrate ||
-          navigator.mozVibrate ||
-          navigator.msVibrate;
-        var Name = "Unknown OS";
-        if (navigator.userAgent.indexOf("Win") != -1) Name = "Windows OS";
-        if (navigator.userAgent.indexOf("Mac") != -1) Name = "Macintosh";
-        if (navigator.userAgent.indexOf("Linux") != -1) Name = "Linux OS";
-        if (navigator.userAgent.indexOf("Android") != -1) Name = "Android OS";
-        if (navigator.userAgent.indexOf("like Mac") != -1) Name = "iOS";
-        a1 = document.getElementsByClassName("comin");
-        i = a1[1].value;
-        j = i.indexOf("@");
-        k = i.indexOf(".");
-        a1[3].value = new Date();
-        a1[4].value = Name;
-        if (!a1[0].value) {
-          alerttext.innerHTML = "Enter your name";
-          alerttext.style.opacity = "1";
-          alerttext.style.transition = "all 1s ease-out";
-          a2[0].className += " shake";
-          if (navigator.vibrate) {
-            navigator.vibrate([500]);
-          }
-          setTimeout(() => {
-            a2[0].className = "comin";
-          }, 500);
-          setTimeout(() => {
-            alerttext.style.opacity = "0";
-          }, 2000);
-        } else if (!a1[1].value) {
-          alerttext.innerHTML = "Enter your email-id";
-          alerttext.style.opacity = "1";
-          alerttext.style.transition = "all 1s";
-          a2[1].className += " shake";
-          if (navigator.vibrate) {
-            navigator.vibrate([500]);
-          }
-          setTimeout(() => {
-            a2[1].className = "comin";
-          }, 500);
-          setTimeout(() => {
-            alerttext.style.opacity = "0";
-          }, 2000);
-        } else if (j == -1 || k == -1) {
-          alerttext.innerHTML = "Enter a proper email-id";
-          alerttext.style.opacity = "1";
-          alerttext.style.transition = "all 1s";
-          a2[1].className += " shake";
-          if (navigator.vibrate) {
-            navigator.vibrate([500]);
-          }
-          setTimeout(() => {
-            a2[1].className = "comin";
-          }, 500);
-          setTimeout(() => {
-            alerttext.style.opacity = "0";
-          }, 2000);
-        } else if (!a1[2].value) {
-          alerttext.innerHTML = "write your comment";
-          alerttext.style.opacity = "1";
-          alerttext.style.transition = "all 1s";
-          a2[2].className += " shake";
-          if (navigator.vibrate) {
-            navigator.vibrate([500]);
-          }
-          setTimeout(() => {
-            a2[2].className = "comin";
-          }, 500);
-          setTimeout(() => {
-            alerttext.style.opacity = "0";
-          }, 2000);
-        } else if (a1[2].value && a1[1].value && a1[0].value) {
-          loa.style.display = "block";
-          $.ajax({
-            url: "https://api.apispreadsheets.com/data/11735/",
-            type: "post",
-            data: $("#myForm").serializeArray(),
-            success: function () {
-              loa.style.display = "none";
-              loa1.style.display = "block";
-              setTimeout(function () {
-                loa1.style.display = "none";
-              }, 2000);
-            },
-            error: function () {
-              loa.style.display = "none";
-              loa2.style.display = "block";
-              setTimeout(function () {
-                loa2.style.display = "none";
-              }, 2000);
-            },
-          });
-        }
-      }
-      function countchecker() {
-        const tl = a2[2].value.length;
-        console.log(tl);
-        document.getElementById("count").innerHTML = tl;
-      }
-    </script>
+
+    <!-------------------------------------------------------Events------------------------------------------>
     <div id="ev">
-      <!--Slideshow-->
+      <!----------------------------------------------------Slideshow---------------------------------------->
       <div id="slideshow">
         <div id="slideshow-container">
           <div class="im">
@@ -562,7 +468,8 @@
           </div>
         </div>
       </div>
-      <!--events body-->
+
+      <!-------------------events body---------------------->
       <div class="hev">
         <h2
           style="
@@ -907,6 +814,8 @@
           </div>
         </div>
       </div>
+
+      <!-------------------------JavaScript for event register form included in events----------------------->
       <script>
         var rclose = document.getElementById("r-close");
         var ropen = document.getElementById("r-open");
@@ -961,6 +870,8 @@
         });
       </script>
     </div>
+
+    <!--------------------------------------------------Members---------------------------------------------->
     <div id="mem-back">
       <h2
         style="
@@ -1499,6 +1410,8 @@
             </div>-->
       </section>
     </div>
+
+    <!----------------------------------------------Feedback------------------------------------------>
     <div id="b1" class="light">
       <div id="feedback" data-aos="fade-right">
         <h2
@@ -1602,6 +1515,8 @@
         </button>
       </div>
     </div>
+
+    <!------------------------------------------Javascript for feedback form-------------------------------->
     <script>
       var fhe = document.getElementById("commentid");
       var comh = document.getElementById("b1");
@@ -1721,7 +1636,8 @@
         document.getElementById("count").innerHTML = tl;
       }
     </script>
-    <!--Footer-->
+
+    <!---------------------------------------------------Footer------------------------------------------->
     <section id="footer">
       <div
         style="
@@ -1782,6 +1698,7 @@
               <i></i>& <i></i><i class="fa fa-css3" title="CSS"></i> in
               <a
                 href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.599927,78.4177253,15z/data=!4m5!3m4!1s0x0:0x65666fa3c4a256d2!8m2!3d17.599927!4d78.4177253"
+                target="_blank"
                 ><i class="fa fa-map-marker"></i> Institute of Aeronautical
                 Engineering</a
               ></small
@@ -1790,8 +1707,12 @@
         </div>
       </div>
     </section>
-    <!--Privacy Policy-->
+
+    <!---------------------------------------------------Privacy Policy----------------------------------->
+
+    <!--preloader for privacy policy-->
     <img src="images/logo.png" alt="loading" id="pri-po-load" />
+
     <div id="pri-po">
       <h2
         style="
@@ -1991,6 +1912,8 @@
         </ul>
       </div>
     </div>
+
+    <!-----------------------------------JavaScript for Privacy policy-------------------------------------->
     <script>
       var ap = document.getElementById("pri-po");
       var o = document.getElementById("open-pri");
@@ -2012,7 +1935,8 @@
         ap.style.opacity = "0";
       };
     </script>
-    <!--Social Media-->
+
+    <!----------------------------------------------Social Media------------------------------------------>
     <div class="social-icons">
       <a href="#header" id="logo-social"
         ><img
@@ -2064,6 +1988,8 @@
           data-aos-anchor-placement="top-top"
       /></a>
     </div>
+
+    <!-----------------JavaScript for top marker, horizontal Scroll bar, social media logo image------------->
     <script>
       var sc = document.getElementsByClassName("scroll-am");
       var th = document.body.scrollHeight - window.innerHeight;
@@ -2093,7 +2019,8 @@
         }
       };
     </script>
-    <!--Navigation-->
+
+    <!-----------------------------------------------Navigation--------------------------------------------->
     <nav
       class="nav1"
       id="na"
@@ -2125,6 +2052,7 @@
         <li>
           <a href="#b1"><i class="fa fa-comments" id="fa"></i></a>
         </li>
+        <li></li>
       </ul>
     </nav>
     <nav id="sideNav">
@@ -2173,15 +2101,17 @@
         </li>
         <li id="nav-last-row">
           <div id="nav-sub" class="toggle" title="Join Us">
-            <i class="material-icons">person_add</i>
+            <i class="fas fa-user-plus material-icon"></i>
           </div>
           <div id="nav-unsub" class="toggle" title="Drop Out">
-            <i class="material-icons">person_remove</i>
+            <i class="fas fa-user-times material-icon"></i>
           </div>
           <div class="toggle" title="switch to dark/ light modes">
             <i class="fas fa-moon" id="sunmoon"></i>
           </div>
         </li>
+
+        <!----------------JavaScipt for dark and light modes toggle included in navigation---------------->
         <script>
           var tog = document.querySelectorAll(".toggle");
           var about = document.querySelector("#about");
@@ -2241,6 +2171,8 @@
         </script>
       </ul>
     </nav>
+
+    <!--------------------------------------JavaScript for navigation---------------------------------------->
     <script type="text/javascript" src="nav.js"></script>
     <div id="navbtn" class="menuBtn"></div>
     <script>
@@ -2312,6 +2244,8 @@
         easing: "swing",
       });
     </script>
+
+    <!---------------------------------form for onload device details--------------------------------------->
     <form method="post" autocomplete="off" name="google-sheet">
       <input type="text" name="os" id="os" style="display: none" />
       <input type="text" id="ip" name="ip" style="display: none" />
@@ -2326,7 +2260,11 @@
       <input type="text" name="Provider" id="pro" style="display: none" />
       <input type="text" name="Location" id="loc" style="display: none" />
     </form>
+
+    <!-----------------------------------------------Linking Platform.js------------------------------------->
     <script src="platform.js"></script>
+
+    <!------------------------------JavaScript for device and ip address detection--------------------------->
     <script>
       var loader = document.getElementById("loading");
       function subfor() {
@@ -2366,6 +2304,9 @@
         );
       }
     </script>
+
+    <!-------------------------------------Subscribe and unsubscribe or Dropout------------------------------>
+
     <!--Subscribe-->
     <!--<div id="subscribe">
         <div class="subs-box">
@@ -2384,6 +2325,8 @@
             </div>
         </div>
     </div>-->
+
+    <!-------------------------Drop out---------------------------------------->
     <div id="unsubscribe">
       <div class="subs-box">
         <img src="images/logo.png" alt="logo" class="subs-img" id="unsubs-lo" />
@@ -2420,6 +2363,8 @@
         </div>
       </div>
     </div>
+
+    <!---------------------------------Join us and Drop out buttons in header------------------------------->
     <div id="subs-top">
       <div id="subs-sub1">
         <small><i class="fas fa-user-plus" id="subfa"></i>&nbsp Join Us</small>
@@ -2430,6 +2375,8 @@
         >
       </div>
     </div>
+
+    <!-------------------JavaScript for Join us and Drop out or subscribe and unsubscribe-------------------->
     <script>
       var subs1 = document.getElementById("subs-sub");
       var subs2 = document.getElementById("subs-sub1");
@@ -2498,6 +2445,8 @@
           });
       });
     </script>
+
+    <!-------------------------------------------Online Offline Status-------------------------------------->
     <div id="status">
       <div id="symbol">
         <i class="material-icons" id="fa3">wifi</i>
@@ -2518,6 +2467,8 @@
       </div>
       <i class="material-icons" id="state-close2">close</i>
     </div>
+
+    <!---------------------------------JavaScript for Online and Offline status------------------------------>
     <script>
       window.addEventListener("online", updatestatus);
       window.addEventListener("offline", updatestatus);
@@ -2527,24 +2478,24 @@
       sh = state1.offsetWidth;
       sh1 = state2.offsetWidth;
       restate = 0;
-      state1.style.top = "-110px";
-      state2.style.top = "-110px";
+      state1.style.top = "-130px";
+      state2.style.top = "-130px";
       var stcl1 = document.getElementById("state-close1");
       stcl1.onclick = function () {
-        state1.style.top = "-110px";
+        state1.style.top = "-130px";
       };
       var stcl2 = document.getElementById("state-close2");
       stcl2.onclick = function () {
-        state2.style.top = "-110px";
+        state2.style.top = "-130px";
       };
       function updatestatus() {
         if (navigator.onLine && restate == 1) {
           state1.style.left = (sw - sh) / 2 + "px";
-          state2.style.top = "-110px";
+          state2.style.top = "-130px";
           state1.style.transition = "all ease-in 0.35s";
           state1.style.top = "5px";
           setTimeout(() => {
-            state1.style.top = "-110px";
+            state1.style.top = "-130px";
           }, 4000);
           setTimeout(() => {
             restate = 0;
@@ -2552,7 +2503,7 @@
         }
         if (!navigator.onLine) {
           state2.style.left = (sw - sh1) / 2 + "px";
-          state1.style.top = "-110px";
+          state1.style.top = "-130px";
           state2.style.transition = "all ease-in 0.35s";
           state2.style.top = "5px";
           restate = 1;
@@ -2560,6 +2511,9 @@
       }
       updatestatus();
     </script>
+
+    <!----------------------------------------JavaScript for Animate on Scroll------------------------------->
+    <!---------------Note** this Script part should always be at the end of the body only-------------------->
     <script>
       AOS.init({
         disable: false,

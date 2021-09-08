@@ -438,6 +438,75 @@
       font-size: small;
       font: -moz-pull-down-menu;
     }
+    .block {
+      width: 100%;
+      border-radius: 3mm;
+      padding: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin-bottom: 3%;
+      margin-left: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .block h3 {
+      align-self: flex-start;
+    }
+    .block p {
+      font-size: 14px;
+    }
+    #whatsapp {
+      width: fit-content;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 1mm;
+      border: rgb(218, 218, 218) 1px solid;
+      margin-top: 10px;
+      background: white;
+      z-index: 999999;
+    }
+    #watop {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      border-radius: 1mm;
+      background: rgb(226, 226, 226);
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    #watop img {
+      width: 40px;
+    }
+    #btext {
+      font-weight: bold;
+      font-size: 16px;
+      color: rgb(31, 31, 31);
+    }
+    #stext {
+      font-size: 14px;
+      color: rgb(31, 31, 31);
+    }
+    #wabot {
+      background: white;
+      border-radius: 1mm;
+      display: flex;
+      justify-content: center;
+    }
+    #wabot a {
+      text-decoration: none;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      color: dodgerblue;
+      width: 100%;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 16px;
+    }
   </style>
 
   <body>
@@ -634,6 +703,26 @@
             <div class="sub-part">
               <i class="fas fa-check-circle"></i>
               <p>Your details have been recorded,</p>
+              <div class="block">
+                <p>Join the WhatsApp group using the below link</p>
+                <div id="whatsapp">
+                  <div id="watop">
+                    <img
+                      src="https://idea2innovation.github.io/images/whatsapp.png"
+                      alt="whatsapp"
+                    />
+                    <div id="watoptext">
+                      <div id="btext">Idea to Innovation</div>
+                      <div id="stext">Group chat invite</div>
+                    </div>
+                  </div>
+                  <div id="wabot">
+                    <a href="https://chat.whatsapp.com/JIOQs7xYMrQGj8C2g2vVfV"
+                      >Join Group</a
+                    >
+                  </div>
+                </div>
+              </div>
               <p>you will recieve a mail shortly</p>
             </div>
           </div>

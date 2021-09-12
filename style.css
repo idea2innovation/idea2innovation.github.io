@@ -962,7 +962,7 @@ nav ul li a:hover {
     0 0 15px rgba(30, 143, 255, 0.7), 0 0 20px rgba(30, 143, 255, 0.616);
 }*/
 /*Event register*/
-#register {
+/*#register {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
@@ -1105,7 +1105,7 @@ input[type="number"] {
 #r-branch:focus,
 #r-branch:hover {
   border-bottom: rgb(204, 0, 255) 0.35vh solid;
-}
+}*/
 /*--Footer--*/
 #footer {
   padding: 0 0 0 0;
@@ -1332,6 +1332,7 @@ i {
   padding-right: 0%;
   border-radius: 2mm;
   text-align: center;
+  overflow: hidden;
 }
 #r-open {
   padding: 0;
@@ -1352,7 +1353,6 @@ img:hover {
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   transition: 0.35s;
-  overflow: hidden;
 }
 #ev1:hover {
   transform: translateY(-10px);

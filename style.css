@@ -124,6 +124,9 @@ button:hover {
   color: rgb(82, 82, 82);
   background: transparent;
 }
+#read1e {
+  margin-right: 50px;
+}
 p {
   font-size: 15px;
   line-height: 18px;
@@ -454,158 +457,135 @@ nav ul li a:hover {
 }
 /*--Members--*/
 #members {
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  position: relative;
+  height: fit-content;
 }
 .member-row {
-  width: 80%;
-  margin: auto;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.member-row1 {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.member-row2 {
-  display: flex;
-  width: 240vw;
-  animation: memberslide ease 5s infinite;
-  position: relative;
-}
-.member-row3 {
-  overflow: hidden;
-  width: 80%;
-  margin: auto;
-  align-items: center;
-  flex-wrap: wrap;
-  box-shadow: none;
-  padding-bottom: 3%;
-  position: relative;
-}
-.member-col {
-  position: relative;
-  flex-basis: 20%;
-  text-align: center;
-  box-shadow: 0px 8px 8px 0 rgba(0, 0, 0, 0.432);
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
-  padding-bottom: 2%;
-  font-family: mulish;
-  transition: all ease 0.25s;
-  overflow: hidden;
-  border-radius: 2mm;
-  height: 100%;
-}
-.member-col:hover {
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  transform: scale(1.05);
-}
-.member-col img {
-  transform: scale(1);
-  transition: ease-in 0.25s;
-}
-.member-col img:hover {
-  transform: scale(1.2);
-}
-#fa1 {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 2vw;
-  width: 40px;
-  height: 40px;
-  background: rgba(119, 119, 119, 0.411);
-  border-radius: 100%;
-  line-height: 40px;
-  box-shadow: inset 1px 3px 3px rgba(0, 0, 0, 0.411);
-  transition: cubic-bezier(0.19, 1, 0.22, 1) all 1s;
-}
-#fa1:hover {
-  box-shadow: inset 0 100px 0 rgb(0, 0, 0);
-}
-.middle {
-  position: absolute;
-  top: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  text-align: center;
-  padding-top: 3%;
-  padding-bottom: 2%;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  -moz-backdrop-filter: blur(4px);
-  border-radius: 2mm;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  -webkit-transform-origin: top;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  transform-origin: top;
-  -webkit-transform: rotateX(-90deg) translateY(2px);
-  transform: rotateX(-90deg) translateY(2px);
-  transition: all 0.5s ease;
-  z-index: 99999;
-}
-.member-col:hover > .middle {
-  -webkit-transform: rotateX(0deg) translateY(0);
-  transform: rotateX(0deg) translateY(0);
-}
-.member-col img {
-  width: 100%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.308);
-}
-.member-img {
-  width: 100%;
-  overflow: hidden;
-  height: fit-content;
-  padding: 0;
-  background: white;
-}
-.member-col h4 {
-  margin-bottom: 1vh;
-  font-size: 1.5vw;
-  font-weight: 400;
-  margin-top: 10px;
-}
-.member-btn {
-  margin: 5vh auto 0;
-  display: flex;
-  width: 100%;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
-.mem-con {
-  margin-top: 6%;
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2mm;
+  position: relative;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
 }
-.mem-con-btn {
-  background: rgb(92, 89, 89);
-  padding-left: 23%;
-  padding-right: 23%;
+.mem-details {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 2mm;
+  border-top: gray dashed 3px;
+}
+.member .imag {
+  width: 120px;
+  border-radius: 100%;
+  border: gray dotted 1px;
+  margin-bottom: 5px;
+}
+.mem-text {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mem-name {
+  color: rgb(150, 0, 0);
+  font-size: x-large;
+  font-family: poppins;
   text-align: center;
-  cursor: pointer;
-  padding-bottom: 2%;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  transition: 0.25s;
+}
+.mem-pos {
+  color: gray;
+  font-size: medium;
+  font-family: poppins;
+  text-align: center;
+}
+.member a {
   text-decoration: none;
-  color: white;
-  cursor: pointer;
+  transition: 0.25s;
 }
-.mem-con-btn:hover {
-  background: rgb(65, 63, 63);
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.527);
-  color: gold;
+.member a i {
+  font-size: 20px;
+  font-weight: bold;
 }
-#mem-con-fa {
-  font-size: 16px;
+.member a img {
+  width: 20px;
+}
+.mem-social {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.member a:hover {
+  transform: scale(1.5);
+}
+.member a .fa-hackerrank {
+  color: rgb(0, 194, 0);
+}
+.member a .fa-google {
+  color: rgb(255, 217, 0);
+}
+.member a .fa-instagram {
+  color: rgb(255, 145, 163);
+}
+.member a .fa-facebook-f {
+  color: rgb(33, 118, 202);
+}
+.member a .fa-github {
+  color: black;
+}
+.member-row:nth-child(2) .member:nth-child(1) .mem-details {
+  background: rgb(253, 233, 233);
+  border-top: rgb(150, 0, 0) dashed 3px;
+}
+.member-row:nth-child(2) .member:nth-child(2) .mem-details {
+  background: rgb(229, 255, 229);
+  border-top: rgb(25, 65, 25) dashed 3px;
+}
+.member-row:nth-child(2) .member:nth-child(2) .mem-details .mem-name {
+  color: rgb(25, 65, 25);
+}
+.member-row:nth-child(3) .member:nth-child(1) .mem-details {
+  background: rgb(230, 243, 255);
+  border-top: rgb(21, 43, 65) dashed 3px;
+}
+.member-row:nth-child(3) .member:nth-child(1) .mem-details .mem-name {
+  color: rgb(21, 43, 65);
+}
+.member-row:nth-child(1) .member:nth-child(1) .mem-details .mem-name {
+  color: orangered;
+}
+.member-row:nth-child(3) .member:nth-child(2) .mem-details {
+  background: rgb(254, 255, 223);
+  border-top: rgb(65, 59, 25) dashed 3px;
+}
+.member-row:nth-child(3) .member:nth-child(2) .mem-details .mem-name {
+  color: rgb(65, 59, 25);
+}
+.member-row:nth-child(2) .member:nth-child(1) .imag {
+  border: rgb(150, 0, 0) dotted 1px;
+}
+.member-row:nth-child(2) .member:nth-child(2) .imag {
+  border: rgb(25, 65, 25) dotted 1px;
+}
+.member-row:nth-child(3) .member:nth-child(1) .imag {
+  border: rgb(21, 43, 65) dotted 1px;
+}
+.member-row:nth-child(3) .member:nth-child(2) .imag {
+  border: rgb(65, 59, 25) dotted 1px;
 }
 /*--Activity--*/
 #activities {
@@ -2359,53 +2339,12 @@ html {
   .about-text h2 {
     font-size: 18px;
   }
-  #members {
-    flex-wrap: wrap;
-  }
-  .member-row {
-    width: 80%;
-    flex-wrap: wrap;
-  }
-  .member-row1 {
-    width: 80%;
-  }
-  .member-col {
-    flex-basis: 30%;
-    margin-bottom: 2vh;
-  }
-  .member-col img {
-    transform: scale(1);
-    transition: ease-in 0.25s;
-    overflow: hidden;
-  }
-  .member-col img:hover {
-    transform: scale(1);
-  }
   #fa1,
   #fa2 {
     font-size: 2vw;
     width: 25px;
     height: 25px;
     line-height: 25px;
-  }
-  .middle {
-    text-align: center;
-    padding-top: 3%;
-    padding-bottom: 2%;
-  }
-  .member-col h4 {
-    margin-bottom: 1vh;
-    font-size: 3vw;
-  }
-  .mem-con-btn {
-    font-size: 2.3vw;
-  }
-  #mem-con-fa {
-    font-size: 2.3vw;
-  }
-  .mem-social,
-  .mem-social1 {
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.295);
   }
   /*.activity-row {
     margin-left: 10px;
@@ -2789,45 +2728,12 @@ html {
   .about-text h2 {
     font-size: 18px;
   }
-  .member-row {
-    width: 80%;
-  }
-  .member-row1 {
-    width: 80%;
-  }
-  .member-col {
-    flex-basis: 45%;
-    margin-bottom: 2vh;
-  }
-  .member-col img {
-    transform: scale(1);
-    transition: ease-in 0.25s;
-    overflow: hidden;
-  }
-  .member-col img:hover {
-    transform: scale(1);
-  }
   #fa1,
   #fa2 {
     font-size: 1.9vh;
     width: 23px;
     height: 23px;
     line-height: 23px;
-  }
-  .middle {
-    text-align: center;
-    padding-top: 3%;
-    padding-bottom: 2%;
-  }
-  .member-col h4 {
-    margin-bottom: 1vh;
-    font-size: 2.25vh;
-  }
-  .mem-con-btn {
-    font-size: 1.75vh;
-  }
-  #mem-con-fa {
-    font-size: 1.75vh;
   }
   /*.activity-row {
     margin-left: 10px;
